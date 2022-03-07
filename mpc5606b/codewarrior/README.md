@@ -4,3 +4,4 @@ FlashAlgorithms_Internal_FREESCALE_QORIVVAP.zip 파일의 압축을 풀어서 �
 
 C:\Freescale\CW MCU v10.5\MCU\bin\plugins\support\EPPC\gdi\P&E
 
+![Directory path to patch](img/codewarrior_patch.png)
