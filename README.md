@@ -1,2 +1,1 @@
-# autosar
-AUTOSAR 강의를 위한 자료
+# AUTOSAR 강의 자료
