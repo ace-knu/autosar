@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_EcuM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>BswImplementation_EcuM</SHORT-NAME>
+              <SW-VERSION>2.8.1</SW-VERSION>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/EcuM/ServiceSwComponentTypes/SwcBswMapping_EcuM</SWC-BSW-MAPPING-REF>
+              <VENDOR-ID>76</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>EcuM_LoopDetection</SHORT-NAME>
+              <SERVICE-ID>48</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+              <SERVICE-ID>24</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>EcuM</SHORT-NAME>
+              <MODULE-ID>10</MODULE-ID>
+              <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswIB_EcuM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>ALARM_TIME_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>BOOT_TARGET_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>SHUTDOWN_CAUSE</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>SHUTDOWN_OR_SLEEP_FLAG_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>SHUTDOWN_TARGET_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>STATE_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>WAKEUP_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-SCHEDULABLE-ENTITY>
+                  <SHORT-NAME>BswSE_EcuM_LoopDetection</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_EcuM/BswModuleEntrys/EcuM_LoopDetection</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY>
+                  <SHORT-NAME>BswSE_EcuM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/ALARM_TIME_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BOOT_TARGET_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_CAUSE</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_OR_SLEEP_FLAG_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/SHUTDOWN_TARGET_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/STATE_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/WAKEUP_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_EcuM/BswModuleEntrys/EcuM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT>
+                  <SHORT-NAME>BswTE_EcuM_LoopDetection</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BswSE_EcuM_LoopDetection</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+                <BSW-TIMING-EVENT>
+                  <SHORT-NAME>BswTE_EcuM_MainFunction</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswIB_EcuM/BswSE_EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+            </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+
+  </AR-PACKAGES>
+</AUTOSAR>

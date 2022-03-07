@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+			<SHORT-NAME>Autosar_Rte</SHORT-NAME>
+				<ELEMENTS>
+					<BSW-IMPLEMENTATION>
+						<SHORT-NAME>BswImplementation_0</SHORT-NAME>
+						<GENERATED-ARTIFACTS>
+						</GENERATED-ARTIFACTS>
+						<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+						<RESOURCE-CONSUMPTION>
+							<SHORT-NAME>ResourceConsumption_0</SHORT-NAME>				
+							<MEMORY-SECTIONS>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_START_SEC_CODE</SHORT-NAME>
+									<ALIGNMENT>CODE
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>START
+									</SYMBOL>
+								</MEMORY-SECTION>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_STOP_SEC_CODE</SHORT-NAME>
+									<ALIGNMENT>CODE
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>STOP
+									</SYMBOL>
+								</MEMORY-SECTION>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_START_SEC_VAR_8</SHORT-NAME>
+									<ALIGNMENT>8
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>START
+									</SYMBOL>
+								</MEMORY-SECTION>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_STOP_SEC_VAR_8</SHORT-NAME>
+									<ALIGNMENT>8
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>STOP
+									</SYMBOL>
+								</MEMORY-SECTION>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_START_SEC_VAR_NO_INIT_8</SHORT-NAME>
+									<ALIGNMENT>8
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>START
+									</SYMBOL>
+								</MEMORY-SECTION>
+								<MEMORY-SECTION>					
+									<SHORT-NAME>RTE_STOP_SEC_VAR_NO_INIT_8</SHORT-NAME>
+									<ALIGNMENT>8
+									</ALIGNMENT>
+									<PREFIX-REF DEST="SECTION-NAME-PREFIX">/Autosar_Rte/BswImplementation_0/ResourceConsumption_0/SectionNamePrefix_0</PREFIX-REF>
+									<SYMBOL>STOP
+									</SYMBOL>
+								</MEMORY-SECTION>
+							</MEMORY-SECTIONS>
+							<SECTION-NAME-PREFIXS>
+								<SECTION-NAME-PREFIX>
+									<SHORT-NAME>SectionNamePrefix_0</SHORT-NAME>
+									<SYMBOL>RTE</SYMBOL>
+								</SECTION-NAME-PREFIX>
+							</SECTION-NAME-PREFIXS>
+						</RESOURCE-CONSUMPTION>
+
+						<SW-VERSION>4.4.0</SW-VERSION>
+						<USED-CODE-GENERATOR>RteCodeGenerator</USED-CODE-GENERATOR>
+						<VENDOR-ID>76</VENDOR-ID>
+						<AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+						<BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Autosar_Rte/BswModuleDescription_0/BswInternalBehavior_0</BEHAVIOR-REF>
+
+					</BSW-IMPLEMENTATION>
+					<BSW-MODULE-ENTRY>
+						<SHORT-NAME>Rte_Start</SHORT-NAME>
+						<SERVICE-ID>0x70</SERVICE-ID>
+						<ROLE>Rte_Start</ROLE>
+						<IS-REENTRANT>true</IS-REENTRANT>
+						<IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+						<CALL-TYPE>REGULAR</CALL-TYPE>
+						<EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+						<SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+						<RETURN-TYPE>
+							<SHORT-NAME>Std_ReturnType</SHORT-NAME>
+							<DIRECTION>OUT</DIRECTION>
+							<SW-DATA-DEF-PROPS>
+								<SW-DATA-DEF-PROPS-VARIANTS>
+									<SW-DATA-DEF-PROPS-CONDITIONAL>
+										<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Autosar_Rte/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+									</SW-DATA-DEF-PROPS-CONDITIONAL>
+								</SW-DATA-DEF-PROPS-VARIANTS>
+							</SW-DATA-DEF-PROPS>
+						</RETURN-TYPE>
+					</BSW-MODULE-ENTRY>
+					<BSW-MODULE-ENTRY>
+						<SHORT-NAME>Rte_Stop</SHORT-NAME>
+						<SERVICE-ID>0x71</SERVICE-ID>
+						<ROLE>Rte_Stop</ROLE>
+						<IS-REENTRANT>true</IS-REENTRANT>
+						<IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+						<CALL-TYPE>REGULAR</CALL-TYPE>
+						<EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+						<SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+						<RETURN-TYPE>
+							<SHORT-NAME>Std_ReturnType</SHORT-NAME>
+							<DIRECTION>OUT</DIRECTION>
+							<SW-DATA-DEF-PROPS>
+								<SW-DATA-DEF-PROPS-VARIANTS>
+									<SW-DATA-DEF-PROPS-CONDITIONAL>
+										<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Autosar_Rte/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+									</SW-DATA-DEF-PROPS-CONDITIONAL>
+								</SW-DATA-DEF-PROPS-VARIANTS>
+							</SW-DATA-DEF-PROPS>
+						</RETURN-TYPE>
+					</BSW-MODULE-ENTRY>									
+					<BSW-MODULE-ENTRY>
+						<SHORT-NAME>SchM_Init</SHORT-NAME>
+						<SERVICE-ID>0x00</SERVICE-ID>
+						<ROLE>SchM_Init</ROLE>
+						<IS-REENTRANT>true</IS-REENTRANT>
+						<IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+						<CALL-TYPE>REGULAR</CALL-TYPE>
+						<EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+						<SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+					</BSW-MODULE-ENTRY>
+					<BSW-MODULE-ENTRY>
+						<SHORT-NAME>SchM_Deinit</SHORT-NAME>
+						<SERVICE-ID>0x01</SERVICE-ID>
+						<ROLE>SchM_Deinit</ROLE>
+						<IS-REENTRANT>true</IS-REENTRANT>
+						<IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+						<CALL-TYPE>REGULAR</CALL-TYPE>
+						<EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+						<SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+					</BSW-MODULE-ENTRY>
+					<BSW-MODULE-ENTRY>
+						<SHORT-NAME>SchM_GetVersionInfo</SHORT-NAME>
+						<SERVICE-ID>0x02</SERVICE-ID>
+						<ROLE>SchM_GetVersionInfo</ROLE>
+						<IS-REENTRANT>true</IS-REENTRANT>
+						<IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+						<CALL-TYPE>REGULAR</CALL-TYPE>
+						<EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+						<SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+						<ARGUMENTS>
+							<SW-SERVICE-ARG>
+								<SHORT-NAME>LpVersionInfo</SHORT-NAME>
+								<DIRECTION>IN</DIRECTION>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Autosar_Rte/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</SW-SERVICE-ARG>
+						</ARGUMENTS>
+					</BSW-MODULE-ENTRY>
+
+					<BSW-MODULE-DESCRIPTION>
+						<SHORT-NAME>BswModuleDescription_0</SHORT-NAME>
+						
+
+						
+						<PROVIDED-ENTRYS>
+							<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Start</BSW-MODULE-ENTRY-REF>
+							</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+							<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Stop</BSW-MODULE-ENTRY-REF>
+							</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+							<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Init</BSW-MODULE-ENTRY-REF>
+							</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+							<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Deinit</BSW-MODULE-ENTRY-REF>
+							</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+							<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+							</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+
+						</PROVIDED-ENTRYS>
+						<BSW-MODULE-DEPENDENCYS>
+							<BSW-MODULE-DEPENDENCY>
+								<SHORT-NAME>BswModuleDependency_0</SHORT-NAME>
+								<TARGET-MODULE-ID>2</TARGET-MODULE-ID>
+								<REQUIRED-ENTRYS>
+									<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+										<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Start</BSW-MODULE-ENTRY-REF>
+									</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+									<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+										<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Stop</BSW-MODULE-ENTRY-REF>
+									</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+									<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+										<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Init</BSW-MODULE-ENTRY-REF>
+									</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+									<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+										<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Deinit</BSW-MODULE-ENTRY-REF>
+									</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+									<BSW-MODULE-ENTRY-REF-CONDITIONAL>
+										<BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+									</BSW-MODULE-ENTRY-REF-CONDITIONAL>
+								</REQUIRED-ENTRYS>
+							</BSW-MODULE-DEPENDENCY>
+
+						</BSW-MODULE-DEPENDENCYS>
+						<INTERNAL-BEHAVIORS>
+							<BSW-INTERNAL-BEHAVIOR>
+								<SHORT-NAME>BswInternalBehavior_0</SHORT-NAME>
+								
+								<STATIC-MEMORYS>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupRx_Project_CurrentMode_modeSwitchPort_PduGroupRx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucTestMode_CurrentMode_modeSwitchPort_TestModeSWC_TestModeManager</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_NewMode_globalModeWdgM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupRx_Project_OldMode_modeSwitchPort_PduGroupRx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucInitState_NewMode_modeSwitchPort_InitStateBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_mode_SE_InitWdgM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucEcuMode_OldMode_modeSwitchPort_EcuModeBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/EcuM/ImplementationDataTypes/EcuM_StateType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucDcmDiagnosticSessionControl_NewMode_modeSwitchPort_DcmDiagnosticSessionControlBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucWakeupEvent_CurrentMode_modeSwitchPort_WakeupEventBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucDcmDiagnosticSessionControl_CurrentMode_modeSwitchPort_DcmDiagnosticSessionControlBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_UM001_RSWC_ComM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ComM_ModeType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucDcmDiagnosticSessionControl_OldMode_modeSwitchPort_DcmDiagnosticSessionControlBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_UM000_RSWC_ComM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ComM_ModeType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucEcuMode_CurrentMode_modeSwitchPort_EcuModeBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/EcuM/ImplementationDataTypes/EcuM_StateType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_globalModeWdgM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_UM000_PComM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ComM_ModeType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupTx_Project_CurrentMode_modeSwitchPort_PduGroupTx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucComMMode_Project_NewMode_modeSwitchPort_ComMMode_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_UM002_PComM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ComM_ModeType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucComMMode_Project_OldMode_modeSwitchPort_ComMMode_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucInitState_OldMode_modeSwitchPort_InitStateBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucWakeupEvent_CurrentMode_modeNotificationPort_WakeupEventSWC_AppMode</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_OldMode_globalModeWdgM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupTx_Project_OldMode_modeSwitchPort_PduGroupTx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucComMMode_Project_CurrentMode_modeSwitchPort_ComMMode_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_mode_SE_WdgMTestWdgM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucInitState_CurrentMode_modeSwitchPort_InitStateBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupRx_Project_NewMode_modeSwitchPort_PduGroupRx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucEcuMode_NewMode_modeSwitchPort_EcuModeBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/EcuM/ImplementationDataTypes/EcuM_StateType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GuccurrentMode_CurrentMode_UM001_PComM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_ComM/ComM_ModeType</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+									<VARIABLE-DATA-PROTOTYPE>
+										<SHORT-NAME>Rte_GucPduGroupTx_Project_NewMode_modeSwitchPort_PduGroupTx_ProjectBswM</SHORT-NAME>
+										<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									</VARIABLE-DATA-PROTOTYPE>
+								</STATIC-MEMORYS>
+
+								<ENTITYS>
+									<BSW-CALLED-ENTITY>
+										<SHORT-NAME>BswCalledEntity_0</SHORT-NAME>
+										<MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+										<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Start</IMPLEMENTED-ENTRY-REF>
+									</BSW-CALLED-ENTITY>
+									<BSW-CALLED-ENTITY>
+										<SHORT-NAME>BswCalledEntity_1</SHORT-NAME>
+										<MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+										<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/Rte_Stop</IMPLEMENTED-ENTRY-REF>
+									</BSW-CALLED-ENTITY>
+									<BSW-CALLED-ENTITY>
+										<SHORT-NAME>BswCalledEntity_3</SHORT-NAME>
+										<MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+										<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Init</IMPLEMENTED-ENTRY-REF>
+									</BSW-CALLED-ENTITY>
+									<BSW-CALLED-ENTITY>
+										<SHORT-NAME>BswCalledEntity_4</SHORT-NAME>
+										<MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+										<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_Deinit</IMPLEMENTED-ENTRY-REF>
+									</BSW-CALLED-ENTITY>
+									<BSW-CALLED-ENTITY>
+										<SHORT-NAME>BswCalledEntity_5</SHORT-NAME>
+										<MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+										<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Autosar_Rte/SchM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+									</BSW-CALLED-ENTITY>
+									
+								</ENTITYS>
+							</BSW-INTERNAL-BEHAVIOR>
+						</INTERNAL-BEHAVIORS>
+					</BSW-MODULE-DESCRIPTION>
+					<IMPLEMENTATION-DATA-TYPE>
+						<SHORT-NAME>Std_ReturnType</SHORT-NAME>
+						<SW-DATA-DEF-PROPS>
+							<SW-DATA-DEF-PROPS-VARIANTS>
+								<SW-DATA-DEF-PROPS-CONDITIONAL>
+									<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint8</BASE-TYPE-REF>
+								</SW-DATA-DEF-PROPS-CONDITIONAL>
+							</SW-DATA-DEF-PROPS-VARIANTS>
+						</SW-DATA-DEF-PROPS>
+					</IMPLEMENTATION-DATA-TYPE>
+					<IMPLEMENTATION-DATA-TYPE>
+						<SHORT-NAME>Std_VersionInfoType</SHORT-NAME>
+						<CATEGORY>DATA_REFERENCE</CATEGORY>
+						<SUB-ELEMENTS>
+							<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+								<SHORT-NAME>vendorID</SHORT-NAME>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint16</BASE-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+							<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+								<SHORT-NAME>moduleID</SHORT-NAME>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint16</BASE-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+							<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+								<SHORT-NAME>sw_major_version</SHORT-NAME>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint8</BASE-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+							<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+								<SHORT-NAME>sw_minor_version</SHORT-NAME>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint8</BASE-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+							<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+								<SHORT-NAME>sw_patch_version</SHORT-NAME>
+								<SW-DATA-DEF-PROPS>
+									<SW-DATA-DEF-PROPS-VARIANTS>
+										<SW-DATA-DEF-PROPS-CONDITIONAL>
+											<BASE-TYPE-REF DEST="SW-BASE-TYPE">/Autosar_Rte/uint8</BASE-TYPE-REF>
+										</SW-DATA-DEF-PROPS-CONDITIONAL>
+									</SW-DATA-DEF-PROPS-VARIANTS>
+								</SW-DATA-DEF-PROPS>
+							</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+						</SUB-ELEMENTS>
+					</IMPLEMENTATION-DATA-TYPE>
+					<SW-BASE-TYPE>
+						<SHORT-NAME>uint8</SHORT-NAME>
+						<NATIVE-DECLARATION>unsigned char</NATIVE-DECLARATION>
+						<BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+					</SW-BASE-TYPE>
+					<SW-BASE-TYPE>
+						<SHORT-NAME>uint16</SHORT-NAME>
+						<NATIVE-DECLARATION>unsigned short</NATIVE-DECLARATION>
+						<BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+					</SW-BASE-TYPE>
+				</ELEMENTS>
+			</AR-PACKAGE>
+
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_MemMap</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="ea47efe2-6dda-44ec-9a52-f8aeacb66da4">
+          <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+          <DESC>
+            <L-2 L="EN">This ARPackage defines the blueprints for SwAddrMethods which are the basis for the standardized Memory Allocation Keywords in the document SWS_MemoryMapping</L-2>
+          </DESC>
+          <ELEMENTS>
+            <SW-ADDR-METHOD UUID="df7f6b79-3614-41fa-9e4f-3ee0ccfba421">
+              <SHORT-NAME>VAR</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="fc7f942d-be7e-4e07-b965-7b7722f78103">
+              <SHORT-NAME>VAR_FAST</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="76464dee-1c3b-4d43-bd60-a7e8143583d9">
+              <SHORT-NAME>VAR_SLOW</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all infrequently accessed global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="a822eeb7-73a7-42a4-b70c-a2950fede50f">
+              <SHORT-NAME>INTERNAL_VAR</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for global or static variables those are accessible from a calibration tool.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="974fd268-75bc-421c-84d0-693a3ffa1961">
+              <SHORT-NAME>VAR_SAVED_ZONE</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for RAM buffers of variables saved in non volatile memory.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-INITIALIZATION-POLICY>NO-INIT</SECTION-INITIALIZATION-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="9ddc46e9-ecf8-4d53-b6b6-6acbd3a03161">
+              <SHORT-NAME>CONST_SAVED_RECOVERY_ZONE</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for ROM buffers of variables saved in non volatile memory.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONST</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="ecab8bea-f451-49de-b820-5f49bc72a96f">
+              <SHORT-NAME>CONST</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for global or static constants.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONST</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="2358eb87-ab28-40ba-a766-e76be0c344a2">
+              <SHORT-NAME>CALIB</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for calibration constants.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CALPRM</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="3af89859-9e3f-4af0-8909-503714bcafb6">
+              <SHORT-NAME>CODE</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for mapping code to application block, boot block, external flash etc.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="82f42f1e-c680-4848-b2fd-186e3e890a3c">
+              <SHORT-NAME>CONFIG_DATA</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Constants with attributes that show that they reside in one segment for module configuration.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="433ba0e5-f378-43b8-8325-1a016279ddef">
+              <SHORT-NAME>CALLOUT_CODE</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for mapping callouts of the BSW Modules which shall typically use the global linker settings for callouts.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="473e0b32-e47e-4bf1-aae1-668758a123f0">
+              <SHORT-NAME>CALLOUT_CODE2</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for mapping callouts of the BSW Modules.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="6daed9a7-2cde-4a37-90a8-8fe266df8462">
+              <SHORT-NAME>CODE_FAST</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for code that shall go into fast code memory segments.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="0440636c-a24c-4762-8674-40841ef6c266">
+              <SHORT-NAME>CODE_SLOW</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for code that shall go into slow code memory segments.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="97d04975-83d7-495a-8ef2-136df41fb729">
+              <SHORT-NAME>VAR_NO_INIT_16</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR-NO-INIT</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="f222407b-24c3-4eb3-8531-88a7e2fe9a2c">
+              <SHORT-NAME>VAR_NO_INIT_32</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR-NO-INIT</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="3dc53831-7119-441b-b5e9-96f249423d6c">
+              <SHORT-NAME>VAR_NO_INIT_8</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR-NO-INIT</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="714ad46c-691f-43d5-9925-5e120f45c5f1">
+              <SHORT-NAME>VAR_NO_INIT_UNSPECIFIED</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR-NO-INIT</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="9c1c1df7-0522-4824-aa17-efe31a652124">
+              <SHORT-NAME>VAR_INIT_16</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="7cd29840-c3fa-469f-9a69-679be2950862">
+              <SHORT-NAME>VAR_INIT_32</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="3491b693-400c-4862-abb4-f2986639b5b3">
+              <SHORT-NAME>VAR_INIT_8</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="4488bce5-5903-404e-9790-363097657262">
+              <SHORT-NAME>VAR_INIT_BOOLEAN</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="c1ddfb9b-61a8-4ba9-8a87-45f00a435a57">
+              <SHORT-NAME>VAR_INIT_UNSPECIFIED</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for all global or static variables.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>VAR</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="a01059be-dde0-44be-9c7d-2c712856d26e">
+              <SHORT-NAME>RAMCODE</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for mapping code to application block, boot block, external flash etc.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="eba4116d-ac72-47c6-bccc-cd20a012225f">
+              <SHORT-NAME>CODE_AC</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for mapping code to application block, boot block, external flash etc.</L-2>
+              </DESC>
+              <SECTION-TYPE>CODE</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="583852b9-7335-4e81-a726-a86b82d3eb3c">
+              <SHORT-NAME>CONFIG_DATA_8</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Constants with attributes that show that they reside in one segment for module configuration.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="fe69dbb7-5fb7-4e58-99da-6de3f09ca1d4">
+              <SHORT-NAME>CONFIG_DATA_UNSPECIFIED</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Constants with attributes that show that they reside in one segment for module configuration.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="31dd599d-1711-42aa-a23a-6c1281e83a2b">
+              <SHORT-NAME>CONST_32</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for ROM buffers of variables saved in non volatile memory.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONST</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+            <SW-ADDR-METHOD UUID="54cebfa5-671f-41a9-a28f-97afb6a42a1f">
+              <SHORT-NAME>CONST_UNSPECIFIED</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">To be used for ROM buffers of variables saved in non volatile memory.</L-2>
+              </DESC>
+              <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+              <SECTION-TYPE>CONST</SECTION-TYPE>
+            </SW-ADDR-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

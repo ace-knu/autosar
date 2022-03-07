@@ -1,0 +1,2139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GENERAL-INFORMATION>
+
+  <!-- Template version -->
+  <TEMPLATE-VERSION>2.5.4</TEMPLATE-VERSION>
+
+  <!-- Generation Tool versions which are supported by this Template -->
+  <SUPPORTED-TOOL-VERSIONS>2.5.4</SUPPORTED-TOOL-VERSIONS>
+  
+  <!-- Parser Details for Config Module -->
+  <PARSER-DETAILS>
+    <!-- Module under test -->
+    <MODULE-UNDER-TEST>CANIF</MODULE-UNDER-TEST>
+    <!-- Modules required MDT File information -->
+    <MODULE-UNDER-TEST-MDT>CANIF CAN CANTRCV</MODULE-UNDER-TEST-MDT>
+    <!-- Mandatory Modules required to Parse <Msn> -->
+    <MANDATORY-MODULES>CANIF CAN ECUC</MANDATORY-MODULES>
+    <!-- All the Modules to be Parsed -->
+    <MODULES>CANIF CANTP CAN PDUR COM ECUM CANTRCV CANNM CDD ECUC XCP J1939TP J1939NM CANSM OSEKNM ATM IDSM</MODULES>
+    <!-- Provide all command line options here in capital case, first letter of each commandline option will also be 
+         a valid command line option but it need not be mentioned below.
+         command line options should not conflict with each other including the first charactor of option
+    -->
+    <CMDLINEOPTIONS></CMDLINEOPTIONS> 
+    <!-- Containers which contain reference parameters -->
+    <REFERENCE-CONTAINER-ARRAY>CntrConfig DrvConfig HrhConfig RxPduConfig HthConfig TxPduConfig CanTrcvChannel CanIfCanTrcvChannel CanIfCanTrcvChannel BufferCfg</REFERENCE-CONTAINER-ARRAY>
+    
+    <!-- Name of the containers and their corresponding reference parameters -->
+    <SYMREF-PARAM>
+	  <ENTRY NAME = 'CntrConfig'       					DETAILS = 'CtrlCanCtrlRef'></ENTRY>      
+      <ENTRY NAME = 'DrvConfig' 						DETAILS = 'InitHohConfigRef DrvName'></ENTRY>
+      <ENTRY NAME = 'HohConfig'   						DETAILS = 'InitRefCfgSet'></ENTRY>
+      <ENTRY NAME = 'HrhConfig'              			DETAILS = 'HrhId CntrHrhId HrhCanHandleTypeRef'></ENTRY>
+      <ENTRY NAME = 'HthConfig'              			DETAILS = 'HthId CntrHthId HthCanHandleTypeRef'></ENTRY>
+      <ENTRY NAME = 'RxPduConfig'               		DETAILS = 'RxHrhId'></ENTRY>      
+      <ENTRY NAME = 'TxPduConfig'               		DETAILS = 'TxPduBufferRef'></ENTRY>      	    	    
+	    <ENTRY NAME = 'CanIfCanTrcvChannel'    			DETAILS = 'CanTrcvIdRef'></ENTRY>
+	    <ENTRY NAME = 'InitHohConfig'    					DETAILS = ''></ENTRY>
+	    <ENTRY NAME = 'BufferCfg'    					DETAILS = 'BufferHthRef'></ENTRY>
+    </SYMREF-PARAM>
+    <!-- For each reference parameters corresponding destination containers and parameters -->
+   <REFERENCES>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'CtrlCanCtrlRef'                 DESTINATION-CONTAINER = 'CanControllerConfig' DESTINATION-PARAMETER = 'CanCtrlId'></REFERENCE-PARAM-DETAIL>            
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'UnResCtrlCanCtrlRef'                 DESTINATION-CONTAINER = 'CanControllerConfig' DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>            
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'CtrlWakeupSourceRef'      		DESTINATION-CONTAINER = 'EcuMWakeupSource'                    DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'InitHohConfigRef'       			DESTINATION-CONTAINER = 'HohConfig'                    DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'DrvName'    						DESTINATION-CONTAINER = 'CanGeneral'                    DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'InitRefCfgSet'     				DESTINATION-CONTAINER = 'CanConfigSet'                    DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'HrhId'   							DESTINATION-CONTAINER = 'CanHwObjectConfig'            DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'CntrHrhId' 						DESTINATION-CONTAINER = 'CntrConfig'                    DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'HrhCanHandleTypeRef'         		DESTINATION-CONTAINER = 'CanHwObjectConfig'                         DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'HthId'                			DESTINATION-CONTAINER = 'CanHwObjectConfig'                 DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'CntrHthId'            			DESTINATION-CONTAINER = 'CntrConfig'               DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'HthCanHandleTypeRef'          	DESTINATION-CONTAINER = 'CanHwObjectConfig'                      DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>      
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'TxPduBswSchExclAreaIdRef'    		DESTINATION-CONTAINER = 'RteBswExclusiveAreaImpl'                     DESTINATION-PARAMETER = 'RteBswExclusiveAreaRef'></REFERENCE-PARAM-DETAIL>            
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'CanTrcvIdRef'    				DESTINATION-CONTAINER = 'CanTrcvChannel'                     DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>	  
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'RxHrhId'    				DESTINATION-CONTAINER = 'HrhConfig'                     DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>	   
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'BufferHthRef'    				DESTINATION-CONTAINER = 'HthConfig'                     DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>	   
+      <REFERENCE-PARAM-DETAIL REFERENCE-PARAM-NAME = 'TxPduBufferRef'    				DESTINATION-CONTAINER = 'BufferCfg'                     DESTINATION-PARAMETER = 'ShortName'></REFERENCE-PARAM-DETAIL>	   
+    </REFERENCES>
+    <!-- To check if the correct description file is provided as input.
+      ArReleaseVersion in the description file is compared with the below versions -->
+    <FOR-VERSION-CHECK>
+      <VERSIONS>4.0.3</VERSIONS>
+      <MESSAGE-TYPE>INF</MESSAGE-TYPE>
+    </FOR-VERSION-CHECK>  
+    <!-- Parameter required to fetch more than one values in a destination container -->
+    <PARAMETER-COPY>   
+      <ENTRY NAME = 'CtrlCanCtrlRef' DETAILS = 'UnResCtrlCanCtrlRef'></ENTRY>   
+    </PARAMETER-COPY>
+    <!-- If parameter multiplicity is more than one -->
+    <PARAM-MULTIPLICITY>
+      <ENTRY>RxHrhId</ENTRY>
+      <ENTRY>CanIfPublicCddHeaderFile</ENTRY>
+    </PARAM-MULTIPLICITY>
+    <!-- For the parameters listed below reference need not be configured -->
+    <REF-MUL>
+      <ENTRY>CanCntrlEcuMWakeupSource</ENTRY>
+      <ENTRY>EcuMWakeupSourceIdRef</ENTRY>
+      <ENTRY>CanTrcvChannelRef</ENTRY>            
+    </REF-MUL>
+  </PARSER-DETAILS> 
+	<HANDLE-ID-DETAILS>
+    <HANDLE-ENTRY CONTAINER-NAME = 'RxPduConfig'     PARAMETER-NAME = 'RxPduId' TYPE-CAST = 'PduIdType'></HANDLE-ENTRY>
+    <HANDLE-ENTRY CONTAINER-NAME = 'TxPduConfig'     PARAMETER-NAME = 'TxPduId' TYPE-CAST = 'PduIdType'></HANDLE-ENTRY>
+		<HANDLE-ENTRY CONTAINER-NAME = 'CanIfCanTrcvChannel'     PARAMETER-NAME = 'CanIfCanTrcvId' TYPE-CAST = 'uint8'></HANDLE-ENTRY>		
+		<HANDLE-ENTRY CONTAINER-NAME = 'CntrConfig'     PARAMETER-NAME = 'CtrlId' TYPE-CAST = 'uint8'></HANDLE-ENTRY>
+  </HANDLE-ID-DETAILS>
+	
+  <!-- Map Names -->
+  <MAP-NAMES>
+    <SWC-DETAILS> 
+    </SWC-DETAILS>
+    <CONTAINER-DETAILS>
+      <CONTAINER-DETAIL   ORIGINAL-NAME = 'CanIfPrivateCfg' MAP-NAME = 'PriConf'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPrivateDlcCheck' MAP-NAME = 'DlcCheck'></PARAMETER-DETAIL>        
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPrivateSoftwareFilterType'  		MAP-NAME = 'FilterType'></PARAMETER-DETAIL>        
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfSupportTTCAN'      					MAP-NAME = 'SupportTTCan'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfSupportCANFD'      					MAP-NAME = 'SupportCANFD'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfSupportCanCM'      					MAP-NAME = 'SupportCanCM'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL   ORIGINAL-NAME = 'CanIfPublicCfg'  					    MAP-NAME = 'PublicConf'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicCancelTransmitSupport'  		MAP-NAME = 'CancelTransmitSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicCddHeaderFile'      			MAP-NAME = 'CanIfPublicCddHeaderFile'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicPnSupport'      			MAP-NAME = 'PnSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicDevErrorDetect'				MAP-NAME = 'ErrorDetect'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicHandleTypeEnum'  				MAP-NAME = 'HandleTypeEnum'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicMultipleDrvSupport' 			MAP-NAME = 'MulDrvSup'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicNumberOfCanHwUnits'  			MAP-NAME = 'NumDriver'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicReadRxPduDataApi' 			MAP-NAME = 'ReadDataApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicReadRxPduNotifyStatusApi'  	MAP-NAME = 'ReadRxStsApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicReadTxPduNotifyStatusApi' 	MAP-NAME = 'ReadTxStsApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicSetDynamicTxIdApi'  			MAP-NAME = 'SetDynApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicTxBuffering' 					MAP-NAME = 'TxBuffering'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicTxConfirmPollingSupport'  	MAP-NAME = 'ConfirmPollingSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicVersionInfoApi' 				MAP-NAME = 'VersionApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicWakeupCheckValidApi'          MAP-NAME = 'WakeupCheckValidApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicWakeupCheckValidByNM'         MAP-NAME = 'WakeupCheckValidByNM'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicWakeupCheckValidSupport'         MAP-NAME = 'Wakeupchkvldsuport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPublicChangeBaudrateSupport'         MAP-NAME = 'ChangeBaudrateSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfMetaDataSupport'                     MAP-NAME = 'SupportMetaData'></PARAMETER-DETAIL>	
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfAutronTrcvDrvSupport'                     MAP-NAME = 'AutronTrcvDrvSupport'></PARAMETER-DETAIL>	
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfExternalTrcvDrvSupport'                     MAP-NAME = 'ExternalTrcvDrvSupport'></PARAMETER-DETAIL>	
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCANFDID16BitSupport'                     MAP-NAME = 'CANFDID16BitSupport'></PARAMETER-DETAIL>	
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCANFDDiscreteDlcSupport'                     MAP-NAME = 'CANFDDiscreteDlcSupport'></PARAMETER-DETAIL>	
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCfg'      						MAP-NAME = 'RxPduConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanId'    						MAP-NAME = 'RxPduCanId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanIdType'    					MAP-NAME = 'RxCanIdType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduDlc' 						    MAP-NAME = 'RxPduDlc'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduId'  							MAP-NAME = 'RxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduReadData' 						MAP-NAME = 'RxPduData'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduReadNotifyStatus'  			MAP-NAME = 'RxPduNotifySts'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduUserRxIndicationName'  		MAP-NAME = 'RxIndication'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduUserRxIndicationUL'      		MAP-NAME = 'RxUserType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduBswSchExclAreaIdRef' 			MAP-NAME = 'RxBswSchExclAreaIdRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduHrhIdRef'  					MAP-NAME = 'RxHrhId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduRef'  							MAP-NAME = 'PduIdRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanIdMask'  					MAP-NAME = 'RxPduCanIdMask'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfPduReportIdsMEnable'  					MAP-NAME = 'PduReportIdsMEnable'></PARAMETER-DETAIL>	
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfTxPduCfg'            					MAP-NAME = 'TxPduConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduCanId' 						MAP-NAME = 'TxPduCanId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduCanIdMask' 						MAP-NAME = 'TxPduCanIdMask'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduCanIdType'  					MAP-NAME = 'TxCanIdType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduDlc' 							MAP-NAME = 'TxPduDlc'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduId'  							MAP-NAME = 'TxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduReadNotifyStatus' 				MAP-NAME = 'TxPduNotifySts'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduType'  						MAP-NAME = 'TxPduType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduUserTxConfirmationName' 		MAP-NAME = 'TxConfirm'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduUserTxConfirmationUL'  		MAP-NAME = 'TxUserType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduBswSchExclAreaIdRef' 			MAP-NAME = 'TxPduBswSchExclAreaIdRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduBufferRef' 							MAP-NAME = 'TxPduBufferRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduRef' 							MAP-NAME = 'PduIdRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTxPduPnFilterPdu' 							MAP-NAME = 'CanIfTxPduPnFilterPdu'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfBufferCfg'            					MAP-NAME = 'BufferCfg'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfBufferHthRef' 						MAP-NAME = 'BufferHthRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfBufferSize'  					MAP-NAME = 'BufferSize'></PARAMETER-DETAIL>		
+      </CONTAINER-DETAIL>      
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfTTTxFrameTriggering'   				MAP-NAME = 'TTTxFrameTriggering'></CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfCtrlDemEventParameterRefs' 			MAP-NAME = 'CtrlDemEventParameterRefs'>        
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfTxPduDemEventParameterRefs'  			MAP-NAME = 'CanIfTxPduDemEventParameterRefs'></CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanIdRange'  					MAP-NAME = 'RxPduCanIdRange'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanIdRangeLowerCanId'  		MAP-NAME = 'RxPduCanIdRangeLowerCanId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRxPduCanIdRangeUpperCanId' 			MAP-NAME = 'RxPduCanIdRangeUpperCanId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfRxPduDemEventParameterRefs'  			MAP-NAME = 'RxPduDemEventParameterRefs'>        
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfDispatchCfg' 							MAP-NAME = 'NetworkDispatcherConf'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCtrlBusOffName'         MAP-NAME = 'DispatchUserCtrlBusOffName'></PARAMETER-DETAIL>
+					<PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCheckTrcvWakeFlagIndicationName'         MAP-NAME = 'CanIfDispatchUserCheckTrcvWakeFlagIndicationName'></PARAMETER-DETAIL>
+				<PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCheckTrcvWakeFlagIndicationUL'         MAP-NAME = 'CanIfDispatchUserCheckTrcvWakeFlagIndicationUL'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCtrlBusOffUL' 			MAP-NAME = 'DispatchUserCtrlBusOffUL'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCtrlModeIndicationName' MAP-NAME = 'CanIfDispatchUserCtrlModeIndicationName'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserCtrlModeIndicationUL'   MAP-NAME = 'CanIfDispatchUserCtrlModeIndicationUL'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserTrcvModeIndicationName' MAP-NAME = 'CanIfDispatchUserTrcvModeIndicationName'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserTrcvModeIndicationUL'   MAP-NAME = 'CanIfDispatchUserTrcvModeIndicationUL'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserValidateWakeupEventUL'  MAP-NAME = 'DispatchUserValidateWakeupEventUL'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfDispatchUserValidateWakeupEventName'  MAP-NAME = 'DispatchUserValidateWakeupEventName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfCtrlCfg' 								MAP-NAME = 'CntrConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlId'   							MAP-NAME = 'CtrlId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlWakeupSupport'    				MAP-NAME = 'CtrlWakeupSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlCanCtrlRef'         			MAP-NAME = 'CtrlCanCtrlRef'></PARAMETER-DETAIL>        
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfCtrlDrvCfg'  							MAP-NAME = 'DrvConfig'>	    
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlDrvTxCancellation'         		MAP-NAME = 'DrvTxCancel'></PARAMETER-DETAIL>        
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlDrvInitHohConfigRef'   			MAP-NAME = 'InitHohConfigRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfCtrlDrvNameRef'     				MAP-NAME = 'DrvName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfTrcvDrvCfg'  							MAP-NAME = 'CanTrcvDriverConfig'></CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfTrcvCfg'      						MAP-NAME = 'CanIfCanTrcvChannel'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTrcvId'     						MAP-NAME = 'CanIfCanTrcvId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTrcvWakeupSupport'         			MAP-NAME = 'CanTrcvWakeupSupport'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfTrcvCanTrcvRef' 					MAP-NAME = 'CanTrcvIdRef'></PARAMETER-DETAIL>                		
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfInitHohCfg'              				MAP-NAME = 'HohConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRefConfigSet' 						MAP-NAME = 'RefConfSet'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRefConfigSet' 						MAP-NAME = 'RefConfSet'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfHrhCfg'          						MAP-NAME = 'HrhConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhIdSymRef'         				MAP-NAME = 'HrhId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhSoftwareFilter' 					MAP-NAME = 'HrhFilter'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhCanCtrlIdRef'   					MAP-NAME = 'CntrHrhId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhCanHandleTypeRef'     			MAP-NAME = 'HrhCanHandleTypeRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfHrhRangeCfg'          						MAP-NAME = 'HrhRangeConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhRangeRxPduLowerCanId'         				MAP-NAME = 'RxPduLowerCanId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhRangeRxPduRangeCanIdType' 					MAP-NAME = 'RangeCanIdType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHrhRangeRxPduUpperCanId'   					MAP-NAME = 'RxPduUpperCanId'></PARAMETER-DETAIL>        
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfHthCfg'   							MAP-NAME = 'HthConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHthIdSymRef' 						MAP-NAME = 'HthId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHthCanCtrlIdRef'   					MAP-NAME = 'CntrHthId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfHthCanHandleTypeRef'     			MAP-NAME = 'HthCanHandleTypeRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfInitCfg'         						MAP-NAME = 'InitCfg'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfInitCfgSet' 						MAP-NAME = 'CfgSet'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME =   'J1939TpRxFcNPdu'             				MAP-NAME = 'J1939TpRxFcNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxFcNPduRef'   					MAP-NAME = 'J1939TpRxFcNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxFcNPduId'    					MAP-NAME = 'J1939TpRxFcNPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>  
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpRxDirectNPdu'             				MAP-NAME = 'J1939TpRxDirectNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxDirectNPduRef'   					MAP-NAME = 'J1939TpRxDirectNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxDirectNPduId'    					MAP-NAME = 'J1939TpRxDirectNPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>  
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpTxDirectNPdu'             				MAP-NAME = 'J1939TpTxDirectNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxDirectNPduRef'   					MAP-NAME = 'J1939TpTxDirectNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxDirectNPduTxConfId'    					MAP-NAME = 'J1939TpTxDirectNPduTxConfId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>       
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939NmTxPdu'             				        MAP-NAME = 'J1939NmTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939NmTxPduId'   					MAP-NAME = 'J1939NmTxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939NmTxPduRef'    					MAP-NAME = 'J1939NmTxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939NmRxPdu'             				MAP-NAME = 'J1939NmRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939NmRxPduId'   					        MAP-NAME = 'J1939NmRxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939NmRxPduRef'    					        MAP-NAME = 'J1939NmRxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>	  
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'EcuMWakeupSource'        					MAP-NAME = 'EcuMWakeupSource'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'EcuMWakeupSourceId'   					MAP-NAME = 'EcuMWakeupSourceId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanTpTxNSdu'          						MAP-NAME = 'CanTpTxNSdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxNSduRef'   						MAP-NAME = 'CanTpTxNSduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxNSduId'  							MAP-NAME = 'CanTpTxNSduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanTpTxNPdu'             					MAP-NAME = 'CanTpTxNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxNPduRef'   						MAP-NAME = 'CanTpTxNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxNPduConfirmationPduId'  			MAP-NAME = 'CanTpTxNPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanTpRxNPdu'             					MAP-NAME = 'CanTpRxNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpRxNPduRef'   						MAP-NAME = 'CanTpRxNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpRxNPduId'  			MAP-NAME = 'CanTpRxNPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'ComIPdu'                  					MAP-NAME = 'ComIPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'ComIPduIdRef'   								MAP-NAME = 'PduIdRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'ComIPduHandleId'  						MAP-NAME = 'ComIPduHandleId'></PARAMETER-DETAIL>        
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanTpRxNSdu'       						MAP-NAME = 'CanTpRxNSdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxFcNPduRef'  						MAP-NAME = 'CanTpTxFcNPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTpTxFcNPduId'   						MAP-NAME = 'CanTpTxFcNPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanController'             				MAP-NAME = 'CanControllerConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanControllerId'  						MAP-NAME = 'CanCtrlId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanWakeupSupport'  						MAP-NAME = 'CanWakeupSupport'></PARAMETER-DETAIL>	
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanHardwareObject'  						MAP-NAME = 'CanHwObjectConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanObjectId'  							MAP-NAME = 'CanObjId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanHandleType'   						MAP-NAME = 'CanHandleType'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfInitHohConfig'        				MAP-NAME = 'InitHohConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRefConfigSet'  						MAP-NAME = 'CanIfRefConfigSet'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanIfRefConfigSet'   					MAP-NAME = 'CanIfRefConfigSet'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanIfUserUpperLayerConfig'          		MAP-NAME = 'UserUpperLayerConfig'>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanNmRxPdu'             					MAP-NAME = 'CanNmRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanNmRxPduId'  							MAP-NAME = 'CanNmRxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanNmRxPduRef'   					    MAP-NAME = 'CanNmRxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanNmTxPdu'             					MAP-NAME = 'CanNmTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanNmTxConfirmationPduId'  							MAP-NAME = 'CanNmTxConfirmationPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanNmTxPduRef'   					    MAP-NAME = 'CanNmTxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>      
+     <CONTAINER-DETAIL ORIGINAL-NAME = 'OsekNmRxPdu'             					MAP-NAME = 'OsekNmRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'OsekNmRxPduId'  							MAP-NAME = 'OsekNmRxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'OsekNmRxPduRef'   					    MAP-NAME = 'OsekNmRxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'OsekNmTxPdu'             					MAP-NAME = 'OsekNmTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'OsekNmTxPduId'  							MAP-NAME = 'OsekNmTxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'OsekNmTxPduRef'   					    MAP-NAME = 'OsekNmTxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+     <CONTAINER-DETAIL ORIGINAL-NAME = 'AtmRxPdu'             					MAP-NAME = 'CddComIfUpperLayerRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'AtmRxPduId'  							MAP-NAME = 'CddComIfHandleId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'AtmRxPduRef'   					    MAP-NAME = 'CddComIfPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'AtmTxPdu'             					MAP-NAME = 'CddComIfUpperLayerTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'AtmTxPduId'  							MAP-NAME = 'CddComIfHandleId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'AtmTxPduRef'   					    MAP-NAME = 'CddComIfPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+     <CONTAINER-DETAIL ORIGINAL-NAME = 'XcpTxPdu'             					MAP-NAME = 'XcpTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpTxPduRef'  							MAP-NAME = 'XcpTxPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpTxPduId'   					    MAP-NAME = 'XcpTxPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'XcpRxPdu'             					MAP-NAME = 'XcpRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpRxPduRef'  							MAP-NAME = 'XcpRxPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpRxPduId'   					    MAP-NAME = 'XcpRxPduId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CddIPdu'                  					MAP-NAME = 'CddIPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CddIpduDirection'  						MAP-NAME = 'CddIpduDirection'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CddIPduRxHandleId'  						MAP-NAME = 'CddIPduRxHandleId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'PduIdRef'   								MAP-NAME = 'PduIdRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanTrcvChannel'       						MAP-NAME = 'CanTrcvChannel'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CanTrcvChannelId'   						MAP-NAME = 'CanTrcvChannelId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanConfigSet'                  			MAP-NAME = 'CanConfigSet'>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'PduRSrcPdu'       							MAP-NAME = 'PduRSrcPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'PduRSrcPduRef'  						    MAP-NAME = 'SrcPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'PduRSourcePduHandleId'   				MAP-NAME = 'HandleId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'PduRDestPdu'             					MAP-NAME = 'PduRDestPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'PduRDestPduRef'  						MAP-NAME = 'DestPduRef'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'PduRDestPduHandleId'   					MAP-NAME = 'HandleId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'XcpTxPdu'                  				MAP-NAME = 'XcpTxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpTxPduId'  							MAP-NAME = 'XcpTxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpTxPduRef'   							MAP-NAME = 'XcpTxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'XcpRxPdu'        							MAP-NAME = 'XcpRxPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpRxPduId'  							MAP-NAME = 'XcpRxPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'XcpRxPduRef'   							MAP-NAME = 'XcpRxPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL> 
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpTxCmNPdu'             				MAP-NAME = 'J1939TpTxCmNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxCmNPduTxConfId'  				MAP-NAME = 'J1939TpTxCmNPduTxConfId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxCmNPduRef'   					MAP-NAME = 'J1939TpTxCmNPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpRxCmNPdu'             				MAP-NAME = 'J1939TpRxCmNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxCmNPduId'  				        MAP-NAME = 'J1939TpRxCmNPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxCmNPduRef'   					MAP-NAME = 'J1939TpRxCmNPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpTxDtNPdu'             				MAP-NAME = 'J1939TpTxDtNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxDtNPduTxConfId'  				MAP-NAME = 'J1939TpTxDtNPduTxConfId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpTxDtNPduRef'   					MAP-NAME = 'J1939TpTxDtNPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'J1939TpRxDtNPdu'             				MAP-NAME = 'J1939TpRxDtNPdu'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxDtNPduId'  				        MAP-NAME = 'J1939TpRxDtNPduId'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'J1939TpRxDtNPduRef'   					MAP-NAME = 'J1939TpRxDtNPduRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CanGeneral'                  				MAP-NAME = 'CanGeneral'>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'DemEventParameter'       					MAP-NAME = 'DemEventParameter'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'DemEventId'   								MAP-NAME = 'DemEventId'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'RteBswExclusiveAreaImpl'       			MAP-NAME = 'RteBswExclusiveAreaImpl'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'RteBswExclusiveAreaRef'   					MAP-NAME = 'RteBswExclusiveAreaRef'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+    </CONTAINER-DETAILS>
+  </MAP-NAMES>
+
+  <!-- Container Count -->
+  <CONTAINER-COUNTS>
+    <CONTAINER-COUNT MAP-NAME = 'PriConf' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'PublicConf' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RxPduConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'TxPduConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'TTTxFrameTriggering' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'TxPduDemEventParameterRefs' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RxPduCanIdRange' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RxPduDemEventParameterRefs' COUNT = '0'></CONTAINER-COUNT>    
+    <CONTAINER-COUNT MAP-NAME = 'HohConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'HrhConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'HthConfig'  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CntrConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'DrvConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'HrhRangeConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'NetworkDispatcherConf' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'InitCfg'  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanControllerConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanTrcvDriverConfig' COUNT = '0'></CONTAINER-COUNT>    
+    <CONTAINER-COUNT MAP-NAME = 'PublishedInformation' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanTrcvChannel' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanIfCanTrcvChannel' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanTpTxNPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanTpRxNPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'UserUpperLayerConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanNmRxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CanNmTxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'OsekNmRxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'OsekNmTxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'PduRSrcPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'PduRDestPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'BufferCfg' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'XcpTxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'XcpRxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'J1939TpRxDirectNPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'J1939TpTxDirectNPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CddComIfUpperLayerRxPdu' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'CddComIfUpperLayerTxPdu' COUNT = '0'></CONTAINER-COUNT>
+  </CONTAINER-COUNTS>
+
+  <!-- Pre compile options -->
+  <PRE-COMPILE-OPTIONS>
+    <MACRO-ENTRY
+      Name      = 'CANIF_SETDYNAMICTXID_API'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '1'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for SetDynamicTxId API' 
+      Container = 'PublicConf'
+      Parameter = 'SetDynApi' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_MULTIPLE_CANDRV_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '2'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Multiple CAN Driver Support' 
+      Container = 'PublicConf'
+      Parameter = 'MulDrvSup' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_VERSION_INFO_API'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '3'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Version Info API' 
+      Container = 'PublicConf'
+      Parameter = 'VersionApi' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_DEV_ERROR_DETECT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '4'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Development Error Checking'  
+      Container = 'PublicConf'
+      Parameter = 'ErrorDetect' >
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_PN_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '8'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Partial network Support'      
+      Container = 'PublicConf'
+      Parameter = 'PnSupport' >
+    </MACRO-ENTRY>        
+    <MACRO-ENTRY
+      Name      = 'CANIF_WAKEUP_CHECK_VALIDATION_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '10'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Validation Support' 
+      Container = 'PublicConf'
+      Parameter = 'Wakeupchkvldsuport' >
+    </MACRO-ENTRY>        
+    <MACRO-ENTRY
+      Name      = 'CANIF_BINARY_SEARCH'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '13'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Binary Search'
+      Container = 'PriConf'
+      Parameter = 'FilterType' 
+      ParamValue = 'BINARY'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_LINEAR_SEARCH'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '14'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Linear Search' 
+      Container = 'PriConf'
+      Parameter = 'FilterType' 
+      ParamValue = 'LINEAR'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CTRL_WAKEUP_SUPPORT'
+      Type      = '6'
+      Value     = 'STD_OFF'
+      Pos       = '31'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Controller Wakeup Support'
+      Container = 'CntrConfig'
+      Parameter = 'CtrlWakeupSupport'      >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CANCEL_TRANSMIT_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '55'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel Transmit support'  
+      Container = 'PublicConf'
+      Parameter = 'CancelTransmitSupport' >
+    </MACRO-ENTRY> 
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_BUFFERING'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '56'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tx buffering'  
+      Container = 'PublicConf'
+      Parameter = 'TxBuffering' >
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_AUTRON_CANTRCV_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '18'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Autron CanTrcv Support' 
+      Container = 'PublicConf'
+      Parameter = 'AutronTrcvDrvSupport'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_EXTENAL_CANTRCV_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '19'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for External CanTrcv Support' 
+      Container = 'PublicConf'
+      Parameter = 'ExternalTrcvDrvSupport'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CANTRCV_SUPPORT'
+      Type      = '3'
+      Value     = 'STD_OFF'
+      Pos       = '60'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CAN Trcv Support'  
+      Container = 'CanIfCanTrcvChannel' 
+      ContCount = '0' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_MULTIPLE_TRCVDRV_SUPPORT'
+      Type      = '3'
+      Value     = 'STD_OFF'
+      Pos       = '61'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Multiple CAN Trcv Driver Support'   
+      Container = 'CanTrcvDriverConfig'  
+      ContCount = '1' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CANNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '20'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanNm Callbacks'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CANTP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '21'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanTp Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CDD_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '22'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cdd Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_ECUM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '23'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for EcuM Callbacks' >
+    </MACRO-ENTRY>
+	<MACRO-ENTRY
+      Name      = 'CANIF_PDUR_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '24'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for PduR Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_CANNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '25'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanNm Rx Callbacks' >
+    </MACRO-ENTRY>	
+	  <MACRO-ENTRY
+      Name      = 'CANIF_RX_CANTP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '26'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanTp Rx Callbacks' >
+    </MACRO-ENTRY>	
+	  <MACRO-ENTRY
+      Name      = 'CANIF_RX_CDD_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '27'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cdd Rx Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_MULTIPLE_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '28'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Rx Multiple Call-Back' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_PDUR_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '29'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for PduR Rx Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CONFIG_CLASS'
+      Type      = '5'
+      Value     = 'CANIF_PRE_COMPILE'
+      Pos       = '30'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Implementation Class' 
+      Container = 'ImplClass'
+      Parameter = 'CANIF'
+      ParamValue = 'VARIANT-PRE-COMPILE'>    
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_CTRL_WAKEUP_SUPPORT'
+      Type      = '6'
+      Value     = 'STD_OFF'
+      Pos       = '31'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Controller Wakeup Support'
+      Container = 'CntrConfig'
+      Parameter = 'CtrlWakeupSupport'      >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_WAKEUP_SUPPORT'
+      Type      = '7'
+      Value     = 'STD_OFF'
+      Pos       = '32'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Wakeup Support' 
+      Container = 'CntrConfig'
+      Parameter = 'CtrlWakeupSupport'      
+      DepContainer = 'CanIfCanTrcvChannel'
+      DepParameter = 'CanTrcvWakeupSupport'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TRCV_WAKEUP_SUPPORT'
+      Type      = '6'
+      Value     = 'STD_OFF'
+      Pos       = '33'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tranceiver Wakeup Support' 
+      Container = 'CanIfCanTrcvChannel'
+      Parameter = 'CanTrcvWakeupSupport'>
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_CANCELLATION'
+      Type      = '21'
+      Value     = 'STD_OFF'
+      Pos       = '40'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tx Cancellation'
+      Container = 'DrvConfig'
+      Parameter = 'DrvTxCancel'>
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_LPDU'
+      Type      = '11'
+      Value     = 'STD_OFF'
+      Pos       = '38'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Rx L-PDUs'
+      Container = 'RxPduConfig'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_LPDU'
+      Type      = '3'
+      Value     = 'STD_OFF'
+      Pos       = '39'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tx L-PDUs'   
+      Container = 'TxPduConfig'  
+      ContCount = '0' >
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_CANNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '41'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanNm Tx Callbacks' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_CANTP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '42'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanTp Tx Callbacks' >
+    </MACRO-ENTRY>	
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_CDD_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '43'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cdd Tx Callbacks' >
+    </MACRO-ENTRY>	
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_MULTIPLE_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '44'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tx Multiple Call-Back' >
+    </MACRO-ENTRY>	
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_PDUR_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '45'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for PduR Tx Callbacks' >
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_QUEUE'
+      Type      = '3'
+      Value     = 'STD_OFF'
+      Pos       = '46'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Transmit Queue'
+      Container = 'TxPduConfig' 
+      ContCount = '0' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_XCP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '47'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for XCP Callbacks'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TX_J1939TP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '48'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for J1939TP Callbacks'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_XCP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '47'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for XCP Callbacks'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_J1939TP_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '48'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for J1939TP Callbacks'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_TXCONFIRM_POLLING_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '49'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Tx Confirmation Polling Support'
+      Container = 'PublicConf'
+      Parameter = 'ConfirmPollingSupport'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_BASIC_CAN_TXPDU'
+      Type      = '13'
+      Value     = 'STD_OFF'
+      Pos       = '34'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for configuration of BASIC TX PDU'>      
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_FULL_CAN_TXPDU'
+      Type      = '12'
+      Value     = 'STD_OFF'
+      Pos       = '36'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for configuration of FULL TX PDU'>      
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_RX_BASIC_CAN_SUPPORT'
+      Type      = '8'
+      Value     = 'STD_OFF'
+      Pos       = '37'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for configuration of BASIC RX PDU'>      
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_NO_OF_BASIC_TXLPDU'
+      Type      = '9'
+      Value     = '0'
+      Pos       = '35'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Number of BASIC TX PDU'
+      Container = 'RxPduConfig'>
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_READRXPDU_DATA_API'
+      Type      = '10'
+      Value     = 'STD_OFF'
+      Pos       = '5'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for ReadRxPdu Data API'   
+      Container = 'PublicConf'
+      Parameter = 'ReadDataApi' 
+      DepContainer = 'RxPduConfig'
+      DepParameter = 'RxPduData'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_READTXPDU_NOTIFY_STATUS_API'
+      Type      = '10'
+      Value     = 'STD_OFF'
+      Pos       = '6'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for ReadTxNotify Status API'    
+      Container = 'PublicConf'
+      Parameter = 'ReadTxStsApi'
+      DepContainer = 'TxPduConfig'
+      DepParameter = 'TxPduNotifySts'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_READRXPDU_NOTIFY_STATUS_API'
+      Type      = '10'
+      Value     = 'STD_OFF'
+      Pos       = '7'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for ReadRxNotify Status API'     
+      Container = 'PublicConf'
+      Parameter = 'ReadRxStsApi' 
+      DepContainer = 'RxPduConfig'
+      DepParameter = 'RxPduNotifySts'>
+    </MACRO-ENTRY>    
+		<MACRO-ENTRY
+      Name      = 'CANIF_CTRLDRV_TX_CANCELLATION'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '50'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for TX Cancellation' 
+      Container = 'DrvConfig'
+      Parameter = 'DrvTxCancel'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_CHANGE_BAUDRATE_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '51'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for change Baud rate' 
+      Container = 'PublicConf'
+      Parameter = 'ChangeBaudrateSupport'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_CANCEL_TRANSMIT_SUPPORT  '
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '55'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = 'PublicConf'
+      Parameter = 'CancelTransmitSupport'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_WAKEUP_CHECK_VALIDATION_API'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '54'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = 'PublicConf'
+      Parameter = 'Wakeupchkvldsuport'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_DLC_CHECK_ENABLED'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '55'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = 'PriConf'
+      Parameter = 'DlcCheck'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_CANCM_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '57'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CanCM support' 
+      Container = 'PriConf'
+      Parameter = 'SupportCanCM'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_CANFD_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '58'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for CAN-FD support' 
+      Container = 'PriConf'
+      Parameter = 'SupportCANFD'>
+      </MACRO-ENTRY>
+      		<MACRO-ENTRY
+      Name      = 'CANIF_META_DATA_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '59'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for meta data support' 
+      Container = 'PublicConf'
+      Parameter = 'SupportMetaData'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_STANDARD_CANID_ONLY'
+      Type      = '20'
+      Value     = ''
+      Pos       = '56'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = 'RxPduConfig'
+      Parameter = 'RxCanIdType'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_EXTENDED_CANID_ONLY'
+      Type      = '20'
+      Value     = ''
+      Pos       = '57'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = 'RxPduConfig'
+      Parameter = 'RxCanIdType'>
+    </MACRO-ENTRY>
+		<MACRO-ENTRY
+      Name      = 'CANIF_EXT_STD_CANID'
+      Type      = '20'
+      Value     = ''
+      Pos       = '58'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Cancel transmit support' 
+      Container = ''
+      Parameter = ''>
+    </MACRO-ENTRY>    
+    <MACRO-ENTRY
+      Name      = 'CANIF_OSEKNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '55'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for OsekNm Callbacks'>
+    </MACRO-ENTRY>
+<MACRO-ENTRY
+      Name      = 'CANIF_RX_OSEKNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '56'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for OsekNm Rx Callbacks' >
+    </MACRO-ENTRY>
+<MACRO-ENTRY
+      Name      = 'CANIF_TX_OSEKNM_CALLBACK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '57'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for OsekNm Tx Callbacks' >
+    </MACRO-ENTRY>
+	<MACRO-ENTRY
+	  Name      = 'CANIF_TX_J1939NM_CALLBACK'
+	  Type      = '14'
+	  Value     = 'STD_OFF'
+	  Pos       = '81'
+	  Prefix    = ''
+	  Postfix   = ''
+	  Comment   = 'Pre-compile option for J1939NM Callbacks'
+      Container = 'TxPduConfig'
+      Parameter = 'TxUserType'>
+      </MACRO-ENTRY>
+      <MACRO-ENTRY
+		Name      = 'CANIF_RX_J1939NM_CALLBACK'
+		Type      = '14'
+		Value     = 'STD_OFF'
+		Pos       = '82'
+		Prefix    = ''
+		Postfix   = ''
+		Comment   = 'Pre-compile option for J1939NM Callbacks'
+		Container = 'RxPduConfig'
+		Parameter = 'RxUserType'>
+    </MACRO-ENTRY>
+  <MACRO-ENTRY
+      Name      = 'CANIF_CANFD_ID_16BIT_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '90'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Mcal CAN-FD ID 32 Bit Support' 
+      Container = 'PublicConf'
+      Parameter = 'CANFDID16BitSupport'>
+    </MACRO-ENTRY>
+  <MACRO-ENTRY
+      Name      = 'CANIF_CANFD_DISCRETE_DLC_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '91'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for Mcal CAN_FD Dlc Discrete Support' 
+      Container = 'PublicConf'
+      Parameter = 'CANFDDiscreteDlcSupport'>
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'CANIF_IDSM_SUPPORT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '92'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Pre-compile option for IdsM Support' 
+      Container = 'IdsMGeneral'
+      Parameter = 'IdsMEnableMsgFrequencyCheck'>
+    </MACRO-ENTRY>    
+  </PRE-COMPILE-OPTIONS>
+
+  <!-- Pointer Cast -->
+  <POINTER-CAST>    
+  </POINTER-CAST>
+
+   <!-- Decimal Fields -->
+  <DECIMAL-FIELDS>      
+  </DECIMAL-FIELDS>
+
+  <!-- Contains all consistency checks -->
+  <CONSISTENCY-CHECKS>
+    <!-- Mandatory check -->
+    <MANDATORY-CHECK>      
+      <CONTAINER NAME = 'PriConf'>
+         <PARAMETER-NAME>FilterType</PARAMETER-NAME>
+      </CONTAINER>
+    </MANDATORY-CHECK>
+
+    <!-- String check -->
+    <STRING-CHECK>
+    <PARAMETER>
+        <NAME>CfgSet</NAME>
+        <CONTAINER-NAME>InitCfg</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>RxIndication</NAME>
+        <CONTAINER-NAME>RxPduConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>TxConfirm</NAME>
+        <CONTAINER-NAME>TxPduConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>DispatchUserValidateWakeupEventName</NAME>
+        <CONTAINER-NAME>NetworkDispatcherConf</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>DispatchUserCtrlBusOffName</NAME>
+        <CONTAINER-NAME>NetworkDispatcherConf</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>UserTrcvModeIndicationName</NAME>
+        <CONTAINER-NAME>NetworkDispatcherConf</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>UserCtrlModeIndicationName</NAME>
+        <CONTAINER-NAME>NetworkDispatcherConf</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+    </STRING-CHECK>
+    <!-- Config set reference check -->
+    <CONFIGSET-REFERENCE-CHECK>
+    </CONFIGSET-REFERENCE-CHECK>
+
+    <DEPENDENCY_CHECK>
+      <CHECK-ENTRY></CHECK-ENTRY>
+    </DEPENDENCY_CHECK>
+  </CONSISTENCY-CHECKS>
+
+  <!-- Static code that is to be added in the output files -->
+  <OUTPUT-FILES>
+    <CanIf_Cfg.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_Cfg.h                                                    **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef CANIF_CFG_H
+#define CANIF_CFG_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_VERSION
+/*******************************************************************************
+**                      Common Published Information                          **
+*******************************************************************************/
+PUBLISHED_INFORMATION
+
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+PRECOMPILE_OPTIONS
+
+/*******************************************************************************
+**           MACRO FOR BUS-OFF, WAKE-UP AND VALIDATION WAKEUP                 **
+*******************************************************************************/
+/*  polyspace:begin<![CDATA[<]]>MISRA-C:19.7:Not a defect:Justify with annotations<![CDATA[>]]>
+    No Impact of this rule violation (AUTOSAR Standard : Rte SWS #1236)       */
+
+DISPATCHER_MACROS
+/*******************************************************************************
+**                     MACRO FOR RX INDICATION                                **
+*******************************************************************************/
+INDICATION_MACRO
+/*******************************************************************************
+**                     MACRO FOR TX CONFIRMATION                              **
+*******************************************************************************/
+CONFIRMATION_MACRO
+/* polyspace:end<![CDATA[<]]>MISRA-C:19.7:Not a defect:Justify with annotations<![CDATA[>]]>
+   No Impact of this rule violation (AUTOSAR Standard : Rte SWS #1236)  */
+
+/*******************************************************************************
+**                      Tx L-PDU Handles                                      **
+*******************************************************************************/
+TX_PDUS
+/*******************************************************************************
+**                      Rx L-PDU Handles                                      **
+*******************************************************************************/
+RX_PDUS
+/*******************************************************************************
+**                      TRCVDRV Handles                                      **
+*******************************************************************************/
+TRCVDRV
+/*******************************************************************************
+**                      CNTRL Handles                                      **
+*******************************************************************************/
+CNTRL
+/*******************************************************************************
+**                      MACROS                                                **
+*******************************************************************************/
+NOOFCONTROLLERS
+/* Number of Transceiver channels */
+CANIF_NO_OF_TRANSCEIVER
+/* Number of CAN Drivers */
+CANIF_NO_OF_CANDRIVER
+MACRO
+NOOFWAKEUPSOURCES
+MULTIPLE_DRIVER_CONF
+CANIF_TXPDUIDTYPE
+CANIF_RXPDUIDTYPE
+CANIF_HTHTYPE
+CANIF_TXQUEUETYPE
+CANIF_DYNAMICIDTYPE
+
+/*******************************************************************************
+**                      Function Prototypes                                   **
+*******************************************************************************/
+#endif /* CANIF_CFG_H */
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_Cfg.h>
+		<CanIf_Can.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_Can.h                                                    **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef CANIF_CAN_H
+#define CANIF_CAN_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+HEADER
+
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_VERSION
+
+/* Multiple Driver version information */
+VERSION_INFO
+
+
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+
+
+/*******************************************************************************
+**                      Configuration Set Handles                             **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Function Prototypes                                   **
+*******************************************************************************/
+#endif /* CANIF_CAN_H */
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_Can.h>
+		<CanIf_CanTrcv.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_CanTrcv.h                                                **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+ #ifndef CANIF_CANTRCV_H
+ #define CANIF_CANTRCV_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+HEADER
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_VERSION
+
+VERSION_INFO
+
+CANTRCV_H_SW
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Configuration Set Handles                             **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Function Prototypes                                   **
+*******************************************************************************/
+#endif /* CANIF_CANTRCV_H */
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_CanTrcv.h>
+		<CanIf_Cbk.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_Cbk.h                                                    **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef CANIF_CBK_H
+#define CANIF_CBK_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "CanIf.h"
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_MAJOR_VERSION
+
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+
+
+/*******************************************************************************
+ GENERATED FOLLOWING PART FOR EACH DRIVER ONLY WHEN MULTIPLE DRIVER EXIST
+*******************************************************************************/
+FUNC
+
+/*******************************************************************************
+                GENERATE FOLLOWING PART ONLY ONCE
+*******************************************************************************/
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* BusOff event referring to a CAN Controller */
+extern FUNC(void, CANIF_CODE) CanIf_ControllerBusOff (uint8 ControllerId);
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"
+
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* RxIndication event referring to a CAN Controller */
+extern FUNC(void, CANIF_CODE) CanIf_RxIndication
+                  (Can_HwHandleType Hrh, Can_IdType CanId, uint8 CanDlc,
+                  P2CONST(uint8, AUTOMATIC, CANIF_APPL_CONST) CanSduPtr);
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"                
+
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* TxConfirmaton event referring to a CAN Controller */
+extern FUNC(void, CANIF_CODE)
+                  CanIf_TxConfirmation(PduIdType CanTxPduId);
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"                  
+
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* TxCancelConfirmation event referring to a CAN Controller */
+extern FUNC(void, CANIF_CODE) CanIf_CancelTxConfirmation
+                  (PduIdType CanTxPduId, 
+                  P2CONST(PduInfoType, AUTOMATIC, CANIF_APPL_CONST) PduInfoPtr);
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"
+       
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* Mode Controller event referring to a CAN Controller */
+extern FUNC(void, CANIF_CODE) CanIf_ControllerModeIndication 
+       (uint8 ControllerId, CanIf_ControllerModeType ControllerMode);                    
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"
+       
+#define CANIF_START_SEC_CODE
+#include "MemMap.h"
+/* Trcv Mode Controller event referring to a CANTRCV Controller */
+extern FUNC(void, CANIF_CODE) CanIf_TrcvModeIndication 
+       (uint8 TransceiverId, CanTrcv_TrcvModeType TransceiverMode);       
+#define CANIF_STOP_SEC_CODE
+#include "MemMap.h"
+
+/*******************************************************************************
+**                      Configuration Set Handles                             **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Function Prototypes                                   **
+*******************************************************************************/
+#endif
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_Cbk.h>
+		<CanIf_UserInc.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_UserInc.h                                                **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef CANIF_USERINC_H
+#define CANIF_USERINC_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+INCLUDE
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_MAJOR_VERSION
+
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Configuration Set Handles                             **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Function Prototypes                                   **
+*******************************************************************************/
+#endif /* CANIF_USERINC_H */
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_UserInc.h>
+    <CanIf_MulVersion.c>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_MulVersion.c                                             **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+INCLUDE
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_VERSION
+
+/*******************************************************************************
+**                      Version Check                                         **
+*******************************************************************************/
+
+VERSION_CHECK
+
+/*******************************************************************************
+* F U N C T I O N    D E F I N I T I O N S
+*******************************************************************************/
+
+
+
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_MulVersion.c>
+    <CanIf_Driver.c>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_Driver.c                                                 **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "CanIf_Cbk.h"
+#include "CanIf_Ram.h"
+INCLUDE
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_VERSION
+
+/*******************************************************************************
+**                      Version Check                                         **
+*******************************************************************************/
+#if (CANIF_CBK_H_AR_RELEASE_MAJOR_VERSION != CANIF_DRIVER_C_AR_RELEASE_MAJOR_VERSION)
+   #error "CanIf_Driver.c : Mismatch in Specification Major Version"
+#endif
+#if (CANIF_CBK_H_AR_RELEASE_MINOR_VERSION != CANIF_DRIVER_C_AR_RELEASE_MINOR_VERSION)
+   #error "CanIf_Driver.c : Mismatch in Specification Minor Version"
+#endif
+#if (CANIF_CBK_H_AR_RELEASE_REVISION_VERSION != CANIF_DRIVER_C_AR_RELEASE_REVISION_VERSION)
+   #error "CanIf_Driver.c : Mismatch in Specification Patch Version"
+#endif
+#if (CANIF_CBK_H_SW_MAJOR_VERSION != CANIF_DRIVER_C_SW_MAJOR_VERSION)
+   #error "CanIf_Driver.c : Mismatch in Software Major Version"
+#endif
+#if (CANIF_CBK_H_SW_MINOR_VERSION != CANIF_DRIVER_C_SW_MINOR_VERSION)
+   #error "CanIf_Driver.c : Mismatch in Software Minor Version"
+#endif
+
+/*******************************************************************************
+* F U N C T I O N    D E F I N I T I O N S
+*******************************************************************************/
+FUNC
+
+
+
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </CanIf_Driver.c>
+    <CanIf_Cfg.c>
+    <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: CanIf_Cfg.c                                                    **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR CAN Interface Module                                 **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **                                                                
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            ** 
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "CanIf_PCTypes.h"
+#include "CanIf_Version.h"        /* CanIf Version header file */
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_SW_VERSIONS
+/*******************************************************************************
+**                      Version Check                                         **
+*******************************************************************************/
+VERSION_CHECK
+/*******************************************************************************
+**                      Global Data                                           **
+*******************************************************************************/
+
+/*******************************************************************************
+**                      Initialization Structure                              **
+*******************************************************************************/
+ARRAY_DECLARATIONS
+RAM_ARRAYS_DECLARATIONS
+STRUCTURE_DECLARATIONS
+
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+      <!--To generate arrays with values -->
+      <ARRAYS>		         
+      </ARRAYS>
+    <!--To generate ram arrays -->
+      <RAM-ARRAYS>      
+        <RAM-ARRAY-ENTRY>
+          <ARRAY-COMMENT>/* Global array for Rx L-PDU notify structure */</ARRAY-COMMENT>
+          <NAME>CanIf_GaaRxLpduNotify</NAME>
+          <TYPE>VAR(CanIf_RxLpduNotify, CANIF_VAR)</TYPE>
+          <!-- size of each ram array will be zero it will be incremented in modulespecific code -->
+          <SIZE>0</SIZE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_NO_INIT_UNSPECIFIED 
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_NO_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+        </RAM-ARRAY-ENTRY>
+        <RAM-ARRAY-ENTRY>
+          <ARRAY-COMMENT>/*  Global array for Queue allocation */</ARRAY-COMMENT>
+          <NAME>CanIf_GaaQueueList</NAME>
+          <TYPE>P2VAR(CanIf_TxQueue, CANIF_VAR, CANIF_VAR)</TYPE>
+          <!-- size of each ram array will be zero it will be incremented in modulespecific code -->
+          <SIZE>0</SIZE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_NO_INIT_UNSPECIFIED 
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_NO_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+        </RAM-ARRAY-ENTRY>
+        <RAM-ARRAY-ENTRY>
+          <ARRAY-COMMENT>/* Global array for Tx and Rx notificaton status */</ARRAY-COMMENT>
+          <NAME>CanIf_GaaBitArray</NAME>
+          <TYPE>VAR(uint8, CANIF_VAR)</TYPE>
+          <!-- size of each ram array will be zero it will be incremented in modulespecific code -->
+          <SIZE>0</SIZE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_NO_INIT_8 
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_NO_INIT_8
+#include "MemMap.h"</MEMMAP-STOP>
+        </RAM-ARRAY-ENTRY>        
+				<RAM-ARRAY-ENTRY>
+          <ARRAY-COMMENT>/* Global variable for the transmit queue */</ARRAY-COMMENT>
+          <NAME>CanIf_GaaTxQueue</NAME>
+          <TYPE>VAR(CanIf_TxQueue, CANIF_VAR)</TYPE>
+          <SIZE>0</SIZE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_NO_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_NO_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+        </RAM-ARRAY-ENTRY>
+      </RAM-ARRAYS>
+    <STRUCTURES-AND-ARRAYS>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Controller */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaControllerConfigType</NAME>
+          <COMMENT>/* CONST(CanIf_ControllerConfigType, CANIF_CONST)CanIf_GaaControllerConfigType[];*/</COMMENT>
+          <FIELD>pTxLpdu ddNoOfTxPdu ucCanDriverId ucCanControllerId blWakeupEnabled blPartialNWEnabled</FIELD>
+          <TYPE>PSTR UINT8 UINT8 UINT8 STR STR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE  CtrlCanCtrlRef#CntrConfig CtrlWakeupSupport#CntrConfig 
+            CanIfTxPduPnFilterPdu#TxPduConfig</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+         <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+         <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>        
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for HRH */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaHrh</NAME>
+          <COMMENT>/* CONST(CanIf_Hrh, CANIF_CONST) CanIf_GaaHrh[];*/</COMMENT>
+          <FIELD>ddRxLpduIndex ddNoOfRxLpdusRange ddNoOfRxLpdusList ucFilterMethod ucControllerId</FIELD>
+          <TYPE>UINT16 UINT8 UINT8 UINT8 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE HrhId#HrhConfig CtrlId#CntrConfig</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for HRH Map array */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaHrhMapArray</NAME>
+          <COMMENT>/* CONST(uint8, CANIF_CONST) CanIf_GaaHrhMapArray[]; */</COMMENT>
+          <FIELD>Val</FIELD>
+          <TYPE>UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_8
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_8
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Array</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Basic TxPdu Index Map array */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaTxBasicPduIndexMapping</NAME>
+          <COMMENT>/* CONST(uint16, CANIF_CONST) CanIf_GaaTxBasicPduIndexMapping[]; */</COMMENT>
+          <FIELD>Val</FIELD>
+          <TYPE>UINT16</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Array</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>	
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for CanId */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GddCanId</NAME>
+          <COMMENT>/* VAR(Can_IdType, CANIF_VAR_NOINIT) CanIf_GddCanId[]; */</COMMENT>
+          <FIELD>ddCanId</FIELD>
+          <TYPE>UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>TxPduCanId#TxPduConfig</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Array</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for CanTrcv Ids */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaCanTrcvIds</NAME>
+          <COMMENT>/* CONST(uint8, CANIF_CONST) CanIf_GaaCanTrcvIds[]; */</COMMENT>
+          <FIELD>ucCtrlId</FIELD>
+          <TYPE>UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_8
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_8
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Array</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>        
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Tx Pdu To Queue Mapping */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaTxPduToQueueMapping</NAME>
+          <COMMENT>/* VAR(CanIf_TxPduIdType, CANIF_VAR) CanIf_GaaTxPduToQueueMapping[CANIF_NO_OF_BASIC_TXLPDU];*/</COMMENT>
+          <FIELD>Index</FIELD>
+          <TYPE>STR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Array</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Tx Buffer */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaTxBuffer</NAME>
+          <COMMENT>/* CONST(CanIf_TxBuffer, CANIF_CONST) CanIf_GaaTxBuffer[]; */</COMMENT>
+          <FIELD>pTxFirstQueue ddHthId ddQueueIndex ddNoOfTxQueue</FIELD>
+          <TYPE>PSTR UINT8 UINT8 UINT8 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+	   <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Rx L-PDU(Range Or List) */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaRxLpdu</NAME>
+          <COMMENT>/* CONST(CanIf_RxLpdu, CANIF_VAR) CanIf_GaaRxLpdu[]; */</COMMENT>
+          <FIELD>ddCanIdLl ddCanIdUl ddRxNotifyId ddRxPduId ddTargetId ucCallbackIndex 
+					ucDlc ucRxUserOrNotifSts ucControllerId RxPduCanIdMask ucMetaDataLength</FIELD>
+          <TYPE>UINT32 UINT32 UINT16 UINT16 UINT16 UINT8 UINT8 PSTR UINT8 UINT32 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>RxPduLowerCanId#HrhRangeConfig RxPduUpperCanId#HrhRangeConfig NONE#NONE NONE#NONE
+            PduIdRef#RxPduConfig NONE#NONE RxPduDlc#RxPduConfig RxPduNotifySts#RxPduConfig^
+            RxPduData#RxPduConfig^RxIndUserDlc#UserUpperLayerConfig NONE#NONE NONE#NONE   
+          </REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Transmit L-PDU */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaTxLpdu</NAME>
+          <COMMENT>/* CONST(CanIf_TxLpdu, CANIF_CONST)CanIf_GaaTxLpdu[]; */</COMMENT>          
+          <FIELD>ddCanId ddHthIdorBufferId 
+          ucTxNotifyStatusIndex ddDynCanIdIndex ddTxConfirmPduId ddTxPduId ucCallbackIndex 
+          ucTxCbkUser ucHTHTypeOrTXPN ucDriverId ucTxNotifyStsMask ucCanIdType
+          ucControllerId ddCanIdMask ucMetaDataLength</FIELD>
+          <TYPE>UINT32 UINT8 UINT8 UINT8 UINT16 UINT16 UINT8 UINT8 UINT8 UINT8 UINT8 UINT8 UINT8 UINT32 UINT8</TYPE>          
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>TxPduCanId#TxPduConfig NONE#NONE NONE#NONE NONE#NONE NONE#NONE TxPduId#TxPduConfig 
+            NONE#NONE TxUserType#TxPduConfig NONE#NONE NONE#NONE NONE#NONE TxCanIdType#TxPduConfig 
+            CtrlId#CntrConfig
+          </REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for HRH Init */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaHrhInit</NAME>
+          <COMMENT>/* CONST(CanIf_HrhInit, CANIF_CONST)CanIf_GaaHrhInit[]; */</COMMENT>
+          <FIELD>ucMaxHrhId ucHrhOffSetId</FIELD>
+          <TYPE>UINT8 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for CAN Driver */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaCanDriver</NAME>
+          <COMMENT>/* CONST(CanIf_CanDriver, CANIF_CONST)CanIf_GaaCanDriver[]; */</COMMENT>
+          <FIELD>pCanSetControllerMode pCanWrite pCanCheckwakeup pCanCheckBaudrate pCanChangeBaudrate</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR PSTR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Rx callback user */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaRxCbkUser</NAME>
+          <COMMENT>/* CONST(CanIf_RxCbkUser, CANIF_CONST)CanIf_GaaRxCbkUser[]; */</COMMENT>
+          <FIELD>pRxIndication</FIELD>
+          <TYPE>PSTR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+         </STRUCTURE-ARRAY-ENTRY>
+		 <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Tx callback user */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaTxCbkUser</NAME>
+          <COMMENT>/* CONST(CanIf_TxCbkUser, CANIF_CONST)CanIf_GaaTxCbkUser[]; */</COMMENT>
+          <FIELD>pTxCbkUser</FIELD>
+          <TYPE>PSTR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+         </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Function pointer to CanTrcv Driver */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaCanTrcvDriver</NAME>
+          <COMMENT>/*CONST(CanIf_CanTrcvDriver, CANIF_CONST)CanIf_GaaCanTrcvDriver[]; */</COMMENT>
+          <FIELD>pCanTrcvSetOpMode pCanTrcvGetOpMode pCanTrcvGetBusWuReason 
+					pCanTrcvSetWakeupMode pCanTrcvCheckWakeup pClearTrcvWufFlag 
+          pCheckWakeFlag</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR PSTR PSTR PSTR</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE NONE#NONE NONE#NONE NONE#NONE</REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+         </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for wakeup source information */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaWakeupSource</NAME>
+          <COMMENT>/* CONST(CanIf_WakeupSource, CANIF_CONST)CanIf_GaaWakeupSource[]; */</COMMENT>
+          <FIELD>ddWakeupEvent ucWakeupSource ucCanCntrlOrTrcvId
+					ucValidationWakeupFlagIndex ucDriverId ucControllerConfigId ucNoOfCanCntrlOrTrcvId</FIELD>
+          <TYPE>UINT8 STR UINT8 UINT8 UINT8 UINT8 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE NONE#NONE CtrlId#CntrConfig NONE#NONE
+          </REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure for Transciever */</STRUCTURE-COMMENT>
+          <NAME>CanIf_GaaCanTrcv</NAME>
+          <COMMENT>/* CONST(CanIf_TransceiverConfigType, CANIF_CONST)CanIf_GaaCanTrcv[]; */</COMMENT>
+          <FIELD>ucCanIfTrcvId ucCanTrcvId ucCanTrcvDriverId</FIELD>
+          <TYPE>UINT8 UINT8 UINT8</TYPE>
+          <RANGE>NONE#NONE</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>CanIfCanTrcvId#CanIfCanTrcvChannel CanTrcvChannelId#CanTrcvDriverConfig NONE#NONE          
+          </REFERENCE>
+          <MEMMAP-START>#define CANIF_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+         <ENTRY-TYPE>Structure</ENTRY-TYPE>
+         <SIZE-MACRO></SIZE-MACRO>
+          <SIZE-MACRO-COMMENT></SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX></SIZE-MACRO-PREFIX>
+        </STRUCTURE-ARRAY-ENTRY>
+      </STRUCTURES-AND-ARRAYS>
+    </CanIf_Cfg.c>
+  </OUTPUT-FILES>
+</GENERAL-INFORMATION>
+
+<!--
+################################################################################
+# Revision History:                                                            #
+# Version No.  Last modified  Author     Description                           #
+################################################################################
+# 1.5.9        24-Nov-2016    Js Lim     #6752                                 #
+# 1.5.8        15-Nov-2016    Js Lim     #6556                                 #
+# 1.5.7        12-Aug-2016    Kt Kim     #5739                                 #
+# 1.5.6        27-Jun-2016    Kt Kim     #5334                                 #
+# 1.5.5        13-Jun-2016    Kt Kim     #5139                                 #
+# 1.5.4        03-Jun-2016    Kt Kim     #5123                                 #
+# 1.2.0        19-Mar-2016    Kt Kim     #4442                                 #
+# 1.1.9        14-Mar-2016    Kt Kim     Precompile option for CAN-FD          #
+# 1.1.8        26-Jun-2015    Kt Kim     Code change for MISRA rule            #
+# 1.1.7        26-Feb-2015    Kt Kim     Cleared error on generating header    #
+#                                        files in CanIf_UserInc.h              #
+# 1.1.0        10-Sep-2014    Kt Kim     Meta Data Support (Feature #1290)     #
+# 1.0.9        21-Aug-2014    Kt Kim     Add Parameter 'CanWakeupSupport'      #
+# 1.0.8        28-Jul-2014    Kt Kim     Bug Fix : Redmine Bug #1200           #
+#                                        J1939TpRxFcNPdu is added in the list  #
+# 1.0.7        26-Apr-2014    Kt Kim     Bug Fix : Redmine Bug #904            #
+# 1.0.6        22-Apr-2014    Kt Kim     CanCM support                         #
+# 1.0.5        24-Mar-2014    Kt Kim     Add mapping 'J1939TpRxCmNPdu'         #
+# 1.0.4        01-Jul-2013    Kt Kim     Add CanIf_GaaTxBasicPduIndexMapping   #
+#                                        array                                 #
+# 1.0.3        29-May-2013    Kt Kim     OsekNm Support                        #
+# 1.0.0        04-Feb-2013    Kt Kim     Initial version                       #
+################################################################################
+-->

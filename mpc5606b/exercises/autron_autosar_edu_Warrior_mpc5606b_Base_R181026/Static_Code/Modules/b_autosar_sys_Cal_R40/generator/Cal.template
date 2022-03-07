@@ -1,0 +1,2729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GENERAL-INFORMATION>
+
+  <!-- Template version -->
+  <TEMPLATE-VERSION>1.1.1</TEMPLATE-VERSION>
+
+  <!-- Generation Tool versions which are supported by this Template -->
+  <SUPPORTED-TOOL-VERSIONS>1.1.0 1.1.1</SUPPORTED-TOOL-VERSIONS>
+
+  <!-- Parser Details for Config Module -->
+  <PARSER-DETAILS>
+    <!-- Module under test -->
+    <MODULE-UNDER-TEST>CAL</MODULE-UNDER-TEST>
+    <!-- Modules required MDT File information -->
+    <MODULE-UNDER-TEST-MDT>CAL</MODULE-UNDER-TEST-MDT>
+    <!-- Mandatory Modules required to Parse <Msn> -->
+    <MANDATORY-MODULES>CAL</MANDATORY-MODULES>
+    <!-- All the Modules to be Parsed -->
+    <MODULES>CAL HWRESOURCE</MODULES>
+    <!-- Provide all command line options here in capital case, first letter of each commandline option will also be
+         a valid command line option but it need not be mentioned below.
+         command line options should not conflict with each other including the first charactor of option
+    -->
+    <CMDLINEOPTIONS></CMDLINEOPTIONS>
+    <!-- Containers which contain reference parameters -->
+    <REFERENCE-CONTAINER-ARRAY></REFERENCE-CONTAINER-ARRAY>
+    <!-- Parameter required to fetch more than one values in a destination container -->
+    <PARAMETER-COPY></PARAMETER-COPY>
+    <!-- Name of the containers and their corresponding reference parameters -->
+    <SYMREF-PARAM></SYMREF-PARAM>
+    <!-- For each reference parameters corresponding destination containers and parameters -->
+    <REFERENCES></REFERENCES>
+    <!-- To check if the correct description file is provided as input.
+      ArReleaseVersion in the description file is compared with the below versions -->
+    <FOR-VERSION-CHECK>
+      <VERSIONS>4.0.3</VERSIONS>
+      <MESSAGE-TYPE>INF</MESSAGE-TYPE>
+    </FOR-VERSION-CHECK>
+    <!-- If parameter multiplicity is more than one -->
+    <PARAM-MULTIPLICITY></PARAM-MULTIPLICITY>
+    <!-- For the parameters listed below reference need not be configured -->
+    <REF-MUL></REF-MUL>
+  </PARSER-DETAILS>
+  <!-- Handle Id details -->
+  <HANDLE-ID-DETAILS></HANDLE-ID-DETAILS>
+
+  <!-- Map Names -->
+  <MAP-NAMES>
+    <CONTAINER-DETAILS>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalGeneral'                                      MAP-NAME = 'General'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMaxAlignScalarType'                         MAP-NAME = 'MaxAlignScalarType'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalVersionInfoApi'                             MAP-NAME = 'VersionInfoApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalUseCommonFblCryptoLib'                      MAP-NAME = 'UseCommonFblCryptoLib'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSeedRefAddr'                                MAP-NAME = 'SeedRefAddr'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalHash'                                         MAP-NAME = 'Hash'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalHashMaxCtxBufByteSize'                      MAP-NAME = 'HashMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalHashConfig'                                   MAP-NAME = 'HashConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalHashInitConfiguration'                      MAP-NAME = 'HashInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalHashPrimitiveName'                          MAP-NAME = 'HashPrimitiveName'></PARAMETER-DETAIL>
+        </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalMacGenerate'                                  MAP-NAME = 'MacGenerate'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacGenerateMaxCtxBufByteSize'               MAP-NAME = 'MacGenerateMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacGenerateMaxKeySize'                      MAP-NAME = 'MacGenerateMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalMacGenerateConfig'                            MAP-NAME = 'MacGenerateConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacGenerateInitConfiguration'               MAP-NAME = 'MacGenerateInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacGeneratePrimitiveName'                   MAP-NAME = 'MacGeneratePrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalMacVerify'                                    MAP-NAME = 'MacVerify'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacVerifyMaxCtxBufByteSize'                 MAP-NAME = 'MacVerifyMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacVerifyMaxKeySize'                        MAP-NAME = 'MacVerifyMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalMacVerifyConfig'                              MAP-NAME = 'MacVerifyConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacVerifyInitConfiguration'                 MAP-NAME = 'MacVerifyInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalMacVerifyPrimitiveName'                     MAP-NAME = 'MacVerifyPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalRandomSeed'                                   MAP-NAME = 'RandomSeed'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalRandomMaxCtxBufByteSize'                    MAP-NAME = 'RandomMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalRandomSeedConfig'                             MAP-NAME = 'RandomSeedConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalRandomSeedInitConfiguration'                MAP-NAME = 'RandomSeedInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalRandomSeedPrimitiveName'                    MAP-NAME = 'RandomSeedPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalRandomGenerate'                               MAP-NAME = 'RandomGenerate'></CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalRandomGenerateConfig'                         MAP-NAME = 'RandomGenerateConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalRandomGenerateInitConfiguration'            MAP-NAME = 'RandomGenerateInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalRandomGeneratePrimitiveName'                MAP-NAME = 'RandomGeneratePrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncrypt'                              MAP-NAME = 'SymBlockEncrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncryptMaxCtxBufByteSize'           MAP-NAME = 'SymBlockEncryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncryptMaxKeySize'                  MAP-NAME = 'SymBlockEncryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncryptConfig'                        MAP-NAME = 'SymBlockEncryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncryptInitConfiguration'           MAP-NAME = 'SymBlockEncryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockEncryptPrimitiveName'               MAP-NAME = 'SymBlockEncryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecrypt'                              MAP-NAME = 'SymBlockDecrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecryptMaxCtxBufByteSize'           MAP-NAME = 'SymBlockDecryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecryptMaxKeySize'                  MAP-NAME = 'SymBlockDecryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecryptConfig'                        MAP-NAME = 'SymBlockDecryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecryptInitConfiguration'           MAP-NAME = 'SymBlockDecryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymBlockDecryptPrimitiveName'               MAP-NAME = 'SymBlockDecryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymEncrypt'                                   MAP-NAME = 'SymEncrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymEncryptMaxCtxBufByteSize'                MAP-NAME = 'SymEncryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymEncryptMaxKeySize'                       MAP-NAME = 'SymEncryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymEncryptConfig'                             MAP-NAME = 'SymEncryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymEncryptInitConfiguration'                MAP-NAME = 'SymEncryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymEncryptPrimitiveName'                    MAP-NAME = 'SymEncryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymDecrypt'                                   MAP-NAME = 'SymDecrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymDecryptMaxCtxBufByteSize'                MAP-NAME = 'SymDecryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymDecryptMaxKeySize'                       MAP-NAME = 'SymDecryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymDecryptConfig'                             MAP-NAME = 'SymDecryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymDecryptInitConfiguration'                MAP-NAME = 'SymDecryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymDecryptPrimitiveName'                    MAP-NAME = 'SymDecryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymEncrypt'                                  MAP-NAME = 'AsymEncrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymEncryptMaxCtxBufByteSize'               MAP-NAME = 'AsymEncryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymEncryptMaxKeySize'                      MAP-NAME = 'AsymEncryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymEncryptConfig'                            MAP-NAME = 'AsymEncryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymEncryptInitConfiguration'               MAP-NAME = 'AsymEncryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymEncryptPrimitiveName'                   MAP-NAME = 'AsymEncryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymDecrypt'                                  MAP-NAME = 'AsymDecrypt'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymDecryptMaxCtxBufByteSize'               MAP-NAME = 'AsymDecryptMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymDecryptMaxKeySize'                      MAP-NAME = 'AsymDecryptMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymDecryptConfig'                            MAP-NAME = 'AsymDecryptConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymDecryptInitConfiguration'               MAP-NAME = 'AsymDecryptInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymDecryptPrimitiveName'                   MAP-NAME = 'AsymDecryptPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSignatureGenerate'                            MAP-NAME = 'SignatureGenerate'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureGenerateMaxCtxBufByteSize'         MAP-NAME = 'SignatureGenerateMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureGenerateMaxKeySize'                MAP-NAME = 'SignatureGenerateMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSignatureGenerateConfig'                      MAP-NAME = 'SignatureGenerateConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureGenerateInitConfiguration'         MAP-NAME = 'SignatureGenerateInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureGeneratePrimitiveName'             MAP-NAME = 'SignatureGeneratePrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSignatureVerify'                              MAP-NAME = 'SignatureVerify'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureVerifyMaxCtxBufByteSize'           MAP-NAME = 'SignatureVerifyMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureVerifyMaxKeySize'                  MAP-NAME = 'SignatureVerifyMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSignatureVerifyConfig'                        MAP-NAME = 'SignatureVerifyConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureVerifyInitConfiguration'           MAP-NAME = 'SignatureVerifyInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSignatureVerifyPrimitiveName'               MAP-NAME = 'SignatureVerifyPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalChecksum'                                     MAP-NAME = 'Checksum'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalChecksumMaxCtxBufByteSize'                  MAP-NAME = 'ChecksumMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalChecksumConfig'                               MAP-NAME = 'ChecksumConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalChecksumInitConfiguration'                  MAP-NAME = 'ChecksumInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalChecksumPrimitiveName'                      MAP-NAME = 'ChecksumPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyDerive'                                    MAP-NAME = 'KeyDerive'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyDeriveMaxCtxBufByteSize'                 MAP-NAME = 'KeyDeriveMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyDeriveMaxKeySize'                        MAP-NAME = 'KeyDeriveMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyDeriveConfig'                              MAP-NAME = 'KeyDeriveConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyDeriveInitConfiguration'                 MAP-NAME = 'KeyDeriveInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyDerivePrimitiveName'                     MAP-NAME = 'KeyDerivePrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubVal'                        MAP-NAME = 'KeyExchangeCalcPubVal'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValMaxBaseTypeSize'       MAP-NAME = 'KeyExchangeCalcPubValMaxBaseTypeSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValMaxCtxBufByteSize'     MAP-NAME = 'KeyExchangeCalcPubValMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValMaxPrivateTypeSize'    MAP-NAME = 'KeyExchangeCalcPubValMaxPrivateTypeSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValConfig'                  MAP-NAME = 'KeyExchangeCalcPubValConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValInitConfiguration'     MAP-NAME = 'KeyExchangeCalcPubValInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcPubValPrimitiveName'         MAP-NAME = 'KeyExchangeCalcPubValPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecret'                        MAP-NAME = 'KeyExchangeCalcSecret'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretMaxBaseTypeSize'       MAP-NAME = 'KeyExchangeCalcSecretMaxBaseTypeSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretMaxCtxBufByteSize'     MAP-NAME = 'KeyExchangeCalcSecretMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretMaxPrivateTypeSize'    MAP-NAME = 'KeyExchangeCalcSecretMaxPrivateTypeSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretConfig'                  MAP-NAME = 'KeyExchangeCalcSecretConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretInitConfiguration'     MAP-NAME = 'KeyExchangeCalcSecretInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalKeyExchangeCalcSecretPrimitiveName'         MAP-NAME = 'KeyExchangeCalcSecretPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtract'                                MAP-NAME = 'SymKeyExtract'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtractMaxCtxBufByteSize'             MAP-NAME = 'SymKeyExtractMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtractMaxKeySize'                    MAP-NAME = 'SymKeyExtractMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtractConfig'                          MAP-NAME = 'SymKeyExtractConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtractInitConfiguration'             MAP-NAME = 'SymKeyExtractInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyExtractPrimitiveName'                 MAP-NAME = 'SymKeyExtractPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtract'                         MAP-NAME = 'AsymPublicKeyExtract'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtractMaxCtxBufByteSize'      MAP-NAME = 'AsymPublicKeyExtractMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtractMaxKeySize'             MAP-NAME = 'AsymPublicKeyExtractMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtractConfig'                   MAP-NAME = 'AsymPublicKeyExtractConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtractInitConfiguration'      MAP-NAME = 'AsymPublicKeyExtractInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPublicKeyExtractPrimitiveName'          MAP-NAME = 'AsymPublicKeyExtractPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtract'                        MAP-NAME = 'AsymPrivateKeyExtract'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtractMaxCtxBufByteSize'     MAP-NAME = 'AsymPrivateKeyExtractMaxCtxBufByteSize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtractMaxKeySize'            MAP-NAME = 'AsymPrivateKeyExtractMaxKeySize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtractConfig'                  MAP-NAME = 'AsymPrivateKeyExtractConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtractInitConfiguration'     MAP-NAME = 'AsymPrivateKeyExtractInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyExtractPrimitiveName'         MAP-NAME = 'AsymPrivateKeyExtractPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsym'                               MAP-NAME = 'SymKeyWrapAsym'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymMaxPubKeySize'                MAP-NAME = 'SymKeyWrapAsymMaxPubKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymMaxSymKeySize'                MAP-NAME = 'SymKeyWrapAsymMaxSymKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymMaxCtxBufByteSize'            MAP-NAME = 'SymKeyWrapAsymMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymConfig'                         MAP-NAME = 'SymKeyWrapAsymConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymInitConfiguration'            MAP-NAME = 'SymKeyWrapAsymInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapAsymPrimitiveName'                MAP-NAME = 'SymKeyWrapAsymPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSym'                                MAP-NAME = 'SymKeyWrapSym'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSymMaxSymKeySize'                 MAP-NAME = 'SymKeyWrapSymMaxSymKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSymMaxCtxBufByteSize'             MAP-NAME = 'SymKeyWrapSymMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSymConfig'                          MAP-NAME = 'SymKeyWrapSymConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSymInitConfiguration'             MAP-NAME = 'SymKeyWrapSymInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalSymKeyWrapSymPrimitiveName'                 MAP-NAME = 'SymKeyWrapSymPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsym'                       MAP-NAME = 'AsymPrivateKeyWrapAsym'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymMaxPrivKeySize'       MAP-NAME = 'AsymPrivateKeyWrapAsymMaxPrivKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymMaxPubKeySize'        MAP-NAME = 'AsymPrivateKeyWrapAsymMaxPubKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymMaxCtxBufByteSize'    MAP-NAME = 'AsymPrivateKeyWrapAsymMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymConfig'                 MAP-NAME = 'AsymPrivateKeyWrapAsymConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymInitConfiguration'    MAP-NAME = 'AsymPrivateKeyWrapAsymInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapAsymPrimitiveName'        MAP-NAME = 'AsymPrivateKeyWrapAsymPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSym'                        MAP-NAME = 'AsymPrivateKeyWrapSym'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymMaxPrivKeySize'        MAP-NAME = 'AsymPrivateKeyWrapSymMaxPrivKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymMaxSymKeySize'         MAP-NAME = 'AsymPrivateKeyWrapSymMaxSymKeySize'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymMaxCtxBufByteSize'     MAP-NAME = 'AsymPrivateKeyWrapSymMaxCtxBufByteSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymConfig'                  MAP-NAME = 'AsymPrivateKeyWrapSymConfig'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymInitConfiguration'     MAP-NAME = 'AsymPrivateKeyWrapSymInitConfiguration'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'CalAsymPrivateKeyWrapSymPrimitiveName'         MAP-NAME = 'AsymPrivateKeyWrapSymPrimitiveName'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+    </CONTAINER-DETAILS>
+  </MAP-NAMES>
+
+  <!-- Container Count -->
+  <CONTAINER-COUNTS>
+    <CONTAINER-COUNT MAP-NAME = 'General'                      COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'Hash'                         COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'HashConfig'                   COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'MacGenerate'                  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'MacGenerateConfig'            COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'MacVerify'                    COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'MacVerifyConfig'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RandomSeed'                   COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RandomSeedConfig'             COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RandomGenerate'               COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'RandomGenerateConfig'         COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymBlockEncrypt'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymBlockEncryptConfig'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymBlockDecrypt'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymBlockDecryptConfig'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymEncrypt'                   COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymEncryptConfig'             COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymDecrypt'                   COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymDecryptConfig'             COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymEncrypt'                  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymEncryptConfig'            COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymDecrypt'                  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymDecryptConfig'            COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SignatureGenerate'            COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SignatureGenerateConfig'      COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SignatureVerify'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SignatureVerifyConfig'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'Checksum'                     COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'ChecksumConfig'               COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyDerive'                    COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyDeriveConfig'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyExchangeCalcPubVal'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyExchangeCalcPubValConfig'  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyExchangeCalcSecret'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'KeyExchangeCalcSecretConfig'  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyExtract'                COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyExtractConfig'          COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPublicKeyExtract'         COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPublicKeyExtractConfig'   COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyExtract'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyExtractConfig'  COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyWrapAsym'               COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyWrapAsymConfig'         COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyWrapSym'                COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'SymKeyWrapSymConfig'          COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyWrapAsym'       COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyWrapAsymConfig' COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyWrapSym'        COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'AsymPrivateKeyWrapSymConfig'  COUNT = '0'></CONTAINER-COUNT>
+  </CONTAINER-COUNTS>
+
+  <!-- Pre compile options -->
+  <PRE-COMPILE-OPTIONS>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_FBLLIB_USED'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '0'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Enable or Disable using the common crypto library in FBL'
+      Container = 'General'
+      Parameter = 'UseCommonFblCryptoLib'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_VERSION_INFO_API'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '1'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Enable or Disable Cal_GetVersionInfo API'
+      Container = 'General'
+      Parameter = 'VersionInfoApi'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_AUTRANDOM_SEED_ADDR'
+      Type      = '6'
+      Value     = ''
+      Pos       = '50'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Reference address for AutRandom seed'
+      Container = 'General'
+      Parameter = 'SeedRefAddr'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_HASH_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '10'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Hash interface'
+      Container1 = 'HashConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_GENERATE_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '11'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Mac Generate interface'
+      Container1 = 'MacGenerateConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_VERIFY_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '12'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Mac Verify interface'
+      Container1 = 'MacVerifyConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_RANDOM_SEED_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '13'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Random Seed interface'
+      Container1 = 'RandomSeedConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_RANDOM_GENERATE_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '14'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Random Generate interface'
+      Container1 = 'RandomGenerateConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_ENCRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '15'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Sym Block Encrypt interface'
+      Container1 = 'SymBlockEncryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_DECRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '16'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Sym Block Decrypt interface'
+      Container1 = 'SymBlockDecryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_ENCRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '17'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Sym Ecnrypt interface'
+      Container1 = 'SymEncryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_DECRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '18'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Sym Decrypt interface'
+      Container1 = 'SymDecryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_ENCRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '19'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Asym Encrypt interface'
+      Container1 = 'AsymEncryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_DECRYPT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '20'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Asym Decrypt interface'
+      Container1 = 'AsymDecryptConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_GENERATE_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '21'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Signature Generate interface'
+      Container1 = 'SignatureGenerateConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_VERIFY_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '22'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Signature Verify interface'
+      Container1 = 'SignatureVerifyConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_CHECKSUM_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '30'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a checksum status Interface'
+      Container1 = 'ChecksumConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_DERIVE_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '31'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a key derivation status Interface'
+      Container1 = 'KeyDeriveConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '32'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a key exchange Interface'
+      Container1 = 'KeyExchangeCalcPubValConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_SECRET_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '33'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for Key exchange interface Interface'
+      Container1 = 'KeyExchangeCalcSecretConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_EXTRACT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '34'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for Symmetrical Key Extract interface'
+      Container1 = 'SymKeyExtractConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_SYM_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '35'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for Symmetrical Key Wrap interface'
+      Container1 = 'SymKeyWrapSymConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_ASYM_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '36'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for Symmetrical Key Wrap interface'
+      Container1 = 'SymKeyWrapAsymConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '37'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for Asymmetrical Key Extract interface'
+      Container1 = 'AsymPublicKeyExtractConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '38'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a Asym private key extract status Interface'
+      Container1 = 'AsymPrivateKeyExtractConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_KEY_WRAP_SYM_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '39'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a asymmetrical private key wrap interface'
+      Container1 = 'AsymPrivateKeyWrapSymConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_KEY_WRAP_ASYM_STATUS'
+      Type      = '2'
+      Value     = 'STD_OFF'
+      Pos       = '40'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'Macro for implement a asymmetrical private key wrap interface'
+      Container1 = 'AsymPrivateKeyWrapAsymConfig'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_HASH_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '60'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Hash Interface'
+      macro     = 'CAL_HASH_STATUS'
+      Container = 'Hash'
+      Parameter = 'HashMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_GENERATE_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '61'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Generate Interface'
+      macro     = 'CAL_MAC_GENERATE_STATUS'
+      Container = 'MacGenerate'
+      Parameter = 'MacGenerateMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_VERIFY_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '62'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Verify Interface'
+      macro     = 'CAL_MAC_VERIFY_STATUS'
+      Container = 'MacVerify'
+      Parameter = 'MacVerifyMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_RANDOM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '63'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Random Seed Interface'
+      macro     = 'CAL_RANDOM_SEED_STATUS'
+      Container = 'RandomSeed'
+      Parameter = 'RandomMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_ENCRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '64'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block encryption'
+      macro     = 'CAL_SYM_BLOCK_ENCRYPT_STATUS'
+      Container = 'SymBlockEncrypt'
+      Parameter = 'SymBlockEncryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_DECRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '65'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block decryption'
+      macro     = 'CAL_SYM_BLOCK_DECRYPT_STATUS'
+      Container = 'SymBlockDecrypt'
+      Parameter = 'SymBlockDecryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_ENCRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '66'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical encryption interface'
+      macro     = 'CAL_SYM_ENCRYPT_STATUS'
+      Container = 'SymEncrypt'
+      Parameter = 'SymEncryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_DECRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '67'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical decryption Interface'
+      macro     = 'CAL_SYM_DECRYPT_STATUS'
+      Container = 'SymDecrypt'
+      Parameter = 'SymDecryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_ENCRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '68'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical encryption Interface'
+      macro     = 'CAL_ASYM_ENCRYPT_STATUS'
+      Container = 'AsymEncrypt'
+      Parameter = 'AsymEncryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_DECRYPT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '69'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical decryption Interface'
+      macro     = 'CAL_ASYM_DECRYPT_STATUS'
+      Container = 'AsymDecrypt'
+      Parameter = 'AsymDecryptMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_GENERATE_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '70'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature generation Interface'
+      macro     = 'CAL_SIGNATURE_GENERATE_STATUS'
+      Container = 'SignatureGenerate'
+      Parameter = 'SignatureGenerateMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_VERIFY_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '71'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature verification Interface'
+      macro     = 'CAL_SIGNATURE_VERIFY_STATUS'
+      Container = 'SignatureVerify'
+      Parameter = 'SignatureVerifyMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_CHECKSUM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '72'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Checksum Interface'
+      macro     = 'CAL_CHECKSUM_STATUS'
+      Container = 'Checksum'
+      Parameter = 'ChecksumMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_DERIVE_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '73'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key derivation Interface'
+      macro     = 'CAL_KEY_DERIVE_STATUS'
+      Container = 'KeyDerive'
+      Parameter = 'KeyDeriveMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_PUB_VAL_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '74'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange public value Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_STATUS'
+      Container = 'KeyExchangeCalcPubVal'
+      Parameter = 'KeyExchangeCalcPubValMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_SECRET_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '75'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_SECRET_STATUS'
+      Container = 'KeyExchangeCalcSecret'
+      Parameter = 'KeyExchangeCalcSecretMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_EXTRACT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '76'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_EXTRACT_STATUS'
+      Container = 'SymKeyExtract'
+      Parameter = 'SymKeyExtractMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_SYM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '77'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_SYM_STATUS'
+      Container = 'SymKeyWrapSym'
+      Parameter = 'SymKeyWrapSymMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_ASYM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '78'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'SymKeyWrapAsym'
+      Parameter = 'SymKeyWrapAsymMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '79'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_STATUS'
+      Container = 'AsymPublicKeyExtract'
+      Parameter = 'AsymPublicKeyExtractMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '80'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_STATUS'
+      Container = 'AsymPrivateKeyExtract'
+      Parameter = 'AsymPrivateKeyExtractMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_SYM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '81'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_SYM_STATUS'
+      Container = 'AsymPrivateKeyWrapSym'
+      Parameter = 'AsymPrivateKeyWrapSymMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_ASYM_MAX_CTX_BUFFER_BYTE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '82'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'AsymPrivateKeyWrapAsym'
+      Parameter = 'AsymPrivateKeyWrapAsymMaxCtxBufByteSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_HASH_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '83'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Hash Interface'
+      macro     = 'CAL_HASH_STATUS'
+      Container = 'Hash'
+      Parameter = 'HashMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_GENERATE_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '84'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Generate Interface'
+      macro     = 'CAL_MAC_GENERATE_STATUS'
+      Container = 'MacGenerate'
+      Parameter = 'MacGenerateMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_VERIFY_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '85'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Verify Interface'
+      macro     = 'CAL_MAC_VERIFY_STATUS'
+      Container = 'MacVerify'
+      Parameter = 'MacVerifyMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_RANDOM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '86'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Random Seed Interface'
+      macro     = 'CAL_RANDOM_SEED_STATUS'
+      Container = 'RandomSeed'
+      Parameter = 'RandomMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_ENCRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '87'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block encryption'
+      macro     = 'CAL_SYM_BLOCK_ENCRYPT_STATUS'
+      Container = 'SymBlockEncrypt'
+      Parameter = 'SymBlockEncryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_DECRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '88'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block decryption'
+      macro     = 'CAL_SYM_BLOCK_DECRYPT_STATUS'
+      Container = 'SymBlockDecrypt'
+      Parameter = 'SymBlockDecryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_ENCRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '89'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical encryption interface'
+      macro     = 'CAL_SYM_ENCRYPT_STATUS'
+      Container = 'SymEncrypt'
+      Parameter = 'SymEncryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_DECRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '90'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical decryption Interface'
+      macro     = 'CAL_SYM_DECRYPT_STATUS'
+      Container = 'SymDecrypt'
+      Parameter = 'SymDecryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_ENCRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '91'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical encryption Interface'
+      macro     = 'CAL_ASYM_ENCRYPT_STATUS'
+      Container = 'AsymEncrypt'
+      Parameter = 'AsymEncryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_DECRYPT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '92'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical decryption Interface'
+      macro     = 'CAL_ASYM_DECRYPT_STATUS'
+      Container = 'AsymDecrypt'
+      Parameter = 'AsymDecryptMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_GENERATE_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '93'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature generation Interface'
+      macro     = 'CAL_SIGNATURE_GENERATE_STATUS'
+      Container = 'SignatureGenerate'
+      Parameter = 'SignatureGenerateMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_VERIFY_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '94'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature verification Interface'
+      macro     = 'CAL_SIGNATURE_VERIFY_STATUS'
+      Container = 'SignatureVerify'
+      Parameter = 'SignatureVerifyMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_CHECKSUM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '95'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Checksum Interface'
+      macro     = 'CAL_CHECKSUM_STATUS'
+      Container = 'Checksum'
+      Parameter = 'ChecksumMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_DERIVE_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '96'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key derivation Interface'
+      macro     = 'CAL_KEY_DERIVE_STATUS'
+      Container = 'KeyDerive'
+      Parameter = 'KeyDeriveMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_PUB_VAL_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '97'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange public value Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_STATUS'
+      Container = 'KeyExchangeCalcPubVal'
+      Parameter = 'KeyExchangeCalcPubValMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_SECRET_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '98'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_SECRET_STATUS'
+      Container = 'KeyExchangeCalcSecret'
+      Parameter = 'KeyExchangeCalcSecretMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_EXTRACT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '99'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_EXTRACT_STATUS'
+      Container = 'SymKeyExtract'
+      Parameter = 'SymKeyExtractMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_SYM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '100'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_SYM_STATUS'
+      Container = 'SymKeyWrapSym'
+      Parameter = 'SymKeyWrapSymMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_ASYM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '101'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'SymKeyWrapAsym'
+      Parameter = 'SymKeyWrapAsymMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '102'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_STATUS'
+      Container = 'AsymPublicKeyExtract'
+      Parameter = 'AsymPublicKeyExtractMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '103'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_STATUS'
+      Container = 'AsymPrivateKeyExtract'
+      Parameter = 'AsymPrivateKeyExtractMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_SYM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '104'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_SYM_STATUS'
+      Container = 'AsymPrivateKeyWrapSym'
+      Parameter = 'AsymPrivateKeyWrapSymMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_ASYM_CONTEXT_BUFFER_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '105'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'AsymPrivateKeyWrapAsym'
+      Parameter = 'AsymPrivateKeyWrapAsymMaxCtxBufByteSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_GENERATE_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '120'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Generate Interface'
+      macro     = 'CAL_MAC_GENERATE_STATUS'
+      Container = 'MacGenerate'
+      Parameter = 'MacGenerateMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_MAC_VERIFY_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '121'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for MAC Verify Interface'
+      macro     = 'CAL_MAC_VERIFY_STATUS'
+      Container = 'MacVerify'
+      Parameter = 'MacVerifyMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_ENCRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '122'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block encryption'
+      macro     = 'CAL_SYM_BLOCK_ENCRYPT_STATUS'
+      Container = 'SymBlockEncrypt'
+      Parameter = 'SymBlockEncryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_BLOCK_DECRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '123'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical block decryption'
+      macro     = 'CAL_SYM_BLOCK_DECRYPT_STATUS'
+      Container = 'SymBlockDecrypt'
+      Parameter = 'SymBlockDecryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_ENCRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '124'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical encryption interface'
+      macro     = 'CAL_SYM_ENCRYPT_STATUS'
+      Container = 'SymEncrypt'
+      Parameter = 'SymEncryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_DECRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '125'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for symmetrical decryption Interface'
+      macro     = 'CAL_SYM_DECRYPT_STATUS'
+      Container = 'SymDecrypt'
+      Parameter = 'SymDecryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_ENCRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '126'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical encryption Interface'
+      macro     = 'CAL_ASYM_ENCRYPT_STATUS'
+      Container = 'AsymEncrypt'
+      Parameter = 'AsymEncryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_DECRYPT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '127'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical decryption Interface'
+      macro     = 'CAL_ASYM_DECRYPT_STATUS'
+      Container = 'AsymDecrypt'
+      Parameter = 'AsymDecryptMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_GENERATE_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '128'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature generation Interface'
+      macro     = 'CAL_SIGNATURE_GENERATE_STATUS'
+      Container = 'SignatureGenerate'
+      Parameter = 'SignatureGenerateMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SIGNATURE_VERIFY_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '129'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Signature verification Interface'
+      macro     = 'CAL_SIGNATURE_VERIFY_STATUS'
+      Container = 'SignatureVerify'
+      Parameter = 'SignatureVerifyMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_DERIVE_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '130'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key derivation Interface'
+      macro     = 'CAL_KEY_DERIVE_STATUS'
+      Container = 'KeyDerive'
+      Parameter = 'KeyDeriveMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_MAX_BASE_TYPE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '131'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange public value Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_STATUS'
+      Container = 'KeyExchangeCalcPubVal'
+      Parameter = 'KeyExchangeCalcPubValMaxBaseTypeSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_MAX_PRIVATE_TYPE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '132'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the max private type sixe of Key exchange calculate Secret Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_PUB_VAL_STATUS'
+      Container = 'KeyExchangeCalcPubVal'
+      Parameter = 'KeyExchangeCalcPubValMaxPrivateTypeSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_SECRET_MAX_BASE_TYPE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '133'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_SECRET_STATUS'
+      Container = 'KeyExchangeCalcSecret'
+      Parameter = 'KeyExchangeCalcSecretMaxBaseTypeSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EXCHANGE_CALC_SECRET_MAX_PRIVATE_TYPE_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '133'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_KEY_EXCHANGE_CALC_SECRET_STATUS'
+      Container = 'KeyExchangeCalcSecret'
+      Parameter = 'KeyExchangeCalcSecretMaxPrivateTypeSize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_EXTRACT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '134'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_EXTRACT_STATUS'
+      Container = 'SymKeyExtract'
+      Parameter = 'SymKeyExtractMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_SYM_MAX_SYM_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '135'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_SYM_STATUS'
+      Container = 'SymKeyWrapSym'
+      Parameter = 'SymKeyWrapSymMaxSymKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_ASYM_MAX_PUB_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '136'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'SymKeyWrapAsym'
+      Parameter = 'SymKeyWrapAsymMaxPubKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_WRAP_ASYM_MAX_SYM_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '137'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for Key exchange calculate Secret Interface'
+      macro     = 'CAL_SYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'SymKeyWrapAsym'
+      Parameter = 'SymKeyWrapAsymMaxSymKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '138'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PUBLIC_KEY_EXTRACT_STATUS'
+      Container = 'AsymPublicKeyExtract'
+      Parameter = 'AsymPublicKeyExtractMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_MAX_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '139'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical public key extract Interface'
+      macro     = 'CAL_ASYM_PRIVATE_KEY_EXTRACT_STATUS'
+      Container = 'AsymPrivateKeyExtract'
+      Parameter = 'AsymPrivateKeyExtractMaxKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_SYM_MAX_PRIV_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '140'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_SYM_STATUS'
+      Container = 'AsymPrivateKeyWrapSym'
+      Parameter = 'AsymPrivateKeyWrapSymMaxPrivKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_SYM_MAX_SYM_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '141'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_SYM_STATUS'
+      Container = 'AsymPrivateKeyWrapSym'
+      Parameter = 'AsymPrivateKeyWrapSymMaxSymKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_ASYM_MAX_PRIV_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '142'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'AsymPrivateKeyWrapAsym'
+      Parameter = 'AsymPrivateKeyWrapAsymMaxPrivKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIVATE_KEY_WRAP_ASYM_MAX_PUB_KEY_SIZE'
+      Type      = '4'
+      Value     = ''
+      Pos       = '143'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macro for the context buffer length for asymmetrical private key wrap interface'
+      macro     = 'CAL_ASYM_KEY_WRAP_ASYM_STATUS'
+      Container = 'AsymPrivateKeyWrapAsym'
+      Parameter = 'AsymPrivateKeyWrapAsymMaxPubKeySize'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PUB_KEY_MAX_SIZE'
+      Type      = '5'
+      Value     = '0'
+      Pos       = '144'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macros for Key size'
+      DependentContainer = 'AsymEncrypt#SignatureVerify#AsymPublicKeyExtract#SymKeyWrapAsym#AsymPrivateKeyWrapAsym'
+      DependentParameters = 'AsymEncryptMaxKeySize#SignatureVerifyMaxKeySize#AsymPublicKeyExtractMaxKeySize#SymKeyWrapAsymMaxPubKeySize#AsymPrivateKeyWrapAsymMaxPubKeySize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_ASYM_PRIV_KEY_MAX_SIZE'
+      Type      = '5'
+      Value     = '0'
+      Pos       = '92'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macros for Key size'
+      DependentContainer = 'AsymDecrypt#SignatureGenerate#AsymPrivateKeyExtract#AsymPrivateKeyWrapSym#AsymPrivateKeyWrapAsym'
+      DependentParameters = 'AsymDecryptMaxKeySize#SignatureGenerateMaxKeySize#AsymPrivateKeyExtractMaxKeySize#AsymPrivateKeyWrapSymMaxPrivKeySize#AsymPrivateKeyWrapAsymMaxPrivKeySize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_SYM_KEY_MAX_SIZE'
+      Type      = '5'
+      Value     = '0'
+      Pos       = '93'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macros for Key size'
+      DependentContainer = 'SymBlockEncrypt#SymBlockDecrypt#SymEncrypt#SymDecrypt#KeyDerive#SymKeyExtract#MacGenerate#MacVerify#SymKeyWrapSym#SymKeyWrapAsym#AsymPrivateKeyWrapSym'
+      DependentParameters = 'SymBlockEncryptMaxKeySize#SymBlockDecryptMaxKeySize#SymEncryptMaxKeySize#SymDecryptMaxKeySize#KeyDeriveMaxKeySize#SymKeyExtractMaxKeySize#MacGenerateMaxKeySize#MacVerifyMaxKeySize#SymKeyWrapSymMaxSymKeySize#SymKeyWrapAsymMaxSymKeySize#AsymPrivateKeyWrapSymMaxSymKeySize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EX_BASE_MAX_SIZE'
+      Type      = '5'
+      Value     = '0'
+      Pos       = '94'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macros for Key size'
+      DependentContainer = 'KeyExchangeCalcPubVal#KeyExchangeCalcSecret'
+      DependentParameters = 'KeyExchangeCalcPubValMaxBaseTypeSize#KeyExchangeCalcSecretMaxBaseTypeSize'
+      DependentParameter = 'MaxAlignScalarType'>
+    </MACRO-ENTRY>
+
+    <MACRO-ENTRY
+      Name      = 'CAL_KEY_EX_PRIV_MAX_SIZE'
+      Type      = '5'
+      Value     = '0'
+      Pos       = '95'
+      Prefix    = '(uint32)'
+      Postfix   = ''
+      Comment   = 'Macros for Key size'
+      DependentContainer = 'KeyExchangeCalcPubVal#KeyExchangeCalcSecret'
+      DependentParameters = 'KeyExchangeCalcPubValMaxPrivateTypeSize#KeyExchangeCalcSecretMaxPrivateTypeSize'
+      DependentParameter = 'MaxAlignScalarType'>>
+    </MACRO-ENTRY>
+
+  </PRE-COMPILE-OPTIONS>
+
+  <!-- Pointer Cast -->
+  <POINTER-CAST></POINTER-CAST>
+
+  <!-- Decimal Fields -->
+  <DECIMAL-FIELDS>
+    <ENTRY>ConfigId</ENTRY>
+  </DECIMAL-FIELDS>
+
+  <!-- Contains all consistency checks -->
+  <CONSISTENCY-CHECKS>
+
+    <!-- Mandatory check -->
+    <MANDATORY-CHECK>
+      <CONTAINER NAME = 'General'>
+        <PARAMETER-NAME>MaxAlignScalarType</PARAMETER-NAME>
+        <PARAMETER-NAME>VersionInfoApi</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'Hash'>
+        <PARAMETER-NAME>HashMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'HashConfig'>
+        <PARAMETER-NAME>HashInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>HashPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'MacGenerate'>
+        <PARAMETER-NAME>MacGenerateMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>MacGenerateMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'MacGenerateConfig'>
+        <PARAMETER-NAME>MacGenerateInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>MacGeneratePrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'MacVerify'>
+        <PARAMETER-NAME>MacVerifyMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>MacVerifyMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'MacVerifyConfig'>
+        <PARAMETER-NAME>MacVerifyInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>MacVerifyPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'RandomSeed'>
+        <PARAMETER-NAME>RandomMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'RandomSeedConfig'>
+        <PARAMETER-NAME>RandomSeedInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>RandomSeedPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'RandomGenerateConfig'>
+        <PARAMETER-NAME>RandomGenerateInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>RandomGeneratePrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymBlockEncrypt'>
+        <PARAMETER-NAME>SymBlockEncryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymBlockEncryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymBlockEncryptConfig'>
+        <PARAMETER-NAME>SymBlockEncryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymBlockEncryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymBlockDecrypt'>
+        <PARAMETER-NAME>SymBlockDecryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymBlockDecryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymBlockDecryptConfig'>
+        <PARAMETER-NAME>SymBlockDecryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymBlockDecryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymEncrypt'>
+        <PARAMETER-NAME>SymEncryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymEncryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymEncryptConfig'>
+        <PARAMETER-NAME>SymEncryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymEncryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymDecrypt'>
+        <PARAMETER-NAME>SymDecryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymDecryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymDecryptConfig'>
+        <PARAMETER-NAME>SymDecryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymDecryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymEncrypt'>
+        <PARAMETER-NAME>AsymEncryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymEncryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymEncryptConfig'>
+        <PARAMETER-NAME>AsymEncryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymEncryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymDecrypt'>
+        <PARAMETER-NAME>AsymDecryptMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymDecryptMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymDecryptConfig'>
+        <PARAMETER-NAME>AsymDecryptInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymDecryptPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SignatureGenerate'>
+        <PARAMETER-NAME>SignatureGenerateMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SignatureGenerateMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SignatureGenerateConfig'>
+        <PARAMETER-NAME>SignatureGenerateInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SignatureGeneratePrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SignatureVerify'>
+        <PARAMETER-NAME>SignatureVerifyMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SignatureVerifyMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SignatureVerifyConfig'>
+        <PARAMETER-NAME>SignatureVerifyInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SignatureVerifyPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'Checksum'>
+        <PARAMETER-NAME>ChecksumMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'ChecksumConfig'>
+        <PARAMETER-NAME>ChecksumInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>ChecksumPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyDerive'>
+        <PARAMETER-NAME>KeyDeriveMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyDeriveMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyDeriveConfig'>
+        <PARAMETER-NAME>KeyDeriveInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyDerivePrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyExchangeCalcPubVal'>
+        <PARAMETER-NAME>KeyExchangeCalcPubValMaxBaseTypeSize</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcPubValMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcPubValMaxPrivateTypeSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyExchangeCalcPubValConfig'>
+        <PARAMETER-NAME>KeyExchangeCalcPubValInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcPubValPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyExchangeCalcSecret'>
+        <PARAMETER-NAME>KeyExchangeCalcSecretMaxBaseTypeSize</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcSecretMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcSecretMaxPrivateTypeSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'KeyExchangeCalcSecretConfig'>
+        <PARAMETER-NAME>KeyExchangeCalcSecretInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>KeyExchangeCalcSecretPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyExtract'>
+        <PARAMETER-NAME>SymKeyExtractMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyExtractMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyExtractConfig'>
+        <PARAMETER-NAME>SymKeyExtractInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyExtractPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPublicKeyExtract'>
+        <PARAMETER-NAME>AsymPublicKeyExtractMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPublicKeyExtractMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPublicKeyExtractConfig'>
+        <PARAMETER-NAME>AsymPublicKeyExtractInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPublicKeyExtractPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyExtract'>
+        <PARAMETER-NAME>AsymPrivateKeyExtractMaxCtxBufByteSize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyExtractMaxKeySize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyExtractConfig'>
+        <PARAMETER-NAME>AsymPrivateKeyExtractInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyExtractPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyWrapAsym'>
+        <PARAMETER-NAME>SymKeyWrapAsymMaxPubKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyWrapAsymMaxSymKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyWrapAsymMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyWrapAsymConfig'>
+        <PARAMETER-NAME>SymKeyWrapAsymInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyWrapAsymPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyWrapSym'>
+        <PARAMETER-NAME>SymKeyWrapSymMaxSymKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyWrapSymMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'SymKeyWrapSymConfig'>
+        <PARAMETER-NAME>SymKeyWrapSymInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>SymKeyWrapSymPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyWrapAsym'>
+        <PARAMETER-NAME>AsymPrivateKeyWrapAsymMaxPrivKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapAsymMaxPubKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapAsymMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyWrapAsymConfig'>
+        <PARAMETER-NAME>AsymPrivateKeyWrapAsymInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapAsymPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyWrapSym'>
+        <PARAMETER-NAME>AsymPrivateKeyWrapSymMaxPrivKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapSymMaxSymKeySize</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapSymMaxCtxBufByteSize</PARAMETER-NAME>
+      </CONTAINER>
+      <CONTAINER NAME = 'AsymPrivateKeyWrapSymConfig'>
+        <PARAMETER-NAME>AsymPrivateKeyWrapSymInitConfiguration</PARAMETER-NAME>
+        <PARAMETER-NAME>AsymPrivateKeyWrapSymPrimitiveName</PARAMETER-NAME>
+      </CONTAINER>
+    </MANDATORY-CHECK>
+
+    <!-- String check -->
+    <STRING-CHECK>
+      <PARAMETER>
+        <NAME>MaxAlignScalarType</NAME>
+        <CONTAINER-NAME>General</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>HashInitConfiguration</NAME>
+        <CONTAINER-NAME>HashConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>HashPrimitiveName</NAME>
+        <CONTAINER-NAME>HashConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>MacGenerateInitConfiguration</NAME>
+        <CONTAINER-NAME>MacGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>MacGeneratePrimitiveName</NAME>
+        <CONTAINER-NAME>MacGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>MacVerifyInitConfiguration</NAME>
+        <CONTAINER-NAME>MacVerifyConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>MacVerifyPrimitiveName</NAME>
+        <CONTAINER-NAME>MacVerifyConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>RandomSeedInitConfiguration</NAME>
+        <CONTAINER-NAME>RandomSeedConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>RandomSeedPrimitiveName</NAME>
+        <CONTAINER-NAME>RandomSeedConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>RandomGenerateInitConfiguration</NAME>
+        <CONTAINER-NAME>RandomGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>RandomGeneratePrimitiveName</NAME>
+        <CONTAINER-NAME>RandomGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymBlockEncryptInitConfiguration</NAME>
+        <CONTAINER-NAME>SymBlockEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymBlockEncryptPrimitiveName</NAME>
+        <CONTAINER-NAME>SymBlockEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymBlockDecryptInitConfiguration</NAME>
+        <CONTAINER-NAME>SymBlockDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymBlockDecryptPrimitiveName</NAME>
+        <CONTAINER-NAME>SymBlockDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymEncryptInitConfiguration</NAME>
+        <CONTAINER-NAME>SymEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymEncryptPrimitiveName</NAME>
+        <CONTAINER-NAME>SymEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymDecryptInitConfiguration</NAME>
+        <CONTAINER-NAME>SymDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymDecryptPrimitiveName</NAME>
+        <CONTAINER-NAME>SymDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymEncryptInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymEncryptPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymEncryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymDecryptInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymDecryptPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymDecryptConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SignatureGenerateInitConfiguration</NAME>
+        <CONTAINER-NAME>SignatureGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SignatureGeneratePrimitiveName</NAME>
+        <CONTAINER-NAME>SignatureGenerateConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SignatureVerifyInitConfiguration</NAME>
+        <CONTAINER-NAME>SignatureVerifyConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SignatureVerifyPrimitiveName</NAME>
+        <CONTAINER-NAME>SignatureVerifyConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>ChecksumInitConfiguration</NAME>
+        <CONTAINER-NAME>ChecksumConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>ChecksumPrimitiveName</NAME>
+        <CONTAINER-NAME>ChecksumConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyDeriveInitConfiguration</NAME>
+        <CONTAINER-NAME>KeyDeriveConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyDerivePrimitiveName</NAME>
+        <CONTAINER-NAME>KeyDeriveConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyExchangeCalcPubValInitConfiguration</NAME>
+        <CONTAINER-NAME>KeyExchangeCalcPubValConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyExchangeCalcPubValPrimitiveName</NAME>
+        <CONTAINER-NAME>KeyExchangeCalcPubValConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyExchangeCalcSecretInitConfiguration</NAME>
+        <CONTAINER-NAME>KeyExchangeCalcSecretConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>KeyExchangeCalcSecretPrimitiveName</NAME>
+        <CONTAINER-NAME>KeyExchangeCalcSecretConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyExtractInitConfiguration</NAME>
+        <CONTAINER-NAME>SymKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyExtractPrimitiveName</NAME>
+        <CONTAINER-NAME>SymKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPublicKeyExtractInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymPublicKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPublicKeyExtractPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymPublicKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyExtractInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyExtractPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyExtractConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyWrapAsymInitConfiguration</NAME>
+        <CONTAINER-NAME>SymKeyWrapAsymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyWrapAsymPrimitiveName</NAME>
+        <CONTAINER-NAME>SymKeyWrapAsymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyWrapSymInitConfiguration</NAME>
+        <CONTAINER-NAME>SymKeyWrapSymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>SymKeyWrapSymPrimitiveName</NAME>
+        <CONTAINER-NAME>SymKeyWrapSymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyWrapAsymInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyWrapAsymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyWrapAsymPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyWrapAsymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyWrapSymInitConfiguration</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyWrapSymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+      <PARAMETER>
+        <NAME>AsymPrivateKeyWrapSymPrimitiveName</NAME>
+        <CONTAINER-NAME>AsymPrivateKeyWrapSymConfig</CONTAINER-NAME>
+        <REGULAR-EXPRESSION>[a-zA-Z][a-zA-Z0-9\_]*</REGULAR-EXPRESSION>
+      </PARAMETER>
+    </STRING-CHECK>
+
+  </CONSISTENCY-CHECKS>
+
+  <!-- Static code that is to be added in the output files -->
+  <OUTPUT-FILES>
+    <Cal_Cfg.h>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: Cal_Cfg.h                                                      **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR ModuleName Module                                    **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            **
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef CAL_CFG_H
+#define CAL_CFG_H
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "Std_Types.h"
+
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_SW_VERSIONS
+
+/*******************************************************************************
+**                      Common Published Information                          **
+*******************************************************************************/
+PUBLISHED_INFORMATION
+
+/*******************************************************************************
+**                      Supported Primitives                                  **
+*******************************************************************************/
+/* Macros for the PrimitiveNames supported */
+PRECOMPILE_CFG
+/*******************************************************************************
+**                      Precompile options                                    **
+*******************************************************************************/
+PRECOMPILE_OPTIONS
+/*******************************************************************************
+**                      Primitives Index                                      **
+*******************************************************************************/
+PRIMITIVES_INDEX
+/*******************************************************************************
+**                      Global Data Types                                     **
+*******************************************************************************/
+/* Type definition for maximum alignment restrictions */
+TYPEDEF
+
+#endif /* CAL_CFG_H */
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </Cal_Cfg.h>
+    <Cal_Cfg.c>
+      <TEMPLATE>/*******************************************************************************
+**  FILE-NAME: Cal_Cfg.c                                                      **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR ModuleName Module                                    **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            **
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "Cal_Types.h"
+INCLUDE
+/*******************************************************************************
+**                      Version Information                                   **
+*******************************************************************************/
+AR_SW_VERSIONS
+/*******************************************************************************
+**                      Version Check                                         **
+*******************************************************************************/
+VERSION_CHECK
+/*******************************************************************************
+**                      Global Data                                           **
+*******************************************************************************/
+EXTERNS
+
+STRUCTURE_DECLARATIONS
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+      <STRUCTURES-AND-ARRAYS>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Hash interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaHashConfigType</NAME>
+          <COMMENT>/* CONST(Cal_HashConfigType, CAL_CONST)
+   Cal_GaaHashConfigType[CAL_HASH_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalHashPrimitiveName#HashConfig CalHashPrimitiveName#HashConfig CalHashPrimitiveName#HashConfig CalHashPrimitiveName#HashConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_HASH_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Hash services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>100</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Mac Generate interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaMacGenerateConfigType</NAME>
+          <COMMENT>/* CONST(Cal_MacGenerateConfigType, CAL_CONST)
+   Cal_GaaMacGenerateConfigType[CAL_MAC_GENERATE_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalMacGeneratePrimitiveName#MacGenerateConfig CalMacGeneratePrimitiveName#MacGenerateConfig CalMacGeneratePrimitiveName#MacGenerateConfig CalMacGeneratePrimitiveName#MacGenerateConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_MAC_GENERATE_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Mac generate services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>101</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Mac Verify interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaMacVerifyConfigType</NAME>
+          <COMMENT>/* CONST(Cal_MacVerifyConfigType, CAL_CONST)
+   Cal_GaaMacVerifyConfigType[CAL_MAC_VERIFY_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalMacVerifyPrimitiveName#MacVerifyConfig CalMacVerifyPrimitiveName#MacVerifyConfig CalMacVerifyPrimitiveName#MacVerifyConfig CalMacVerifyPrimitiveName#MacVerifyConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_MAC_VERIFY_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Mac verify services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>102</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Random Seed interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaRandomSeedConfigType</NAME>
+          <COMMENT>/* CONST(Cal_RandomSeedConfigType, CAL_CONST)
+   Cal_GaaRandomSeedConfigType[CAL_RANDOM_SEED_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalRandomSeedPrimitiveName#RandomSeedConfig CalRandomSeedPrimitiveName#RandomSeedConfig CalRandomSeedPrimitiveName#RandomSeedConfig CalRandomSeedPrimitiveName#RandomSeedConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_RANDOM_SEED_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Random seed primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>103</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Random Generate interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaRandomGenerateConfigType</NAME>
+          <COMMENT>/* CONST(Cal_RandomGenerateConfigType, CAL_CONST)
+   Cal_GaaRandomGenerateConfigType[CAL_RANDOM_GENERATE_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalRandomGeneratePrimitiveName#RandomGenerateConfig CalRandomGeneratePrimitiveName#RandomGenerateConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_RANDOM_GENERATE_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Random generate primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>104</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Symmetrical Block Encryption interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymBlockEncryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymBlockEncryptConfigType, CAL_CONST)
+   Cal_GaaSymBlockEncryptConfigType[CAL_SYM_BLOCK_ENCRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymBlockEncryptPrimitiveName#SymBlockEncryptConfig CalSymBlockEncryptPrimitiveName#SymBlockEncryptConfig CalSymBlockEncryptPrimitiveName#SymBlockEncryptConfig CalSymBlockEncryptPrimitiveName#SymBlockEncryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_BLOCK_ENCRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Symmetric Block encrypt primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>105</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Symmetrical Block Decryption interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymBlockDecryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymBlockDecryptConfigType, CAL_CONST)
+   Cal_GaaSymBlockDecryptConfigType[CAL_SYM_BLOCK_DECRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymBlockDecryptPrimitiveName#SymBlockDecryptConfig CalSymBlockDecryptPrimitiveName#SymBlockDecryptConfig CalSymBlockDecryptPrimitiveName#SymBlockDecryptConfig CalSymBlockDecryptPrimitiveName#SymBlockDecryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_BLOCK_DECRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Symmetric Block decrypt primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>106</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Symmetrical Encryption */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymEncryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymEncryptConfigType, CAL_CONST)
+   Cal_GaaSymEncryptConfigType[CAL_SYM_ENCRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymEncryptPrimitiveName#SymEncryptConfig CalSymEncryptPrimitiveName#SymEncryptConfig CalSymEncryptPrimitiveName#SymEncryptConfig CalSymEncryptPrimitiveName#SymEncryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_ENCRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Symmetric encrypt primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>107</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Symmetrical Decryption */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymDecryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymDecryptConfigType, CAL_CONST)
+   Cal_GaaSymDecryptConfigType[CAL_SYM_DECRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymDecryptPrimitiveName#SymDecryptConfig CalSymDecryptPrimitiveName#SymDecryptConfig CalSymDecryptPrimitiveName#SymDecryptConfig CalSymDecryptPrimitiveName#SymDecryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_DECRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Symmetric decrypt primitives services supporte</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>108</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Asymmetrical Encryption */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymEncryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymEncryptConfigType, CAL_CONST)
+   Cal_GaaAsymEncryptConfigType[CAL_ASYM_ENCRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymEncryptPrimitiveName#AsymEncryptConfig CalAsymEncryptPrimitiveName#AsymEncryptConfig CalAsymEncryptPrimitiveName#AsymEncryptConfig CalAsymEncryptPrimitiveName#AsymEncryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_ENCRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Asymmetric encrypt primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>109</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Asymmetrical Decryption */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymDecryptConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymDecryptConfigType, CAL_CONST)
+   Cal_GaaAsymDecryptConfigType[CAL_ASYM_DECRYPT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymDecryptPrimitiveName#AsymDecryptConfig CalAsymDecryptPrimitiveName#AsymDecryptConfig CalAsymDecryptPrimitiveName#AsymDecryptConfig CalAsymDecryptPrimitiveName#AsymDecryptConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_DECRYPT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Asymmetric decrypt primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>110</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Signature Generation */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSignatureGenerateConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SignatureGenerateConfigType, CAL_CONST)
+   Cal_GaaSignatureGenerateConfigType[CAL_SIGNATURE_GENERATE_CFGID_LIMIT] ; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSignatureGeneratePrimitiveName#SignatureGenerateConfig CalSignatureGeneratePrimitiveName#SignatureGenerateConfig CalSignatureGeneratePrimitiveName#SignatureGenerateConfig CalSignatureGeneratePrimitiveName#SignatureGenerateConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SIGNATURE_GENERATE_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Signature generate primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>111</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Signature Verify */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSignatureVerifyConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SignatureVerifyConfigType, CAL_CONST)
+   Cal_GaaSignatureVerifyConfigType[CAL_SIGNATURE_VERIFY_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSignatureVerifyPrimitiveName#SignatureVerifyConfig CalSignatureVerifyPrimitiveName#SignatureVerifyConfig CalSignatureVerifyPrimitiveName#SignatureVerifyConfig CalSignatureVerifyPrimitiveName#SignatureVerifyConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SIGNATURE_VERIFY_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Signature verify primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>112</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Checksum */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaChecksumConfigType</NAME>
+          <COMMENT>/* CONST(Cal_ChecksumConfigType, CAL_CONST)
+   Cal_GaaChecksumConfigType[CAL_CHECKSUM_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalChecksumPrimitiveName#ChecksumConfig CalChecksumPrimitiveName#ChecksumConfig CalChecksumPrimitiveName#ChecksumConfig CalChecksumPrimitiveName#ChecksumConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_CHECKSUM_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Checksum primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>113</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Key Derivation */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaKeyDeriveConfigType</NAME>
+          <COMMENT>/* CONST(Cal_KeyDeriveConfigType, CAL_CONST)
+   Cal_GaaKeyDeriveConfigType[CAL_KEY_DERIVE_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalKeyDerivePrimitiveName#KeyDeriveConfig CalKeyDerivePrimitiveName#KeyDeriveConfig CalKeyDerivePrimitiveName#KeyDeriveConfig CalKeyDerivePrimitiveName#KeyDeriveConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_KEY_DERIVE_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Key Derive primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>114</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for public value calulation */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaKeyExchangeCalcPubValConfigType</NAME>
+          <COMMENT>/* CONST(Cal_KeyExchangeCalcPubValConfigType, CAL_CONST)
+   Cal_GaaKeyExchangeCalcPubValConfigType[CAL_KEY_EXCHANGE_CALC_PUB_VAL_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalKeyExchangeCalcPubValPrimitiveName#KeyExchangeCalcPubValConfig CalKeyExchangeCalcPubValPrimitiveName#KeyExchangeCalcPubValConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_KEY_EXCHANGE_CALC_PUB_VAL_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Key Exchange Calc Public Val primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>115</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Key Exchange */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaKeyExchangeCalcSecretConfigType</NAME>
+          <COMMENT>/* CONST(Cal_KeyExchangeCalcSecretConfigType, CAL_CONST)
+   Cal_GaaKeyExchangeCalcSecretConfigType[CAL_KEY_EXCHANGE_CALC_SECRET_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalKeyExchangeCalcSecretPrimitiveName#KeyExchangeCalcSecretConfig CalKeyExchangeCalcSecretPrimitiveName#KeyExchangeCalcSecretConfig CalKeyExchangeCalcSecretPrimitiveName#KeyExchangeCalcSecretConfig CalKeyExchangeCalcSecretPrimitiveName#KeyExchangeCalcSecretConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_KEY_EXCHANGE_CALC_SECRET_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the Key Exchange Calc Secret primitives services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>116</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Key Extraction */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymKeyExtractConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymKeyExtractConfigType, CAL_CONST)
+   Cal_GaaSymKeyExtractConfigType[CAL_SYM_KEY_EXTRACT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymKeyExtractPrimitiveName#SymKeyExtractConfig CalSymKeyExtractPrimitiveName#SymKeyExtractConfig CalSymKeyExtractPrimitiveName#SymKeyExtractConfig CalSymKeyExtractPrimitiveName#SymKeyExtractConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_KEY_EXTRACT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Symmetrical Key Extract services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>117</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Key Wrapping interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymKeyWrapSymConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymKeyWrapSymConfigType, CAL_CONST)
+   Cal_GaaSymKeyWrapSymConfigType[CAL_SYM_KEY_WRAP_SYM_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymKeyWrapSymPrimitiveName#SymKeyWrapSymConfig CalSymKeyWrapSymPrimitiveName#SymKeyWrapSymConfig CalSymKeyWrapSymPrimitiveName#SymKeyWrapSymConfig CalSymKeyWrapSymPrimitiveName#SymKeyWrapSymConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_KEY_WRAP_SYM_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Symmetrical Key Wrap Sym services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>118</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Key Wrapping interface */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaSymKeyWrapAsymConfigType</NAME>
+          <COMMENT>/* CONST(Cal_SymKeyWrapAsymConfigType, CAL_CONST)
+   Cal_GaaSymKeyWrapAsymConfigType[CAL_SYM_KEY_WRAP_ASYM_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalSymKeyWrapAsymPrimitiveName#SymKeyWrapAsymConfig CalSymKeyWrapAsymPrimitiveName#SymKeyWrapAsymConfig CalSymKeyWrapAsymPrimitiveName#SymKeyWrapAsymConfig CalSymKeyWrapAsymPrimitiveName#SymKeyWrapAsymConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_SYM_KEY_WRAP_ASYM_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Symmetrical Key Wrap Asym services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>119</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Public Key Extraction */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymPublicKeyExtractConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymPublicKeyExtractConfigType, CAL_CONST)
+   Cal_GaaAsymPublicKeyExtractConfigType[CAL_ASYM_PUBLIC_KEY_EXTRACT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymPublicKeyExtractPrimitiveName#AsymPublicKeyExtractConfig CalAsymPublicKeyExtractPrimitiveName#AsymPublicKeyExtractConfig CalAsymPublicKeyExtractPrimitiveName#AsymPublicKeyExtractConfig CalAsymPublicKeyExtractPrimitiveName#AsymPublicKeyExtractConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_PUBLIC_KEY_EXTRACT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Asymmetrical Public Key Extract services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>120</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Private Key Extraction */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymPrivateKeyExtractConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymPrivateKeyExtractConfigType, CAL_CONST)
+   Cal_GaaAsymPrivateKeyExtractConfigType[CAL_ASYM_PRIVATE_KEY_EXTRACT_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymPrivateKeyExtractPrimitiveName#AsymPrivateKeyExtractConfig CalAsymPrivateKeyExtractPrimitiveName#AsymPrivateKeyExtractConfig CalAsymPrivateKeyExtractPrimitiveName#AsymPrivateKeyExtractConfig CalAsymPrivateKeyExtractPrimitiveName#AsymPrivateKeyExtractConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_PRIVATE_KEY_EXTRACT_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Asymmetrical Private Key Extract services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>121</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Private Key Wrapping */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymPrivateKeyWrapSymConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymPrivateKeyWrapSymConfigType, CAL_CONST)
+   Cal_GaaAsymPrivateKeyWrapSymConfigType[CAL_ASYM_KEY_WRAP_SYM_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymPrivateKeyWrapSymPrimitiveName#AsymPrivateKeyWrapSymConfig CalAsymPrivateKeyWrapSymPrimitiveName#AsymPrivateKeyWrapSymConfig CalAsymPrivateKeyWrapSymPrimitiveName#AsymPrivateKeyWrapSymConfig CalAsymPrivateKeyWrapSymPrimitiveName#AsymPrivateKeyWrapSymConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_KEY_WRAP_SYM_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Asymmetrical Key Wrap Sym services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>122</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+        <STRUCTURE-ARRAY-ENTRY>
+          <STRUCTURE-COMMENT>/* Structure contains all the information needed for Private Key Wrapping */</STRUCTURE-COMMENT>
+          <NAME>Cal_GaaAsymPrivateKeyWrapAsymConfigType</NAME>
+          <COMMENT>/* CONST(Cal_AsymPrivateKeyWrapAsymConfigType, CAL_CONST)
+   Cal_GaaAsymPrivateKeyWrapAsymConfigType[CAL_ASYM_KEY_WRAP_ASYM_CFGID_LIMIT]; */</COMMENT>
+          <FIELD>PrimitiveStartFct PrimitiveUpdateFct PrimitiveFinishFct PrimitiveConfigPtr ConfigId</FIELD>
+          <TYPE>PSTR PSTR PSTR PSTR UINT8</TYPE>
+          <RANGE>NONE#NONE NONE#NONE NONE#NONE NONE#NONE 0#32</RANGE>
+          <ELEMENT-COMMENT></ELEMENT-COMMENT>
+          <REFERENCE>NONE#NONE CalAsymPrivateKeyWrapAsymPrimitiveName#AsymPrivateKeyWrapAsymConfig CalAsymPrivateKeyWrapAsymPrimitiveName#AsymPrivateKeyWrapAsymConfig CalAsymPrivateKeyWrapAsymPrimitiveName#AsymPrivateKeyWrapAsymConfig CalAsymPrivateKeyWrapAsymPrimitiveName#AsymPrivateKeyWrapAsymConfig</REFERENCE>
+          <MEMMAP-START>#define CAL_START_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define CAL_STOP_SEC_CONST_UNSPECIFIED
+    #include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Structure</ENTRY-TYPE>
+          <SIZE-MACRO>CAL_ASYM_KEY_WRAP_ASYM_CFGID_LIMIT</SIZE-MACRO>
+          <SIZE-MACRO-COMMENT>Macro for the maximum Asymmetrical Key Extract Asym services supported</SIZE-MACRO-COMMENT>
+          <SIZE-MACRO-PREFIX>(uint16)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-POS>123</SIZE-MACRO-POS>
+        </STRUCTURE-ARRAY-ENTRY>
+      </STRUCTURES-AND-ARRAYS>
+    </Cal_Cfg.c>
+  </OUTPUT-FILES>
+  <VENDOR-SPECIFIC-INFOS>
+    <FREESCALE>
+      <DEFAULT>
+        <!-- STM_CNT -->
+        <SEED_ADDR>0xFFF3C004</SEED_ADDR>
+      </DEFAULT>
+      <MPC5607B>
+        <!-- STM_CNT -->
+        <SEED_ADDR>0xFFF3C004</SEED_ADDR>
+      </MPC5607B>
+    </FREESCALE>
+    <RENESAS>
+      <DEFAULT>
+        <!-- TAUJ0CNT0 TAUJ0CNT1 TAUJ0CNT2 TAUJ0CNT3 TAUJ1CNT0 TAUJ1CNT1 TAUJ1CNT2 TAUJ1CNT3-->
+        <SEED_ADDR>0xFFE50010 0xFFE50014 0xFFE50018 0xFFE5001B 0xFFE51010 0xFFE51014 0xFFE51018 0xFFE5101B</SEED_ADDR>
+      </DEFAULT>
+      <RH850F1L>
+        <!-- TAUJ0CNT0 TAUJ0CNT1 TAUJ0CNT2 TAUJ0CNT3 TAUJ1CNT0 TAUJ1CNT1 TAUJ1CNT2 TAUJ1CNT3-->
+        <SEED_ADDR>0xFFE50010 0xFFE50014 0xFFE50018 0xFFE5001B 0xFFE51010 0xFFE51014 0xFFE51018 0xFFE5101B</SEED_ADDR>
+      </RH850F1L>
+      <RH850F1K>
+        <!-- TAUJ0CNT0 TAUJ0CNT1 TAUJ0CNT2 TAUJ0CNT3 TAUJ1CNT0 TAUJ1CNT1 TAUJ1CNT2 TAUJ1CNT3-->
+        <SEED_ADDR>0xFFE50010 0xFFE50014 0xFFE50018 0xFFE5001B 0xFFE51010 0xFFE51014 0xFFE51018 0xFFE5101B</SEED_ADDR>
+      </RH850F1K>
+    </RENESAS>
+    <INFINEON>
+      <DEFAULT>
+        <!-- OS_STM0_TIM0 OS_STM0_TIM1 OS_STM0_TIM2 OS_STM0_TIM3 OS_STM0_TIM4 OS_STM0_TIM5 OS_STM0_TIM6-->
+        <SEED_ADDR>0xF0000010 0xF0000014 0xF0000018 0xF000001C 0xF0000020 0xF0000024 0xF0000028</SEED_ADDR>
+      </DEFAULT>
+    </INFINEON>
+    <ST>
+      <DEFAULT>
+        <!-- STM0SR0 STM0SR1 STM0SR2 STM0SR4 STM2SR0 STM2SR1 STM2SR2 STM2SR3 -->
+        <SEED_ADDR>0xF4068004 0xF4068004 0xF4068004 0xF4068004 0xF4070004 0xF4070004 0xF4070004 0xF4070004</SEED_ADDR>
+      </DEFAULT>
+    </ST>
+  </VENDOR-SPECIFIC-INFOS>
+</GENERAL-INFORMATION>
+
+<!--
+################################################################################
+# Revision History:                                                            #
+# Version No.  Last modified  Author     Description                           #
+################################################################################
+# 1.1.1        29-May-2017    Sinil      Redmine #8671, 8673                   #
+# 1.1.0        10-Jan-2017    Sinil      Redmine #7197                         #
+# 1.0.8        02-Dec-2016    Sinil      Redmine #6853                         #
+# 1.0.7        17-Oct-2016    Sinil      Redmine #6213                         #
+# 1.0.6        16-Jun-2016    Sinil      Redmine #4533, #5093, #5094           #
+# 1.0.5        02-May-2016    Sinil      Redmine #4422, #4903                  #
+# 1.0.0        01-Jan-2013    Autron     Initial version                       #
+################################################################################
+-->

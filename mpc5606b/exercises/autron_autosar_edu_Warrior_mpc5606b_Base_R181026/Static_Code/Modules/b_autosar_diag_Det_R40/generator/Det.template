@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GENERAL-INFORMATION>
+
+  <!-- Template version -->
+  <TEMPLATE-VERSION>1.0.2</TEMPLATE-VERSION>
+
+  <!-- Generation Tool versions which are supported by this Template -->
+  <SUPPORTED-TOOL-VERSIONS>1.0.5</SUPPORTED-TOOL-VERSIONS>
+
+  <!-- Parser Details for Config Module -->
+  <PARSER-DETAILS>
+    <!-- Module under test -->
+    <MODULE-UNDER-TEST>DET</MODULE-UNDER-TEST>
+    <!-- Mandatory Modules required to Parse Det -->
+    <MANDATORY-MODULES>DET</MANDATORY-MODULES>
+    <!-- Modules required MDT File information -->
+    <MODULE-UNDER-TEST-MDT>DET</MODULE-UNDER-TEST-MDT>
+    <!-- All the Modules to be Parsed -->
+    <MODULES>DET</MODULES>
+    <FOR-VERSION-CHECK>
+      <VERSIONS>4.0.3</VERSIONS>
+      <MESSAGE-TYPE>INF</MESSAGE-TYPE>
+    </FOR-VERSION-CHECK>
+    <!-- If parameter multiplicity is more than one -->
+    <PARAM-MULTIPLICITY>
+      <ENTRY>ErrorHook</ENTRY>
+    </PARAM-MULTIPLICITY>
+  </PARSER-DETAILS>
+
+  <!-- Map Names -->
+  <MAP-NAMES>
+    <CONTAINER-DETAILS>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'DetGeneral' MAP-NAME = 'General'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'DetForwardToDlt' MAP-NAME = 'ForwardToDlt'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'DetVersionInfoApi' MAP-NAME = 'VersionInfoApi'></PARAMETER-DETAIL>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'DetRamBufferSize' MAP-NAME = 'RamBufferSize'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+      <CONTAINER-DETAIL ORIGINAL-NAME = 'DetNotification' MAP-NAME = 'Notification'>
+        <PARAMETER-DETAIL ORIGINAL-NAME = 'DetErrorHook' MAP-NAME = 'ErrorHook'></PARAMETER-DETAIL>
+      </CONTAINER-DETAIL>
+    </CONTAINER-DETAILS>
+  </MAP-NAMES>
+
+  <!-- Container Count -->
+  <CONTAINER-COUNTS>
+    <CONTAINER-COUNT MAP-NAME = 'General'              COUNT = '0'></CONTAINER-COUNT>
+    <CONTAINER-COUNT MAP-NAME = 'Notification'         COUNT = '0'></CONTAINER-COUNT>
+  </CONTAINER-COUNTS>
+
+  <!-- Pre compile options -->
+  <PRE-COMPILE-OPTIONS>
+    <MACRO-ENTRY
+      Name      = 'DET_FORWARD_TO_DLT'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '1'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'To enable / disable development error detection'
+      Container = 'General'
+      Parameter = 'ForwardToDlt' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'DET_VERSION_INFO_API'
+      Type      = '1'
+      Value     = 'STD_OFF'
+      Pos       = '2'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'To enable / disable the Ea_GetVersionInfo API'
+      Container = 'General'
+      Parameter = 'VersionInfoApi' >
+    </MACRO-ENTRY>
+    
+    <MACRO-ENTRY
+      Name      = 'DET_ERROR_HOOK'
+      Type      = '4'
+      Value     = 'STD_OFF'
+      Pos       = '4'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'To enable / disable the notification functions in the deterrorhook'
+      Container = 'Notification'
+      Parameter = 'ErrorHook' >
+    </MACRO-ENTRY>
+    
+    <MACRO-ENTRY
+      Name      = 'DET_RAM_BUFFER'
+      Type      = '5'
+      Value     = 'STD_OFF'
+      Pos       = '7'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'To enable / disable the Ram Buffer Storage'
+      Container = 'General'
+      Parameter = 'RamBufferSize' >
+    </MACRO-ENTRY>
+    <MACRO-ENTRY
+      Name      = 'DET_RAM_BUFFER_SIZE'
+      Type      = '2'
+      Value     = ''
+      Pos       = '6'
+      Prefix    = '(uint8)'
+      Postfix   = ''
+      Comment   = 'The Ram Buffer Storage Size'
+      Container = 'General'
+      Parameter = 'RamBufferSize' >
+    </MACRO-ENTRY>
+    
+    <MACRO-ENTRY
+      Name      = 'DET_NOTIFY_FUNC'
+      Type      = '6'
+      Value     = 'STD_OFF'
+      Pos       = '5'
+      Prefix    = ''
+      Postfix   = ''
+      Comment   = 'To enable/disable development error detection'
+      Container = ''
+      Parameter = '' 
+      Macro     = 'DET_ERROR_HOOK'>
+    </MACRO-ENTRY>
+    
+  </PRE-COMPILE-OPTIONS>
+
+  <!-- Contains all consistency checks -->
+  <CONSISTENCY-CHECKS>
+    <!-- Mandatory check -->
+    <MANDATORY-CHECK>
+      <CONTAINER NAME = 'General'>
+        <PARAMETER-NAME>VersionInfoApi</PARAMETER-NAME>
+      </CONTAINER>
+    </MANDATORY-CHECK>
+
+    <!-- String check -->
+    <STRING-CHECK>
+      <PARAMETER>
+        <NAME>ErrorHook</NAME>
+        <CONTAINER-NAME>Notification</CONTAINER-NAME>
+      </PARAMETER>
+    </STRING-CHECK>
+
+  </CONSISTENCY-CHECKS>
+
+  <!-- Static codes that to be added in the output files -->
+  <OUTPUT-FILES>
+    <Det_Cfg.h>
+      <TEMPLATE>/*******************************************************************************
+**                                                                            **
+**  (C) 2013 HYUNDAI AUTRON Co., Ltd.                                         **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  FILE-NAME: Det_Cfg.h                                                      **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR DET Module                                           **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            **
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+#ifndef DET_CFG_H
+#define DET_CFG_H
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "Std_Types.h"
+
+/*******************************************************************************
+**                      Common Published Information                          **
+*******************************************************************************/
+PUBLISHED_INFORMATION
+
+/*******************************************************************************
+**                      Pre-compile Options                                   **
+*******************************************************************************/
+PRECOMPILE_OPTIONS
+EXTERN
+#endif /* Det_CFG_H */
+
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+    </Det_Cfg.h>
+    <Det_Cfg.c>
+      <TEMPLATE>/*******************************************************************************
+**                                                                            **
+**  (C) 2013 HYUNDAI AUTRON Co., Ltd.                                         **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  FILE-NAME: Det_Cfg.c                                                      **
+**                                                                            **
+**  MODULE-NAME: AUTOSAR DET Module                                           **
+**                                                                            **
+**  NOTE: This file is auto generated, do not edit this file manually.        **
+**                                                                            **
+********************************************************************************
+
+********************************************************************************
+**                      Generation Tool Information                           **
+********************************************************************************
+TOOL_VERSION
+**                                                                            **
+**  Change History: Refer log file (use -l option to generate log file)       **
+**                                                                            **
+********************************************************************************
+**                      File Generation Information                           **
+*******************************************************************************/
+
+CREATED_DATE_FILE
+
+/*******************************************************************************
+**                      Include Section                                       **
+*******************************************************************************/
+#include "Det.h"
+#include "Det_PCTypes.h"
+
+/*******************************************************************************
+**                      Global Data                                           **
+*******************************************************************************/
+ARRAY_DECLARATIONS
+/*******************************************************************************
+**                      End of File                                           **
+*******************************************************************************/
+</TEMPLATE>
+  <!--To generate arrays with values -->
+      <ARRAYS>
+        <ARRAY-ENTRY>
+          <ARRAY-COMMENT>/* Array of Function Pointers for Error Hook */</ARRAY-COMMENT>
+          <NAME>Det_GaaErrorHook</NAME>
+          <TYPE>CONST(Det_FuncPtrType, DET_CONST)</TYPE>
+          <!-- If any default value need to be generated if array element is not field otherwise NONE-->
+          <DEFAULT-VALUE>NONE</DEFAULT-VALUE>
+          <MEMMAP-START>#define DET_START_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-START>
+          <MEMMAP-STOP>#define DET_STOP_SEC_CONST_UNSPECIFIED
+#include "MemMap.h"</MEMMAP-STOP>
+          <ENTRY-TYPE>Array</ENTRY-TYPE>
+          <SIZE-MACRO>DET_TOTAL_ERROR_HOOKS</SIZE-MACRO>
+          <SIZE-MACRO-PREFIX>(uint8)</SIZE-MACRO-PREFIX>
+          <SIZE-MACRO-COMMENT>Total number of Error Hooks configured</SIZE-MACRO-COMMENT>
+        </ARRAY-ENTRY>
+      </ARRAYS>
+    </Det_Cfg.c>
+  </OUTPUT-FILES>
+  <EXTERN-ERROR-HOOK>
+    <FUNCTION-FORMAT>extern Std_ReturnType $ERROR_FUNCTION$(uint16 LusModuleId, uint8 LucInstanceId,
+  uint8 LucApiId, uint8 LucErrorId);</FUNCTION-FORMAT>
+  </EXTERN-ERROR-HOOK>
+</GENERAL-INFORMATION>
+<!--
+################################################################################
+# Revision History:                                                            #
+# Version No.  Last modified  Author           Description                     #
+################################################################################
+# 1.0.2        08-Mar-2013    Aditi Soni       1. TEMPLATE-VERSION and         #
+#                                              SUPPORTED-TOOL-VERSIONS are     #
+#                                              updated.                        #         
+#                                              2. PRE-COMPILE-OPTIONS and      #
+#                                              CONTAINER-DETAILS are updated.  #
+# 1.0.1        22-Jan-2013    Avinash Bhogadi  TEMPLATE-VERSION and            #
+#                                              SUPPORTED-TOOL-VERSIONS are     #
+#                                              updated.                        #
+# 1.0.0        01-Jan-2013    Autron           Initial version                 #
+################################################################################
+-->

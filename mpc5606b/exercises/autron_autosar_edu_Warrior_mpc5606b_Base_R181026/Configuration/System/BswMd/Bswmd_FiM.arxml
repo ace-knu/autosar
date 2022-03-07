@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Bsw_FiM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="f1d61efd-371a-446e-9db3-b3fdfa9b01a6">
+          <SHORT-NAME>BswImplementation_FiM</SHORT-NAME>
+          <SW-VERSION>1.0.0</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_FiM/FiM/BswInternalBehavior_1</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="a2b3a2a9-ab5b-4eb6-bfb2-600f8986ad04">
+          <SHORT-NAME>FiM</SHORT-NAME>
+          <MODULE-ID>11</MODULE-ID>
+          <REQUIRED-MODE-GROUPS>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="38c86b1c-f38f-4092-a7ad-cff15a7b061a">
+              <SHORT-NAME>FiM_EM_R</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/EcuM/ModeDeclarationGroups/EcuMode</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+          </REQUIRED-MODE-GROUPS>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="f2537d59-87fe-4bd3-a7f6-fde1f2cbc233">
+              <SHORT-NAME>BswInternalBehavior_1</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="e3865671-e95e-4032-9ed5-88e62c22ed83">
+                  <SHORT-NAME>REQUEST_EVENTID_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="b45b062c-42e8-4c02-b704-e1def6770923">
+                  <SHORT-NAME>REQUEST_FID_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-SCHEDULABLE-ENTITY UUID="a97034e1-70c7-4c80-a865-e0d026bd545a">
+                  <SHORT-NAME>BswSE_FiM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_FiM/FiM/BswInternalBehavior_1/REQUEST_EVENTID_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_FiM/FiM/BswInternalBehavior_1/REQUEST_FID_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_FiM/FiM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="7395bcbb-39fe-4b89-ac44-37002a5c2a45">
+          <SHORT-NAME>FiM_MainFunction</SHORT-NAME>
+          <SERVICE-ID>5</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,2788 @@
+<?xml version='1.0'?>
+<datamodel version="3.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Adc.xdm
+*   @version 1.0.1
+*
+*   @brief   AUTOSAR Adc - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Adc Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : AUTOSAR 4.0 MCAL
+*   Platform             : PA
+*   Peripheral           : ADCDIG
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.0.3
+*   Autosar Revision     : ASR_REL_4_0_REV_0003
+*   Autosar Conf.Variant :
+*   SW Version           : 1.0.1
+*   Build Version        : MPC560xB_MCAL_1_0_1_RTM_ASR_REL_4_0_REV_0003_20140606
+
+*   (c) Copyright 2006-2014 Freescale Semiconductor Inc and STMicroelectronics
+*   All Rights Reserved.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->    
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="TS_T2D13M10I1R0" type="AR-PACKAGE">
+        <a:a name="UUID" value="ECUC:a84607df-0830-44be-bb99-d99335517970"/>
+        <d:lst type="ELEMENTS">
+          <d:chc name="Adc" type="AR-ELEMENT" value="MODULE-DEF">
+            <v:ctr type="MODULE-DEF">
+              <a:a name="RELEASE" value="asc:4.0"/>
+              <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                <ad:ADMIN-DATA>
+                  <ad:DOC-REVISIONS>
+                    <ad:DOC-REVISION>
+                      <ad:REVISION-LABEL>4.1.0</ad:REVISION-LABEL>
+                      <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                      <ad:DATE>2010-12-03T17:00:00+01:00</ad:DATE>
+                    </ad:DOC-REVISION>
+                  </ad:DOC-REVISIONS>
+                </ad:ADMIN-DATA>
+              </a:a>
+              <a:a name="DESC" 
+                   value="EN: Configuration of the Adc (Analog Digital Conversion) module."/>
+              <a:a name="LOWER-MULTIPLICITY" value="1"/>
+              <a:a name="UPPER-MULTIPLICITY" value="1"/>
+              <a:a name="UUID" value="ECUC:2337ed24-d295-40a8-b345-d9a2aed99496"/>
+              <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                <a:a name="DESC">
+                  <a:v>
+                    <![CDATA[EN:<html><p>
+                         Configuration classes.
+                         Enable the parameters that are editable for specific configuration classes
+                         </p></html>]]>
+                  </a:v>
+                </a:a>
+                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                  <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                </a:a>
+                <a:a name="LABEL" value="Config Variant"/>
+                <a:a name="UUID" value="ECUC:91c33d86-91f7-4887-974e-c747793e6862"/>
+                <a:da name="DEFAULT" value="VariantPostBuild"/>
+                <a:da name="RANGE">
+                  <a:v>VariantPostBuild</a:v>
+                  <a:v>VariantPreCompile</a:v>
+                </a:da>
+              </v:var>
+
+              <!-- start multiple configuration container -->
+              <v:lst name="AdcConfigSet" 
+                     type="MULTIPLE-CONFIGURATION-CONTAINER">
+                <a:da name="MIN" value="1"/>
+                <!-- @implements DADC01001  -->
+                <v:ctr name="AdcConfigSet" 
+                       type="MULTIPLE-CONFIGURATION-CONTAINER">
+                  <a:a name="DESC">
+                       <a:v><![CDATA[EN:<html><p>This is the base container that contains the post-build selectable configuration parameters</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="UUID" value="ECUC:836055ec-e3f3-48d2-8b97-5cbdb7c54981"/>
+
+                  <!--  @implements DADC01002  -->
+                  <v:lst name="AdcHwUnit" type="MAP">
+                    <a:da name="MIN" value="1"/>
+                    <a:da name="INVALID" type="XPath">
+                       <a:tst expr="num:i(count(node:current()/*)) &gt; ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)"
+                       true="Maximum ADC Hardwares available for the selected derivative was exceeded."/>
+                    </a:da>
+
+                    <!-- AdcHwUnit Big container -->
+                    <v:ctr name="AdcHwUnit" type="IDENTIFIABLE">
+                      <a:a name="DESC"> 
+                           <a:v><![CDATA[EN:<html><p>This container contains the Driver configuration (parameters) depending on grouping of channels.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="UUID" value="ECUC:5b4d2445-a17e-47df-ae12-e51566fa9f0a"/>
+                      <a:da name="INVALID" type="XPath">
+                        <a:tst expr="text:uniq(text:split(../../../../AdcConfigSet/*/AdcHwUnit/*/@name), ./@name)"
+                          false="Duplicate AdcHwUnitNames, AdcHwUnit Symbolic names must be unique across Config Sets"
+                          />
+                      </a:da>
+
+                      <!-- AdcClockSource -->
+                      <!--  @implements DADC01003  -->
+                      <v:var name="AdcClockSource" type="ENUMERATION">
+                        <a:a name="DESC">
+                             <a:v><![CDATA[EN:<html><p>Not used. This value should be selected in the MCU Driver.</p></html>]]></a:v>
+                      </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                             type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="OPTIONAL" value="false"/>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="LABEL" value="Adc Source Clock"/>
+                        <a:a name="UUID" value="ECUC:a6abcb84-fe4b-4cda-863a-26b680b1fe02"/>
+                        <a:da name="DEFAULT" value="CLK_SRC_0"/>
+                        <a:da name="ENABLE" value="false"/>
+                        <a:da name="RANGE">
+                            <a:v>CLK_SRC_0</a:v>
+                        </a:da>
+                      </v:var>
+
+                      <!-- ADCHwUnitId -->
+                      <!--  @implements DADC01004 -->                    
+                      <v:var name="AdcHwUnitId" type="ENUMERATION">
+                        <a:a name="DESC"> 
+                             <a:v><![CDATA[EN:<html><p>Specifies the used ADC Hardware Unit (for Bolero 128k,256k,512k - only ADC0; for Bolero 1M, 1.5M - ADC0 and ADC1 are available).</p></html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                             type="IMPLEMENTATIONCONFIGCLASS">
+                          <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                          <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                        <a:a name="LABEL" value="Adc Hardware Unit"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:0641f486-8e8a-4884-963d-46a1f4720180"/>
+                        <a:da name="DEFAULT" type="XPath" expr="concat('ADC_UNIT_', string(node:fallback(node:current()/../@index,'0')))"/>
+                        <a:da name="ENABLE" value="true"/>
+                        <a:da name="RANGE">
+                            <a:v>ADC_UNIT_0</a:v>
+                            <a:v>ADC_UNIT_1</a:v>
+                        </a:da>
+                        <a:da name="INVALID" type="XPath">
+                            <a:tst expr="( (((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2))  or  (ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE'))  and  (. = 'ADC_UNIT_1') )"
+                            true="Only one hardware unit exists in MPC5602/3/4B and MPC5601/2D derivatives."/>
+                            <a:tst expr="text:uniq(../../*/AdcHwUnitId, .)" false="Duplicate Hw Unit id"/>
+                        </a:da>
+                      </v:var>
+
+                    <!-- AdcPrescale -->
+                    <!--  @implements DADC01005  -->
+                    <v:var name="AdcPrescale" type="INTEGER">
+                      <a:a name="DESC"> 
+                          <a:v><![CDATA[EN:<html><p>The prescaler Value is fixed to two.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Adc Prescaler Value"/>
+                      <a:a name="OPTIONAL" value="false"/>
+                      <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:a8142e8e-ac63-4c69-a219-4c8b68285c28"/>
+                      <a:da name="DEFAULT" value="2"/>
+                      <a:da name="ENABLE" value="true"/>
+                      <a:da name="READONLY" value="true"/>
+                      <a:da name="INVALID" type="Range">
+                        <a:tst expr="&lt;=65535"/>
+                        <a:tst expr="&gt;=0"/>
+                      </a:da>
+                    </v:var>
+
+                    <!-- AdcPowerDownDelay -->
+                    <v:var name="AdcPowerDownDelay" type="INTEGER">
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>The delay between the power down bit reset and the starting of conversion when ADC runs on normal system frequency.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Adc Power Down Delay"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:c227b9fb-ea26-4386-be71-14b330bfa117"/>
+                      <a:da name="DEFAULT" value="15"/>
+                      <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=0"/>
+                        <a:tst expr="&lt;=255"/>
+                      </a:da>
+                    </v:var>
+
+                    <!-- AdcAltPowerDownDelay -->
+                    <v:var name="AdcAltPowerDownDelay" type="INTEGER">
+                      <a:a name="DESC">
+                          <a:v><![CDATA[EN:<html><p>The delay between the power down bit reset and the starting of conversion when ADC runs on low power system frequency.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Adc Alternate Power Down Delay"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:c227b7fb-ea26-4387-be77-14b370bfa117"/>
+                      <a:a name="ENABLE" type="XPath">
+                        <a:tst expr="node:fallback(../../../../../NonAutosar/AdcEnableDualClockMode,'true') = 'true'"/>
+                      </a:a>
+                      <a:da name="DEFAULT" value="15"/>
+                      <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=0"/>
+                        <a:tst expr="&lt;=255"/>
+                      </a:da>
+                    </v:var>
+
+                    <!-- AdcMuxDelay -->
+                    <v:var name="AdcMuxDelay" type="INTEGER">
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>
+                                The delay between the external decode signals and the start of the sampling phase.<br>
+                                It is used to take into account the settling time of the external mux when ADC runs on normal system frequency.<br>
+                                The decode signal delay is calculated as (DSD X 1/frequency of system clock).<br>
+                                The DSDR register is 12-bit.<br>
+                                Note: This is an Implementation Specific Parameter.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="ADC Mux Delay"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:c24b64bc-f39d-4f6b-af73-386e6c09ac55"/>
+                      <a:da name="DEFAULT" value="15"/>
+                      <a:da name="RANGE" type="XPath">
+                       <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') and (node:fallback(.,0) &gt;= 256)"
+                        true="The maximum value for this parameter should not be more than 255 for MPC5602/3/4B."/>
+                      </a:da>
+                      <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=0"/>
+                        <a:tst expr="&lt;=4095"/>
+                      </a:da>
+                    </v:var>
+                    
+                    <!-- AdcAutoClockOff -->
+                    <v:var name="AdcAutoClockOff" type="BOOLEAN">
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>Enables/disables the auto-clock-off features.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Adc Auto Clock Off"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:7509437f-fb9c-4f83-803a-a868f3e0d9ce"/>
+                      <a:da name="DEFAULT" value="false"/>
+                    </v:var>
+
+                    <!-- AdcBypassSampling -->
+                    <v:var name="AdcBypassSampling" type="BOOLEAN">
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>When true, this parameter bypasses the sampling phase for all the presampling enabled channels, for the current hardware unit.
+                        The normal operation sequence on the presampling enabled channels will be: Presampling -> Conversion.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Bypass Sampling"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:c6b5e6bc-33e8-47b9-84cc-bc3c4527c702"/>
+                      <a:da name="DEFAULT" value="false"/>
+                      <a:da name="ENABLE" value="true"/>
+                    </v:var>
+
+                    <!-- AdcPresamplingEnableSignal -->
+                    <v:var name="AdcPresamplingEnableSignal" type="ENUMERATION">
+                      <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>Select the presampling channel enable signal for the current hardware unit:
+                        ADC_PRESAMP_VOLTAGE_V0 - Vss = 0V
+                        ADC_PRESAMP_VOLTAGE_V1 - Vdd = 5V.</p></html>]]></a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                           type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="LABEL" value="Adc Presampling channel enable signal"/>
+                      <a:a name="ORIGIN" value="Freescale"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="UUID" value="ECUC:3be13b7b-7092-4d41-a94b-8b629e4401ed"/>
+                      <a:da name="DEFAULT" value="ADC_PRESAMP_VOLTAGE_V0"/>
+                      <a:a name="ENABLE" value="true"/>
+                      <a:da name="RANGE">
+                        <a:v>ADC_PRESAMP_VOLTAGE_V0</a:v>
+                        <a:v>ADC_PRESAMP_VOLTAGE_V1</a:v>
+                      </a:da>
+                    </v:var>
+
+                    <!-- AdcChannel Big container -->
+                    <!--  @implements DADC01006  -->
+                      <v:lst name="AdcChannel" type="MAP">
+                        <a:da name="MIN" value="1"/>
+                        <v:ctr name="AdcChannel" type="IDENTIFIABLE">
+                           <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>This container contains the channel configuration (parameters) depending on the hardware capability.</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:e849f7e8-e76b-44c4-b88f-958b2d554b89"/>
+                          <a:da name="INVALID" type="XPath">
+                            <a:tst expr="text:uniq(text:split(../../../../../*/AdcHwUnit/*/AdcChannel/*/@name), ./@name)"
+                            false="Duplicate AdcChannel Names, Channel names names must be unique across HWUnits"
+                            />
+                          </a:da>
+
+                          <!-- AdcChannelConvTime -->
+                          <!--  @implements DADC01007  -->
+                          <v:var name="AdcChannelConvTime" type="INTEGER">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Configuration of conversion time, i.e. the time during which the analogue value is converted into digital representation, (in clock cycles) for each channel, if supported by hardware.
+                                                          This parameter is not used by the current implementation.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Channel Conversion Time"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:5129013a-a919-4e8b-94d8-ec5cab2d1a45"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=9223372036854775807"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelHighLimit -->
+                          <!--  @implements DADC01008  -->
+                          <v:var name="AdcChannelHighLimit" type="INTEGER">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>High limit - used for limit checking.</p>
+                                        <p>If configured alignment of ADC raw results in ADC result 
+                                        buffer is left alignment than during generation time the value 
+                                        of AdcChannelhighlimit will be shifted left by (15-Adc_resolution +1) times.</p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:a name="LABEL" value="Adc Channel High Limit"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:019dbd75-3f10-4b0d-9ec4-ab6ac418154d"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="EDITABLE" type="XPath" expr="../AdcChannelLimitCheck = 'true' and ../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'true'"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=9223372036854775807"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath">
+                            <a:tst expr="(. &gt;= ../AdcChannelLowLimit)"
+                            false="Adc Channel High Limit value should be greater or equal than Adc Channel Low Limit value."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelId -->
+                          <!--  @implements DADC01009  -->
+                          <v:var name="AdcChannelId" type="INTEGER">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>This parameter defines the assignment of the channel to the physical ADC  hardware channel.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Channel ID"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:b48ea6bd-6a64-46f9-ae8f-21211a023024"/>
+                            <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index, '0')"/>
+                            <a:da name="RANGE" type="XPath">
+                             <a:tst expr="(. &gt;= 0) and (. &lt; num:i(count(node:current()/../../*)))"
+                             false="Value out of range: must be in range 0 to N-1 (N is number of configured channels). Use the Calc button to calculate correct default value."/>
+                             <a:tst expr="text:uniq(../../*/AdcChannelId, .)"
+                             false="Duplicated value, AdcChannelId must be unique across all channels. Use the Calc button to calculate correct default value."/>
+                            </a:da>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=1024"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcHwChannel -->
+                          <v:var name="AdcHwChannel" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Selects the physical Hardware Adc Channel. Note: Range of the ADC Channels depends on the selected package.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Physical HW Channel"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:d6331469-499f-45fe-92f2-68ce861414c1"/>
+                            <a:da name="DEFAULT" type="XPath" expr="ecu:list(concat('Adc.AdcConfigSet.',node:fallback(../../../AdcHwUnitId, 'ADC_UNIT_0'),'.AdcChannel.AdcHwChannel'))[position()-1=node:fallback(node:current()/../@index,'0')]" ></a:da>
+                            <a:da name="RANGE" type="XPath" expr="ecu:list(concat('Adc.AdcConfigSet.',node:fallback(../../../AdcHwUnitId, 'ADC_UNIT_0'),'.AdcChannel.AdcHwChannel'))"/>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="text:uniq(../../*/AdcHwChannel, .)"
+                                false="Duplicate physical channel"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelLimitCheck -->
+                          <!--  @implements DADC01010  -->
+                          <v:var name="AdcChannelLimitCheck" type="BOOLEAN">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Enables or disables limit checking for an ADC channel.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:a name="LABEL" value="Adc Channel Limit Check"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:f49c8852-ea1f-4af3-9cd4-4ef2ba1f3a37"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="EDITABLE" type="XPath" expr="../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'true'"/>
+                            <a:a name="INVALID" type="XPath">
+                               <a:tst expr="(../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'false' and .='true')" true ="AdcChannelLimitCheck must be disabled when AdcEnableLimitCheck is false."/>
+                            </a:a>
+                          </v:var>
+
+                          <!-- AdcChannelLowLimit -->
+                          <!--  @implements DADC01011  -->
+                          <v:var name="AdcChannelLowLimit" type="INTEGER">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Low limit - used for limit checking.</p>
+                                       <p>If configured alignment of ADC raw results in ADC result 
+                                        buffer is left alignment than during generation time the value 
+                                        of AdcChannelLowlimit will be shifted left by (15-Adc_resolution +1) times.</p></html>]]>
+                                </a:v>                          
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:a name="LABEL" value="Adc Channel Low Limit"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:43ec2efd-6e34-49d0-9690-5afd51ca41c5"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="EDITABLE" type="XPath" expr="../AdcChannelLimitCheck = 'true' and ../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'true'"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=9223372036854775807"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath">
+                            <a:tst expr="(. &lt;= ../AdcChannelHighLimit)"
+                            false="Adc Channel Low Limit value should be less or equal than Adc Channel High Limit value."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelRangeSelect -->
+                          <!--  @implements DADC01012  -->
+                          <v:var name="AdcChannelRangeSelect" type="ENUMERATION">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>In case of active limit checking: defines which conversion values are taken into account related to the boarders defined with AdcChannelLowLimit and AdcChannelHighLimit.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:a name="LABEL" value="Adc Channel Range Select"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:a50e22cf-ef57-4d7b-8fec-ff071690bd3e"/>
+                            <a:da name="DEFAULT" value="ADC_RANGE_ALWAYS"/>
+                            <a:da name="EDITABLE" type="XPath" expr="../AdcChannelLimitCheck = 'true' and ../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'true'"/>
+                            <a:da name="RANGE">
+                              <a:v>ADC_RANGE_ALWAYS</a:v>
+                              <a:v>ADC_RANGE_BETWEEN</a:v>
+                              <a:v>ADC_RANGE_NOT_BETWEEN</a:v>
+                              <a:v>ADC_RANGE_NOT_OVER_HIGH</a:v>
+                              <a:v>ADC_RANGE_NOT_UNDER_LOW</a:v>
+                              <a:v>ADC_RANGE_OVER_HIGH</a:v>
+                              <a:v>ADC_RANGE_UNDER_LOW</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelRefVoltsrcHigh -->
+                          <!--  @implements DADC01013  -->
+                          <v:var name="AdcChannelRefVoltsrcHigh" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Upper reference voltage source for each channel.This parameter is not used by the current implementation.</p></html>]]></a:v>
+                          </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc High Reference Voltage"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:bc7d3522-59be-4c80-ab49-a3c80d22d444"/>
+                            <a:da name="DEFAULT" value="UPPER_REF_VOLT_0"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="RANGE">
+                              <a:v>UPPER_REF_VOLT_0</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelRefVoltsrcLow -->
+                          <!--  @implements DADC01014  -->
+                          <v:var name="AdcChannelRefVoltsrcLow" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Lower reference voltage source for each channel.This parameter is not used by the current implementation.</p></html>]]></a:v>
+                          </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Low Reference Voltage"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:98bfc07f-8bbc-41ff-94e4-1e44fe38a759"/>
+                            <a:da name="DEFAULT" value="LOWER_REF_VOLT_0"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="RANGE">
+                              <a:v>LOWER_REF_VOLT_0</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelResolution -->
+                        <!-- @implements DADC01015  -->
+                          <v:var name="AdcChannelResolution" type="INTEGER">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:
+                                  <html>
+                                      <table border="1">
+                                          <tbody>
+                                              <caption>Resolution of converted value in bits</caption>
+                                              <tr>
+                                                  <th>Subderivative</th>
+                                                  <th>HwUnit0</th>
+                                                  <th>HwUnit1</th>
+                                              </tr>
+                                              <tr>
+                                                  <td>mpc560[1,2]d, spc560d[30,40]</td>
+                                                  <td>12</td>
+                                                  <td>NA</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>mpc560[2,3,4][b,c], spc560[b,c][40,44,50]</td>
+                                                  <td>10</td>
+                                                  <td>NA</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>mpc560[5,6,7]b, spc560b[54,60,64]</td>
+                                                  <td>10</td>
+                                                  <td>12</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="true"/>
+                            <a:a name="LABEL" value="Adc Channel Resolution"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:b6544e4f-4363-4f48-b677-f14cdec64901"/>
+                            <a:da name="DEFAULT" type="XPath" expr=
+                                  "((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2))"
+                                true="12"
+                                false="10"/>
+                            <a:da name="ENABLE" value="true"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=63"/>
+                              <a:tst expr="&gt;=1"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath">
+                              <a:tst expr="(.&gt;=10) and (.&lt;=12)" false="Invalid Resolution value (10 or 12 should be used)"/>
+                              <a:tst expr="(.=11)" true="Invalid Resolution value (10 or 12 should be used)"/>
+                              <a:tst expr="( (.=10 and ../../../AdcHwUnitId = 'ADC_UNIT_1')  or  (((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and (.=10)) )"
+                                true="Invalid Resolution value: 10Bit is only for ADC0 on MPC560[2,3,4,5,6,7][B,C]. For MPC560[1,2]D 12bit is for ADC0"/>
+                              <a:tst expr="( (.=12 and ../../../AdcHwUnitId = 'ADC_UNIT_0') and ((ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') or (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2)) )"
+                                true="Invalid Resolution value: 12Bit is only for ADC1 in MPC560[5,6,7]B _and_ for ADC0 in MPC560[1,2]D"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcChannelSampTime -->
+                          <!--  @implements DADC01016  -->
+                          <v:var name="AdcChannelSampTime" type="INTEGER">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Sampling time, i.e. the time during whuch the value is sampled, (in clock cycles) for each channel. Not used.</p></html>]]></a:v>
+                          </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Channel Sampling time"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:472c9f25-ea3d-4cf9-a733-c743201b9db0"/>
+                            <a:da name="DEFAULT" value="7"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&gt;=7"/>
+                              <a:tst expr="&lt;=254"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcEnablePresampling -->
+                          <v:var name="AdcEnablePresampling" type="BOOLEAN">
+                            <a:a name="DESC">
+                             <a:v><![CDATA[EN:<html><p>When true, this parameter enables the presampling phase for the selected channel.
+                              The normal operation sequence on the channel: Presampling -> Sampling -> Conversion.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Enable Presampling"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:48eef9f1-1bde-4df2-bd2e-1bd4fd925c1f"/>
+                            <a:da name="DEFAULT" value="false"/>
+                          </v:var>
+
+                          <!-- AdcThresholdControl Big Container -->
+                          <v:ctr name="AdcThresholdControl" type="IDENTIFIABLE">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>This container contains the Threshold configuration (parameters).</p></html>]]></a:v>
+                          </a:a>
+                            <a:a name="UUID" value="ECUC:3e80c450-728a-4156-aaca-e6267c103c12"/>
+
+                            <!-- AdcEnableThresholds -->
+                            <v:var name="AdcEnableThresholds" type="BOOLEAN">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>When true, this parameter enables the threshold detection feature for the selected channel.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Enable Threshold"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:3e80c450-728a-4156-aaca-e6267c103c13"/>
+                              <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- AdcThresholdControlRegister -->
+                            <v:var name="AdcThresholdControlRegister" type="ENUMERATION">
+                              <a:a name="DESC">
+                               <a:v><![CDATA[EN:<html><p>
+
+                                Select the threshold register which provides the values to be used for upper and lower thresholds.<br>
+                                For 5601/2D:
+                                ADCHwUnit0(12Bit ADC) supports threshold registers from ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_2.<br>
+                                For 5602/3/4B:
+                                ADCHwUnit0(10Bit ADC) supports threshold registers from ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_3.<br>
+                                For 5605/6/7B:
+                                ADCHwUnit0(10Bit ADC) supports threshold registers from ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_5 while ADCHwUnit1(12Bit ADC) supports threshold registers from ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_2.<br>
+
+                                Note: This is an Implementation Specific Parameter.
+                                </p></html>]]>
+                               </a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Threshold Register"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:10ed7efd-5926-4df5-84e0-c0e36d0409a9"/>
+                              <a:da name="DEFAULT" value="ADC_THRESHOLD_REG_0"/>
+                              <a:a name="ENABLE" type="XPath">
+                                <a:tst expr="../AdcEnableThresholds = 'true'"/>
+                              </a:a>
+                              <a:da name="RANGE">
+                              <a:v>ADC_THRESHOLD_REG_0</a:v>
+                              <a:v>ADC_THRESHOLD_REG_1</a:v>
+                              <a:v>ADC_THRESHOLD_REG_2</a:v>
+                              <a:v>ADC_THRESHOLD_REG_3</a:v>
+                              <a:v>ADC_THRESHOLD_REG_4</a:v>
+                              <a:v>ADC_THRESHOLD_REG_5</a:v>
+                              </a:da>
+                              <a:da name="INVALID" type="XPath">
+                                <a:tst expr="text:uniq(../../../*/AdcThresholdControl/AdcThresholdControlRegister, .)"
+                                 false="Duplicate Threshold register"/>
+                                <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') and (.= 'ADC_THRESHOLD_REG_4' or .='ADC_THRESHOLD_REG_5')"
+                                true="Only the threshold registers  ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_3 are supported for MPC5602/3/4B."/>
+                                <a:tst expr="((node:current()/../../../../AdcHwUnitId = 'ADC_UNIT_1') and (.= 'ADC_THRESHOLD_REG_3' or .= 'ADC_THRESHOLD_REG_4' or .= 'ADC_THRESHOLD_REG_5'))"
+                                true="ADCHwUnit1 supports only threshold registers from ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_2."/>
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and (.= 'ADC_THRESHOLD_REG_3' or .= 'ADC_THRESHOLD_REG_4' or .= 'ADC_THRESHOLD_REG_5')"
+                                true="Only the threshold registers  ADC_THRESHOLD_REG_0 to ADC_THRESHOLD_REG_2 are supported for MPC5601/2D."/>
+                              </a:da>
+                            </v:var>
+
+                            <!-- AdcHighThreshold -->
+                            <v:var name="AdcHighThreshold" type="INTEGER">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Set the value for High Threshold.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc High Threshold value"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:3ab2d195-8086-458f-b5e1-d1dfc831e0a4"/>
+                              <a:da name="DEFAULT" value="1023"/>
+                              <a:a name="ENABLE" type="XPath">
+                                <a:tst expr="../AdcEnableThresholds = 'true'"/>
+                              </a:a>
+                              <a:da name="INVALID" type="Range">
+                                <a:tst expr="&gt;=0"/>
+                                <a:tst expr="&lt;=4095"/>
+                              </a:da>
+                              <a:da name="RANGE" type="XPath">
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and ((node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0') and (node:fallback(../AdcHighThreshold,0) &gt; 4095))"
+                                    true="For ADCHwUnit0 in MPC5601/2D the maximum threshold allowed is 4095"/>
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') or (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2)) and ((node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0') and (node:fallback(../AdcHighThreshold,0) &gt; 1023))"
+                                    true="For ADCHwUnit0 in MPC560[2/3/4][B/C] and MPC560[5/6/7]B the maximum threshold value should not be more than 1023."/>
+                                <a:tst expr="(node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_1')= 'ADC_UNIT_1') and (node:fallback(../AdcHighThreshold,0) &gt; 4095)"
+                                    true="For ADCHwUnit1 in MPC560[5/6/7]B the maximum threshold value should not be more than 4095."/>
+                              </a:da>
+                            </v:var>
+
+                            <!-- AdcLowThreshold -->
+                            <v:var name="AdcLowThreshold" type="INTEGER">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Set the value for Low Threshold.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Low Threshold value"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:45c100e5-fbc4-452f-98fb-6a1f3b568977"/>
+                              <a:da name="DEFAULT" value="0"/>
+                              <a:a name="ENABLE" type="XPath">
+                                <a:tst expr="../AdcEnableThresholds = 'true'"/>
+                              </a:a>
+                              <a:da name="INVALID" type="Range">
+                                <a:tst expr="&gt;=0"/>
+                                <a:tst expr="&lt;=4095"/>
+                              </a:da>
+                              <a:da name="RANGE" type="XPath">
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and ((node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0') and (node:fallback(../AdcLowThreshold,0) &gt; 4095))"
+                                    true="For ADCHwUnit0 in MPC5601/2D the lower threshold value should not be more than 4095"/>
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') or (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2)) and ((node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0') and (node:fallback(../AdcLowThreshold,0) &gt; 1023))"
+                                    true="For ADCHwUnit0 in MPC560[2/3/4][B/C] and MPC560[5/6/7]B the lower threshold value should not be more than 1023."/>
+                                <a:tst expr="(node:fallback(node:current()/../../../../AdcHwUnitId,'ADC_UNIT_1')= 'ADC_UNIT_1') and (node:fallback(../AdcLowThreshold,0) &gt; 4095)"
+                                    true="For ADCHwUnit1 in MPC560[5/6/7]B the lower threshold value should not be more than 4095."/>
+                              </a:da>
+                            </v:var>
+
+                            <!-- AdcWdogNotification -->
+                            <!--  @implements DADC01048  -->
+                            <v:var name="AdcWdogNotification" type="FUNCTION-NAME">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>This function pointer is called everytime when the conversion of the channel caused a watchdog interrupt.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Channel Watchdog Notification"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:0ecc344e-9883-4acd-b16f-284e54e0bc5f"/>
+                              <a:da name="DEFAULT" value="NULL_PTR"/>
+                              <a:a name="ENABLE" type="XPath">
+                                <a:tst expr="../AdcEnableThresholds = 'true'"/>
+                              </a:a>
+                              <a:a name="INVALID" type="XPath">
+                                <a:tst expr="text:uniq(../../../*/AdcThresholdControl/AdcWdogNotification,text:replace(.,'NULL_PTR','0'))" false="Duplicate AdcWdogNotification"/>
+                              </a:a>
+                            </v:var>
+                          </v:ctr>
+                        </v:ctr>
+                      </v:lst>
+
+                      <!-- AdcGroup Big container -->
+                      <!--  @implements DADC01017  -->
+                      <v:lst name="AdcGroup" type="MAP">
+                        <a:da name="MIN" value="1"/>
+
+                        <!-- AdcGroup -->
+                        <v:ctr name="AdcGroup" type="IDENTIFIABLE">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>This container contains the Group configuration (parameters).</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="UUID" value="ECUC:b0694ba6-332b-4bf8-8f6c-696f58ebcb4e"/>
+                          <a:da name="INVALID" type="XPath">
+                            <a:tst expr="text:uniq(text:split(../../../../../*/AdcHwUnit/*/AdcGroup/*/@name), ./@name)"
+                              false="Duplicate AdcGroupNames, Group Symbolic names must be unique across HWUnits."
+                            />
+                          </a:da>
+
+                          <!-- AdcGroupAccessMode -->
+                          <!--  @implements DADC01018  -->
+                          <v:var name="AdcGroupAccessMode" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Type of access mode to group conversion results.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Access Mode"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:338ca8ed-3e91-4e37-9675-66e484162968"/>
+                            <a:da name="DEFAULT" value="ADC_ACCESS_MODE_SINGLE"/>
+                            <a:da name="RANGE">
+                              <a:v>ADC_ACCESS_MODE_SINGLE</a:v>
+                              <a:v>ADC_ACCESS_MODE_STREAMING</a:v>
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="((../AdcWithoutInterrupts='true') and (.='ADC_ACCESS_MODE_STREAMING'))"
+                              true="Streaming access mode is not supported without interrupts."/>
+                              <a:tst expr="((../AdcGroupAccessMode='ADC_ACCESS_MODE_STREAMING') and (../AdcGroupTriggSrc='ADC_TRIGG_SRC_SW') and (../AdcGroupConversionMode='ADC_CONV_MODE_ONESHOT'))"
+                              true="Group cannot be configured with streaming access mode when it is Software triggered in one shot mode."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupConversionMode -->
+                          <!--  @implements DADC01019  -->
+                          <v:var name="AdcGroupConversionMode" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Type of Conversion mode of the channel group.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Conversion Mode"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:9c42285d-ef14-484c-91b4-090f3fcbaa66"/>
+                            <a:da name="DEFAULT" value="ADC_CONV_MODE_ONESHOT"/>
+                            <a:da name="RANGE">
+                              <a:v>ADC_CONV_MODE_CONTINUOUS</a:v>
+                              <a:v>ADC_CONV_MODE_ONESHOT</a:v>
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="((../AdcGroupTriggSrc='ADC_TRIGG_SRC_HW') and (../AdcGroupConversionMode='ADC_CONV_MODE_CONTINUOUS'))"
+                              true="Group cannot be configured for continuous conversion mode when it is hardware triggered."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupConversionType -->
+                          <!--  @implements DADC01020  -->
+                          <v:var name="AdcGroupConversionType" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Normal or Injected conversion type.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Conversion Type"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:cd67d5fb-3692-4012-827d-ce3d95182d4b"/>
+                            <a:da name="DEFAULT" value="ADC_CONV_TYPE_NORMAL"/>
+                            <a:a name="EDITABLE" type="XPath">
+                              <a:tst expr="../AdcGroupTriggSrc = 'ADC_TRIGG_SRC_SW'"/>
+                            </a:a>
+                            <a:da name="RANGE">
+                              <a:v>ADC_CONV_TYPE_NORMAL</a:v>
+                              <a:v>ADC_CONV_TYPE_INJECTED</a:v>
+                            </a:da>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="(((../AdcGroupTriggSrc='ADC_TRIGG_SRC_HW') or (../AdcGroupConversionMode='ADC_CONV_MODE_CONTINUOUS') or (../AdcGroupPriority!=255)) and (.='ADC_CONV_TYPE_INJECTED'))"
+                              true="Injected conversions can be configured only when trigger source is SW, conversion mode is ONE SHOT and the priority is the highest (255)."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupId -->
+                          <!--  @implements DADC01021  -->
+                          <v:var name="AdcGroupId" type="INTEGER">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Numeric ID of the group. This parameter is the symbolic name to be used on the API. This symbolic name allows accessing Channel Group data. This value will be assigned to the symbolic name derived of the AdcGroup container shortName.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Id"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                            <a:a name="UUID" value="ECUC:456482bb-9e0e-4880-9bda-fce3eb21923c"/>
+                            <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index,'0')"/>
+                            <a:da name="RANGE" type="XPath">
+                              <a:tst expr="(node:fallback(.,0) &gt;= 0) and (node:fallback(.,0) &lt; num:i(count(node:fallback(../../../../*/AdcGroup/*,1))))"
+                              false="Value out of range: must be in range 0 to N-1 (N is number of configured groups). Use the Calc button to calculate correct default value."/>
+                              <a:tst expr="text:uniq(node:fallback(../../../../*/AdcGroup/*/AdcGroupId,text:split('0') ),node:fallback(.,1))"
+                              false="Duplicate AdcGroupId, GroupIds must be unique across HWUnits."/>
+                            </a:da>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=1023"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupPriority -->
+                          <!-- @implements DADC01022 -->
+                          <v:var name="AdcGroupPriority" type="INTEGER">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Priority level of the AdcGroup. This item is ignored if Adc/AdcGeneral/AdcPriorityImplementation is defined to ADC_PRIORITY_NONE.</p></html>]]></a:v>
+                          </a:a>
+                          <!--
+                          <a:a name="LOWER-MULTIPLICITY" value="0"/>
+                          <a:a name="UPPER-MULTIPLICITY" value="1"/>
+                          -->
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <!-- <a:a name="OPTIONAL" value="true"/> -->
+                            <a:a name="LABEL" value="Adc Group Priority"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:6160f0b4-eb47-4c34-ae5c-983685131dbd"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="ENABLE" value="true"/>
+                            <a:a name="READONLY" type="XPath">
+                              <a:tst expr="../../../../../../AdcGeneral/AdcPriorityImplementation = 'ADC_PRIORITY_NONE'"/>
+                            </a:a>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=255"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath"> 
+                              <a:tst expr="(node:fallback(../AdcGroupConversionType, 'ADC_CONV_TYPE_NORMAL') = 'ADC_CONV_TYPE_NORMAL') and 
+                                           (node:fallback(../AdcGroupTriggSrc, 'ADC_TRIGG_SRC_SW') = 'ADC_TRIGG_SRC_SW') and 
+                                           node:exists(node:fallback(../../../AdcGroup/*[AdcGroupTriggSrc='ADC_TRIGG_SRC_HW']/AdcGroupPriority, 0)) and 
+                                           (node:fallback(.,0) &gt; (num:min(node:fallback(../../../AdcGroup/*[AdcGroupTriggSrc='ADC_TRIGG_SRC_HW']/AdcGroupPriority, 0))))"
+                                     true="Normal SW Triggered Groups cannot have priority more than HW Triggered Groups"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupReplacement -->
+                          <!-- @implements DADC01023  -->
+                          <v:var name="AdcGroupReplacement" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Replacement mechanism used on ADC group level, if a group conversion is interrupted by a group which has a higher priority. It's fixed to Abort/Restart</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Group Replacement"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:56c755c6-431b-452a-aa15-7c54cb67ee85"/>
+                            <a:da name="DEFAULT" value="ADC_GROUP_REPL_ABORT_RESTART"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="RANGE">
+                              <a:v>ADC_GROUP_REPL_ABORT_RESTART</a:v>
+                              <a:v>ADC_GROUP_REPL_SUSPEND_RESUME</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupTriggSrc -->
+                          <!-- @implements DADC01024  -->
+                          <v:var name="AdcGroupTriggSrc" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Type of source event that starts a group conversion. It' s possible select Hw or Sw trigger.
+                              In case of Hw trigger the trigger source can be from the CTU or External hardware pins of the controller.
+                              In this controller both CTU trigger and external hw pin sources are supported which is selected by the &quot;AdcHwTrigSrc&quot; parameter.
+                              </p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Trigger Source"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:80812e88-23fa-4d1e-bdb7-8f0517cd8f3a"/>
+                            <a:da name="DEFAULT" value="ADC_TRIGG_SRC_SW"/>
+                            <a:a name="INVALID" type="XPath">
+                              <a:tst expr="((../../../../../../../AdcGeneral/AdcHwTriggerApi = 'false') and (. = 'ADC_TRIGG_SRC_HW'))"
+                              true="Adc Hw Trigger API is switched off! Cannot configure any groups in HW triggered mode!"/>
+                            </a:a>
+                            <a:da name="RANGE">
+                              <a:v>ADC_TRIGG_SRC_HW</a:v>
+                              <a:v>ADC_TRIGG_SRC_SW</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcHwTrigSignal -->
+                          <!--  @implements DADC01025  -->
+                          <v:var name="AdcHwTrigSignal" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Configures on which edge of the hardware trigger signal the driver should reach, i.e. start the conversion.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <!-- <a:a name="OPTIONAL" value="true"/> -->
+                            <a:a name="LABEL" value="Adc Group Trigger Signal"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:f3a6b182-7bc9-49b1-8487-ce488b918304"/>
+                            <a:da name="DEFAULT" value="ADC_HW_TRIG_RISING_EDGE"/>
+                            <a:a name="ENABLE" type="XPath">
+                              <a:tst expr="(../../../../../../../AdcGeneral/AdcHwTriggerApi = 'true') and (../AdcGroupTriggSrc = 'ADC_TRIGG_SRC_HW')"/>
+                            </a:a>
+                            <a:da name="RANGE">
+                              <a:v>ADC_HW_TRIG_FALLING_EDGE</a:v>
+                              <a:v>ADC_HW_TRIG_RISING_EDGE</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcHwTrigTimer -->
+                          <!--  @implements DADC01026  -->
+                          <v:var name="AdcHwTrigTimer" type="INTEGER">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Reload value of the ADC module embedded timer. Isn't used on this version.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Group Trigger Timer"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:15bfe40a-c251-4080-a7f9-fad6c1e48277"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="ENABLE" value="false"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=9223372036854775807"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcNotification -->
+                          <!--  @implements DADC01027  -->
+                          <v:var name="AdcNotification" type="FUNCTION-NAME">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Callback function for each group. This function pointer is called everytime when the conversion of this group is completed.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="OPTIONAL" value="false"/>
+                            <a:a name="LABEL" value="Adc Group Notification"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:dcd1d7e2-e6b6-4028-bfcb-4d680748fbc3"/>
+                            <a:da name="DEFAULT" value="NULL_PTR"/>
+                            <a:a name="ENABLE" type="XPath">
+                              <a:tst expr="../../../../../../../AdcGeneral/AdcGrpNotifCapability = 'true'"/>
+                            </a:a>
+                          </v:var>
+
+                          <!-- AdcStreamingBufferMode -->
+                          <!--  @implements DADC01028  -->
+                          <v:var name="AdcStreamingBufferMode" type="ENUMERATION">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Select the streaming buffer as linear buffer (i.e. the ADC Driver stops the conversion as soon as the stream buffer is full) or as ring buffer (wraps around if the end of the stream buffer is reached).</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Streaming Buffer Mode"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:c9ca4545-f581-481a-8eb6-f9bac95de2f0"/>
+                            <a:da name="DEFAULT" value="ADC_STREAM_BUFFER_LINEAR"/>
+                            <a:a name="EDITABLE" type="XPath">
+                              <a:tst expr="../AdcGroupAccessMode = 'ADC_ACCESS_MODE_STREAMING'"/>
+                            </a:a>
+                            <a:a name="INVALID" type="XPath">
+                              <a:tst expr="(../AdcGroupAccessMode = 'ADC_ACCESS_MODE_SINGLE' and .='ADC_STREAM_BUFFER_CIRCULAR')" true ="For Single Access the Buffer must be Linear."/>
+                            </a:a>
+                            <a:da name="RANGE">
+                              <a:v>ADC_STREAM_BUFFER_CIRCULAR</a:v>
+                              <a:v>ADC_STREAM_BUFFER_LINEAR</a:v>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcStreamingNumSamples -->
+                          <!--  @implements DADC01029  -->
+                          <v:var name="AdcStreamingNumSamples" type="INTEGER">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Number of ADC values to be acquired per channel in streaming access mode.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Streaming Number Samples"/>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:41106ad2-75dd-4ffa-acb8-a7278fb7f194"/>
+                            <a:da name="DEFAULT" value="1"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=255"/>
+                              <a:tst expr="&gt;=1"/>
+                            </a:da>
+                            <a:da name="RANGE" type="XPath">
+                              <a:tst expr="../AdcGroupAccessMode = 'ADC_ACCESS_MODE_SINGLE' and ../AdcStreamingNumSamples != 1" true="AdcStreamingNumSamples must be 1 for ADC_ACCESS_MODE_SINGLE."/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcEnableChDisableChGroup -->
+                          <v:var name="AdcEnableChDisableChGroup" type="BOOLEAN">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>
+                                If this parameter is enabled, it allows the feature of enabling or disabling a particular channel in the group.<br>
+                                Max.no of Groups with this feature enabled, should be configured are 254 if the configuration parameter AdcEnableChDisableChApi is enabled in NonAutosar container/>
+                                <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Enable/Disable channels"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:46b390ad-52ad-4f9e-a4a8-8dab83179edb"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="EDITABLE" type="XPath" expr="../../../../../../../NonAutosar/AdcEnableChDisableChApi = 'true'"/>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="num:i(count(../../*[AdcEnableChDisableChGroup='true'])) &gt; 254" true="Up to 254 Adc Groups can have AdcEnableChDisableChGroup feature enabled"/>
+                            </a:da>
+                          </v:var>
+                            <!-- AdcMuxDelayNeeded -->
+                          <v:var name="AdcMuxDelayNeeded" type="BOOLEAN">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>
+                              This parameter will be enabled only when both "AdcMuxDelaySupport" and "AdcMuxDelaySupportPerGroup" parameters are enabled and the Group is a SW group.<br>
+                              If enabled, Adc_StartGroupConversion Api will be able to change the DSDR values.<br>
+                              <h1>Note</h1>This is an Implementation Specific Parameter.
+                            </p></html>]]>
+                            </a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>                            
+                          </a:a>
+                          <a:a name="LABEL" value="Adc Mux Delay Needed"/>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:bc352e8d-12d3-46e4-977e-40fd983c6be2"/>
+                          <a:da name="DEFAULT" value="false"/>
+                          <a:a name="ENABLE" type="XPath">
+                          <a:tst expr="(../../../../../../../AdcGeneral/AdcMuxDelaySupport ='true') and
+                                       (../../../../../../../AdcGeneral/AdcMuxDelaySupportPerGroup ='true') and
+                                       (../../../AdcHwUnitId = 'ADC_UNIT_0') and (../AdcGroupTriggSrc='ADC_TRIGG_SRC_SW') and (../AdcGroupConversionType='ADC_CONV_TYPE_NORMAL')"/>
+                          </a:a>
+                        </v:var>
+
+                          <!-- AdcWithoutInterrupts -->
+                          <!--  @implements DADC01050  -->
+                          <v:var name="AdcWithoutInterrupts" type="BOOLEAN">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>
+                                            Enable/ Disable the occuring of ADC Interrupts and Reading of the group conversion results periodically without interrupts.
+                                            A) When this parameter is enabled, interrupts are disabled .
+                                            The conversion will run without software intervention (no interrupt generated anymore) and application can read the results
+                                            by calling Adc_ReadGroup().
+                                            B) When this parameter is enabled, the result buffer is no longer to be used to read the results as the results will be directly read from HW registers.
+                                            When this parameter is Disabled, normal functionlaity shall be executed.
+                                            Note: This is an Implementation Specific Parameter.</p></html>]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc Group Without Interrupts"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:d51a5254-f810-483e-be67-0814a4b7e322"/>
+                            <a:da name="DEFAULT" value="false"/>
+                           </v:var>
+
+                          <!-- AdcMultipleHardwareTriggerGroup -->
+                           <v:var name="AdcMultipleHardwareTriggerGroup" type="BOOLEAN">
+                             <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>
+                              If is checked that means that this group is part of the MHT groups subset.
+                              MHT - Multiple Hardware Trigger. That meaning a subset of groups can be active at a given time as Hardware Triggered
+                              groups. To use this feature it is required that every MHT marked group share the same settings on several parameters.
+                              The list of parameters that can be different is:
+                               - Group Id - actually it should be different.
+                               - Group Priority - it can have any value in the domain, it doesnt matter. The priority will be based on the
+                               selected CTU trigger priority.
+                               - Group Notification - can be different.
+                               - Group Buffer Pointer - recommended to be different to know which value from which group/channel comes.
+                               - AdcHwTrigSrc - should be different for every group. If two or more MHT groups share the same trigger source it won't work.
+                              Each such a grup (MHT) should have only and only one ADC channel!
+                              These ADC channel should be unique across these MHT groups (actually they should be unique across the MHT subset runtime!).</p></html>]]>
+                              </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Adc MHT Group"/>
+                            <a:a name="ORIGIN" value="Freescale"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:d51a5254-f810-483e-be67-0814a4b7e323"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="(.='true') and (../AdcGroupTriggSrc = 'ADC_TRIGG_SRC_SW')" true="This feature is available only for hardware triggered groups!"/>
+                              <a:tst expr="(.='true') and (count(../AdcGroupDefinition/*) &gt; 1)" true="This feature requires only one hardware channel!"/>
+                              <a:tst expr="(.='true') and ((../AdcHwTrigSrc = 'PIT2') or (../AdcHwTrigSrc = 'PIT6'))" true="This feature is not available for no CTU trigger!"/>
+                            </a:da>
+                          </v:var>
+
+                          <!-- AdcGroupDefinition -->
+                          <!--  @implements DADC01030  -->
+                          <v:lst name="AdcGroupDefinition">
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="INVALID" type="XPath">
+                              <a:tst expr="num:i(count(node:refs(./*)/AdcChannelLimitCheck[.='true'])) &gt; 1"
+                              true="ADC channels with limit checking feature enabled have to be assigned to ADC groups which consist exactly of one limit checking enabled ADC channel."/>
+                              <a:tst expr="(num:i(count(node:refs(./*)/AdcChannelLimitCheck[.='true'])) = 1) and (../../../../../AdcGeneric/AdcTransferType = 'ADC_DMA')"
+                              true="ADC channels with limit checking feature enabled can be assigned to ADC groups only when the ADC transfer type is set to ADC_INTERRUPT."/>
+                              <a:tst expr="(../../../../../../../AdcGeneral/AdcEnableLimitCheck = 'true') and (num:i(count(node:current()/*)) &gt; 1) and (num:i(count(node:refs(./*)/AdcChannelLimitCheck[.='true'])) = 1)"
+                              true="ADC Channel group must contain exactly one ADC Channel if the global limit checking feature is enabled and a channel with specific limit checking is into the group."/>
+                            </a:da>
+                            <v:ref name="AdcGroupDefinition" type="REFERENCE">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Assignment of channels to a AdcGroups. For each AdcChannel that should belong to the group, a reference needs to be defined.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                              <a:a name="UUID" value="ECUC:1acb60cb-93a5-4130-bcf1-c9bd033348cc"/>
+                              <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Adc/AdcConfigSet/AdcHwUnit/AdcChannel"/>
+                              <a:da name="INVALID" type="XPath">
+                                <a:tst expr=".=''" true="Select an ADC channel for the configured group."/>
+                              </a:da>
+                              <a:da name="INVALID" type="XPath">
+                                <a:tst expr="contains(., ../../../../@name)" false="The ADC channel must be mapped on the same Hw Unit Group."/>
+                              </a:da>
+                            </v:ref>
+                          </v:lst>
+
+                        <!-- AdcHwTrig Big container -->
+                        <v:lst name="AdcHwTrig" type="MAP">
+                          <a:da name="MIN" value="0"/>
+                          <a:da name="MAX" value="64"/>
+                          <a:da name="INVALID" type="XPath">
+                            <a:tst expr="(../AdcGroupTriggSrc = 'ADC_TRIGG_SRC_HW') and (num:i(count(./*)) = 0)" true="For ADC_TRIGG_SRC_HW, there should be at least one AdcHwTrig configured."/>
+                          </a:da>
+                         <v:ctr name="AdcHwTrig" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>This container contains the Hardware trigger source configured for the group.</p></html>]]></a:v>
+                            </a:a>
+                         <a:a name="UUID" value="ECUC:1df7a136-db83-44a5-ac85-ff21c8db3f05"/>
+                          <!-- @implements DADC01049  -->
+                         <v:var name="AdcHwTrigSrc" type="ENUMERATION">
+                          <a:a name="DESC">
+                          <a:v><![CDATA[EN:<html><p>
+                            Select the TIMER / PIT Trigger source channels for the ADC trigger inputs.
+                            Available Trigger Sources from the CTU modules are:<br>
+                                MPC5601/2D:<br>
+                                    eMIOS_A_Ch0 to eMIOS_A_CH22, PIT3, eMIOS_A_CH24 to eMIOS_A_CH27<br>
+                                MPC5602/3/4B/C:<br>
+                                    eMIOS_A_Ch0 to eMIOS_A_CH22, PIT3, eMIOS_A_CH24, eMIOS_B_CH0 to eMIOS_B_CH22, eMIOS_B_CH24<br>
+                                MPC5605/6/7B:<br>
+                                    eMIOS_A_Ch0 to eMIOS_A_CH22, PIT3, eMIOS_A_CH24 to eMIOS_A_CH31, eMIOS_B_CH0 to eMIOS_B_CH22, PIT7, eMIOS_B_CH24 to eMIOS_B_CH31<br>
+
+                            Available Trigger Sources without the CTU module are:
+                            PIT2 for ADC0
+                            PIT6 for ADC1
+                            Hardware Priority for the &quot;eMIOS_A_Ch0&quot; is highest while for the &quot;eMIOS_B_Ch24&quot; is lowest.
+                            Priority configured for the group with &quot;ADC_TRIGG_SRC_HW&quot; (Hardware trigger source) should
+                            be always greater then the &quot;ADC_TRIGG_SRC_SW&quot; (Software trigger source) configured group. 
+                            <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]></a:v>
+                          </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:c904ad1f-ea97-46c8-9263-13c638e22165"/>
+                          <a:da name="EDITABLE" type="XPath" expr="../../../AdcGroupTriggSrc='ADC_TRIGG_SRC_HW'"/>
+                          <a:da name="DEFAULT" value="eMIOS_A_Ch0"/>
+                          <a:a name="INVALID" type="XPath">
+                            <a:tst expr="(. = 'PIT2' and ../../../../../AdcHwUnitId = 'ADC_UNIT_1')" true ="PIT2 HW trigger source only for ADC Hw unit 0."/>
+                            <a:tst expr="(. = 'PIT6' and ../../../../../AdcHwUnitId = 'ADC_UNIT_0')" true ="PIT6 HW trigger source only for ADC Hw unit 1."/>
+                          </a:a>
+                          <a:da name="RANGE" type="XPath" expr="ecu:list(&apos;Adc.AdcConfigSet.AdcHwUnit.AdcGroup.AdcHwTrigSrc&apos;)"></a:da>
+                        </v:var>
+                        </v:ctr>                       
+                        </v:lst>
+
+
+                          <!-- AdcGroupConversionConfiguration Big Container -->
+                          <v:ctr name="AdcGroupConversionConfiguration" type="IDENTIFIABLE">
+                            <a:a name="ENABLE" type="XPath">
+                              <a:tst expr="(((../../../../../../../AdcGeneral/AdcConvTimeOnce = 'true') and ((node:current()/../@index) = 0)) or (../../../../../../../AdcGeneral/AdcConvTimeOnce = 'false'))"/>
+                            </a:a>
+                            <a:a name="DESC">
+                              <a:v><![CDATA[EN:<html><p>Configure the Sampling and Conversion TimeGroup.</p></html>]]></a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:44926f47-31a5-4b6d-b23c-744481470be8"/>
+                            
+                            <!-- AdcLatchingDuration -->
+                            <v:var name="AdcLatchingDuration" type="ENUMERATION">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Select the Bit Latching Phase Duration. Usually this value should be ADC_ONE_CLOCK_CYCLE.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Group Latch Duration"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:fdc2c56b-6ab8-4f5f-932b-bdd8373fc20f"/>
+                              <a:da name="DEFAULT" value="ADC_HALF_CLOCK_CYCLE"/>
+                              <a:da name="RANGE">
+                                <a:v>ADC_HALF_CLOCK_CYCLE</a:v>
+                                <a:v>ADC_ONE_CLOCK_CYCLE</a:v>
+                              </a:da>
+                            </v:var>
+
+                            <!-- AdcComparisonDuration -->
+                            <v:var name="AdcComparisonDuration" type="ENUMERATION">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Select the Comparison Duration. Usually this value should be ADC_THREE_LATCH_CYCLE.</p></html>]]></a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Group Comparison Duration"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:f5d7df28-435e-4404-b883-e1f312905aa2"/>
+                              <a:da name="DEFAULT" value="ADC_TWO_LATCH_CYCLE"/>
+                              <a:da name="RANGE">
+                                <a:v>ADC_ONE_LATCH_CYCLE</a:v>
+                                <a:v>ADC_TWO_LATCH_CYCLE</a:v>
+                                <a:v>ADC_THREE_LATCH_CYCLE</a:v>
+                                <a:v>ADC_FOUR_LATCH_CYCLE</a:v>
+                              </a:da>
+                            </v:var>
+
+                            <!-- AdcSamplingDuration -->
+                            <v:var name="AdcSamplingDuration" type="INTEGER">
+                              <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html><p>Selects value to be written into bit-field INPSAMP of the CTR register. The sampling duration component (Tsample) of the total conversion time {Tsample + Teval + Ndelay*nTck} is given by:<br>
+                                Tsample = (INPSAMP-Ndelay) * Tck<br>
+                                The timing refers to Tck, where Fck = (1/2 * ADC peripheral set clock)<br>
+                                Ndelay = 0.5 (for INPSAMP &lt;= 6); Ndelay = 1 (for INPSAMP &gt; 6). INPSAMPLE must be greater than or equal to 8 (hardware requirement)<br>
+                                Teval=n*Tbiteval; where: 'n' = Channel resolution (10 or 12 bits); Tbiteval = INPCMP*Tck if INPCMP &gt;= 1.<br>
+                                Only for mpc560[2|3|4][B|C], spc560[B|C][40x|50x] and mpc560[5|6|7]B, spc560B[54|60|64]x if if INPCMP = 0, Tbiteval = 4*Tck.<br>
+                                The hardware imposes the following restrictions on the choice of INPSAMP:<br>
+                                  <table border="1">
+                                    <title>INPSAMP HW restrictions at 3.3V</title>
+                                    <thead>
+                                      <tr>
+                                        <th>Subderivative type</th>
+                                        <th>mpc560[1|2]D, spc560D[30|40]</th>
+                                        <th>mpc560[2|3|4][B|C], spc560[B|C][40x|50x]</th>
+                                        <th>mpc560[5|6|7]B, spc560B[54|60|64]x</th>
+                                        <th>mpc560[5|6|7]B, spc560B[54|60|64]x</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Adc Unit</td>
+                                        <td>ADC_1</td>
+                                        <td>ADC_0</td>
+                                        <td>ADC_0</td>
+                                        <td>ADC_1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Min Tsample</td>
+                                        <td>600ns</td>
+                                        <td>500ns</td>
+                                        <td>500ns</td>
+                                        <td>600ns</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Min INPSAMP</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>8</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <table border="1">
+                                    <title>INPSAMP HW restrictions at 5.0V</title>
+                                    <thead>
+                                      <tr>
+                                        <th>Subderivative type</th>
+                                        <th>mpc560[1|2]D, spc560D[30|40]</th>
+                                        <th>mpc560[2|3|4][B|C], spc560[B|C][40x|50x]</th>
+                                        <th>mpc560[5|6|7]B, spc560B[54|60|64]x</th>
+                                        <th>mpc560[5|6|7]B, spc560B[54|60|64]x</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Adc Unit</td>
+                                        <td>ADC_1</td>
+                                        <td>ADC_0</td>
+                                        <td>ADC_0</td>
+                                        <td>ADC_1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Min Tsample</td>
+                                        <td>500ns</td>
+                                        <td>500ns</td>
+                                        <td>500ns</td>
+                                        <td>500ns</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Min INPSAMP</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>8</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </p></html>]]></a:v>
+                            </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="LABEL" value="Adc Group Sampling Duration"/>
+                              <a:a name="ORIGIN" value="Freescale"/>
+                              <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                              <a:a name="UUID" value="ECUC:c4153078-0ed7-4831-9da5-e601056b243f"/>
+                            <a:da name="DEFAULT" type="XPath">
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2))"
+                                    true="8"/>
+                                <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE')"
+                                    true="3"/>
+                                <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0'))"
+                                    true="3"/>
+                                <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1'))"
+                                    true="8"/>
+                            </a:da>
+                              <a:da name="INVALID" type="Range">
+                                <a:tst expr="&gt;=3"/>
+                                <a:tst expr="&lt;=255"/>
+                              </a:da>
+                            <a:da name="RANGE" type="XPath">
+                                <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and (node:fallback(.,0) &lt; 8)"
+                                    true="For this subderivative the HW requirement is AdcSamplingDuration >= 8"/>
+                                <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') and (node:fallback(.,0) &lt; 3)"
+                                    true="For this subderivative the HW requirement is AdcSamplingDuration >= 3"/>
+                                <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0')) and (node:fallback(.,0) &lt; 3)"
+                                    true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 3"/>
+                                <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1')) and (node:fallback(.,0) &lt; 8)"
+                                    true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 8"/>
+                            </a:da>
+                            </v:var>
+                          </v:ctr>
+                        </v:ctr>
+                      </v:lst>
+                      
+                      <!-- AdcAlternateConvTimings Big Container-->
+                      <v:ctr name="AdcNormalAltConvTimings" type="IDENTIFIABLE">
+                        <a:a name ="DESC">
+                          <a:v>
+                            <![CDATA[<html><p> Selects Normal and Alternate values used in Adc_SetClockMode API for prorgamming CTR Conversion Timing Registers. This is available only when AdcEnableDualClockMode has been enabled</p></html>]]></a:v>
+                        </a:a>
+                        <a:a name="ENABLE" type="XPath">
+                          <a:tst expr="node:fallback(../../../../../NonAutosar/AdcEnableDualClockMode,'true') = 'true'"/>
+                        </a:a>
+                        <a:a name="UUID" value="ECUC:0cb2283c-677d-434e-80a6-169b5c6e63e4"/>
+
+                        <!-- AdcLatchingDurationNormal -->
+                        <v:var name="AdcLatchingDurationNormal" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Select the Normal Bit Latching Phase Duration used when calling Adc_SetClockMode(ADC_NORMAL). Usually this value should be ADC_ONE_CLOCK_CYCLE.</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="LABEL" value="Normal Latch Duration"/>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:dd32aa0f-9713-4560-8904-967f92e77499"/>
+                          <a:da name="DEFAULT" value="ADC_HALF_CLOCK_CYCLE"/>
+                          <a:da name="RANGE">
+                            <a:v>ADC_HALF_CLOCK_CYCLE</a:v>
+                            <a:v>ADC_ONE_CLOCK_CYCLE</a:v>
+                          </a:da>
+                        </v:var>
+
+                        <!-- AdcComparisonDurationNormal -->
+                        <v:var name="AdcComparisonDurationNormal" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Select the Normal Comparison Duration used when calling Adc_SetClockMode(ADC_NORMAL). Usually this value should be ADC_THREE_LATCH_CYCLE.<br></p></html>]]></a:v>
+
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="LABEL" value="Normal Comparison Duration"/>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:b9c36d8e-9fe0-4007-b778-086c5fcd4e65"/>
+                          <a:da name="DEFAULT" value="ADC_TWO_LATCH_CYCLE"/>
+                          <a:da name="RANGE">
+                            <a:v>ADC_ONE_LATCH_CYCLE</a:v>
+                            <a:v>ADC_TWO_LATCH_CYCLE</a:v>
+                            <a:v>ADC_THREE_LATCH_CYCLE</a:v>
+                            <a:v>ADC_FOUR_LATCH_CYCLE</a:v>
+                          </a:da>
+                        </v:var>
+
+                        <!-- AdcSamplingDurationNormal -->
+                        <v:var name="AdcSamplingDurationNormal" type="INTEGER">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Selects the Normal INPSAMP value of the CTR register used when calling Adc_SetClockMode(ADC_NORMAL)</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="LABEL" value="Normal Sampling Duration for Channels 0..14"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:16426534-25ba-4d05-a8f6-30f6879cb9d2"/>
+                          <a:da name="DEFAULT" type="XPath">
+                            <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2))"
+                                true="8"/>
+                            <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE')"
+                                true="3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0'))"
+                                true="3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1'))"
+                                true="8"/>
+                          </a:da>
+                          <a:da name="INVALID" type="Range">
+                            <a:tst expr="&gt;=3"/>
+                            <a:tst expr="&lt;=255"/>
+                          </a:da>
+                          <a:da name="RANGE" type="XPath">
+                            <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and (node:fallback(.,0) &lt; 8)"
+                                true="For this subderivative the HW requirement is AdcSamplingDuration >= 8"/>
+                            <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') and (node:fallback(.,0) &lt; 3)"
+                                true="For this subderivative the HW requirement is AdcSamplingDuration >= 3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0')) and (node:fallback(.,0) &lt; 3)"
+                                true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1')) and (node:fallback(.,0) &lt; 8)"
+                                true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 8"/>
+                          </a:da>
+                        </v:var>
+
+                        <!-- AdcLatchingDurationAlt -->
+                        <v:var name="AdcLatchingDurationAlt" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Select the Alternate Bit Latching Phase Duration used when calling Adc_SetClockMode(ADC_ALTERNATE). Usually this value should be ADC_ONE_CLOCK_CYCLE.</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="LABEL" value="Alternate Latch Duration"/>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:39659eb0-2fa4-4045-bec2-7a77010f64b3"/>
+                          <a:da name="DEFAULT" value="ADC_HALF_CLOCK_CYCLE"/>
+                          <a:da name="RANGE">
+                            <a:v>ADC_HALF_CLOCK_CYCLE</a:v>
+                            <a:v>ADC_ONE_CLOCK_CYCLE</a:v>
+                          </a:da>
+                        </v:var>
+
+                        <!-- AdcComparisonDurationAlt -->
+                        <v:var name="AdcComparisonDurationAlt" type="ENUMERATION">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Select the Alternate Comparison Duration used when calling Adc_SetClockMode(ADC_ALTERNATE). Usually this value should be ADC_THREE_LATCH_CYCLE.</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="LABEL" value="Alternate Comparison Duration"/>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:a850ac16-824c-46f8-b1e0-5051dddde68c"/>
+                          <a:da name="DEFAULT" value="ADC_TWO_LATCH_CYCLE"/>
+                          <a:da name="RANGE">
+                            <a:v>ADC_ONE_LATCH_CYCLE</a:v>
+                            <a:v>ADC_TWO_LATCH_CYCLE</a:v>
+                            <a:v>ADC_THREE_LATCH_CYCLE</a:v>
+                            <a:v>ADC_FOUR_LATCH_CYCLE</a:v>
+                          </a:da>
+                        </v:var>
+
+                        <!-- AdcSamplingDurationAlt -->
+                        <v:var name="AdcSamplingDurationAlt" type="INTEGER">
+                          <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html><p>Selects the Normal INPSAMP value of the CTR register used when calling Adc_SetClockMode(ADC_ALTERNATE)</p></html>]]></a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="ORIGIN" value="Freescale"/>
+                          <a:a name="LABEL" value="Alternate Sampling Duration for Channels 0..14"/>
+                          <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                          <a:a name="UUID" value="ECUC:4fa491ee-ef8d-4e2d-aec0-c6f19eba1aa8"/>
+                          <a:da name="DEFAULT" type="XPath">
+                            <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2))"
+                                true="8"/>
+                            <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE')"
+                                true="3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0'))"
+                                true="3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1'))"
+                                true="8"/>
+                          </a:da>
+                          <a:da name="INVALID" type="Range">
+                            <a:tst expr="&gt;=3"/>
+                            <a:tst expr="&lt;=255"/>
+                          </a:da>
+                          <a:da name="RANGE" type="XPath">
+                            <a:tst expr="((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE') and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;) &lt; 2)) and (node:fallback(.,0) &lt; 8)"
+                                true="For this subderivative the HW requirement is AdcSamplingDuration >= 8"/>
+                            <a:tst expr="(ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE') and (node:fallback(.,0) &lt; 3)"
+                                true="For this subderivative the HW requirement is AdcSamplingDuration >= 3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_0')) and (node:fallback(.,0) &lt; 3)"
+                                true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 3"/>
+                            <a:tst expr="((ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2) and (node:fallback(../../AdcHwUnitId,'ADC_UNIT_0')= 'ADC_UNIT_1')) and (node:fallback(.,0) &lt; 8)"
+                                true="For this subderivative and AdcHWUnit, the HW requirement is AdcSamplingDuration >= 8"/>
+                          </a:da>
+                        </v:var>
+                      </v:ctr>                      
+                    
+                    </v:ctr>
+                  </v:lst>
+
+                <!-- AdcGeneric Big Container -->
+                <v:ctr name="AdcGeneric" type="IDENTIFIABLE">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>General configuration parameters for the current configuration of the ADC Driver software module.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="UUID" value="ECUC:66d1efeb-bb72-48d6-bd96-706ee51c8de0"/>
+                
+                  <!-- AdcPriorityQueueMaxDepth -->
+                  <v:var name="AdcPriorityQueueMaxDepth" type="INTEGER">
+                    <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>Maximum depth of queue used for queuing of incoming conversion requests when hardware unit is busy.</p></html>]]></a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                         type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="LABEL" value="Adc Max Queue Depth"/>
+                    <a:a name="ORIGIN" value="Freescale"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:b19532fd-4313-43cf-8a5c-ddab3166b4bf"/>
+                    <a:da name="DEFAULT" value="1"/>
+                    <a:da name="INVALID" type="Range">
+                      <a:tst expr="&lt;=255"/>
+                      <a:tst expr="&gt;=1"/>
+                    </a:da>
+                    <a:da name="RANGE" type="XPath">
+                      <a:tst expr="../../../../AdcGeneral/AdcPriorityImplementation = 'ADC_PRIORITY_NONE' and ../../../../AdcGeneral/AdcEnableQueuing = 'false' and . !=1" true="The depth must be 1"/>
+                    </a:da>
+                  </v:var>
+
+                  <!-- AdcTransferType -->
+                  <v:var name="AdcTransferType" type="ENUMERATION">
+                    <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>Select the Interrupt or Dma transfer Type. 
+                              If DMA is used, user must not run SW and HW groups at the same time on the same HW unit because 
+                              the same DMA channel will be used for both. If DMA is required for AdcTransferType, it is recommended 
+                              to keep AdcWithoutInterrupts as false, otherwise, DMA will not be configured and it will be user 
+                              responsibilty to read the results from registers directly by calling Adc_ReadGroup.</p></html>]]>
+                      </a:v>
+                    </a:a>
+            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                         type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+
+                    <a:a name="LABEL" value="Adc Transfer Type"/>
+                    <a:a name="ORIGIN" value="Freescale"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:70ade8e2-ff8f-4990-a6ee-b2289ea0f310"/>
+                    <a:da name="DEFAULT" value="ADC_INTERRUPT"/>
+                    <a:da name="RANGE">
+                      <a:v>ADC_DMA</a:v>
+                      <a:v>ADC_INTERRUPT</a:v>
+                    </a:da>
+                    <a:da name="INVALID" type="XPath">
+                      <a:tst expr="(.= 'ADC_DMA') and ((ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE'))"
+                        true="DMA mode is not supported for 5602/03/04B platforms"/>
+                      <a:tst expr="(count(node:refs('ASPathDataOfSchema:/AUTOSAR/Mcu')/McuModuleConfiguration/*/McuDMA/*/DMAChannelEnable[.='true']/../McuDMASource[.= 'ADC0_EOC'])=0) and (.= 'ADC_DMA') and (../../AdcHwUnit/*/AdcHwUnitId = 'ADC_UNIT_0') and ((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE')) and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2)"
+                        true="Dma channel with ADC source must be enabled in MCU for hardware unit 0"/>
+                      <a:tst expr="(count(node:refs('ASPathDataOfSchema:/AUTOSAR/Mcu')/McuModuleConfiguration/*/McuDMA/*/DMAChannelEnable[.='true']/../McuDMASource[.= 'ADC1_EOC'])=0) and (.= 'ADC_DMA') and (../../AdcHwUnit/*/AdcHwUnitId = 'ADC_UNIT_1') and ((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE')) and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 2)"
+                        true="Dma channel with ADC source must be enabled in MCU for hardware unit 1"/>
+                      <a:tst expr="(count(node:refs('ASPathDataOfSchema:/AUTOSAR/Mcu')/McuModuleConfiguration/*/McuDMA/*/DMAChannelEnable[.='true']/../McuDMASource[.= 'ADC1_EOC'])=0) and (.= 'ADC_DMA') and (../../AdcHwUnit/*/AdcHwUnitId = 'ADC_UNIT_0') and ((ecu:get(&apos;AdcDMAPresent&apos;) = 'TRUE')) and (ecu:get(&apos;Adc.AdcConfigSet.AdcHwUnit&apos;)= 1)"
+                        true="Dma channel with ADC1_EOC source must be enabled in MCU for hardware unit 0"/>
+                    </a:da>
+                  </v:var>
+                </v:ctr>
+                </v:ctr>
+              </v:lst>
+
+              <!-- AdcGeneral Big Container -->
+              <!--  @implements DADC01031  -->
+              <v:ctr name="AdcGeneral" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>General configuration (parameters) of the ADC Driver software module.</p></html>]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:cc743c24-4698-4bac-9b58-3042d47903ec"/>
+
+                <!-- AdcDeInitApi -->
+                <!--  @implements DADC01032  -->
+                <v:var name="AdcDeInitApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds/removes the service Adc_DeInit() from the code.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc_DeInit API"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:87d8f2ba-d6c7-4929-8596-e59acd8c6fc0"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcDevErrorDetect -->
+                <!--  @implements DADC01033  -->
+                <v:var name="AdcDevErrorDetect" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Enable/Disable Development Error Detection.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Development Error Detection"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:01b8a877-9db2-4f03-aef1-ab1d5a3b86e6"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcEnableLimitCheck -->
+                <!--  @implements DADC01034  -->
+                <v:var name="AdcEnableLimitCheck" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Enable/disable limit checking feature in the ADC driver.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Enable Limit Check"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:90cb57a2-07de-4700-89c0-c22862e22b65"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcEnableQueuing -->
+                <!--  @implements DADC01035  -->
+                <v:var name="AdcEnableQueuing" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Enable/Disable the Queue. Note that if AdcPriorityImplementation=ADC_PRIORITY_HW_SW this field is always enabled.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Queue"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:30107c51-a07b-4ad3-84f2-00c06f78fdbb"/>
+                  <a:da name="DEFAULT" value="true"/>
+                  <a:a name="ENABLE" type="XPath">
+                    <a:tst expr="../AdcPriorityImplementation = 'ADC_PRIORITY_NONE'"/>
+                  </a:a>
+                </v:var>
+
+                <!-- AdcEnableStartStopGroupApi -->
+                <!--  @implements DADC01036  -->
+                <v:var name="AdcEnableStartStopGroupApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds / removes the services Adc_StartGroupConversion() and Adc_StopGroupConversion from the code.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc_StartStopGroup API"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:9abdd0a8-285d-44d1-903d-520f3b4aa2ec"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcGrpNotifCapability -->
+                <!--  @implements DADC01037  -->
+                <v:var name="AdcGrpNotifCapability" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Determines, if the group notification mechanism (the functions to enable and disable the notifications) is available at runtime.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Notification Capability"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:512af480-6730-4ba4-a0ec-2127c6a1f312"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcHwTriggerApi -->
+                <!--  @implements DADC01038  -->
+                <v:var name="AdcHwTriggerApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds / removes the services Adc_EnableHardwareTrigger() and Adc_DisableHardwareTrigger() from the code.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Hw Trigger  API"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2fe4e339-5e65-47f0-af70-6c138d016811"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- AdcPriorityImplementation -->
+                <!--  @implements DADC01039  -->
+                <v:var name="AdcPriorityImplementation" type="ENUMERATION">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Select the Priority mechanism. In this version the ADC_PRIORITY_HW isn't used.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Priority Mechanism"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:18622d68-7d9c-4ed6-838e-378cf7e0f1a1"/>
+                  <a:da name="DEFAULT" value="ADC_PRIORITY_NONE"/>
+                  <a:da name="RANGE">
+                    <a:v>ADC_PRIORITY_HW</a:v>
+                    <a:v>ADC_PRIORITY_HW_SW</a:v>
+                    <a:v>ADC_PRIORITY_NONE</a:v>
+                  </a:da>
+                  <a:da name="INVALID" type="XPath">
+                    <a:tst expr=".='ADC_PRIORITY_HW'"
+                    true="Priority Hardware mechanism is not supported."/>
+                  </a:da>
+                </v:var>
+
+                <!-- AdcReadGroupApi -->
+                <!--  @implements DADC01040  -->
+                <v:var name="AdcReadGroupApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds / removes the service Adc_ReadGroup() from the code.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc_ReadGroup API"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:b712cffc-566b-42a3-b7d1-ec74f007e6a3"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcResultAlignment -->
+                <!-- @implements DADC01041  -->
+                <v:var name="AdcResultAlignment" type="ENUMERATION">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Alignment of ADC raw results in ADC result buffer (left/right alignment).</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Result Alignment"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:311a6a42-2046-4173-876c-11b7508dc567"/>
+                  <a:da name="DEFAULT" value="ADC_ALIGN_RIGHT"/>
+                  <a:da name="RANGE">
+                    <a:v>ADC_ALIGN_LEFT</a:v>
+                    <a:v>ADC_ALIGN_RIGHT</a:v>
+                  </a:da>
+                </v:var>
+
+                <!-- AdcVersionInfoApi -->
+                <!--  @implements DADC01042 -->
+                <v:var name="AdcVersionInfoApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds / removes the service Adc_GetVersionInfo() from the code.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc_VersionInfo API"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:dc2d4fa3-10ec-4c54-aac1-80ea54a1640f"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcConvTimeOnce -->
+                <v:var name="AdcConvTimeOnce" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                    <![CDATA[EN:<html><p> Implementation Specific Parameter.
+                         Enable/Disable one time setting of the registers.
+                         If Enabled, the setting of the conversion time registers will be done only once in Adc_Init() function
+                        for the configured hardware unit.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Conversion Time Once"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:a3f13302-4d9e-4757-b715-5e2e0a3e92bc"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                </v:var>
+
+                <!-- AdcConvTimeOnce -->
+                <v:var name="AdcPreSamplingOnce" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                    <![CDATA[EN:<html><p>Implementation Specific Parameter.
+                        Enable/Disable one time setting of the registers.
+                        If Enabled, the setting of the presampling time registers will be done only once in Adc_Init() function
+                        for the configured hardware unit.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Presampling Time Once"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:9a902a27-608f-483d-88ff-43283fbe8a45"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                </v:var>
+
+                <v:var name="AdcWdgThresholdOnce" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                    <![CDATA[<html><p>Implementation Specific Parameter
+                        Enable/Disable one Wdg setting of the registers.
+                        If Enabled, the setting of the Watchdog Enable Registers will be done only once in Adc_Init() function
+                        for the configured hardware unit.
+                       </p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="ADC Watchdog Enable Once"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:85d1e8b3-74f0-42ef-9b0c-9209676bacc6"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:da name="INVALID" type="XPath">
+                    <a:tst expr="((.='true') and (ecu:get(&apos;AdcDMAPresent&apos;) = 'FALSE'))"
+                    true="AdcWdgThresholdOnce parameter value should be true only for Bolero 1M5 and 256K derivatives."/>
+                  </a:da>
+                </v:var>
+
+                <!-- AdcConvTimeOnce -->
+                <v:var name="AdcSetOnceRegisters" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                    <![CDATA[EN:<html><p>Implementation Specific Parameter.
+                        Enable/Disable one time setting of the registers.
+                        If Enabled, the setting of the presampling time or/and conversion time registers
+                        will be done only once in Adc_Init() function for the configured hardware unit.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Set Once Registers"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:68c11cac-3e49-4216-b94f-1414085c4135"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:da name="INVALID" type="XPath">
+                      <a:tst expr="(((.='true') and (../AdcConvTimeOnce = 'true')) or ((.='true') and (../AdcPreSamplingOnce = 'true')) or ((.='true') and (../AdcWdgThresholdOnce = 'true')) or
+                                    ((.='false') and (../AdcPreSamplingOnce = 'false' and ../AdcConvTimeOnce = 'false' and ../AdcWdgThresholdOnce = 'false')))"
+                      false="AdcSetOnceRegisters parameter value should be true if either of AdcPreSamplingOnce or AdcConvTimeOnce or AdcWdgThresholdOnce value is true. Use the Calc button to calculate correct default value."/>
+                  </a:da>
+                </v:var>
+
+                <!-- Adc direct DMA result buffer -->
+                <v:var name="ADCDirectDMAResultBufferCopy" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                      <![CDATA[<html><p>
+                        Enable/Disable the DMA to transfer all channels between the start channel and end channel of the group 
+                        directly to the user configured buffer without filtering out any unused channels data.<br>
+                        <br>
+                        If Enabled, DMA will transfer all the channels between the start channel and end channel even if there are any unused channels inbetween.<br>
+                        If Disabled, DMA will use intermediate buffer to filter out unnecessary channels and copy only used channels data to the user configured buffer.<br>
+                        <br>
+                        Note: If the parameter is enabled then the user configured buffer shall accomodate all the channels between the start channel and end channel of the group.
+                        The size of user configured buffer shall be (last channel - first channel + 1).
+                        </p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="LABEL" value="ADC Direct DMA Result Buffer Copy"/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:c15c5aeb-ac55-4cfe-33ac-77fc21ac0414"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- ADC-Timeout -->
+                <v:var name="AdcTimeout" type="INTEGER">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>This is a timeout value which is used to wait till
+                            - the conversion is not aborted
+                            - ADC hardware is not entered in power down state
+                            - ADC hardware is not entered in idle state
+                            If the Status is not updated then after this timeout the ADC_E_TIMEOUT
+                            production error will be reported and the rest of the functionality will be skipped.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Timeout:"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                  <a:a name="UUID" value="ECUC:10105297-c49e-4aa2-b687-4b645f460983" />
+                  <a:da name="DEFAULT" value="65535" />
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=4294967295" />
+                    <a:tst expr="&gt;=1000" />
+                  </a:da>
+                </v:var>
+                
+                 <v:var name="AdcMuxDelaySupport" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                      <![CDATA[<html><p>
+                        Enable/disable the External mux delay support in ADC driver.<br>
+                        <h1>Note</h1>This is an Implementation Specific Parameter.
+                      </p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="LABEL" value="ADC Mux delay Support"/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:3b76765c-79b5-42f5-97f9-43c21d711843"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <v:var name="AdcMuxDelaySupportPerGroup" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v>
+                      <![CDATA[<html><p>
+                        Enable/disable the External mux delay write in DSDR during execution of Adc_StartGroupConversion in ADC driver.<br>
+                        This parameter will be enabled only if AdcMuxDelaySupport is true.<br>
+                        <h1>Note</h1>This is an Implementation Specific Parameter.
+                      </p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="LABEL" value="ADC Mux delay Support Per Group"/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:566a974b-61e0-4434-9a56-fb8cf694520b"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:a name="ENABLE" type="XPath">
+                    <a:tst expr="(../AdcMuxDelaySupport ='true')"/>
+                  </a:a>
+                </v:var>
+              </v:ctr>
+
+              <!--  @implements DADC01043  -->
+              <v:ctr name="AdcPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>Additional published parameters not covered by CommonPublishedInformation container.
+                    Note that these parameters do not have any configuration class setting, since they are published information.</p></html>]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:f28676fc-7db6-4e07-a21f-f360cd15528f"/>
+
+                <!--  @implements DADC01044  -->
+                <v:var name="AdcChannelValueSigned" type="BOOLEAN_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Information whether the result value of the ADC driver has sign information (true) or not (false). If the result shall be interpreted as signed value it shall apply to C-language rules.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Channel Value Signed"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:f5cf0322-a7e8-45f0-a2e0-cebd0aa3535d"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!--  @implements DADC01045  -->
+                <v:var name="AdcGroupFirstChannelFixed" type="BOOLEAN_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Information whether the first channel of an ADC Channel group can be configured (false) or is fixed (true) to a value determined by the ADC HW Unit.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Group First Channel Fixed"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:584aa827-ae36-4d60-a48b-063b87e5d240"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!--  @implements DADC01046  -->
+                <v:var name="AdcMaxChannelResolution" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Maximum Channel resolution in bits (does not specify accuracy).</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Max Channel Resolution"/>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:54ebb14b-4ac8-4165-86a9-764ad2a433c9"/>
+                  <a:da name="DEFAULT" value="10"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&lt;=63"/>
+                    <a:tst expr="&gt;=1"/>
+                  </a:da>
+                </v:var>
+              </v:ctr>
+
+              <!--  @implements DADC01047  -->
+              <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>
+                      Common container, aggregated by all modules. It contains published information about vendor and versions.
+                  </p></html>]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:0a6d1b5b-dcad-470e-b7de-d32c3f1bcc13"/>
+                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      Major version number of AUTOSAR specification on which the appropriate implementation is based on.
+                      </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:29a32199-9781-486d-a2b9-4a596e2dc551"/>
+                  <a:da name="DEFAULT" value="4"/>                       
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=4"/>
+                    <a:tst expr="&lt;=4"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      Minor version number of AUTOSAR specification on which the appropriate implementation is based on.
+                      </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:17add393-c964-4090-b3d6-3313462f9842"/>
+                  <a:da name="DEFAULT" value="0"/>                       
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=0"/>
+                      <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      Revision version number of AUTOSAR specification on which the appropriate implementation is based on.
+                      </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2d7b45b0-730b-42ab-a87d-530341c15e0f"/>
+                  <a:da name="DEFAULT" value="3"/>                       
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=3"/>
+                      <a:tst expr="&lt;=3"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="ModuleId" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      Module ID of this module from Module List.
+                      </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:a383c8ff-86ff-42fa-a53c-fd6e46c9d726"/>
+                  <a:da name="DEFAULT" value="123"/>                                         
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=123"/>
+                      <a:tst expr="&lt;=123"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      Major version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                      </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:658a93d0-773f-4d69-96e7-d12fbfa9ad10"/>
+                  <a:da name="DEFAULT" value="1"/>
+                  <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=1"/>
+                      <a:tst expr="&lt;=1"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                    Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                    </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:e0b586db-d510-41c7-b752-cdc19ee29536"/>
+                  <a:da name="DEFAULT" value="0"/>                     
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                    Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                    </p></html>]]></a:v>
+                  </a:a>              
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:53ae2695-0e76-4bdb-a6c2-876e0f6dfe15"/>
+                  <a:da name="DEFAULT" value="1"/>                                         
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=1"/>
+                    <a:tst expr="&lt;=1"/>
+                  </a:da>                    
+                </v:var>
+                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                  <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                      In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name. 
+                      This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                      &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                      E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write. 
+                      This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:b8e745f7-6a8b-481c-be24-f6f10dc0ad64"/>
+                  <a:da name="DEFAULT" value=""/>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:da name="ENABLE" value="false"/>
+                </v:var>
+                <v:var name="VendorId" type="INTEGER_LABEL">
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html><p>
+                          Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.
+                        </p></html>]]></a:v>
+                    </a:a>              
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                      <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="Freescale"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:08b48917-9cd7-4f66-bd14-a596c29c0309"/>
+                    <a:da name="DEFAULT" value="43"/>
+                    <a:da name="INVALID" type="Range">
+                        <a:tst expr="&gt;=43"/>
+                        <a:tst expr="&lt;=43"/>
+                    </a:da>                    
+                </v:var>
+              </v:ctr>
+
+              <!-- Non AUTOSAR Big Container -->
+              <v:ctr name="NonAutosar" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>Non Autosar API settings.</p></html>]]></a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:ed9d786a-f5e5-4370-8b82-d431f2f4d44c"/>
+
+                <!-- ADC-NonAutosar hadrware trigger Api's -->
+                <v:var name="AdcEnableCtuTrigNonAutosarApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>This is used to enable the non Autosar API for the hardware triggered group.
+                        If this parameter is enabled than Adc_EnableCtuTrigger(), Adc_DisableCtuTrigger()
+                        and Adc_HwResultReadGroup() will be available in the driver code.
+                        This is an Implementation Specific Parameter.
+                        When this parameter is enabled, the result buffer is no longer to be used to read the results as the result will be directly read from HW registers.
+                        When this parameter is disabled, normal functionlaity shall be executed.</p></html>]]></a:v>
+                  </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                  <a:a name="LABEL" value="Adc CTU HW Trig API"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                  <a:a name="UUID" value="ECUC:bd403903-7e63-4acd-8503-deef3c7d6ee7" />
+                  <a:da name="DEFAULT" value="false" />
+                </v:var>
+
+                <!-- AdcSetModeApi -->
+                <v:var name="AdcSetModeApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds/removes the non-autosar implementation api Adc_SetModeApi() from the code.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Set Mode API"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:7587e32a-5bb7-48b3-9c2b-bb80ea5fc58f"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcEnableDualClockMode -->
+                <v:var name="AdcEnableDualClockMode" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>Adds/removes the Dual Clock mode service Adc_SetClockMode from the code.
+                          Also it enables the programmation of Conversion Timing registers in Adc_SetClockMode.
+                          This paramter is only available if AdcSetModeApi and AdcConvTimeOnce are both enabled.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Dual Clock Mode"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:b724a925-8cfc-4291-8e18-ce0457110746"/>
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:da name="INVALID" type="XPath">
+                    <a:tst expr="(node:fallback(.,'true') = 'true') and (node:fallback(../../AdcGeneral/AdcSetModeApi,'false') = 'false' or node:fallback(../../AdcGeneral/AdcConvTimeOnce,'false') = 'false')"
+                           true="This paramter can be true only if AdcSetModeApi and AdcConvTimeOnce are both enabled"/>
+                  </a:da>
+                </v:var>
+
+                <!-- AdcEnableGroupDependentChannelNames -->
+                <!--  @implements DADC06015  -->
+                <v:var name="AdcEnableGroupDependentChannelNames" type="BOOLEAN">
+                  <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>This is used to generate ADC symbolic names, that depend also on the ADC group
+                        to which each ADC channel is mapped. The generated symbolic name will be something
+                        like:
+                        #define &quot;ADC_GroupName&quot;_&quot;ADC_ChannelName&quot;  &quot;Channel index value&quot;,
+                        where &quot;Channel index value&quot; is the channel index in the current group.
+                        Channel indexes in each group are generated to allow result buffer access by symbolic names.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Channel Indexes Symbolic Names"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                  <a:a name="UUID" value="ECUC:bd2b5a00-7553-4564-b636-3793abc42ea0" />
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- AdcBypassConsistencyLoop -->
+                <v:var name="AdcBypassConsistencyLoop" type="BOOLEAN">
+                  <a:a name="DESC">
+                  <a:v><![CDATA[EN:<html><p>This is used to increase ADC performances.
+                        For instance, when for a group AdcWithoutInterrupt is configured, the user does not have to wait 
+                        the conversion is finished before to abort the current conversion. Nevertheless,as the HW-SW coherency 
+                        is no longer guaranteed by the driver, the user must make sure he does not call a ADC service before 
+                        the HW reaches the correct state.</p></html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Bypass Consistency Loop"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                  <a:a name="UUID" value="ECUC:4eba6af4-a6b6-4559-8a5d-badfde3cb255" />
+                  <a:da name="DEFAULT" value="false"/>
+                  <a:da name="INVALID" type="XPath">
+                    <a:tst expr="node:fallback(.,'true') = 'true' and node:fallback(../../AdcGeneral/AdcPriorityImplementation, 'ADC_PRIORITY_HW_SW') = 'ADC_PRIORITY_HW_SW'"
+                    true="AdcBypassConsistencyLoop parameter can be true if and only if there is NO priority."/>
+                    <a:tst expr="node:fallback(.,'true') = 'true' and node:fallback(../../AdcGeneral/AdcEnableQueuing, 'true') = 'true'"
+                    true="AdcBypassConsistencyLoop parameter can be true if and only if there is NO queue."/>
+                  </a:da>
+                </v:var>
+
+                <!-- AdcEnableChDisableChApi -->
+                <v:var name="AdcEnableChDisableChApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          Enable/disable the non-autosar implementation api(s) Adc_EnableChannel() and Adc_DisableChannel() in ADC driver.<br>
+                          <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Enable/Disable Channels API"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:2d64e960-a7e2-499b-8309-5947a09199cd"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- AdcGetInjectedConvStatusApi -->
+                <v:var name="AdcGetInjectedConvStatusApi" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          Enable/disable the non-autosar API Adc_GetInjectedConversionStatus() in ADC driver.<br>
+                          <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Get Injected Conversions Status API"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:3236a68b-9eb3-4c45-b61b-73b5d82e3782"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <!-- AdcErrataInterruptedNormalGroup -->
+                <v:var name="AdcErrataInterruptedNormalGroup" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          If this parameter has been configured to &quot;TRUE&quot;, the workaround for the errata, &quot;If CTU chain injected in CTU trigger mode, current normal chain aborted channel might not be restored back&quot;, will be enabled.<br>
+                          The Default value is TRUE.<br>
+                          <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Enable Errata Workaround Interrupted Groups"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:9155e00b-41ee-4a57-b15b-a470e15fbb15"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcErrataOptimizedSwAbort -->
+                <v:var name="AdcErrataOptimizedSwAbort" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          If this parameter has been configured to &quot;TRUE&quot;, the workaround for the errata, "ADC triggering an ABORT or ABORTCHAIN before the conversion starts", will be enabled.<br>
+                          The Default value is TRUE.<br>
+                          <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Enable Errata Workaround ABORT(CHAIN) before conversion"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:61ea6f64-7957-4602-861e-2266aa1c2507"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+
+                <!-- AdcDisableDemReportErrorStatus-->
+                <v:var name="AdcDisableDemReportErrorStatus" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:
+                              <html>
+                                  <h1>AdcDisableDemReportErrorStatus</h1>
+                                  <p>Switches the Diagnostic Error Reporting and Notification OFF.</p>
+                              </html>
+                          ]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Disable Production Error Reporting"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:01de3674-3d6c-481b-8173-5d48c317a65f"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+                
+                <!-- AdcEnableThresholdConfiguration -->
+                <v:var name="AdcEnableThresholdConfiguration" type="BOOLEAN">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          If this parameter has been configured to &quot;TRUE&quot;, the Non-Autosar function &quot;Adc_ConfigureThreshold()&quot; shall be accessible, otherwise this function shall not become generated.
+                          Also, there must be at least one channel in the configuration with the threshold feature enabled, otherwise the function will not be generated.
+                          <h1>Note</h1>This is an Implementation Specific Parameter.</p></html>]]>
+                    </a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                  <a:a name="LABEL" value="Adc Enable Threshold Configuration"/>
+                  <a:a name="ORIGIN" value="Freescale"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:00118f07-32be-429d-8b41-3f7dc39d1847"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+              </v:ctr>
+
+              <!-- AdcDemEventParameterRefs Big Container -->
+              <!-- @implements DADC06020  -->
+              <v:ctr name="AdcDemEventParameterRefs" type="IDENTIFIABLE">
+                <a:a name="LABEL" value="Adc Dem Event Parameter Refs" />
+                <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html><p>
+                          Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</p></html>]]>
+                    </a:v>
+                </a:a>
+                <a:a name="OPTIONAL" value="false"/>
+                <a:da name="ENABLE" value="true"/>
+                <a:a name="UUID" value="ECUC:0fdd759a-1369-428e-835d-c5ee3fa2b8ee"/>
+                <v:ref name="ADC_E_TIMEOUT" type="SYMBOLIC-NAME-REFERENCE">
+                    <a:a name="LABEL" value="Adc Timeout Dem Error" />
+                    <a:a name="DESC">
+                      <a:v><![CDATA[EN:<html><p>
+                            Reference to configured DEM event to report &quot;Timeout failure&quot;.</p></html>]]>
+                      </a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="Freescale"/>
+                    <a:a name="UUID" value="ECUC:63e617fc-b407-4b96-8e1d-b53564f97b86"/>
+                    <a:a name="OPTIONAL" value="false"/>
+                    <a:da name="ENABLE" value="true"/>
+                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                </v:ref>
+              </v:ctr>
+
+              <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/Adc"/>
+            </v:ctr>
+          </d:chc>
+          <d:chc name="Adc_EcuParameterDefinition" 
+                 type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="UUID" value="ECUC:a7505160-0a5c-4700-be89-0d9c6413397f"/>
+              <a:a name="DEF" 
+                   value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+              <d:lst name="MODULE_REF">
+                <d:ref type="MODULE_REF" value="ASPath:/TS_T2D13M10I1R0/Adc"/>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+          <d:chc name="Adc_ModuleDescription" 
+                 type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="DEF" 
+                   value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+              <d:var name="MODULE_ID" type="INTEGER" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ref type="RECOMMENDED_CONFIGURATION" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="PRE_CONFIGURED_CONF" >
+                <a:a name="ENABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" 
+                     value="ASPath:/TS_T2D13M10I1R0/Adc"/>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

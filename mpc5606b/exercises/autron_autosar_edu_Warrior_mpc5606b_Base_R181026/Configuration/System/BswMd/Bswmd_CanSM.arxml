@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="d75b425c-2ff8-494b-b034-53112702fc28">
+      <SHORT-NAME>Bsw_CanSM</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="4af775a9-b316-4fd3-a8ee-6965561b7e8c">
+          <SHORT-NAME>BswImplementation_CanSM</SHORT-NAME>
+          <SW-VERSION>1.10.0</SW-VERSION>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="b513c33c-b336-4b06-a229-e83661512fdd">
+          <SHORT-NAME>CanSM</SHORT-NAME>
+          <MODULE-ID>140</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="028012d7-b18a-46a2-b510-048cec4f63c3">
+              <SHORT-NAME>BswInternalBehavior_CanSM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="50afee50-cb74-45b5-ae44-884848026451">
+                  <SHORT-NAME>MODE_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="c3454488-d561-4bbc-b178-038d94ed6b54">
+                  <SHORT-NAME>BUSOFF_STATUS_PROTECTION</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+                <BSW-SCHEDULABLE-ENTITY UUID="3e6f49b3-a21b-4b03-be05-0982da763883">
+                  <SHORT-NAME>BswSE_CanSM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/MODE_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BUSOFF_STATUS_PROTECTION</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_CanSM/CanSM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT UUID="4be8245a-19a6-40e9-800a-d668b8425c61">
+                  <SHORT-NAME>BswTE_CanSM_MainFunction</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_CanSM/CanSM/BswInternalBehavior_CanSM/BswSE_CanSM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="73d47511-8444-46fc-a50e-829be10b6ba0">
+          <SHORT-NAME>CanSM_MainFunction</SHORT-NAME>
+          <SERVICE-ID>5</SERVICE-ID>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

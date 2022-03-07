@@ -1,0 +1,4 @@
+#define Z0H_CORE 1
+
+#define VLE_IS_ON 1 
+#define ROM_VERSION 1

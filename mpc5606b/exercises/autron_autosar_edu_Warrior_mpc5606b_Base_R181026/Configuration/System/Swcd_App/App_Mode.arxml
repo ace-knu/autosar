@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  
+<AR-PACKAGES>
+    <AR-PACKAGE UUID="da7d6798-52e3-447c-b6ef-ab198bb75f85">
+      <SHORT-NAME>AppMode</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="afceafdc-b778-4224-8191-5e6fa24562b5">
+          <SHORT-NAME>ApplicationSwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="4768f790-c5b0-4758-a987-6f023943e2a1">
+              <SHORT-NAME>SWC_AppMode</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="cc65cc7e-eb66-42c1-935f-a9001327c2d6">
+                  <SHORT-NAME>modeNotificationPort_CanSMBORState_Project</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/CanSMBORStateInterface_Project/CanSMBORState_Project</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_Project/ModeSwitchInterfaces/CanSMBORStateInterface_Project</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="658b077f-5da0-4903-8b39-39a191be712c">
+                  <SHORT-NAME>modeNotificationPort_ComMMode_Project</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/ComMModeInterface_Project/ComMMode_Project</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_Project/ModeSwitchInterfaces/ComMModeInterface_Project</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="ac3cb9a0-efd4-40c1-a5e7-0eb88ca70eef">
+                  <SHORT-NAME>modeNotificationPort_EcuMode</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE/ModeSwitchInterfaces/EcuModeInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="2c81da83-02ff-4a0b-a868-b403e7bdceaf">
+                  <SHORT-NAME>modeNotificationPort_InitState</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/InitStateInterface/InitState</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE/ModeSwitchInterfaces/InitStateInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="5bab3764-a399-49f2-9494-508f8d10fa93">
+                  <SHORT-NAME>modeNotificationPort_PduGroupRx_Project</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupRxInterface_Project/PduGroupRx_Project</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_Project/ModeSwitchInterfaces/PduGroupRxInterface_Project</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="255f6750-c0b1-4984-9a9a-b97f50e8c96a">
+                  <SHORT-NAME>modeNotificationPort_PduGroupTx_Project</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupTxInterface_Project/PduGroupTx_Project</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE_Project/ModeSwitchInterfaces/PduGroupTxInterface_Project</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE UUID="f5256232-c613-415f-97e8-563104173814">
+                  <SHORT-NAME>modeNotificationPort_WakeupEvent</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/WakeupEventInterface/WakeupEvent</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MODE/ModeSwitchInterfaces/WakeupEventInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="8cb4a5da-1c67-412a-8f03-902e74e84d4f">
+                  <SHORT-NAME>modeRequestPort_AppMode</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <NONQUEUED-SENDER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</DATA-ELEMENT-REF>
+                    </NONQUEUED-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="546cec32-6d00-409a-a0bd-29c59d9c3de1">
+                  <SHORT-NAME>modeRequestPort_ComMMode_Project</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <NONQUEUED-SENDER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_Project/SenderReceiverInterfaces/ComMModeRequestInterface_Project/ComMMode_Project</DATA-ELEMENT-REF>
+                    </NONQUEUED-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MODE_Project/SenderReceiverInterfaces/ComMModeRequestInterface_Project</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="d709d0f2-3ae0-4f62-9ccb-fdacdcd0725d">
+                  <SHORT-NAME>modeRequestPort_TestMode</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <NONQUEUED-SENDER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeRequestInterface/TestMode</DATA-ELEMENT-REF>
+                    </NONQUEUED-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/AppMode/TestModeInterfaces/TestModeRequestInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="4b0738c5-ba9f-4b56-943d-5751759f1b21">
+                  <SHORT-NAME>SwcIB_AppMode</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_AppMode</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_ComMMode</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_PduRouter</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_CanSMBORState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_InitState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_CanSMState</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AppMode/TestModeInterfaces/MAP_TestModeSR</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="6b5849eb-4728-4d0b-b161-c17f6608aaae">
+                      <SHORT-NAME>TE_AppMode_Test</SHORT-NAME>
+                      <DISABLED-MODE-IREFS>
+                        <DISABLED-MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_STARTUP_ONE</TARGET-MODE-DECLARATION-REF>
+                        </DISABLED-MODE-IREF>
+                        <DISABLED-MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_STARTUP_THREE</TARGET-MODE-DECLARATION-REF>
+                        </DISABLED-MODE-IREF>
+                        <DISABLED-MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_STARTUP_TWO</TARGET-MODE-DECLARATION-REF>
+                        </DISABLED-MODE-IREF>
+                      </DISABLED-MODE-IREFS>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/Test</START-ON-EVENT-REF>
+                      <PERIOD>0.1</PERIOD>
+                    </TIMING-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="e87b8f48-a25b-4bd1-9c1a-1af6c96c2bb4">
+                      <SHORT-NAME>SMSE_Entry_EcuModeSwitched_modeNotificationPort_EcuMode_EcuMode_ECUM_STATE_PREP_SHUTDOWN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/EcuModeSwitched</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_PREP_SHUTDOWN</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="b26ab3dc-8a7b-46e0-b97c-c8dc34912654">
+                      <SHORT-NAME>SMSE_Entry_EcuModeSwitched_modeNotificationPort_EcuMode_EcuMode_ECUM_STATE_RUN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/EcuModeSwitched</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_RUN</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="3b9ffec5-6ab2-46af-ab1d-4fa863f6845e">
+                      <SHORT-NAME>SMSE_Entry_EcuModeSwitched_modeNotificationPort_EcuMode_EcuMode_ECUM_STATE_SHUTDOWN</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/EcuModeSwitched</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_SHUTDOWN</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="bf4b6c69-2662-4df4-8777-db29ba6ba99c">
+                      <SHORT-NAME>SMSE_Entry_EcuModeSwitched_modeNotificationPort_EcuMode_EcuMode_ECUM_STATE_SLEEP</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/EcuModeSwitched</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_SLEEP</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="8747f7b3-f93a-4c1e-a00d-3d1f4fa43e73">
+                      <SHORT-NAME>SMSE_Entry_InitCompleted_modeNotificationPort_InitState_InitState_COMPLETE</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/InitCompleted</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_InitState</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/InitStateInterface/InitState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_InitState/COMPLETE</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="406fc405-21c2-4123-ab8f-549c0219b649">
+                      <SHORT-NAME>SMSE_Entry_PduGroupSwitched_modeNotificationPort_PduGroupTx_Project_PduGroupTx_Project_START</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/PduGroupSwitched_Project_Tx</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupTx_Project</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupTxInterface_Project/PduGroupTx_Project</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_PduGroup/START</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                    <SWC-MODE-SWITCH-EVENT UUID="fae3b868-d884-4a30-a3b7-faa48e63c0c8">
+                      <SHORT-NAME>SMSE_Entry_PduGroupSwitched_modeNotificationPort_PduGroupTx_Project_PduGroupTx_Project_STOP</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/SwcIB_AppMode/PduGroupSwitched_Project_Tx</START-ON-EVENT-REF>
+                      <ACTIVATION>ON-ENTRY</ACTIVATION>
+                      <MODE-IREFS>
+                        <MODE-IREF>
+                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupTx_Project</CONTEXT-PORT-REF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupTxInterface_Project/PduGroupTx_Project</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/MODE/ModeDeclarationGroups/MDG_PduGroup/STOP</TARGET-MODE-DECLARATION-REF>
+                        </MODE-IREF>
+                      </MODE-IREFS>
+                    </SWC-MODE-SWITCH-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="665196df-97fa-4262-8af9-d7bb5673c2d3">
+                      <SHORT-NAME>EcuModeSwitched</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-SEND-POINTS>
+                        <VARIABLE-ACCESS UUID="bd59d8e9-1ccb-4908-b5e7-be0ac0195d4a">
+                          <SHORT-NAME>DSP_EcuModeSwitched_modeRequestPort_AppMode_AppMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_AppMode</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="03dd6f79-66cd-4b25-ad5c-8833ca37370c">
+                          <SHORT-NAME>DSP_EcuModeSwitched_modeRequestPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_ComMMode_Project</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_Project/SenderReceiverInterfaces/ComMModeRequestInterface_Project/ComMMode_Project</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                      </DATA-SEND-POINTS>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="20fbfbd0-a19e-4eec-884f-4a06a4551d46">
+                            <SHORT-NAME>MRAP_EcuModeSwitched_modeNotificationPort_EcuMode_EcuMode</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/EcuModeInterface/EcuMode</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_EcuModeSwitched</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="8cdf6374-a902-4b23-843a-dd80c2f3dead">
+                      <SHORT-NAME>InitCompleted</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-SEND-POINTS>
+                        <VARIABLE-ACCESS UUID="5084db1b-aa76-47b6-8c44-33ca32b4747c">
+                          <SHORT-NAME>DSP_InitCompleted_modeRequestPort_AppMode_AppMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_AppMode</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                      </DATA-SEND-POINTS>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="0899335e-e789-4fe7-8e7a-e818cbacc5bb">
+                            <SHORT-NAME>MRAP_InitCompleted_modeNotificationPort_InitState_InitState</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_InitState</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/InitStateInterface/InitState</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_InitCompleted</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="e70d7d72-32be-4ccf-af4f-de99fd5ce921">
+                      <SHORT-NAME>PduGroupSwitched_Project_Tx</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="61493820-9a3a-41da-a8d6-ef31e2ac3325">
+                            <SHORT-NAME>MRAP_PduGroupSwitched_modeNotificationPort_PduGroupTx_Project_PduGroupTx_Project</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupTx_Project</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupTxInterface_Project/PduGroupTx_Project</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_PduGroupSwitched_Project_Tx</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="2ae5f5e3-bc59-48e1-9f74-40a36cc5986a">
+                      <SHORT-NAME>PduGroupSwitched_Project_Rx</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="9b58e282-27aa-40a3-816a-f3de7e482631">
+                            <SHORT-NAME>MRAP_PduGroupSwitched_Rx_modeNotificationPort_PduGroupRx_Project_PduGroupRx_Project</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupRx_Project</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/PduGroupRxInterface_Project/PduGroupRx_Project</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_PduGroupSwitched_Project_Rx</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="6488d4ac-f07d-49df-bb95-e685d945fd3b">
+                      <SHORT-NAME>Test</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-SEND-POINTS>
+                        <VARIABLE-ACCESS UUID="1aa2e89d-5d67-4bf2-9e6c-09f21a08ad21">
+                          <SHORT-NAME>DSP_Test_modeRequestPort_AppMode_AppMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_AppMode</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="4906eb80-f7db-4200-971f-46d0c954216a">
+                          <SHORT-NAME>DSP_Test_modeRequestPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_ComMMode_Project</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_Project/SenderReceiverInterfaces/ComMModeRequestInterface_Project/ComMMode_Project</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="560db509-64c1-4bad-b3fb-38d1c5f67708">
+                          <SHORT-NAME>DSP_Test_modeRequestPort_TestMode_TestMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_TestMode</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeRequestInterface/TestMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                      </DATA-SEND-POINTS>
+                      <SYMBOL>AppMode_Test</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="0e9eb690-3019-4f80-9392-1e53361da16b">
+                      <SHORT-NAME>ComMModeSwitched_Project</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-SEND-POINTS>
+                        <VARIABLE-ACCESS UUID="0a786b0c-c788-4ef3-aac6-5fbd2c92fd39">
+                          <SHORT-NAME>DSP_ComMModeSwitched_Project_modeRequestPort_AppMode_AppMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_AppMode</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                        <VARIABLE-ACCESS UUID="ce38de45-d089-49ec-bf20-0ab02ba2244e">
+                          <SHORT-NAME>DSP_ComMModeSwitched_Project_modeRequestPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_ComMMode_Project</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE_Project/SenderReceiverInterfaces/ComMModeRequestInterface_Project/ComMMode_Project</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                      </DATA-SEND-POINTS>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="f4cdd05a-f6e4-4e4a-832f-9d8f2c6b86e4">
+                            <SHORT-NAME>MRAP_ComMModeSwitched_Project_modeNotificationPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_ComMMode_Project</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE_Project/ModeSwitchInterfaces/ComMModeInterface_Project/ComMMode_Project</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_ComMModeSwitched_Project</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="b7a667e7-74de-406e-9f8e-e582c768b70d">
+                      <SHORT-NAME>WakeupEventValidated</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <MODE-ACCESS-POINTS>
+                        <MODE-ACCESS-POINT>
+                          <IDENT UUID="3194223e-beb5-4434-ad45-45350236e93b">
+                            <SHORT-NAME>MRAP_WakeupEventValidated_modeNotificationPort_WakeupEvent_WakeupEvent</SHORT-NAME>
+                          </IDENT>
+                          <MODE-GROUP-IREF>
+                            <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_WakeupEvent</CONTEXT-R-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MODE/ModeSwitchInterfaces/WakeupEventInterface/WakeupEvent</TARGET-MODE-GROUP-REF>
+                            </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-ACCESS-POINT>
+                      </MODE-ACCESS-POINTS>
+                      <SYMBOL>AppMode_WakeupEventValidated</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="05d7d83c-e7af-4a68-9eec-fbd153451d82">
+                      <SHORT-NAME>CanSMBorStateSwitched_Project</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>AppMode_CanSMBorStateSwitched_Project</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SERVICE-DEPENDENCYS>
+                    <SWC-SERVICE-DEPENDENCY UUID="c3255f09-5292-4e3c-b106-ebf86f54bba2">
+                      <SHORT-NAME>SwcServiceDependency_BswM</SHORT-NAME>
+                      <ASSIGNED-PORTS>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_ComMMode_Project</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_EcuMode</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_InitState</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupRx_Project</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupTx_Project</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_AppMode</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeRequestPort_ComMMode_Project</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                        <ROLE-BASED-PORT-ASSIGNMENT>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_WakeupEvent</PORT-PROTOTYPE-REF>
+                          <ROLE>Custom</ROLE>
+                        </ROLE-BASED-PORT-ASSIGNMENT>
+                      </ASSIGNED-PORTS>
+                      <SERVICE-NEEDS>
+                        <BSW-MGR-NEEDS UUID="365d07ff-26d5-4181-860d-662a1b8b828b">
+                          <SHORT-NAME>BswMgrNeeds</SHORT-NAME>
+                        </BSW-MGR-NEEDS>
+                      </SERVICE-NEEDS>
+                    </SWC-SERVICE-DEPENDENCY>
+                  </SERVICE-DEPENDENCYS>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="0a063f8f-f419-4449-8720-987a54386794">
+              <SHORT-NAME>SWC_TestModeManager</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="d9762359-22ab-4095-a004-369d985000c8">
+                  <SHORT-NAME>TestModeRequestInterface</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <NONQUEUED-RECEIVER-COM-SPEC>
+                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeRequestInterface/TestMode</DATA-ELEMENT-REF>
+                    </NONQUEUED-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/AppMode/TestModeInterfaces/TestModeRequestInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE UUID="81f25e4c-55b6-4226-b297-b7b4b9442d44">
+                  <SHORT-NAME>modeSwitchPort_TestMode</SHORT-NAME>
+                  <PROVIDED-COM-SPECS>
+                    <MODE-SWITCH-SENDER-COM-SPEC>
+                      <ENHANCED-MODE-API>false</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeInterface/TestMode</MODE-GROUP-REF>
+                      <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                    </MODE-SWITCH-SENDER-COM-SPEC>
+                  </PROVIDED-COM-SPECS>
+                  <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AppMode/TestModeInterfaces/TestModeInterface</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="9e56b282-28ce-413f-a733-4b61c43ffa9e">
+                  <SHORT-NAME>InternalBehavior</SHORT-NAME>
+                  <DATA-TYPE-MAPPING-REFS>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AppMode/TestModeInterfaces/MAP_TestModeMS</DATA-TYPE-MAPPING-REF>
+                    <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AppMode/TestModeInterfaces/MAP_TestModeSR</DATA-TYPE-MAPPING-REF>
+                  </DATA-TYPE-MAPPING-REFS>
+                  <EVENTS>
+                    <DATA-RECEIVED-EVENT UUID="5b3c01b5-67e5-4798-acc3-19495777b417">
+                      <SHORT-NAME>DRE_TestModeManager_TestModeRequestInterface_TestMode</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager/InternalBehavior/TestModeManager</START-ON-EVENT-REF>
+                      <DATA-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager/TestModeRequestInterface</CONTEXT-R-PORT-REF>
+                        <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeRequestInterface/TestMode</TARGET-DATA-ELEMENT-REF>
+                      </DATA-IREF>
+                    </DATA-RECEIVED-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="55173044-1097-479b-b317-e95f2fb80923">
+                      <SHORT-NAME>TestModeManager</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                        <VARIABLE-ACCESS UUID="011de142-7990-4410-a133-4145a6e70e13">
+                          <SHORT-NAME>DRPBA_TestModeManager_TestModeRequestInterface_TestMode</SHORT-NAME>
+                          <ACCESSED-VARIABLE>
+                            <AUTOSAR-VARIABLE-IREF>
+                              <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager/TestModeRequestInterface</PORT-PROTOTYPE-REF>
+                              <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeRequestInterface/TestMode</TARGET-DATA-PROTOTYPE-REF>
+                            </AUTOSAR-VARIABLE-IREF>
+                          </ACCESSED-VARIABLE>
+                          <SCOPE>COMMUNICATION-INTER-ECU</SCOPE>
+                        </VARIABLE-ACCESS>
+                      </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                      <MODE-SWITCH-POINTS>
+                        <MODE-SWITCH-POINT UUID="6dd8cf27-1e46-485d-a51e-cf56a41c6171">
+                          <SHORT-NAME>MSP_TestModeManager_modeSwitchPort_TestMode_TestMode</SHORT-NAME>
+                          <MODE-GROUP-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager/modeSwitchPort_TestMode</CONTEXT-P-PORT-REF>
+                            <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeInterface/TestMode</TARGET-MODE-GROUP-REF>
+                          </MODE-GROUP-IREF>
+                        </MODE-SWITCH-POINT>
+                      </MODE-SWITCH-POINTS>
+                      <SYMBOL>TestModeManager</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+            <APPLICATION-SW-COMPONENT-TYPE UUID="f7e3a1c1-a0a8-432c-a01d-5073c8437293">
+              <SHORT-NAME>SWC_TestModeUser</SHORT-NAME>
+              <PORTS>
+                <R-PORT-PROTOTYPE UUID="48bbda9b-7d87-4f9b-b930-204132b0a3fc">
+                  <SHORT-NAME>modeNotificationPort_TestMode</SHORT-NAME>
+                  <REQUIRED-COM-SPECS>
+                    <MODE-SWITCH-RECEIVER-COM-SPEC>
+                      <ENHANCED-MODE-API>true</ENHANCED-MODE-API>
+                      <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AppMode/TestModeInterfaces/TestModeInterface/TestMode</MODE-GROUP-REF>
+                      <SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>true</SUPPORTS-ASYNCHRONOUS-MODE-SWITCH>
+                    </MODE-SWITCH-RECEIVER-COM-SPEC>
+                  </REQUIRED-COM-SPECS>
+                  <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AppMode/TestModeInterfaces/TestModeInterface</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR UUID="4cfb5a09-a2bb-4a39-9b2b-9eecc5302b5f">
+                  <SHORT-NAME>InternalBehavior</SHORT-NAME>
+                  <EVENTS>
+                    <TIMING-EVENT UUID="91849c56-d16d-4a11-95fb-bed27f53c7dd">
+                      <SHORT-NAME>TE_TestModeUser_B</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AppMode/ApplicationSwComponentTypes/SWC_TestModeUser/InternalBehavior/TestModeUser_B</START-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </TIMING-EVENT>
+                  </EVENTS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY UUID="e4a7d816-70ca-40de-8ade-3a9e8b2d2b32">
+                      <SHORT-NAME>TestModeUser_A</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <SYMBOL>TestModeUser_A</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY UUID="cd2e1cb7-9f43-446f-90ee-8c93cc3d70dc">
+                      <SHORT-NAME>TestModeUser_B</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <SYMBOL>TestModeUser_B</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </APPLICATION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="fc33b9f1-48c6-428f-bb21-b1fd18c2bcd6">
+          <SHORT-NAME>TestModeInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <APPLICATION-PRIMITIVE-DATA-TYPE UUID="85729077-225e-4ff6-8c9a-fed29ec66687">
+              <SHORT-NAME>ENUM_TestMode</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AppMode/TestModeInterfaces/ENUM_TestMode_def</COMPU-METHOD-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </APPLICATION-PRIMITIVE-DATA-TYPE>
+            <COMPU-METHOD UUID="5b652b97-e9b6-4d3f-b309-4b057ae818dd">
+              <SHORT-NAME>ENUM_TestMode_def</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MODE_READY</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MODE_A</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MODE_B</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <DATA-TYPE-MAPPING-SET S="TOOL_CONFIGURED" UUID="8c9dd8b5-19f4-489f-841f-d6cff9171856">
+              <SHORT-NAME>MAP_TestModeSR</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/AppMode/TestModeInterfaces/ENUM_TestMode</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+            <MODE-DECLARATION-GROUP UUID="afd32bf2-7185-426f-bb0d-e17cc33f45f1">
+              <SHORT-NAME>MDG_TestMode</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AppMode/TestModeInterfaces/MDG_TestMode/MODE_READY</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="72ec1a25-ca99-42b6-b633-d399341190fb">
+                  <SHORT-NAME>MODE_READY</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="89301d9e-1d47-4390-a5c7-cc855a05dac3">
+                  <SHORT-NAME>MODE_A</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="094ee909-e0a7-4161-8586-65fcef9e4524">
+                  <SHORT-NAME>MODE_B</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>255</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-SWITCH-INTERFACE UUID="44104a89-a03d-4905-aa52-5211db3ba067">
+              <SHORT-NAME>TestModeInterface</SHORT-NAME>
+              <MODE-GROUP UUID="1c438a2e-a623-4f8a-ad99-b104642cde09">
+                <SHORT-NAME>TestMode</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AppMode/TestModeInterfaces/MDG_TestMode</TYPE-TREF>
+              </MODE-GROUP>
+            </MODE-SWITCH-INTERFACE>
+            <SENDER-RECEIVER-INTERFACE UUID="7020f8a6-d27a-4ed8-bb90-b965c0dfdc09">
+              <SHORT-NAME>TestModeRequestInterface</SHORT-NAME>
+              <DATA-ELEMENTS>
+                <VARIABLE-DATA-PROTOTYPE UUID="5bf04b9d-a1b1-4490-a770-308cc55d4525">
+                  <SHORT-NAME>TestMode</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/AppMode/TestModeInterfaces/ENUM_TestMode</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+              </DATA-ELEMENTS>
+            </SENDER-RECEIVER-INTERFACE>
+            <DATA-TYPE-MAPPING-SET S="TOOL_CONFIGURED" UUID="9d2b61de-43fb-4930-b32a-573a8df61991">
+              <SHORT-NAME>MAP_TestModeMS</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/AppMode/TestModeInterfaces/MDG_TestMode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

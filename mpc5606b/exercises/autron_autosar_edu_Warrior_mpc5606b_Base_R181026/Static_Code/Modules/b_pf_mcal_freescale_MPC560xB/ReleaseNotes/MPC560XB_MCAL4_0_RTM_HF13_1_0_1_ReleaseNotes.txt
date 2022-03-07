@@ -1,0 +1,168 @@
+****************************************************************************************************
+Release Notes for NXP Semiconductor, Inc. AUTOSAR MPC560XB MCAL4.0 swv: 1.0.1 RTM_HF13
+
+NXP(TM) and the NXP logo are trademarks of NXP Semiconductor.
+
+All other product or service names are the property of their respective owners.
+
+Copyright (C) NXP Semiconductor, 2017
+****************************************************************************************************
+
+****************************************************************************************************
+This package contains files for
+NXP AUTOSAR MPC560XB MCAL4.0 swv: 1.0.1 RTM_HF13
+****************************************************************************************************
+"<mod>_TS_T2D13M10I1R0" directories - Tresos Plugins, 1 per module.
+"MPC560XB_MCAL4_0_RTM_HF13_1_0_1_ReleaseNotes.txt" - This file.
+
+****************************************************************************************************
+Installation
+****************************************************************************************************
+Follow the installer steps. By default the installer will create a link between the
+installation target directory and a selected EB Tresos installation. Prior to installing the HF 
+package please remove the link file of the previous installation from "<Tresos Install Path>\links"
+directory. If you choose not to create a link, you can later create one manually or you can copy all
+"<mod>_TS_T2D13M10I1R0" directories and .JAR files to the "<Tresos Install Path>
+\plugins" directory.
+
+
+Release Location:
+=================
+This RTM_HF13 1.0.1 Release is stored on the Clear Case repository and accessible by the following Config
+Spec:
+
+element * HF_MCAL_4.0_BOLERO_RTM_HF13_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF12_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF11_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF10_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF9_1.0.1
+# HF8 has been reserved
+element * HF_MCAL_4.0_BOLERO_RTM_HF7_1.0.1
+# HF6 has been reserved
+element * HF_MCAL_4.0_BOLERO_RTM_HF5_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF4_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF3_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF2_1.0.1
+element * HF_MCAL_4.0_BOLERO_RTM_HF1_1.0.1
+element * BLN_MCAL_4.0_BOLERO_RTM_1.0.1
+
+
+Release Specifics:
+==================
+
+- This release contains some fixes for the Mcu driver.
+
+- Hot Fix Releases are not fully qualified and are not intended for production,
+  they must be replaced by the next qualified standard release.
+  The intention of a Hot Fix Release is immediate fix of a critical and blocking issue at the customer.
+
+- Note: newer hotfixes for the same module are cumulative.
+
+- To note that this hotfix release was not fully tested as the delivery was needed before the relevant test
+  cases could be created. A full validation will be performed as part of the next planned release.
+
+- For additional information, please refer to the Release Notes of the release on which
+  the current HotFix is based on.
+
+
+Support and Driver Plugins Delivered:
+=====================================
+Adc_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Analog to Digital Conversion)
+Base_TS_T2D13M10I1R0      sw version 1.0.1     (Base Module, General AUTOSAR and Hardware Specific register files)
+Can_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Controller Area Network)
+CanIf_TS_T2D13M10I1R0     sw version 1.0.1     (Support Stub, Controller Area Network Interface)
+Dem_TS_T2D13M10I1R0       sw version 1.0.1     (Support Stub, Diagnostic Event Manager)
+Det_TS_T2D13M10I1R0       sw version 1.0.1     (Support Stub, Development Error Tracer)
+Dio_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Digital Input Output)
+EcuM_TS_T2D13M10I1R0      sw version 1.0.1     (Support Stub, ECU State Manager)
+Fee_TS_T2D13M10I1R0       sw version 1.0.1 HF7 (Driver, Flash EEPROM Emulation)
+Fls_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Flash)
+Gpt_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, General Purpose Timer)
+Icu_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Input Capture Unit)
+Lin_TS_T2D13M10I1R0       sw version 1.0.1 HF5 (Driver, Local Interconnect Network)
+LinIf_TS_T2D13M10I1R0     sw version 1.0.1     (Support Stub, Local Interconnect Network Interface)
+Mcu_TS_T2D13M10I1R0       sw version 1.0.1 HF13 (Driver, Micro Controller Unit)
+MemIf_TS_T2D13M10I1R0     sw version 1.0.1     (Support Stub, Memory Interface)
+Port_TS_T2D13M10I1R0      sw version 1.0.1 HF11 (Driver, Port)
+Pwm_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Pulse Width Modulation)
+Resource_TS_T2D13M10I1R0  sw version 1.0.1     (Resource Module, Required by all other modules to
+                                               select MCU derivative)
+Rte_TS_T2D13M10I1R0       sw version 1.0.1     (Support Stub, only for Schedule Manager)
+Spi_TS_T2D13M10I1R0       sw version 1.0.1     (Driver, Serial Peripheral Interface)
+Wdg_TS_T2D13M10I1R0       sw version 1.0.1 HF12 (Driver, Watchdog)
+WdgIf_TS_T2D13M10I1R0     sw version 1.0.1     (Support Stub, Watchdog Interface)
+
+
+=================================
+What's Modified v1.0.1 HF13
+=================================
+ENGR00388001 [Defect] [IPV_SSCM] Det version check not encapsulated in Mcu_Sscm_LLD.c
+
+=================================
+What's Modified v1.0.1 HF12
+=================================
+ENGR00374717 [Defect] [WDG] Wdg_SetMode and Wdg_SetTriggerCondition cannot be reached via function pointer.
+
+=================================
+What's Modified v1.0.1 HF11
+=================================
+ENGR00383842 [Defect] [PORT] Port pin direction change during run-time with Port_SetPinDirection().
+
+=================================
+What's Modified v1.0.1 HF10
+=================================
+ENGR00378292 [Defect] [PORT] Missing peripherals reference on Port epd file
+
+=================================
+What's Modified v1.0.1 HF9
+=================================
+ENGR00375831 [Defect] [PORT] Not possible to use PB[1] as LIN0RX
+
+=================================
+What's Modified v1.0.1 HF8
+=================================
+Reserved.
+
+=================================
+What's Modified v1.0.1 HF7
+=================================
+ENGR00338145 [Defect] [FEE] FEE blocks lost after cluster swap if there is INCONSISTENT block
+
+=================================
+What's Modified v1.0.1 HF6
+=================================
+Reserved.
+
+=================================
+What's Modified v1.0.1 HF5
+=================================
+ENGR00301787 [Defect] [LIN] Inconsistentency with structure Lin_ChannelConfigType in the generated files
+
+=================================
+What's Modified v1.0.1 HF4
+=================================
+ENGR00325559 [Defect] [LIN] Autosar ECUC_2108 is not fully implemented
+
+=================================
+What's Modified v1.0.1 HF3
+=================================
+ENGR00325150 [Defect] [LIN] Lin_Init is using NULL_PTR reference in Pre-Compile variant
+
+=================================
+What's Modified v1.0.1 HF2
+=================================
+ENGR00322314 [Defect] [LIN] Lin_Cfg_Ptr not initialized correctly
+ENGR00313949 [Defect] [MCU] Wrong define generated for McuModeSettingConf and McuClockSettingConfig
+
+=================================
+What's Modified v1.0.1 HF1
+=================================
+ENGR00318737 [Defect] [ICU] Bad Origin field into Configuration file
+ENGR00318736 [Defect] [GPT] Bad Origin field into Configuration file
+ENGR00318734 [Defect] [CAN] Bad Origin field into Configuration file
+
+==============================
+What's Modified v1.0.1
+==============================
+Please refer to the file "MPC560xB_MCAL4.0_RTM_1.0.1_ChangesList.pdf" delivered with this release.
+

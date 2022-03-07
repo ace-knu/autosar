@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+********************************************************************************
+**  (C) 2013 HYUNDAI AUTRON Co., Ltd.                                         **
+**  Confidential Proprietary Information. Distribution Limited.               **
+**  Do Not Copy Without Prior Permission                                      **
+**                                                                            **
+**  MODULE        : CanTp Module                                              **
+**                                                                            **
+**  PURPOSE       : Definition of the Configuration parameters.               **
+**                                                                            **
+**  DESCRIPTION   : This file provides the definition of the containers,      **
+**                  sub-containers and parameters specific to CanTp module.   **
+**                                                                            **
+********************************************************************************
+** Version  Date          Prepared By     Description                         **
+********************************************************************************
+*  1.0.0         21-Mar-2013        Lim Jong Sun   Initial Version             *
+********************************************************************************
+--><AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+	<ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>4.2.0</REVISION-LABEL>
+        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+        <DATE>2011-11-09</DATE>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+	<AR-PACKAGES>
+    <AR-PACKAGE UUID="ECUS:8e8d9c66-4b8c-4704-b46f-75abdf60139f">
+      <SHORT-NAME>AUTRON</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-DEFINITION-COLLECTION UUID="ECUS:145c02b9-a088-4eea-8dcf-2a9e2c0363ff">
+          <SHORT-NAME>ParameterDefinition_CanTp</SHORT-NAME>
+          <MODULE-REFS>
+            <MODULE-REF DEST="ECUC-MODULE-DEF">/AUTRON/CanTp</MODULE-REF>
+          </MODULE-REFS>
+        </ECUC-DEFINITION-COLLECTION>
+        <ECUC-MODULE-DEF UUID="ECUS:ad53fcc0-c698-42fb-9ed0-be4d4215310e">
+          <SHORT-NAME>CanTp</SHORT-NAME>
+          <DESC>
+            <L-2 L="EN">Configuration of the CanTp (CAN Transport Protocol) module.</L-2>
+          </DESC>
+          <ADMIN-DATA>
+            <DOC-REVISIONS>
+              <DOC-REVISION>
+                <REVISION-LABEL>4.2.0</REVISION-LABEL>
+                <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                <DATE>2011-11-09</DATE>
+              </DOC-REVISION>
+            </DOC-REVISIONS>
+          </ADMIN-DATA>
+          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+          <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/CanTp</REFINED-MODULE-DEF-REF>
+          <SUPPORTED-CONFIG-VARIANTS>
+            <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+          </SUPPORTED-CONFIG-VARIANTS>
+          <CONTAINERS>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:2ec7404c-b866-4ec8-bf90-6137b074911a">
+              <SHORT-NAME>CanTpConfig</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR CanTp module. This container is a MultipleConfigurationContainer, i.e. this container and its sub-containers exist once per configuration set.</L-2>
+              </DESC>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+                <ECUC-FLOAT-PARAM-DEF UUID="ECUS:6a79d0dc-feb7-4187-bc03-78840ddf3639">
+                  <SHORT-NAME>CanTpMainFunctionPeriod</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Allow to configure the time for the MainFunction (as float in seconds). Please note: This period shall be the same as call cycle time of the periodic task were CanTp Main function is called.</L-2>
+                  </DESC>
+                  <CATEGORY>FIXED</CATEGORY>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>0.255</MAX>
+                  <MIN>0</MIN>
+                </ECUC-FLOAT-PARAM-DEF>
+              </PARAMETERS>
+              <SUB-CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:5034bf6c-175b-4243-93e7-9e89cc859b91">
+                  <SHORT-NAME>CanTpChannel</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container contains the configuration parameters of the CanTp channel.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:0b2b6847-5e2a-4fa3-b92c-79fc671ae190">
+                      <SHORT-NAME>CanTpChannelMode</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The CAN Transport Layer supports half and full duplex channel modes.</L-2>
+                      </DESC>
+                      <CATEGORY>FIXED</CATEGORY>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Enum values:
+CANTP_MODE_FULL_DUPLEX. To use full duplex channel mode.
+CANTP_MODE_HALF_DUPLEX. To use half duplex channel mode.
+                               </L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <IMPLEMENTATION-CONFIG-CLASSES>
+                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      </IMPLEMENTATION-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:f80b28e4-377e-48d4-a8c4-a121907e91f2">
+                          <SHORT-NAME>CANTP_MODE_FULL_DUPLEX</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:550f0faf-aabb-4931-88fd-4ae88edd13f2">
+                          <SHORT-NAME>CANTP_MODE_HALF_DUPLEX</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:32df75cd-ba65-47a4-8813-b3578dbe3ba3">
+                      <SHORT-NAME>CanTpRxNSdu</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The following parameters needs to be configured for each CAN N-SDU that the CanTp module receives via the CanTpChannel.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:0d878144-3a62-4464-9822-2e63cf18b83e">
+                          <SHORT-NAME>CanTpBs</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Sets the number of N-PDUs the CanTp receiver allows the sender to send, before waiting for an authorization to continue transmission of the following N-PDUs.For further details on this parameter value see ISO 15765-2 specification.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                          <MAX>255</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:7b1ae7d4-1a8a-491b-9ede-bedf8576da83">
+                          <SHORT-NAME>CanTpNar</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in seconds of the N_Ar timeout. N_Ar is the time for transmission of a CAN frame (any N_PDU) on the receiver side.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:d6580997-e4b2-4b43-80ca-6134816f9a8f">
+                          <SHORT-NAME>CanTpNbr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in seconds of the performance requirement for (N_Br + N_Ar). N_Br is the elapsed time between the receiving indication of a FF or CF or the transmit confirmation of a FC, until the transmit request of the next FC.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:0f04163c-f4ac-42f7-bf67-1c7175bbc9db">
+                          <SHORT-NAME>CanTpNcr</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in seconds of the N_Cr timeout. N_Cr is the time until reception of the next Consecutive Frame N_PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:99f01a32-a3c4-40e2-befe-8fd7b7596caa">
+                          <SHORT-NAME>CanTpRxAddressingFormat</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Declares which communication addressing mode is supported for this Rx N-SDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Enum values:
+CANTP_STANDARD. To use normal addressing format.
+CANTP_EXTENDED. To use extended addressing format.
+CANTP_MIXED. To use mixed addressing format.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:6eb5a179-9636-4d91-ac42-31ffcaf04ad7">
+                              <SHORT-NAME>CANTP_EXTENDED</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:3113f6d0-fce2-41bb-bfda-d219d7815f9a">
+                              <SHORT-NAME>CANTP_MIXED</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:2356f630-70a9-41c5-aaa2-e495eb085ef3">
+                              <SHORT-NAME>CANTP_STANDARD</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:49c346f4-aac1-462d-907c-6f0daf89e24e">
+                          <SHORT-NAME>CanTpRxDl</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Data Length Code of this RxNsdu. In case of variable message length, this value indicates the minimum data length.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Depending on SF or FF N-SDU the value will be limited to 7 (6 for an extended addressing format) and 4095 respectively.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:4b26d24e-79e0-4ee2-8397-0e61d8620969">
+                          <SHORT-NAME>CanTpRxNSduId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Unique identifier user by the upper layer to call CanTp_CancelReceive, CanTp_ChangeParameter and CanTp_ReadParameter.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:bee1461e-9f7e-454f-81bd-2fc4c5eeeb19">
+                          <SHORT-NAME>CanTpRxPaddingActivation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Defines if the receive frame uses padding or not.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Definition of enumeration values:
+CANTP_ON: The N-PDU received uses padding for SF, FC and the last CF. (N-PDU length is always 8 bytes)
+CANTP_OFF: The N-PDU received does not use padding for SF, CF and the last CF. (N-PDU length is dynamic)</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:102f2245-5f03-4352-8872-101b0916f7f9">
+                              <SHORT-NAME>CANTP_OFF</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:59ea574d-dc26-4641-910a-71e8436247e4">
+                              <SHORT-NAME>CANTP_ON</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:10bd17f3-5aa4-4743-87e4-2c65eea2eb19">
+                          <SHORT-NAME>CanTpRxTaType</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Declares the communication type of this Rx N-SDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Definition of enumeration values:
+CANTP_FUNCTIONAL: The requested communication type is FUNCTIONAL.
+CANTP_PHYSICAL: The requested communication type is PHYSICAL.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:5719c271-91b6-4937-8a0c-ab756022df1b">
+                              <SHORT-NAME>CANTP_FUNCTIONAL</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:a12b6081-314a-4697-b7b3-741fb58c2097">
+                              <SHORT-NAME>CANTP_PHYSICAL</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:7416a9dd-0fba-4463-8195-dd35385674a5">
+                          <SHORT-NAME>CanTpRxWftMax</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter indicates how many Flow Control wait N-PDUs can be consecutively transmitted by the receiver. It is local to the node and is not transmitted inside the FC protocol data unit.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">CanTpRxWftMax is used to avoid sender nodes being potentially hooked-up in case of a temporarily reception inability on the part of the receiver nodes, whereby the sender could be waiting continuously.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:7c339c64-2cdb-4077-8a73-55b10da3e774">
+                          <SHORT-NAME>CanTpSTmin</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Sets the duration of the minimum time the CanTp sender shall wait between the transmissions of two CF N-PDUs.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">For further details on this parameter value see ISO 15765-2 specification.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0.005</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF UUID="ECUS:d47d5a0a-4863-4106-a551-5717a750a53f">
+                          <SHORT-NAME>CanTpRxNSduRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:688bbf54-993d-4f6c-ac7f-5b88c948f749">
+                          <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains the parameters needed to configure each RxNSdu or TxNSdu with CanTpAddressingFormat set to CanTpMixed.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:c5a25697-3530-42d5-ae9d-7ff86054a3bb">
+                              <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNsdu or a TxNsdu is configured for mixed addressing</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">format, this parameter contains the transport protocol address extension value.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:44566b15-d12c-402d-a481-37cc671a1473">
+                          <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains the parameters needed to configure each RxNSdu or TxNSdu with CanTpAddressingFormat set to CanTpExtended.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:c6c0817d-dedf-4889-aab5-e3704a493f95">
+                              <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNSdu or a TxNSdu is configured for extended addressing format, this parameter contains the transport protocol source address's value.</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:c2a7c16d-49d0-40c6-ab62-c0fa51e5adbb">
+                          <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">The following parameters need to be configured for each RxNsdu or TxNsdu with the CanTpAddressingFormat set to CanTpExtended.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:2a8e312b-f534-4291-9987-bb2a8d555d65">
+                              <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNsdu or a TxNsdu is configured for extended addressing format, this parameter contains the transport protocol target address's value.</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:189ffcd0-103f-448b-a841-db38fde7eeac">
+                          <SHORT-NAME>CanTpRxNPdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:996ccdb5-3cee-49c1-aed6-ae2c00fe58a7">
+                              <SHORT-NAME>CanTpRxNPduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The N-PDU identifier attached to the RxNsdu is identified by CanTpRxNSduId.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Each RxNsdu identifier is linked to only one SF/FF/CF N-PDU identifier. 
+Nevertheless, in the case of extended or mixed addressing format, the same N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by the N_TA or N_AE value (first data byte 
+of SF or FF frames).</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF UUID="ECUS:51cecbc9-feb3-41f6-a629-aeb96a2e5898">
+                              <SHORT-NAME>CanTpRxNPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:0d592e28-7c6f-4ae1-98fd-ed7237c8b426">
+                          <SHORT-NAME>CanTpTxFcNPdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:ff14bf15-65ac-4c49-85ad-045d4a785071">
+                              <SHORT-NAME>CanTpTxFcNPduConfirmationPduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Handle Id to be used by the CanIf to confirm the transmission of the CanTpTxFcNPdu to the CanIf module.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF UUID="ECUS:6108b8c2-0950-4331-8b60-e72fa3563baa">
+                              <SHORT-NAME>CanTpTxFcNPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:abec524e-cc64-4f8e-8c8c-1eeab84b1451">
+                      <SHORT-NAME>CanTpTxNSdu</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">The following parameters needs to be configured for each CAN N-SDU that the CanTp module transmits via the CanTpChannel.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                      <PARAMETERS>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:a14e6234-4093-4d3c-be76-507c1d92c8ae">
+                          <SHORT-NAME>CanTpNas</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in second of the N_As timeout. N_As is the time for transmission of a CAN frame (any N_PDU) on the part of the sender.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:270ef0fc-5029-4848-8a6f-df769b564618">
+                          <SHORT-NAME>CanTpNbs</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in seconds of the N_Bs timeout. N_Bs is the time of transmission until reception of the next Flow Control N_PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF UUID="ECUS:c794ef3f-34f3-48f2-bd46-5b53d281d894">
+                          <SHORT-NAME>CanTpNcs</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value in seconds of the performance requirement of (N_Cs + N_As). N_Cs is the time which elapses between the transmit request of a CF N-PDU until the transmit request of the next CF N-PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                          <MAX>65.535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF UUID="ECUS:938e9a42-ed5e-4da2-bb6d-ef8434e11795">
+                          <SHORT-NAME>CanTpTc</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">switch for enabling Transmit Cancellation.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">True: Transmit Cancellation is Enabled
+False: Transmit Cancellation is Disabled</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:0fda5e6f-8a31-4ce7-8dc3-5b4f028c47ee">
+                          <SHORT-NAME>CanTpTxAddressingFormat</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Declares which communication addressing format is supported for this TxNsdu.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Definition of Enumeration values:
+CANTP_EXTENDED to use normal addressing format.
+CANTP_EXTENDED to use extended addressing format (the N_TA container of this TxNsdu will be used).
+CANTP_MIXED to use mixed addressing format (the N_AE container of this TxNsdu will be used).</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:61454d48-04e9-4b75-8acc-a2301c62f8e1">
+                              <SHORT-NAME>CANTP_EXTENDED</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:d054f21a-e163-46a4-81a9-be2d97e867ab">
+                              <SHORT-NAME>CANTP_MIXED</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:6c552bb6-8ddd-4506-a352-c574488f11c9">
+                              <SHORT-NAME>CANTP_STANDARD</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:6010aa14-f2b4-42c5-bd2f-fe2204a23168">
+                          <SHORT-NAME>CanTpTxDl</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Data Length Code of this TxNsdu. In case of variable length message, this value indicates the minimum data length.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF UUID="ECUS:721d4703-b16b-4d48-8617-3e5447a929b5">
+                          <SHORT-NAME>CanTpTxNSduId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Unique identifier to a structure that contains all useful information to process the transmission of a TxNsdu.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:cb6cedb1-8d39-4c3f-acf4-f3ad049088e6">
+                          <SHORT-NAME>CanTpTxPaddingActivation</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Defines if the transmit frame use padding or not.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Definition of Enumeration values:
+CANTP_ON: The transmit N-PDU uses padding for SF, FC and the last CF. (N-PDU length is always 8 bytes)
+CANTP_OFF: The transmit N-PDU does not use padding for SF, CF and the last CF. (N-PDU length is dynamic)</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:b76b0af5-a75f-4827-8b39-e11c73ac271a">
+                              <SHORT-NAME>CANTP_OFF</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:9ad6eadb-0ffd-48e8-a174-68d0c2f9779e">
+                              <SHORT-NAME>CANTP_ON</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF UUID="ECUS:759b8a0b-bdbe-442f-b59e-e3313806e6c7">
+                          <SHORT-NAME>CanTpTxTaType</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Declares the communication type of this TxNsdu.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">Enumeration values:
+CANTP_PHYSICAL. Used for 1:1 communication.
+CANTP_FUNCTIONAL. Used for 1:n communication.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:81a196e5-3664-4224-9a83-ada68523b5ff">
+                              <SHORT-NAME>CANTP_FUNCTIONAL</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF UUID="ECUS:1409093f-0943-4e4b-8c73-24b82e003a2c">
+                              <SHORT-NAME>CANTP_PHYSICAL</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF UUID="ECUS:c078cf71-93c8-4289-bee7-754f787f1ee0">
+                          <SHORT-NAME>CanTpTxNSduRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:e1003f92-75f9-45b0-8bf2-aa58f200fd7d">
+                          <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains the parameters needed to configure each RxNSdu or TxNSdu with CanTpAddressingFormat set to CanTpMixed.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:ec493cc3-72bf-4b85-8c92-462ecff8de05">
+                              <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNsdu or a TxNsdu is configured for mixed addressing</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">format, this parameter contains the transport protocol address extension value.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:b4769d6d-9b05-4cbb-a093-26beb9149504">
+                          <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains the parameters needed to configure each RxNSdu or TxNSdu with CanTpAddressingFormat set to CanTpExtended.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:436163b8-3e04-49f7-bd61-5099398e7b14">
+                              <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNSdu or a TxNSdu is configured for extended addressing format, this parameter contains the transport protocol source address's value.</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:cc70aef4-85be-446c-8a60-d520dea04d7e">
+                          <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">The following parameters need to be configured for each RxNsdu or TxNsdu with the CanTpAddressingFormat set to CanTpExtended.</L-2>
+                          </DESC>
+                          <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:3819fca9-d994-4a22-8aa2-6babc1fd81fc">
+                              <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">If an RxNsdu or a TxNsdu is configured for extended addressing format, this parameter contains the transport protocol target address's value.</L-2>
+                              </DESC>
+                              <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:d9dfa338-ce48-4a2e-840b-9d90cf7a148c">
+                          <SHORT-NAME>CanTpRxFcNPdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:5ca82f31-9c1f-4ea0-a4e5-871889416144">
+                              <SHORT-NAME>CanTpRxFcNPduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">N-PDU identifier attached to the FC N-PDU of this TxNsdu identified by CanTpTxNSduId.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Each TxNsdu identifier is linked to one Rx FC N-PDU identifier only. However, in the case of extended addressing format, the same FC N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by means of the N_TA value (first data byte of FC frames).</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF UUID="ECUS:02e71465-3611-49c6-9b24-1604c282feea">
+                              <SHORT-NAME>CanTpRxFcNPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:b7e648d9-2ad3-4744-a3b2-3b71c72e89de">
+                          <SHORT-NAME>CanTpTxNPdu</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                          </DESC>
+                          <CATEGORY>FIXED</CATEGORY>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF UUID="ECUS:cebc6888-493e-4d96-99bc-f96d18c5394a">
+                              <SHORT-NAME>CanTpTxNPduConfirmationPduId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Handle Id to be used by the CanIf to confirm the transmission of the CanTpTxNPdu to the CanIf module.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF UUID="ECUS:36c196d2-a852-4308-894f-add4793ab35f">
+                              <SHORT-NAME>CanTpTxNPduRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <CATEGORY>FIXED</CATEGORY>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <IMPLEMENTATION-CONFIG-CLASSES>
+                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              </IMPLEMENTATION-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </SUB-CONTAINERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+            <ECUC-PARAM-CONF-CONTAINER-DEF UUID="ECUS:f4b5d5fc-9071-4c1e-9a29-1de703f74bb0">
+              <SHORT-NAME>CanTpGeneral</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">This container contains the general configuration parameters of the CanTp module.</L-2>
+              </DESC>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+              <PARAMETERS>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUS:294fc293-2cf3-41f5-bbea-1924ea411564">
+                  <SHORT-NAME>CanTpChangeParameterApi</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This parameter, if set to true, enables the CanTp_ChangeParameterRequest Api for this Module.</L-2>
+                  </DESC>
+                  <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">True: CanTp_ChangeParameterRequest Api is Enabled
+False: CanTp_ChangeParameterRequest Api is Disabled
+                          </L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUS:dcbfb725-1351-46fe-b980-5fbbb777517c">
+                  <SHORT-NAME>CanTpDevErrorDetect</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Switches the Development Error Detection and Notification ON or OFF</L-2>
+                  </DESC>
+                  <CATEGORY>FIXED</CATEGORY>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">True: Development Error Detection and Notification is enabled
+False: Development Error Detection and Notification is enabled
+                          </L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-INTEGER-PARAM-DEF UUID="ECUS:3401bbd1-feb7-4a95-b5b1-4322a7a2cf15">
+                  <SHORT-NAME>CanTpPaddingByte</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Used for the initialization of unused bytes with a certain value</L-2>
+                  </DESC>
+                  <CATEGORY>FIXED</CATEGORY>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <MAX>255</MAX>
+                  <MIN>0</MIN>
+                </ECUC-INTEGER-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUS:c69e1eac-fcc3-4111-b0a8-9c07d8809357">
+                  <SHORT-NAME>CanTpReadParameterApi</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This parameter, if set to true, enables the CanTp_ReadParameterApi for this module.</L-2>
+                  </DESC>
+                  <CATEGORY>NOT_SUPPORTED</CATEGORY>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">True: CanTp_ReadParameterApi is enabled
+False: CanTp_ReadParameterApi is enabled
+                          </L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+                <ECUC-BOOLEAN-PARAM-DEF UUID="ECUS:8a223e4c-3508-4518-8914-cb5e4145cb99">
+                  <SHORT-NAME>CanTpVersionInfoApi</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">The function CanTp_GetVersionInfo is configurable (On/Off) by this configuration parameter.</L-2>
+                  </DESC>
+                  <CATEGORY>FIXED</CATEGORY>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">True: CanTp_GetVersionInfo is enabled
+False: CanTp_GetVersionInfo is enabled
+                          </L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <IMPLEMENTATION-CONFIG-CLASSES>
+                    <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                  </IMPLEMENTATION-CONFIG-CLASSES>
+                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                  <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                </ECUC-BOOLEAN-PARAM-DEF>
+              </PARAMETERS>
+            </ECUC-PARAM-CONF-CONTAINER-DEF>
+          </CONTAINERS>
+        </ECUC-MODULE-DEF>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

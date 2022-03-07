@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plugin>
+	<extension id="Autron Generator Error Parser" name="Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.Autron Generator Error Parser" name="Autron Generator Error Parser">
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="WRN ?\d+: .*" severity="Warning"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="INF ?\d+: .*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="ERR ?\d+: .*" severity="Error"/>
+		</errorparser>
+	</extension>
+	<extension id="Freescale OS Error Parser" name="Freescale OS Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.Freescale OS Error Parser" name="Freescale OS Error Parser">
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="error \d+:.*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="warning \d+:.*" severity="Warning"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="information .*" severity="Info"/>
+		</errorparser>
+	</extension>
+	<extension id="MPC MCAL Error Parser" name="MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.MPC MCAL Error Parser" name="MPC MCAL Error Parser">
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="WARNING .*" severity="Warning"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="INFO .*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="ERROR .*? License &quot;/tresosECU&quot; expired" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="ERROR .*" severity="Error"/>
+		</errorparser>
+	</extension>
+	<extension id="GreenHills Error Parser" name="MULTI-IDE Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.GreenHills Error Parser" name="MULTI-IDE Error Parser">
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="$1" line-expr="$2" regex="&quot;(.*?)&quot;, line (\d+): warning .*" severity="Warning"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="$1" line-expr="$2" regex="&quot;(.*?)&quot;, line (\d+): .*? Error .*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="$1" line-expr="$2" regex="&quot;(.*?)&quot;, line (\d+): fatal error .*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="$1" line-expr="$2" regex="&quot;(.*?)&quot;, line (\d+): error.*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="\[elxr\] \(warning\) .*" severity="Warning"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="\[elxr\] \(error\) .*" severity="Error"/>
+		</errorparser>
+	</extension>
+	<extension id="SCons Error Parser" name="SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.SCons Error Parser" name="SCons Error Parser">
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="TypeError: (.*)" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: Reading SConscript files .*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: done reading SConscript files.*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: Building targets .*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: done building targets.*" severity="Info"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: \*\*\* \[.+?\] Error [-|]\d+" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: building terminated because of errors.*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: \*\*\* \[.+?\] Source .+? not found, needed by target .+" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: \*\*\*. *? Error .*" severity="Error"/>
+			<pattern description-expr="" eat-processed-line="true" file-expr="$1" line-expr="$2" regex=".*?File &quot;(.+?)&quot;, line (\d+).*" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="scons: \*\*\* \[.+?\] AttributeError.+" severity="Error"/>
+			<pattern description-expr="$0" eat-processed-line="true" file-expr="" line-expr="" regex="SyntaxError: (.*)" severity="Error"/>
+		</errorparser>
+	</extension>
+	<extension id="TASKING Error Parser" name="TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser">
+		<errorparser class="org.eclipse.cdt.core.errorparsers.RegexErrorParser" id="org.eclipse.cdt.ui.TASKING Error Parser" name="TASKING Error Parser">
+			<pattern description-expr="$1 $7" eat-processed-line="true" file-expr="$3" line-expr="$4" regex="([a-z0-9]+ [SEF][0-9]+:) (\[\&quot;(.*)\&quot; ([0-9]+)(/([0-9]+))?.*\] )?(.*)" severity="Error"/>
+			<pattern description-expr="$1 $7" eat-processed-line="true" file-expr="$3" line-expr="$4" regex="([a-z0-9]+ W[0-9]+:) (\[\&quot;(.*)\&quot; ([0-9]+)(/([0-9]+))?.*\] )?(.*)" severity="Warning"/>
+			<pattern description-expr="$1 $7" eat-processed-line="true" file-expr="$3" line-expr="$4" regex="([a-z0-9]+ [IR][0-9]+:) (\[\&quot;(.*)\&quot; ([0-9]+)(/([0-9]+))?.*\] )?(.*)" severity="Info"/>
+		</errorparser>
+	</extension>
+</plugin>

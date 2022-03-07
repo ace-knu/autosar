@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648" moduleId="org.eclipse.cdt.core.settings" name="Rebuild">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.GreenHills Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Clean &amp; Build" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.ui.SCons Error Parser;org.eclipse.cdt.ui.GreenHills Error Parser;org.eclipse.cdt.ui.MPC MCAL Error Parser;org.eclipse.cdt.ui.Autron Generator Error Parser;org.eclipse.cdt.ui.TASKING Error Parser" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648" name="Rebuild" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1587202242" name="No ToolChain" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1587202242.808517293" name=""/>
+							<builder arguments="Rebuild" buildPath="${ProjDirPath}" cleanBuildTarget="-c" command=".\Build\build.bat" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.2080155864" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1968109961" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.451614414" name="SConstruct" rcbsApplicability="disable" resourcePath="SConstruct" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="Static_Code/Modules/b_autosar_sys_CryptoLib|Static_Code/Modules/b_autosar_sys_Cal_R40|Static_Code/Reference_Code/App_OsHook.c|Static_Code/Integration_Code/Os_VectorTable.c|Static_Code/Integration_Code/integration_MemMap|Static_Code/Integration_Code/flashrchw.c|Static_Code/Integration_Code/Os_VirtualVectorTable.c|Static_Code/Modules/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules/b_autosar_imp_Os_mpc560xb|Static_Code/Integration_Code/Mem_Integration.c|Static_Code/Integration_Code/Fbl_Stub.c|Static_Code/Integration_Code/EcuM_Callout_MPC560x.c|Static_Code/Integration_Code/Det_Stub.c|Static_Code/Integration_Code/Dem_Stub.c|Static_Code/Integration_Code/Boot.c|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Reference_Code/App_Os.c|Static_Code/Reference_Code/App_IoHwAb.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/lib/Dem_Obd.c|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/delivery/Dem_Version.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_CallOuts.c|Static_Code/Integration_Code/tcm_nm_cbk.c|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules_Common/b_autosar_com_CanSm_R40/lib/CanSM_Version.c|Static_Code/Modules_Common/b_autosar_com_Xcp_R40/lib/Xcp_MCUCtrl_Aurix.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451" moduleId="org.eclipse.cdt.core.settings" name="Build">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.GreenHills Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Generate &amp; Compile" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.ui.SCons Error Parser;org.eclipse.cdt.ui.GreenHills Error Parser;org.eclipse.cdt.ui.MPC MCAL Error Parser;org.eclipse.cdt.ui.Autron Generator Error Parser;org.eclipse.cdt.ui.TASKING Error Parser" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451" name="Build" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1885796980" name="No ToolChain" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1885796980.2128890322" name=""/>
+							<builder arguments="Build" buildPath="${ProjDirPath}" cleanBuildTarget="-c" command=".\Build\build.bat" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.1181412126" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="400" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1535036054" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.SConstruct" name="SConstruct" rcbsApplicability="disable" resourcePath="SConstruct" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="Static_Code/Modules/b_autosar_sys_CryptoLib|Static_Code/Modules/b_autosar_sys_Cal_R40|Static_Code/Reference_Code/App_OsHook.c|Static_Code/Integration_Code/Os_VectorTable.c|Static_Code/Integration_Code/integration_MemMap|Static_Code/Integration_Code/flashrchw.c|Static_Code/Integration_Code/Os_VirtualVectorTable.c|Static_Code/Modules/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules/b_autosar_imp_Os_mpc560xb|Static_Code/Integration_Code/Mem_Integration.c|Static_Code/Integration_Code/Fbl_Stub.c|Static_Code/Integration_Code/EcuM_Callout_MPC560x.c|Static_Code/Integration_Code/Det_Stub.c|Static_Code/Integration_Code/Dem_Stub.c|Static_Code/Integration_Code/Boot.c|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Reference_Code/App_Os.c|Static_Code/Reference_Code/App_IoHwAb.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/lib/Dem_Obd.c|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/delivery/Dem_Version.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_CallOuts.c|Static_Code/Integration_Code/tcm_nm_cbk.c|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules_Common/b_autosar_com_CanSm_R40/lib/CanSM_Version.c|Static_Code/Modules_Common/b_autosar_com_Xcp_R40/lib/Xcp_MCUCtrl_Aurix.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.164993850">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.164993850" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.GreenHills Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Generate release project" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.ui.SCons Error Parser;org.eclipse.cdt.ui.GreenHills Error Parser;org.eclipse.cdt.ui.MPC MCAL Error Parser;org.eclipse.cdt.ui.Autron Generator Error Parser;org.eclipse.cdt.ui.TASKING Error Parser" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.164993850" name="Release" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.164993850." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1138927854" name="No ToolChain" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1138927854.767794293" name=""/>
+							<builder arguments="Release" buildPath="${ProjDirPath}" cleanBuildTarget="-c" command=".\Build\build.bat" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.128177758" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1554441716" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.164993850.SConstruct" name="SConstruct" rcbsApplicability="disable" resourcePath="SConstruct" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="Static_Code/Modules/b_autosar_sys_CryptoLib|Static_Code/Modules/b_autosar_sys_Cal_R40|Static_Code/Reference_Code/App_OsHook.c|Static_Code/Integration_Code/Os_VectorTable.c|Static_Code/Integration_Code/integration_MemMap|Static_Code/Integration_Code/flashrchw.c|Static_Code/Integration_Code/Os_VirtualVectorTable.c|Static_Code/Modules/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules/b_autosar_imp_Os_mpc560xb|Static_Code/Integration_Code/Mem_Integration.c|Static_Code/Integration_Code/Fbl_Stub.c|Static_Code/Integration_Code/EcuM_Callout_MPC560x.c|Static_Code/Integration_Code/Det_Stub.c|Static_Code/Integration_Code/Dem_Stub.c|Static_Code/Integration_Code/Boot.c|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Reference_Code/App_Os.c|Static_Code/Reference_Code/App_IoHwAb.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/lib/Dem_Obd.c|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/delivery/Dem_Version.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_CallOuts.c|Static_Code/Integration_Code/tcm_nm_cbk.c|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules_Common/b_autosar_com_CanSm_R40/lib/CanSM_Version.c|Static_Code/Modules_Common/b_autosar_com_Xcp_R40/lib/Xcp_MCUCtrl_Aurix.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.1848255043.800973982">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.1848255043.800973982" moduleId="org.eclipse.cdt.core.settings" name="Auto Generation">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.GreenHills Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Generate SWCs and Bswmds" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.ui.SCons Error Parser;org.eclipse.cdt.ui.GreenHills Error Parser;org.eclipse.cdt.ui.MPC MCAL Error Parser;org.eclipse.cdt.ui.Autron Generator Error Parser;org.eclipse.cdt.ui.TASKING Error Parser" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.1848255043.800973982" name="Auto Generation" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.1848255043.800973982." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.1469842726" name="No ToolChain" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.1469842726.1626541759" name=""/>
+							<builder arguments="GenerateIoHwAb_B GenerateWdg_39_Acw_B GenerateWdgIf_B GenerateWdgM_B GenerateIoHwAb_S GenerateWdgM_S" buildPath="${ProjDirPath}" cleanBuildTarget="-c" command=".\Build\build.bat" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.40497236" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1083560315" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.1848255043.800973982.SConstruct" name="SConstruct" rcbsApplicability="disable" resourcePath="SConstruct" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="Static_Code/Modules/b_autosar_sys_CryptoLib|Static_Code/Modules/b_autosar_sys_Cal_R40|Static_Code/Reference_Code/App_OsHook.c|Static_Code/Integration_Code/Os_VectorTable.c|Static_Code/Integration_Code/integration_MemMap|Static_Code/Integration_Code/flashrchw.c|Static_Code/Integration_Code/Os_VirtualVectorTable.c|Static_Code/Modules/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules/b_autosar_imp_Os_mpc560xb|Static_Code/Integration_Code/Mem_Integration.c|Static_Code/Integration_Code/Fbl_Stub.c|Static_Code/Integration_Code/EcuM_Callout_MPC560x.c|Static_Code/Integration_Code/Det_Stub.c|Static_Code/Integration_Code/Dem_Stub.c|Static_Code/Integration_Code/Boot.c|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Reference_Code/App_Os.c|Static_Code/Reference_Code/App_IoHwAb.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/lib/Dem_Obd.c|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/delivery/Dem_Version.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_CallOuts.c|Static_Code/Integration_Code/tcm_nm_cbk.c|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules_Common/b_autosar_com_CanSm_R40/lib/CanSM_Version.c|Static_Code/Modules_Common/b_autosar_com_Xcp_R40/lib/Xcp_MCUCtrl_Aurix.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.2120684758">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.2120684758" moduleId="org.eclipse.cdt.core.settings" name="Generate Only">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.SCons Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.GreenHills Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.MPC MCAL Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.Autron Generator Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.ui.TASKING Error Parser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="Generate all modules" errorParsers="org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.ui.SCons Error Parser;org.eclipse.cdt.ui.GreenHills Error Parser;org.eclipse.cdt.ui.MPC MCAL Error Parser;org.eclipse.cdt.ui.Autron Generator Error Parser;org.eclipse.cdt.ui.TASKING Error Parser" id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.2120684758" name="Generate Only" parent="cdt.managedbuild.config.gnu.cross.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.2120684758." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.522544493" name="No ToolChain" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+							<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.522544493.1386648191" name=""/>
+							<builder arguments="GenerateAll" buildPath="${ProjDirPath}" cleanBuildTarget="-c" command=".\Build\build.bat" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.78495057" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1385821695" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.2067873451.2120684758.SConstruct" name="SConstruct" rcbsApplicability="disable" resourcePath="SConstruct" toolsToInvoke=""/>
+					<sourceEntries>
+						<entry excluding="Static_Code/Modules/b_autosar_sys_CryptoLib|Static_Code/Modules/b_autosar_sys_Cal_R40|Static_Code/Reference_Code/App_OsHook.c|Static_Code/Integration_Code/Os_VectorTable.c|Static_Code/Integration_Code/integration_MemMap|Static_Code/Integration_Code/flashrchw.c|Static_Code/Integration_Code/Os_VirtualVectorTable.c|Static_Code/Modules/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules/b_autosar_imp_Os_mpc560xb|Static_Code/Integration_Code/Mem_Integration.c|Static_Code/Integration_Code/Fbl_Stub.c|Static_Code/Integration_Code/EcuM_Callout_MPC560x.c|Static_Code/Integration_Code/Det_Stub.c|Static_Code/Integration_Code/Dem_Stub.c|Static_Code/Integration_Code/Boot.c|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Reference_Code/App_Os.c|Static_Code/Reference_Code/App_IoHwAb.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Lin_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/lib/Dem_Obd.c|Static_Code/Modules_Common/b_autosar_diag_Dem_R40/delivery/Dem_Version.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_EcuM_freescale_MPC560xB|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_CallOuts.c|Static_Code/Integration_Code/tcm_nm_cbk.c|Static_Code/Modules_Common/b_autosar_diag_Dcm_R40/delivery/Dcm_Version.c|Static_Code/Modules_Common/b_autosar_com_CanSm_R40/lib/CanSM_Version.c|Static_Code/Modules_Common/b_autosar_com_Xcp_R40/lib/Xcp_MCUCtrl_Aurix.c|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_Dem_freescale_MPC560xB|Static_Code/Modules_MPC560xB/b_pf_mcal_freescale_MPC560xB/b_mcal_rte_freescale_MPC560xB" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="autron_autosar_edu_for_ACE.cdt.managedbuild.target.gnu.cross.exe.474569354" name="Executable" projectType="cdt.managedbuild.target.gnu.cross.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.debug.1940883648;cdt.managedbuild.config.gnu.cross.exe.debug.1940883648.;cdt.managedbuild.tool.gnu.cross.c.compiler.342067396;cdt.managedbuild.tool.gnu.c.compiler.input.1054363232">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.262064333;cdt.managedbuild.config.gnu.cross.exe.release.262064333.;cdt.managedbuild.tool.gnu.cross.c.compiler.1546477613;cdt.managedbuild.tool.gnu.c.compiler.input.1535780559">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="GeneratAtm"/>
+		<configuration configurationName="GenerateWdg_S">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="GenerateOsekNm">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="GenerateCoSvAb_S"/>
+		<configuration configurationName="ModuleGen">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="Compile">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="Rebuild"/>
+		<configuration configurationName="GenerateAll"/>
+		<configuration configurationName="Auto Generation"/>
+		<configuration configurationName="GeneratePm_S"/>
+		<configuration configurationName="Build">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="Generate"/>
+		<configuration configurationName="GenerateWdgM_S"/>
+		<configuration configurationName="Generate Only"/>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/autron_autosar_edu_for_ACE"/>
+		</configuration>
+		<configuration configurationName="GenerateIoHwAb_S"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

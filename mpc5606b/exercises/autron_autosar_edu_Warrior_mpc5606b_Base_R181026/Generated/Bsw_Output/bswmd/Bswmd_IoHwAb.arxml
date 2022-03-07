@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Bsw_IoHwAb</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-MODULE-DESCRIPTION>
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <MODULE-ID>254</MODULE-ID>
+
+           <REQUIRED-MODE-GROUPS>
+              <MODE-DECLARATION-GROUP-PROTOTYPE>
+                <SHORT-NAME>IoHwAb_EM_R</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/EcuM/ModeDeclarationGroups/EcuMode</TYPE-TREF>
+              </MODE-DECLARATION-GROUP-PROTOTYPE>
+            </REQUIRED-MODE-GROUPS>
+
+
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>BswInternalBehavior_IoHwAb</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA>
+                  <SHORT-NAME>IoHwAbProtection</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <ENTITYS>
+               <BSW-SCHEDULABLE-ENTITY>
+                  <SHORT-NAME>BswSE_IoHwAb_IOM_10ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <ACCESSED-MODE-GROUPS>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_IoHwAb/IoHwAb/IoHwAb_EM_R</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                  </ACCESSED-MODE-GROUPS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IOM_10ms</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY>
+                  <SHORT-NAME>BswSE_IoHwAb_IOM_5ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <ACCESSED-MODE-GROUPS>
+                    <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                      <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_IoHwAb/IoHwAb/IoHwAb_EM_R</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                    </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+                  </ACCESSED-MODE-GROUPS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IOM_5ms</IMPLEMENTED-ENTRY-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_AnaInFreeze</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInFreeze</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_AnaInRead</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInRead</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_AnaInReadDirect</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInReadDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_AnaInUnfreeze</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInUnfreeze</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_AnaInDirReadDirect</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_AnaInDirReadDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirIsInput</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirIsInput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirIsOutput</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirIsOutput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirReadDirect</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirReadDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirSetToInput</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirSetToInput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirSetToOutput</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirSetToOutput</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_DigDirWriteDirect</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_DigDirWriteDirect</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptDisableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptDisableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptEnableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptEnableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptGetTimeElapsed</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptGetTimeElapsed</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptGetTimeRemaining</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptGetTimeRemaining</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptStartTimer</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptStartTimer</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_GptStopTimer</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_GptStopTimer</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuDisableEdgeCount</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuDisableEdgeCount</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuDisableEdgeDetection</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuDisableEdgeDetection</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuDisableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuDisableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuEnableEdgeCount</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuEnableEdgeCount</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuEnableEdgeDetection</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuEnableEdgeDetection</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuEnableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuEnableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuGetDutyCycleValues</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuGetDutyCycleValues</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuGetEdgeNumbers</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuGetEdgeNumbers</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuGetInputState</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuGetInputState</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuGetTimeElapsed</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuGetTimeElapsed</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuGetTimestampIndex</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuGetTimestampIndex</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuResetEdgeCount</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuResetEdgeCount</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuSetActivationCondition</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuSetActivationCondition</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuStartSignalMeasurement</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuStartSignalMeasurement</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuStartTimestamp</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuStartTimestamp</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuStopSignalMeasurement</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuStopSignalMeasurement</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_IcuStopTimestamp</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_IcuStopTimestamp</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmDisableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmDisableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmEnableNotification</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmEnableNotification</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmGetOutputState</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmGetOutputState</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmSetDutyCycle</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmSetDutyCycle</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmSetOutputToIdle</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmSetOutputToIdle</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY>
+                   <SHORT-NAME>IoHwAb_PwmSetPeriodAndDuty</SHORT-NAME>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAbProtection</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                   </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                   <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/Bsw_IoHwAb/IoHwAb_PwmSetPeriodAndDuty</IMPLEMENTED-ENTRY-REF>
+                </BSW-CALLED-ENTITY>
+
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT>
+                  <SHORT-NAME>BswTE_IoHwAb_IOM_10ms</SHORT-NAME>
+                  <DISABLED-IN-MODE-IREFS>
+                    <DISABLED-IN-MODE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_IoHwAb/IoHwAb/IoHwAb_EM_R</CONTEXT-MODE-DECLARATION-GROUP-REF>
+                      <TARGET-MODE-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_STARTUP_ONE</TARGET-MODE-REF>
+                    </DISABLED-IN-MODE-IREF>
+                    <DISABLED-IN-MODE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Bsw_IoHwAb/IoHwAb/IoHwAb_EM_R</CONTEXT-MODE-DECLARATION-GROUP-REF>
+                      <TARGET-MODE-REF DEST="MODE-DECLARATION">/EcuM/ModeDeclarationGroups/EcuMode/ECUM_STATE_STARTUP_TWO</TARGET-MODE-REF>
+                    </DISABLED-IN-MODE-IREF>
+                  </DISABLED-IN-MODE-IREFS>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/BswSE_IoHwAb_IOM_10ms</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </BSW-TIMING-EVENT>
+                <BSW-TIMING-EVENT>
+                  <SHORT-NAME>BswTE_IoHwAb_IOM_5ms</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/BswSE_IoHwAb_IOM_5ms</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-IMPLEMENTATION>
+          <SHORT-NAME>BswImplementation_IoHwAb</SHORT-NAME>
+          <SW-VERSION>1.1.21</SW-VERSION>
+          <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Bsw_IoHwAb/SwcBswMapping_IoHwAb</SWC-BSW-MAPPING-REF>
+          <VENDOR-ID>76</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.0.3</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>        
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_AnaInFreeze</SHORT-NAME>
+             <SERVICE-ID>0</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_AnaInRead</SHORT-NAME>
+             <SERVICE-ID>1</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_AnaInReadDirect</SHORT-NAME>
+             <SERVICE-ID>2</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_AnaInUnfreeze</SHORT-NAME>
+             <SERVICE-ID>3</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_AnaInDirReadDirect</SHORT-NAME>
+             <SERVICE-ID>4</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>AnaInDirLength</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirIsInput</SHORT-NAME>
+             <SERVICE-ID>5</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>blResult</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirIsOutput</SHORT-NAME>
+             <SERVICE-ID>6</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>blResult</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirReadDirect</SHORT-NAME>
+             <SERVICE-ID>7</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Level</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirSetToInput</SHORT-NAME>
+             <SERVICE-ID>8</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirSetToOutput</SHORT-NAME>
+             <SERVICE-ID>9</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_DigDirWriteDirect</SHORT-NAME>
+             <SERVICE-ID>10</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Level</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptDisableNotification</SHORT-NAME>
+             <SERVICE-ID>11</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptEnableNotification</SHORT-NAME>
+             <SERVICE-ID>12</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptGetTimeElapsed</SHORT-NAME>
+             <SERVICE-ID>13</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptGetTimeRemaining</SHORT-NAME>
+             <SERVICE-ID>14</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptStartTimer</SHORT-NAME>
+             <SERVICE-ID>15</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Value</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_GptStopTimer</SHORT-NAME>
+             <SERVICE-ID>16</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuDisableEdgeCount</SHORT-NAME>
+             <SERVICE-ID>17</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuDisableEdgeDetection</SHORT-NAME>
+             <SERVICE-ID>18</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuDisableNotification</SHORT-NAME>
+             <SERVICE-ID>19</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuEnableEdgeCount</SHORT-NAME>
+             <SERVICE-ID>20</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuEnableEdgeDetection</SHORT-NAME>
+             <SERVICE-ID>21</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuEnableNotification</SHORT-NAME>
+             <SERVICE-ID>22</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuGetDutyCycleValues</SHORT-NAME>
+             <SERVICE-ID>23</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>DutyCycle</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuGetEdgeNumbers</SHORT-NAME>
+             <SERVICE-ID>24</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Num</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuGetInputState</SHORT-NAME>
+             <SERVICE-ID>25</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>State</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuGetTimeElapsed</SHORT-NAME>
+             <SERVICE-ID>26</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Time</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuGetTimestampIndex</SHORT-NAME>
+             <SERVICE-ID>27</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>TimestampIdx</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuResetEdgeCount</SHORT-NAME>
+             <SERVICE-ID>28</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuSetActivationCondition</SHORT-NAME>
+             <SERVICE-ID>29</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Activation</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuStartSignalMeasurement</SHORT-NAME>
+             <SERVICE-ID>30</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuStartTimestamp</SHORT-NAME>
+             <SERVICE-ID>31</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>BufPtr</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>BufSize</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>NotiItv</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuStopSignalMeasurement</SHORT-NAME>
+             <SERVICE-ID>32</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_IcuStopTimestamp</SHORT-NAME>
+             <SERVICE-ID>33</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmDisableNotification</SHORT-NAME>
+             <SERVICE-ID>34</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmEnableNotification</SHORT-NAME>
+             <SERVICE-ID>35</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>NotificationEdge</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmGetOutputState</SHORT-NAME>
+             <SERVICE-ID>36</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Level</SHORT-NAME>
+
+                 <DIRECTION>OUT</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmSetDutyCycle</SHORT-NAME>
+             <SERVICE-ID>37</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Duty</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmSetOutputToIdle</SHORT-NAME>
+             <SERVICE-ID>38</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+             <SHORT-NAME>IoHwAb_PwmSetPeriodAndDuty</SHORT-NAME>
+             <SERVICE-ID>39</SERVICE-ID>
+             <IS-REENTRANT>false</IS-REENTRANT>
+             <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+             <CALL-TYPE>REGULAR</CALL-TYPE>
+             <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+             <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+             <ARGUMENTS>
+             <SW-SERVICE-ARG>
+                 <SHORT-NAME>ChIdx</SHORT-NAME>
+                 <DIRECTION>IN</DIRECTION>
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Period</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             <SW-SERVICE-ARG>
+
+                 <SHORT-NAME>Duty</SHORT-NAME>
+
+                 <DIRECTION>IN</DIRECTION>
+
+              </SW-SERVICE-ARG>
+             </ARGUMENTS>
+
+          </BSW-MODULE-ENTRY>
+          <SWC-BSW-MAPPING>
+            <SHORT-NAME>SwcBswMapping_IoHwAb</SHORT-NAME>
+            <BSW-BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb</BSW-BEHAVIOR-REF>
+              <RUNNABLE-MAPPINGS>
+                              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInFreeze</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Freeze</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInRead</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Read</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInReadDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_ReadDirect</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInUnfreeze</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Unfreeze</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_AnaInDirReadDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaInDir_ReadDirect</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirIsInput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirIsOutput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirReadDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirSetToInput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirSetToOutput</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_DigDirWriteDirect</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptDisableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_DisableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptEnableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_EnableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptGetTimeElapsed</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeElapsed</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptGetTimeRemaining</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeRemaining</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptStartTimer</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StartTimer</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_GptStopTimer</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StopTimer</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuDisableEdgeCount</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableEdgeCount</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuDisableEdgeDetection</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableEdgeDetection</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuDisableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuEnableEdgeCount</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableEdgeCount</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuEnableEdgeDetection</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableEdgeDetection</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuEnableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuGetDutyCycleValues</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetDutyCycleValues</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuGetEdgeNumbers</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetEdgeNumbers</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuGetInputState</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetInputState</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuGetTimeElapsed</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetTimeElapsed</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuGetTimestampIndex</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetTimestampIndex</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuResetEdgeCount</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_ResetEdgeCount</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuSetActivationCondition</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_SetActivationCondition</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuStartSignalMeasurement</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StartSignalMeasurement</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuStartTimestamp</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StartTimestamp</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuStopSignalMeasurement</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StopSignalMeasurement</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_IcuStopTimestamp</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StopTimestamp</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmDisableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_DisableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmEnableNotification</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_EnableNotification</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmGetOutputState</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_GetOutputState</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmSetDutyCycle</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetDutyCycle</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmSetOutputToIdle</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetOutputToIdle</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+              <SWC-BSW-RUNNABLE-MAPPING>
+              <BSW-ENTITY-REF DEST="BSW-CALLED-ENTITY">/Bsw_IoHwAb/IoHwAb/BswInternalBehavior_IoHwAb/IoHwAb_PwmSetPeriodAndDuty</BSW-ENTITY-REF>
+              <SWC-RUNNABLE-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetPeriodAndDuty</SWC-RUNNABLE-REF>
+              </SWC-BSW-RUNNABLE-MAPPING>
+
+              </RUNNABLE-MAPPINGS>
+              <SWC-BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb</SWC-BEHAVIOR-REF>
+          </SWC-BSW-MAPPING>
+       <BSW-MODULE-ENTRY>
+          <SHORT-NAME>IoHwAb_IOM_10ms</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY>
+          <SHORT-NAME>IoHwAb_IOM_5ms</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

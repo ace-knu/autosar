@@ -1,0 +1,107 @@
+# AUTH PGHS001010568E02607061
+# COMPANY ADaC
+# EXPIRY 10
+# SERVECODE 32#0x20c3705e
+# SERIAL NUMBER 9795
+# ADaC Serial# : SP001867
+# ADaC GenDate : 2016/01/07
+# ADaC UsrHost : ghstool
+# ADaC Server  : Win32
+# ADaC Client  : Win32
+#
+#
+# Creation Date: Wed Jan  6 22:14:56 2016
+#
+# The license file is generated for MULTI 6.0 or later tools. It cannot be
+# installed by "update". To install it, copy the file to MULTI license
+# directory. On Windows, the file is usually located at:
+#    c:\ghs\licenses
+
+version: 20
+
+serial: 9795
+featurebits: ffff7fff
+hostid: 20c3705e
+platform: windows
+key: 45976776 
+
+multi code: 100
+# multi expires at Sat Jan 16 22:14:56 2016
+multi expiration: 569b3160
+
+mpserv code: 398
+# mpserv expires at Sat Jan 16 22:14:56 2016
+mpserv expiration: 569b3160
+
+simppc code: 470
+# simppc expires at Sat Jan 16 22:14:56 2016
+simppc expiration: 569b3160
+
+mpserv_bto code: 691
+# mpserv_bto expires at Sat Jan 16 22:14:56 2016
+mpserv_bto expiration: 569b3160
+
+ecomppc code: 2901
+# ecomppc expires at Sat Jan 16 22:14:56 2016
+ecomppc expiration: 569b3160
+
+ax code: 4101
+# ax expires at Sat Jan 16 22:14:56 2016
+ax expiration: 569b3160
+
+lx code: 4102
+# lx expires at Sat Jan 16 22:14:56 2016
+lx expiration: 569b3160
+
+elxr code: 4103
+# elxr expires at Sat Jan 16 22:14:56 2016
+elxr expiration: 569b3160
+
+asppc code: 4215
+# asppc expires at Sat Jan 16 22:14:56 2016
+asppc expiration: 569b3160
+
+timemachine code: 7003
+# timemachine expires at Sat Jan 16 22:14:56 2016
+timemachine expiration: 569b3160
+
+timemachine_bto code: 7009
+# timemachine_bto expires at Sat Jan 16 22:14:56 2016
+timemachine_bto expiration: 569b3160
+
+svc_cpu_ppc code: 7218
+# svc_cpu_ppc expires at Sat Jan 16 22:14:56 2016
+svc_cpu_ppc expiration: 569b3160
+
+enable_MULTI_v5 code: 11002
+# enable_MULTI_v5 expires at Sat Jan 16 22:14:56 2016
+enable_MULTI_v5 expiration: 569b3160
+
+enable_COMPILER_2012_5 code: 11006
+# enable_COMPILER_2012_5 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2012_5 expiration: 569b3160
+
+enable_COMPILER_2013_1 code: 11007
+# enable_COMPILER_2013_1 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2013_1 expiration: 569b3160
+
+enable_COMPILER_2013_5 code: 11009
+# enable_COMPILER_2013_5 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2013_5 expiration: 569b3160
+
+enable_COMPILER_2014_1 code: 11010
+# enable_COMPILER_2014_1 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2014_1 expiration: 569b3160
+
+enable_COMPILER_2014_5 code: 11011
+# enable_COMPILER_2014_5 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2014_5 expiration: 569b3160
+
+enable_COMPILER_2015_1 code: 11012
+# enable_COMPILER_2015_1 expires at Sat Jan 16 22:14:56 2016
+enable_COMPILER_2015_1 expiration: 569b3160
+
+enable_MULTI_v6 code: 11101
+# enable_MULTI_v6 expires at Sat Jan 16 22:14:56 2016
+enable_MULTI_v6 expiration: 569b3160
+
