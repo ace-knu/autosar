@@ -1,0 +1,2341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+      <AR-PACKAGE>        
+        <SHORT-NAME>Svc_IoHwAb</SHORT-NAME>
+
+
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>CompuMethods</SHORT-NAME>
+        <ELEMENTS>
+        <COMPU-METHOD>
+          <SHORT-NAME>IoHwAb_Cm_BoolEnum</SHORT-NAME>
+          <CATEGORY>TEXTTABLE</CATEGORY>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_False</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_FALSE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_True</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_TRUE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+        <COMPU-METHOD>
+          <SHORT-NAME>IoHwAb_Cm_EdgeEnum</SHORT-NAME>
+          <CATEGORY>TEXTTABLE</CATEGORY>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_RisingEdge</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_RISING_EDGE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_FallingEdge</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_FALLING_EDGE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_BothEdges</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_BOTH_EDGES</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+        <COMPU-METHOD>
+          <SHORT-NAME>IoHwAb_Cm_StateEnum</SHORT-NAME>
+          <CATEGORY>TEXTTABLE</CATEGORY>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_Idle</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_IDLE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_Active</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_ACTIVE</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+        <COMPU-METHOD>
+          <SHORT-NAME>IoHwAb_Cm_LevelEnum</SHORT-NAME>
+          <CATEGORY>TEXTTABLE</CATEGORY>
+          <COMPU-INTERNAL-TO-PHYS>
+            <COMPU-SCALES>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_Low</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_LOW</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+              <COMPU-SCALE>
+                <SHORT-LABEL>IoHwAb_High</SHORT-LABEL>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                <COMPU-CONST>
+                  <VT>IOHWAB_HIGH</VT>
+                </COMPU-CONST>
+              </COMPU-SCALE>
+            </COMPU-SCALES>
+          </COMPU-INTERNAL-TO-PHYS>
+        </COMPU-METHOD>
+        </ELEMENTS>
+    </AR-PACKAGE>
+
+
+    <AR-PACKAGE>
+      <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+        <ELEMENTS>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_OcuReturnType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_LevelType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_IoHwAb/CompuMethods/IoHwAb_Cm_LevelEnum</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_OcuValueType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuEdgeNumberType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_PwmPeriodType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_GptValueType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint32</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuIndexType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_ValueType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_LengthType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IndexType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuValueType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuStateType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_IoHwAb/CompuMethods/IoHwAb_Cm_StateEnum</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_BoolType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_IoHwAb/CompuMethods/IoHwAb_Cm_BoolEnum</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_PwmEdgeType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_IoHwAb/CompuMethods/IoHwAb_Cm_EdgeEnum</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_ThresholdType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_OcuPinStateType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuActivationType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/Svc_IoHwAb/CompuMethods/IoHwAb_Cm_EdgeEnum</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_OcuPinActionType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_DataTypes/BaseTypes/uint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE>
+          <SHORT-NAME>IoHwAb_IcuDutyCycleType</SHORT-NAME>
+          <CATEGORY>STRUCTURE</CATEGORY>
+          <SUB-ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>ActiveTime</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuValueType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+            <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              <SHORT-NAME>PeriodTime</SHORT-NAME>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuValueType</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+          </SUB-ELEMENTS>
+        </IMPLEMENTATION-DATA-TYPE>
+        </ELEMENTS>
+    </AR-PACKAGE>
+
+
+    <AR-PACKAGE>
+      <SHORT-NAME>ClientServerInterfaces</SHORT-NAME>
+        <ELEMENTS>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_McuSpecific</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>ControlIBE</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>PortGroup</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>PinConfig</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_LevelType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_McuSpecific/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_NOT_SUPPORTED</SHORT-NAME>
+              <ERROR-CODE>12</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>          
+          <SHORT-NAME>IoHwAb_If_DigDir</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>ReadDirect</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_LevelType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>WriteDirect</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_LevelType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetToInput</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetToOutput</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IsInput</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>blResult</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_BoolType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>IsOutput</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>blResult</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_BoolType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_AnaInDir</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>ReadDirect</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_ValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>AnaInDirLength</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_LengthType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir/E_BUSY</POSSIBLE-ERROR-REF>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir/E_WRONG_LENGTH</POSSIBLE-ERROR-REF>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir/E_SETUP_BUFFER_FAIL</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_BUSY</SHORT-NAME>
+              <ERROR-CODE>4</ERROR-CODE>
+            </APPLICATION-ERROR>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_WRONG_LENGTH</SHORT-NAME>
+              <ERROR-CODE>5</ERROR-CODE>
+            </APPLICATION-ERROR>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_SETUP_BUFFER_FAIL</SHORT-NAME>
+              <ERROR-CODE>6</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_AnaIn</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>Read</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_ValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>ReadDirect</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_ValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/E_BUSY</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>Freeze</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>Unfreeze</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_BUSY</SHORT-NAME>
+              <ERROR-CODE>7</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_Icu</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetActivationCondition</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Activation</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuActivationType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>DisableNotification</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>EnableNotification</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetInputState</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>State</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuStateType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StartTimestamp</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>BufPtr</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>BufSize</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>NotiItv</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StopTimestamp</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetTimestampIndex</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>TimestampIdx</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuIndexType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>ResetEdgeCount</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>EnableEdgeCount</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>DisableEdgeCount</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetEdgeNumbers</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Num</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuEdgeNumberType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>EnableEdgeDetection</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>DisableEdgeDetection</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StartSignalMeasurement</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StopSignalMeasurement</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetTimeElapsed</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Time</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetDutyCycleValues</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>DutyCycle</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IcuDutyCycleType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>Notification</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_NOT_SUPPORTED</SHORT-NAME>
+              <ERROR-CODE>9</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_Gpt</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StartTimer</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_GptValueType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>StopTimer</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetTimeElapsed</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_GptValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetTimeRemaining</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Value</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_GptValueType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>DisableNotification</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>EnableNotification</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>Notification</SHORT-NAME>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_NOT_SUPPORTED</SHORT-NAME>
+              <ERROR-CODE>10</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        <CLIENT-SERVER-INTERFACE>
+          <SHORT-NAME>IoHwAb_If_Pwm</SHORT-NAME>
+          <IS-SERVICE>true</IS-SERVICE>
+          <OPERATIONS>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetDutyCycle</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Duty</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetPeriodAndDuty</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Period</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_PwmPeriodType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Duty</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_DataTypes/ImplementationDataTypes/uint16</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>SetOutputToIdle</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>GetOutputState</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>Level</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_LevelType</TYPE-TREF>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>DisableNotification</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+            <CLIENT-SERVER-OPERATION>
+              <SHORT-NAME>EnableNotification</SHORT-NAME>
+              <ARGUMENTS>
+                <ARGUMENT-DATA-PROTOTYPE>
+                  <SHORT-NAME>NotificationEdge</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_PwmEdgeType</TYPE-TREF>
+                  <DIRECTION>IN</DIRECTION>
+                  <SERVER-ARGUMENT-IMPL-POLICY>USE-ARGUMENT-TYPE</SERVER-ARGUMENT-IMPL-POLICY>
+                </ARGUMENT-DATA-PROTOTYPE>
+              </ARGUMENTS>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/E_NOT_SUPPORTED</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
+            </CLIENT-SERVER-OPERATION>
+          </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>E_NOT_SUPPORTED</SHORT-NAME>
+              <ERROR-CODE>11</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
+        </CLIENT-SERVER-INTERFACE>
+        </ELEMENTS>
+    </AR-PACKAGE>
+
+
+        
+
+    <AR-PACKAGE>
+        <SHORT-NAME>EcuAbstractionSwComponentTypes</SHORT-NAME>
+        <ELEMENTS>
+          <ECU-ABSTRACTION-SW-COMPONENT-TYPE><SHORT-NAME>IoHwAb</SHORT-NAME>
+            <PORTS>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbMcuSpecific</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_McuSpecific/ControlIBE</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_McuSpecific</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_LED01</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_S01</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_S02</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_S03</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_S04</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbAnalogInputDirectLogical_01</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbAnalogInputLogical_PD00</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Read</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Freeze</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Unfreeze</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbIcuLogical_Timestamp_PA8</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/SetActivationCondition</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetInputState</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StartTimestamp</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StopTimestamp</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetTimestampIndex</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/ResetEdgeCount</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableEdgeCount</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableEdgeCount</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetEdgeNumbers</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableEdgeDetection</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableEdgeDetection</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StartSignalMeasurement</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StopSignalMeasurement</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetTimeElapsed</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetDutyCycleValues</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>R_IoHwAbIcuLogical_Timestamp_PA8_Cbk</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/Notification</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbGptLogical0</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>R_IoHwAbGptLogical0_Cbk</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbGptLogical_EMIOS4</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>R_IoHwAbGptLogical_EMIOS4_Cbk</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbPwm_0</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            </PORTS>
+            <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>IB_IoHwAb</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbMcuSpecific_ControlIBE</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_McuSpecific_ControlIBE</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbMcuSpecific</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_McuSpecific/ControlIBE</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED01_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S01_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S02_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S03_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_S04_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbAnalogInputDirectLogical_01_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaInDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputDirectLogical_01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaInDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbAnalogInputLogical_PD00_Read</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Read</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputLogical_PD00</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Read</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbAnalogInputLogical_PD00_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputLogical_PD00</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbAnalogInputLogical_PD00_Freeze</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Freeze</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputLogical_PD00</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Freeze</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbAnalogInputLogical_PD00_Unfreeze</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_AnaIn_Unfreeze</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputLogical_PD00</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_AnaIn/Unfreeze</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_SetActivationCondition</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_SetActivationCondition</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/SetActivationCondition</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_DisableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_EnableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_GetInputState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetInputState</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetInputState</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_StartTimestamp</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StartTimestamp</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StartTimestamp</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_StopTimestamp</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StopTimestamp</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StopTimestamp</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_GetTimestampIndex</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetTimestampIndex</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetTimestampIndex</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_ResetEdgeCount</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_ResetEdgeCount</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/ResetEdgeCount</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_EnableEdgeCount</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableEdgeCount</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableEdgeCount</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_DisableEdgeCount</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableEdgeCount</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableEdgeCount</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_GetEdgeNumbers</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetEdgeNumbers</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetEdgeNumbers</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_EnableEdgeDetection</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_EnableEdgeDetection</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/EnableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_DisableEdgeDetection</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_DisableEdgeDetection</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/DisableEdgeDetection</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_StartSignalMeasurement</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StartSignalMeasurement</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StartSignalMeasurement</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_StopSignalMeasurement</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_StopSignalMeasurement</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/StopSignalMeasurement</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_GetTimeElapsed</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetTimeElapsed</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetTimeElapsed</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbIcuLogical_Timestamp_PA8_GetDutyCycleValues</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Icu_GetDutyCycleValues</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/GetDutyCycleValues</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_StartTimer</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StartTimer</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_StopTimer</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StopTimer</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_GetTimeElapsed</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeElapsed</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_GetTimeRemaining</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeRemaining</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_DisableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_DisableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical0_EnableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_EnableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_StartTimer</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StartTimer</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_StopTimer</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_StopTimer</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_GetTimeElapsed</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeElapsed</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_GetTimeRemaining</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_GetTimeRemaining</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_DisableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_DisableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbGptLogical_EMIOS4_EnableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Gpt_EnableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_SetDutyCycle</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetDutyCycle</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_SetPeriodAndDuty</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetPeriodAndDuty</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_SetOutputToIdle</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetOutputToIdle</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_GetOutputState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_GetOutputState</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_DisableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_DisableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_EnableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_EnableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <PORT-API-OPTIONS>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>1</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>4</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S04</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputDirectLogical_01</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbAnalogInputLogical_PD00</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbIcuLogical_Timestamp_PA8</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical0</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>1</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwm_0</PORT-REF>
+                </PORT-API-OPTION>
+              </PORT-API-OPTIONS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_McuSpecific_ControlIBE</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_McuSpecificControlIBE</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_ReadDirect</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirReadDirect</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_WriteDirect</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirWriteDirect</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_SetToInput</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirSetToInput</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_SetToOutput</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirSetToOutput</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_IsInput</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirIsInput</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_DigDir_IsOutput</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_DigDirIsOutput</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_AnaInDir_ReadDirect</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_AnaInDirReadDirect</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_AnaIn_Read</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_AnaInRead</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_AnaIn_ReadDirect</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_AnaInReadDirect</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_AnaIn_Freeze</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_AnaInFreeze</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_AnaIn_Unfreeze</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_AnaInUnfreeze</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_SetActivationCondition</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuSetActivationCondition</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_DisableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuDisableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_EnableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuEnableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_GetInputState</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuGetInputState</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_StartTimestamp</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuStartTimestamp</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_StopTimestamp</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuStopTimestamp</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_GetTimestampIndex</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuGetTimestampIndex</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_ResetEdgeCount</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuResetEdgeCount</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_EnableEdgeCount</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuEnableEdgeCount</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_DisableEdgeCount</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuDisableEdgeCount</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_GetEdgeNumbers</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuGetEdgeNumbers</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_EnableEdgeDetection</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuEnableEdgeDetection</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_DisableEdgeDetection</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuDisableEdgeDetection</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_StartSignalMeasurement</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuStartSignalMeasurement</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_StopSignalMeasurement</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuStopSignalMeasurement</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_GetTimeElapsed</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuGetTimeElapsed</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_GetDutyCycleValues</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_IcuGetDutyCycleValues</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Icu_IcuTimestampMeasurement_0_Cbk_Cbk</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT>
+                      <SHORT-NAME>IoHwAb_Cp_Icu_IoHwAbIcuLogical_Timestamp_PA8_Cbk</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/R_IoHwAbIcuLogical_Timestamp_PA8_Cbk</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Icu/Notification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>IcuTimestampMeasurement_0_Cbk</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_StartTimer</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptStartTimer</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_StopTimer</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptStopTimer</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_GetTimeElapsed</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptGetTimeElapsed</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_GetTimeRemaining</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptGetTimeRemaining</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_DisableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptDisableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_EnableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_GptEnableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_GptChannelConfiguration_Dummy_Cbk_Cbk</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT>
+                      <SHORT-NAME>IoHwAb_Cp_Gpt_IoHwAbGptLogical0_Cbk</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/R_IoHwAbGptLogical0_Cbk</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>GptChannelConfiguration_Dummy_Cbk</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Gpt_GptChannelConfiguration_IoHwAbTest_Cbk_Cbk</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT>
+                      <SHORT-NAME>IoHwAb_Cp_Gpt_IoHwAbGptLogical_EMIOS4_Cbk</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/R_IoHwAbGptLogical_EMIOS4_Cbk</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>GptChannelConfiguration_IoHwAbTest_Cbk</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_SetDutyCycle</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmSetDutyCycle</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_SetPeriodAndDuty</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmSetPeriodAndDuty</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_SetOutputToIdle</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmSetOutputToIdle</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_GetOutputState</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmGetOutputState</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_DisableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmDisableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>IoHwAb_Re_Pwm_EnableNotification</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_PwmEnableNotification</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+            </INTERNAL-BEHAVIORS>
+            </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION>
+        <SHORT-NAME>SwcImplementation_IoHwAb</SHORT-NAME>
+        <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/Bsw_IoHwAb/SwcBswMapping_IoHwAb</SWC-BSW-MAPPING-REF>
+        <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>            
+            
+
+
+
+      
+        
+        
+      
+      
+
+      </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

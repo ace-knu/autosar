@@ -424,6 +424,26 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="40610610-b54c-439c-92f7-f26d39b5c8c8">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_LED02</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PortE_Pin5</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="63a1da6e-a146-4019-acaa-e7292bd8174f">
+                      <SHORT-NAME>IoHwAbDigitalDirectLogical_LED03</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbDigitalDirect/IoHwAbDigitalDirectLogical/IoHwAbPortPinChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/IoHwAb/IoHwAbGeneral/IoHwAbPortPinChs/IoHwAbPortPinCh_PortE_Pin6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="691cedc7-9ec7-4747-aec2-30bf638a60eb">
@@ -459,6 +479,22 @@
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical/IoHwAbHwPwmChRef</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Pwm/Pwm/PwmChannelConfigSet_0/PwmChannel_0</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="42d0426e-2da1-48dc-acc3-610607905cd3">
+                      <SHORT-NAME>IoHwAbPwmLogical_EMIOS23</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical/IoHwAbPwmCallbackViaRte</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/IoHwAb/IoHwAbConfig/IoHwAbPwm/IoHwAbPwmLogical/IoHwAbHwPwmChRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Pwm/Pwm/PwmChannelConfigSet_0/PwmChannel_EMIOS23</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

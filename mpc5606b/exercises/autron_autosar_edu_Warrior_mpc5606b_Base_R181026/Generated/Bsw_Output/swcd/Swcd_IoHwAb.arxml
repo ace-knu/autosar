@@ -935,6 +935,66 @@
               <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_LED02</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_LED03</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
               <SHORT-NAME>P_IoHwAbDigitalDirectLogical_S01</SHORT-NAME>
               <PROVIDED-COM-SPECS>
                 <SERVER-COM-SPEC>
@@ -1248,6 +1308,36 @@
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
+              <SHORT-NAME>P_IoHwAbPwmLogical_EMIOS23</SHORT-NAME>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE>
               <SHORT-NAME>P_IoHwAbPwm_0</SHORT-NAME>
               <PROVIDED-COM-SPECS>
                 <SERVER-COM-SPEC>
@@ -1335,6 +1425,102 @@
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
                   <OPERATION-IREF>
                     <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED01</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED02_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_ReadDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_ReadDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_WriteDirect</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_WriteDirect</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_SetToInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_SetToOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_SetToOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_IsInput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsInput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbDigitalDirectLogical_LED03_IsOutput</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_DigDir_IsOutput</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</CONTEXT-P-PORT-REF>
                     <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-PROVIDED-OPERATION-REF>
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
@@ -1803,6 +1989,54 @@
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
                 <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_SetDutyCycle</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetDutyCycle</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetPeriodAndDuty</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetOutputToIdle</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_GetOutputState</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_GetOutputState</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_DisableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_DisableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
+                  <SHORT-NAME>IoHwAb_Ev_IoHwAbPwmLogical_EMIOS23_EnableNotification</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_EnableNotification</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT>
                   <SHORT-NAME>IoHwAb_Ev_IoHwAbPwm_0_SetDutyCycle</SHORT-NAME>
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/IB_IoHwAb/IoHwAb_Re_Pwm_SetDutyCycle</START-ON-EVENT-REF>
                   <OPERATION-IREF>
@@ -1880,7 +2114,7 @@
                       <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
                     </PORT-DEFINED-ARGUMENT-VALUE>
                   </PORT-ARG-VALUES>
-                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</PORT-REF>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</PORT-REF>
                 </PORT-API-OPTION>
                 <PORT-API-OPTION>
                   <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
@@ -1895,7 +2129,7 @@
                       <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
                     </PORT-DEFINED-ARGUMENT-VALUE>
                   </PORT-ARG-VALUES>
-                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</PORT-REF>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</PORT-REF>
                 </PORT-API-OPTION>
                 <PORT-API-OPTION>
                   <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
@@ -1910,7 +2144,7 @@
                       <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
                     </PORT-DEFINED-ARGUMENT-VALUE>
                   </PORT-ARG-VALUES>
-                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</PORT-REF>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S01</PORT-REF>
                 </PORT-API-OPTION>
                 <PORT-API-OPTION>
                   <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
@@ -1920,6 +2154,36 @@
                       <VALUE>
                         <NUMERICAL-VALUE-SPECIFICATION>
                           <VALUE>4</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S02</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>5</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_S03</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>6</VALUE>
                         </NUMERICAL-VALUE-SPECIFICATION>
                       </VALUE>
                       <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
@@ -2010,6 +2274,21 @@
                       <VALUE>
                         <NUMERICAL-VALUE-SPECIFICATION>
                           <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </VALUE>
+                      <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>
+                    </PORT-DEFINED-ARGUMENT-VALUE>
+                  </PORT-ARG-VALUES>
+                  <PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</PORT-REF>
+                </PORT-API-OPTION>
+                <PORT-API-OPTION>
+                  <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                  <INDIRECT-API>false</INDIRECT-API>
+                  <PORT-ARG-VALUES>
+                    <PORT-DEFINED-ARGUMENT-VALUE>
+                      <VALUE>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>1</VALUE>
                         </NUMERICAL-VALUE-SPECIFICATION>
                       </VALUE>
                       <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Svc_IoHwAb/ImplementationDataTypes/IoHwAb_IndexType</VALUE-TYPE-TREF>

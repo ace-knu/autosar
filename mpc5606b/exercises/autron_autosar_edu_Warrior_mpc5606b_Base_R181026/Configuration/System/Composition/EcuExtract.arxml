@@ -20,8 +20,8 @@
             </SDGS>
           </ADMIN-DATA>
           <ANNOTATIONS>
-            <ANNOTATION T="2018-08-29T09:46:26.612+09:00">
-              <ANNOTATION-ORIGIN>DBC_E:/00_AUTOSAR/Project/edu_1807_warrior_Base/References/DB/Project.dbc</ANNOTATION-ORIGIN>
+            <ANNOTATION T="2017-08-08T09:26:26.877+09:00">
+              <ANNOTATION-ORIGIN>DBC_F:/AUTOSAR_Training/Dproject/autron_autosar_edu_for_MPC5606B_201702/References/DB/Project.dbc</ANNOTATION-ORIGIN>
               <ANNOTATION-TEXT>
                 <DEF-LIST SI="Nodes">
                   <DEF-ITEM SI="ECU1">
@@ -497,6 +497,10 @@
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/ECU_EXTRACT/EcuExtract/RootSwCompositionPrototype</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_TestModeManager</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
@@ -567,7 +571,7 @@
             <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/DBCImport/IPDUGROUPS/ISignalIPduGroupTx_ECU1_Project</ASSOCIATED-COM-I-PDU-GROUP-REF>
           </ASSOCIATED-COM-I-PDU-GROUP-REFS>
           <COMM-CONTROLLERS>
-            <CAN-COMMUNICATION-CONTROLLER UUID="d54ec9d4-4767-46dd-8624-43b082cfdecd">
+            <CAN-COMMUNICATION-CONTROLLER UUID="2e506f23-6792-4ff9-bd15-ab70d1fc2cdf">
               <SHORT-NAME>ECU1_Project</SHORT-NAME>
               <CAN-COMMUNICATION-CONTROLLER-VARIANTS>
                 <CAN-COMMUNICATION-CONTROLLER-CONDITIONAL>
@@ -579,357 +583,357 @@
             </CAN-COMMUNICATION-CONTROLLER>
           </COMM-CONTROLLERS>
           <CONNECTORS>
-            <CAN-COMMUNICATION-CONNECTOR UUID="b0450a0a-c529-4578-90f1-3c13b1280845">
+            <CAN-COMMUNICATION-CONNECTOR UUID="cd61c964-c34f-4c40-9c32-b7098e3f75ac">
               <SHORT-NAME>Conn_ECU1_Project</SHORT-NAME>
               <COMM-CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU_EXTRACT/ECU1/ECU1_Project</COMM-CONTROLLER-REF>
               <ECU-COMM-PORT-INSTANCES>
-                <FRAME-PORT UUID="12dd8e51-5e62-4b30-8bf0-91559a043232">
+                <FRAME-PORT UUID="b7d37898-b088-467b-9c8f-73a1e5ed00ad">
                   <SHORT-NAME>FP_ECU1_GST_Msg_TP2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="037af29b-3f15-4d55-bd7b-7c0ab7dba995">
+                <I-PDU-PORT UUID="02d4c966-45f8-49d4-8d30-38c8e1d69f37">
                   <SHORT-NAME>PP_ECU1_GST_Msg_TP2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="70df6c2b-5529-4345-b7a9-e0e0e4b1d0a2">
+                <I-SIGNAL-PORT UUID="273ecb4a-a62a-4a3d-8f02-e41e087ad856">
                   <SHORT-NAME>SP_ECU1_GST_Msg_TP2_GST_Msg_TP2_signal_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="2bdafd5c-564f-4473-9425-029e6e8da804">
+                <FRAME-PORT UUID="8097122c-256a-4c1f-aec3-c0ece680071f">
                   <SHORT-NAME>FP_ECU1_GST_Msg_TP1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="4ebf806b-4442-478c-bc03-7d0392fe46aa">
+                <I-PDU-PORT UUID="45c719d3-e473-4441-be01-1afa28df756c">
                   <SHORT-NAME>PP_ECU1_GST_Msg_TP1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="7b8b38d9-dba5-42e3-aa79-28fd9bbffe89">
+                <I-SIGNAL-PORT UUID="4191bb52-5104-4c42-a3fd-1276a846d31a">
                   <SHORT-NAME>SP_ECU1_GST_Msg_TP1_GST_Msg_TP1_signal_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="7f66d05f-aeab-47ed-bc23-94193d32acfc">
+                <FRAME-PORT UUID="a3caa58e-bb60-4ceb-9f3a-bac8486842a7">
                   <SHORT-NAME>FP_ECU1_ECU1_GST_Msg_TP_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="7044ac1d-30e0-44f9-b657-9277cf3193ee">
+                <I-PDU-PORT UUID="0c8ff8c9-410e-4774-99e8-02c1fa068629">
                   <SHORT-NAME>PP_ECU1_ECU1_GST_Msg_TP_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <FRAME-PORT UUID="01710fdc-4a25-4dcc-88c5-f066c1898cd9">
+                <FRAME-PORT UUID="f98a725d-ae5c-470d-8587-171c2ab58bfb">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_GW1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="0974414a-c5f6-4b20-8ae8-5e99bf45b564">
+                <I-PDU-PORT UUID="c7111df3-4a28-4dc2-b334-59cce7f5fc06">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_GW1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="c14d2a0f-4c05-41b6-b000-ee8cb4b479c2">
+                <I-SIGNAL-PORT UUID="39093e45-82aa-4752-872b-69861ea404be">
                   <SHORT-NAME>SP_ECU1_Msg_GW1_ECU1_Msg_GW1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="cb45d492-17ab-4f9b-9675-4fe4cc032e1d">
+                <I-SIGNAL-PORT UUID="b4f565c7-492b-4fa8-8edc-dd71013b8b18">
                   <SHORT-NAME>SP_ECU1_Msg_GW1_ECU1_Msg_GW1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="9a769eee-0952-4aca-a104-fd6cbcc6cc13">
+                <FRAME-PORT UUID="2b8f1ccc-27aa-4feb-aa03-599f6098f9ef">
                   <SHORT-NAME>FP_ECU1_GST_Msg_TP_Phys_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="8cb2438a-1844-49c0-a98b-8d45f98a4882">
+                <I-PDU-PORT UUID="b36551b5-f4e1-4f99-9c8c-87e66f1f1768">
                   <SHORT-NAME>PP_ECU1_GST_Msg_TP_Phys_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <FRAME-PORT UUID="6738db1a-8a57-4cb9-bbe7-3362b39639cf">
+                <FRAME-PORT UUID="709356c5-0271-49ae-a16b-f80fbfc4d06e">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_TP2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="ce73dff2-4efd-410f-bdad-d4fcf495f089">
+                <I-PDU-PORT UUID="c749c3ad-25ef-476b-aa75-472e7622c8ce">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_TP2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="ec313ab6-b842-4dc2-a069-c4918eeb17b8">
+                <I-SIGNAL-PORT UUID="7c4d4e1c-6cf4-451b-8079-3724a7d466be">
                   <SHORT-NAME>SP_ECU1_Msg_TP2_ECU1_Msg_TP2_signal_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="15107d8c-b448-405c-8626-f8f7d4ace6f4">
+                <FRAME-PORT UUID="b92e8d17-cb48-4b9b-8ef7-a6916c9209be">
                   <SHORT-NAME>FP_ECU1_ECU2_Msg_PIF1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="85f719e8-475f-45c9-9385-d94ebbf24e00">
+                <I-PDU-PORT UUID="d0709cc4-ccf3-4c95-ae60-c14dc79304b8">
                   <SHORT-NAME>PP_ECU1_ECU2_Msg_PIF1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="ed32a32d-3917-4571-8b5f-f96f7bf6956d">
+                <I-SIGNAL-PORT UUID="086e228a-9dd5-4231-90ab-2ec06d7ebcfa">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_PIF1_ECU2_Msg_PIF1_Sig2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="edfbde62-c7a8-4a9a-9cec-25514550c833">
+                <I-SIGNAL-PORT UUID="9f2549cc-a61a-4518-b6f8-bae3f9470f96">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_PIF1_ECU2_Msg_PIF1_Sig1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="345e5f80-a1ac-4af3-a968-997d1d4cc0d9">
+                <FRAME-PORT UUID="de5f827e-0bd3-4e73-ac95-939328a25df3">
                   <SHORT-NAME>FP_ECU1_ECU2_Msg_POE1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="91ae2d57-5b73-40ae-8d39-a3caa70a2c07">
+                <I-PDU-PORT UUID="f8e972bb-4b26-45aa-9005-89db224d4872">
                   <SHORT-NAME>PP_ECU1_ECU2_Msg_POE1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="393d1611-ebd6-48e5-9b2b-293e55cad80a">
+                <I-SIGNAL-PORT UUID="1ae6ea2a-6268-46d3-ba86-ed94a89fae00">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_POE1_ECU2_Msg_POE1_Sig1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="7c5a086a-ee44-4dd1-92cd-c729f2386e72">
+                <I-SIGNAL-PORT UUID="bc15b075-d334-4f98-a0e4-3350983217a0">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_POE1_ECU2_Msg_POE1_Sig2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="bfeb0802-8b98-434b-b3ba-2c7b11ee4eaf">
+                <FRAME-PORT UUID="fa4c528c-34f4-4d18-b000-6fe3d3db5329">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_IF1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="fab9fd98-a291-418d-a5d1-aefad9d7b9e7">
+                <I-PDU-PORT UUID="a1d13db1-4a18-4fee-9f9c-d800a2621794">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_IF1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="863fbd8f-abb1-4494-970b-a23470f6d426">
+                <I-SIGNAL-PORT UUID="52d5b3ae-7ac8-498b-be57-6f15c77abfcb">
                   <SHORT-NAME>SP_ECU1_Msg_IF1_ECU1_Msg_IF1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="87bf749e-f5b0-45bc-9e0f-9d47017ddfb9">
+                <I-SIGNAL-PORT UUID="87d034bb-1215-4b49-a050-27b356907f6a">
                   <SHORT-NAME>SP_ECU1_Msg_IF1_ECU1_Msg_IF1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="0bceb8b0-efaf-4520-87d0-f4e9c800a840">
+                <FRAME-PORT UUID="1019baea-21dc-4c92-a719-f1eccea62552">
                   <SHORT-NAME>FP_ECU1_ECU2_Msg_OE1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="8c74ba28-519a-466d-a092-d80c23826fbe">
+                <I-PDU-PORT UUID="98e73818-bf6d-4861-b9f6-e9d3793635b4">
                   <SHORT-NAME>PP_ECU1_ECU2_Msg_OE1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="b1b5e32a-8062-4e5f-9c91-c49838597f59">
+                <I-SIGNAL-PORT UUID="b69d758a-dada-49a4-b9c1-8f7355f0c1cb">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_OE1_ECU2_Msg_OE1_Sig2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="694b5cc5-fcf3-434f-b2e2-e8488a6fe143">
+                <I-SIGNAL-PORT UUID="21928d49-a8e5-4623-bc39-30b1c5d1fa71">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_OE1_ECU2_Msg_OE1_Sig1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="52ce1862-31ff-4662-a555-04e9fa609129">
+                <FRAME-PORT UUID="efee7821-233e-434e-810b-47181fd2be5e">
                   <SHORT-NAME>FP_ECU1_ECU2_Msg_P1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="1399f900-07ac-4a9a-b93b-af96d66d0e93">
+                <I-PDU-PORT UUID="4de32e60-8049-4c8e-b366-3d385e560746">
                   <SHORT-NAME>PP_ECU1_ECU2_Msg_P1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="b51c85aa-de84-4f98-80a9-48855c6a7225">
+                <I-SIGNAL-PORT UUID="5effe174-780e-4fcb-b8b7-2982493cf029">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_P1_ECU2_Msg_P1_Sig2_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="75689153-52a8-4eb7-8b3d-a0b9933a7ab5">
+                <I-SIGNAL-PORT UUID="b9cd8302-8730-48df-a4db-6df8b7e3bd62">
                   <SHORT-NAME>SP_ECU1_ECU2_Msg_P1_ECU2_Msg_P1_Sig1_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0.7</TIMEOUT>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="e035cead-5387-46ac-8e68-8fa1af995e8f">
+                <FRAME-PORT UUID="c807b7e3-85f9-44f0-9936-fc72f3e8dc93">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_POE3_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="f9d0e96a-f02b-45cf-b35b-ba6978ef6cc8">
+                <I-PDU-PORT UUID="4a25518c-aa2c-43b1-860f-4ae8e02002b7">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_POE3_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="5950fc02-ccaf-4fb7-bfb5-793f96284155">
+                <I-SIGNAL-PORT UUID="3ee76553-0e4d-4f1b-8fdd-816c56526a23">
                   <SHORT-NAME>SP_ECU1_Msg_POE3_ECU1_Msg_POE3_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="0704dae8-1271-45c3-90d2-83d260878f7c">
+                <I-SIGNAL-PORT UUID="eb6b78b6-a8e0-46cf-9eaf-215139392e33">
                   <SHORT-NAME>SP_ECU1_Msg_POE3_ECU1_Msg_POE3_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="ae3b487e-0c75-4439-b1ee-65ae15844513">
+                <FRAME-PORT UUID="04a5b431-8e64-4815-acc1-7da96cf5d1e4">
                   <SHORT-NAME>FP_ECU1_GST_Msg_TP_Func_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="5cf8178b-6f6c-4ae9-abdf-5e01b464c6ab">
+                <I-PDU-PORT UUID="09a17200-7d03-41a8-947e-fb65b8609d44">
                   <SHORT-NAME>PP_ECU1_GST_Msg_TP_Func_IN</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <FRAME-PORT UUID="09367591-d5fe-4ee3-b5fd-d904ce8c3046">
+                <FRAME-PORT UUID="495cc06a-93fc-4610-99e4-f0fd8af5d531">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_TP1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="be74fe95-cbce-45b1-8a4d-68bd8770df6c">
+                <I-PDU-PORT UUID="e128ebe2-279d-4943-9c4c-d5ad434be5a3">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_TP1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="00796d67-5c75-4823-8a60-97af5c28939d">
+                <I-SIGNAL-PORT UUID="e7591705-dba8-46cf-928f-8a57b10a1713">
                   <SHORT-NAME>SP_ECU1_Msg_TP1_ECU1_Msg_TP1_signal_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="379f1c4b-99ed-4ad1-83f5-df9881f8716b">
+                <FRAME-PORT UUID="e1896882-f4c1-449a-9f1c-06094e74f486">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_P4_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="af458c24-26a4-420a-b21a-a2ff20cd9a63">
+                <I-PDU-PORT UUID="ff7085ae-227e-4372-a1f0-7d783ab47e90">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_P4_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="4ed602fd-e2c2-4d7a-8fd3-3e1c499cb387">
+                <I-SIGNAL-PORT UUID="1896b646-63c9-4374-a4c6-780248c3c649">
                   <SHORT-NAME>SP_ECU1_Msg_P4_ECU1_Msg_P4_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="1aa0eadd-3f5c-47a7-89af-192bc06e86d8">
+                <I-SIGNAL-PORT UUID="b207b4f4-9e24-49bf-9e6b-43318020d937">
                   <SHORT-NAME>SP_ECU1_Msg_P4_ECU1_Msg_P4_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="2c009006-0ba0-45fc-9543-67b69c307ebc">
+                <FRAME-PORT UUID="65d9800d-7458-494f-a7ae-da2109b4e0c3">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_P3_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="a67c6073-1897-43ca-96c0-af2f5061430f">
+                <I-PDU-PORT UUID="3b9c1d02-45fb-43be-8c10-6c29557d74c5">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_P3_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="eec1ba3a-7880-46f7-b4e8-a2dde37e97c8">
+                <I-SIGNAL-PORT UUID="502d96d4-8507-4aef-975c-0839866bf51e">
                   <SHORT-NAME>SP_ECU1_Msg_P3_ECU1_Msg_P3_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="50a1d949-62ee-4e0d-a9bb-074e729cb849">
+                <I-SIGNAL-PORT UUID="c294fec2-0bbe-4e53-b3a2-8c09a712f552">
                   <SHORT-NAME>SP_ECU1_Msg_P3_ECU1_Msg_P3_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="0837e4b5-880a-4fd7-92f9-63b4a137375a">
+                <FRAME-PORT UUID="bc91bb5b-3a82-468e-8fcb-d87f507288ae">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_PIF1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="81d2130a-0787-42eb-bc52-573bcdb37760">
+                <I-PDU-PORT UUID="456ac8bb-ea35-4c1a-a1be-56948bdce1e5">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_PIF1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="7f0f0cb9-cd06-4362-8aa3-c4ac1e5c4d73">
+                <I-SIGNAL-PORT UUID="a3e92824-9b5f-40e6-802e-9c40a8c30333">
                   <SHORT-NAME>SP_ECU1_Msg_PIF1_ECU1_Msg_PIF1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="f76e93e3-3d9c-45d1-b370-325daebd2016">
+                <I-SIGNAL-PORT UUID="811f154b-840d-4cf0-8498-73d42b70ab7d">
                   <SHORT-NAME>SP_ECU1_Msg_PIF1_ECU1_Msg_PIF1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="fd84b3e1-2183-4b08-a0d5-4621f5054e61">
+                <FRAME-PORT UUID="9e9c10b0-c8d9-4eb9-9725-9822d205ce88">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_P2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="94745c21-f7bf-4285-9fc5-ff005fd0a505">
+                <I-PDU-PORT UUID="afee4d17-a853-4f53-b32e-5314a1139584">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_P2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="bc421413-9159-4783-8418-1da0b374d998">
+                <I-SIGNAL-PORT UUID="24c51536-9fd2-4a8d-986f-2afa893606e0">
                   <SHORT-NAME>SP_ECU1_Msg_P2_ECU1_Msg_P2_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="12422d68-6bbc-4d92-921d-3b9211b0a232">
+                <I-SIGNAL-PORT UUID="9d9da2cc-0a70-403e-b9a2-272737eec6a6">
                   <SHORT-NAME>SP_ECU1_Msg_P2_ECU1_Msg_P2_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="fbab7d83-524c-494f-904b-05d0f9540f4d">
+                <FRAME-PORT UUID="17dbc547-5c1e-4aeb-93c6-18ba30a5aff3">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_P1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="e4a341b1-ebc1-4e78-bca8-6a6c7c4506a6">
+                <I-PDU-PORT UUID="61418d74-5316-466a-a17a-709729aa1a51">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_P1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="18e10318-47f7-420b-a449-ba54b5edefb7">
+                <I-SIGNAL-PORT UUID="6b305b93-a3a5-4ac4-841b-c828362405e2">
                   <SHORT-NAME>SP_ECU1_Msg_P1_ECU1_Msg_P1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="ff90b4ca-c431-4c3f-bc2e-ed161d6639b5">
+                <I-SIGNAL-PORT UUID="3723e462-7001-4137-ba0b-c3b66a32b241">
                   <SHORT-NAME>SP_ECU1_Msg_P1_ECU1_Msg_P1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="38785d5c-11a0-4af1-9395-5b76fa617ff0">
+                <FRAME-PORT UUID="0eb2fe87-d130-4bf9-84d4-6f9e558ae1ff">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_POE2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="27e2f9fc-cfdd-4e0c-b77a-c67f5e68629c">
+                <I-PDU-PORT UUID="b10fe1d4-ccf5-4b6b-9fb2-9f34cea7993b">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_POE2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="7a49360d-1bfb-4a4f-b09b-6b10cee45da4">
+                <I-SIGNAL-PORT UUID="6513cbd2-d12e-4d2e-beef-4ac3f811b24c">
                   <SHORT-NAME>SP_ECU1_Msg_POE2_ECU1_Msg_POE2_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="7a194a62-2b5e-42dc-8af0-b8481c0f77b8">
+                <I-SIGNAL-PORT UUID="5f400b3d-654a-44e5-8c21-e23649b27cee">
                   <SHORT-NAME>SP_ECU1_Msg_POE2_ECU1_Msg_POE2_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="d9a088e3-24d2-41c3-888e-cde4260c9177">
+                <FRAME-PORT UUID="5e302805-22b9-46d4-aa76-a493327eaefc">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_POE1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="18a2389a-dbf7-49fe-8397-934b32559a0c">
+                <I-PDU-PORT UUID="b916ae72-cd91-4a8b-a4e3-ebd6ce224e33">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_POE1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="3b8028c6-ab4f-4eff-b5b3-cd865a5c9cbc">
+                <I-SIGNAL-PORT UUID="783359e1-4df8-47ba-ac07-2e76dc5ea5e9">
                   <SHORT-NAME>SP_ECU1_Msg_POE1_ECU1_Msg_POE1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="31f18b45-6647-4795-8a72-33cbca17c6ac">
+                <I-SIGNAL-PORT UUID="5f3ab0e1-1f22-4226-a2d8-997de69ba23f">
                   <SHORT-NAME>SP_ECU1_Msg_POE1_ECU1_Msg_POE1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="63526cd4-2c53-4d4a-8028-aaade1040056">
+                <FRAME-PORT UUID="678cbe08-635d-4653-aa30-0251f526bf2d">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_OE2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="c2b5ff5d-06e8-4d37-9344-de4c595f01cb">
+                <I-PDU-PORT UUID="6dc1d0d1-9764-409f-8637-5c12b1e5fc85">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_OE2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="81e7aabf-6959-4132-b060-e1bba4a814c0">
+                <I-SIGNAL-PORT UUID="a5676953-d8cd-4f61-9152-3f9b1e75a13d">
                   <SHORT-NAME>SP_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig5_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="9a0a96b8-163f-46a6-bf57-9b3b1a043193">
+                <I-SIGNAL-PORT UUID="0dd2d88f-b136-4ecf-943a-e6b0e406e7b1">
                   <SHORT-NAME>SP_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig4_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="cc62cc93-a305-4604-988b-0fd98cfb8846">
+                <I-SIGNAL-PORT UUID="4ef8f6e5-3804-4608-ac7c-3a98476905ad">
                   <SHORT-NAME>SP_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig3_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="b2d4092c-48c6-4adb-b67d-13a5a95bf48d">
+                <I-SIGNAL-PORT UUID="1be887d3-9b77-4b5f-8030-27c0ac7431f1">
                   <SHORT-NAME>SP_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="04ac8be0-f262-4c2b-9399-a19ec2ef9c23">
+                <I-SIGNAL-PORT UUID="264bcad8-5b2b-4ef0-b822-18b5c5f30b2b">
                   <SHORT-NAME>SP_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <FRAME-PORT UUID="62f261de-0d52-47d1-b42b-516e89d7e9b0">
+                <FRAME-PORT UUID="edcf3781-2c89-4d16-805b-b30064ece055">
                   <SHORT-NAME>FP_ECU1_ECU1_Msg_OE1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
-                <I-PDU-PORT UUID="9d4d652d-c34b-469a-a544-62e85a227d03">
+                <I-PDU-PORT UUID="e69df210-8696-4fb7-b84a-34838a191cb7">
                   <SHORT-NAME>PP_ECU1_ECU1_Msg_OE1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
-                <I-SIGNAL-PORT UUID="b36903f3-2bc1-4044-b8c2-bceb688c6aca">
+                <I-SIGNAL-PORT UUID="737593e4-b3bf-4473-b5b7-d1efef0af6b7">
                   <SHORT-NAME>SP_ECU1_Msg_OE1_ECU1_Msg_OE1_Sig2_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
-                <I-SIGNAL-PORT UUID="865b179d-4e62-4555-bb4d-ad9d7075fe44">
+                <I-SIGNAL-PORT UUID="e6382980-7e74-48db-a990-695d125606c4">
                   <SHORT-NAME>SP_ECU1_Msg_OE1_ECU1_Msg_OE1_Sig1_OUT</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-SIGNAL-PORT>
@@ -963,6 +967,10 @@
             <SW-COMPONENT-PROTOTYPE UUID="61646c0e-e6ad-4b1e-bfde-c4fbb43f9071">
               <SHORT-NAME>SWC_ErrM</SHORT-NAME>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ErrM/ApplicationSwComponentTypes/SWC_ErrM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="49063f9c-1adf-4ca3-ae44-9d30063f19bc">
+              <SHORT-NAME>SWC_IoHwAbTest</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_IoHwAb/SWC_IoHwAbTest</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
             <SW-COMPONENT-PROTOTYPE UUID="bb016ebb-5b4c-4c21-8555-9e85b2ccb371">
               <SHORT-NAME>SWC_TestModeManager</SHORT-NAME>
@@ -1489,6 +1497,61 @@
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_AppMode</CONTEXT-COMPONENT-REF>
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode/modeNotificationPort_PduGroupTx_Project</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="7bb9f1e6-59da-4b8e-8dc4-d702c68b3826">
+              <SHORT-NAME>P_IoHwAbGptLogical_EMIOS4_CbkOfSWC_IoHwAbTestToR_IoHwAbGptLogical_EMIOS4_CbkOfSvc_IoHwAb</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/P_IoHwAbGptLogical_EMIOS4_Cbk</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Svc_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/R_IoHwAbGptLogical_EMIOS4_Cbk</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="920017c5-dca5-4f48-9410-6dacd9ae7e89">
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_LED02OfSvc_IoHwAbToR_IoHwAbDigitalDirectLogical_PE5OfSWC_IoHwAbTest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Svc_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED02</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="02219a0c-151e-41f4-9fc1-0ef00bd1ff0c">
+              <SHORT-NAME>P_IoHwAbDigitalDirectLogical_LED03OfSvc_IoHwAbToR_IoHwAbDigitalDirectLogical_PE6OfSWC_IoHwAbTest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Svc_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbDigitalDirectLogical_LED03</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="235f7cd0-626b-431b-a5f5-5415e8f96885">
+              <SHORT-NAME>P_IoHwAbGptLogical_EMIOS4OfSvc_IoHwAbToR_IoHwAbGptLogical_EMIOS4OfSWC_IoHwAbTest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Svc_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbGptLogical_EMIOS4</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="34643896-654c-4050-bdbb-fd225160d36c">
+              <SHORT-NAME>P_IoHwAbPwmLogical_EMIOS23OfSvc_IoHwAbToR_IoHwAbPwmLogical_EMIOS23OfSWC_IoHwAbTest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/Svc_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Svc_IoHwAb/EcuAbstractionSwComponentTypes/IoHwAb/P_IoHwAbPwmLogical_EMIOS23</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECU_EXTRACT/EcuComposition/SWC_IoHwAbTest</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
           </CONNECTORS>

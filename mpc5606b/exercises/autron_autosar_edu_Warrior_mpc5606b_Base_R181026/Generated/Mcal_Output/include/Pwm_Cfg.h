@@ -424,7 +424,7 @@ extern "C" {
 /**
 * @brief   Specific the max channels of one config set in all config sets.
 */
-#define PWM_MAX_CHANNELS  (1U)
+#define PWM_MAX_CHANNELS  (2U)
 
 
 #define PWM_PRECOMPILE_SUPPORT (STD_OFF)
@@ -435,10 +435,16 @@ extern "C" {
 /* @violates @ref Pwm_Cfg_H_REF_4 Identifier clash. */
 #define PwmConf_PwmChannel_PwmChannel_0         ((Pwm_ChannelType)0)
 
+/* @violates @ref Pwm_Cfg_H_REF_3 The long identifiers are maintained for better readability. */
+/* @violates @ref Pwm_Cfg_H_REF_4 Identifier clash. */
+#define PwmConf_PwmChannel_PwmChannel_EMIOS23         ((Pwm_ChannelType)1)
+
 
 
 
 #define PwmChannel_0_EMIOS_0_CH_2    ((Pwm_ChannelType)EMIOS_0_CH_2)
+
+#define PwmChannel_EMIOS23_EMIOS_0_CH_23    ((Pwm_ChannelType)EMIOS_0_CH_23)
 
 /**@}*/
 

@@ -18,16 +18,16 @@
 **                      File Generation Information                           **
 *******************************************************************************/
 /*
- * INPUT FILE:    E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_IoHwAb.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Pwm.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Spi.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Dio.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Icu.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Port.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Adc.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Mcu.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Gpt.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml
+ * INPUT FILE:    E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Mcu.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Gpt.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Adc.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Pwm.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Port.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Icu.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_IoHwAb.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Spi.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Dio.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Os.arxml
  * GENERATED ON:  This timestamp is removed.
  */
 
@@ -189,13 +189,15 @@ extern CONST(IoHwAb_GenInfoPropertyType, IOHWAB_CONST)IoHwAb_GaaGenInfos[];
 /*******************************************************************************
 **                      Digital Direct                                        **
 *******************************************************************************/
-#define IOHWAB_DIGDIR_NUM_LGC                         (5U)
+#define IOHWAB_DIGDIR_NUM_LGC                         (7U)
 
 #define IoHwAbDigitalDirectLogical_LED01              (0U)
-#define IoHwAbDigitalDirectLogical_S01                (1U)
-#define IoHwAbDigitalDirectLogical_S02                (2U)
-#define IoHwAbDigitalDirectLogical_S03                (3U)
-#define IoHwAbDigitalDirectLogical_S04                (4U)
+#define IoHwAbDigitalDirectLogical_LED02              (1U)
+#define IoHwAbDigitalDirectLogical_LED03              (2U)
+#define IoHwAbDigitalDirectLogical_S01                (3U)
+#define IoHwAbDigitalDirectLogical_S02                (4U)
+#define IoHwAbDigitalDirectLogical_S03                (5U)
+#define IoHwAbDigitalDirectLogical_S04                (6U)
 
 #define IOHWAB_START_SEC_VAR_CLEARED_8
 #include "MemMap.h"
@@ -524,9 +526,10 @@ extern CONST(Gpt_ChannelType, IOHWAB_CONST)IoHwAb_GaaGptChIdx[];
 
 #define IOHWAB_PWM_NOTIFICATION_SUPPORTED             (STD_ON)
 
-#define IOHWAB_PWM_NUM_LGC                            (1U)
+#define IOHWAB_PWM_NUM_LGC                            (2U)
 
-#define IoHwAbPwm_0                                   (0U)
+#define IoHwAbPwmLogical_EMIOS23                      (0U)
+#define IoHwAbPwm_0                                   (1U)
 
 /* Pwm_SetDutyCycle */
 typedef P2FUNC(void, IOHWAB_CODE, Pwm_SetDutyCycleFuncPtr)(Pwm_ChannelType, uint16);

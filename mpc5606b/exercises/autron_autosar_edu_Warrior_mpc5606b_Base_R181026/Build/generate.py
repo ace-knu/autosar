@@ -698,7 +698,7 @@ try:
             Swcd_IoHwAb, Swcd_WdgM, Swcd_WdgM_Fixed,
             # Swcd_App
             App_Dcm, App_Dem, App_FiM, App_ComM,
-            App_WdgM, App_ErrM, App_Mode,
+            App_WdgM, App_ErrM, App_Mode, App_IoHwAb,
             # DB
             Project,
             # Etc

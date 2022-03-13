@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="09157ed0-6d0a-4255-9ca0-4234c50fc720">
+      <SHORT-NAME>AUTOSAR</SHORT-NAME>
+      <ELEMENTS>
+        <COMPOSITION-SW-COMPONENT-TYPE UUID="3ee958e0-331d-44a5-8335-ce6df22cabaa">
+          <SHORT-NAME>CSWC_RootCompostion</SHORT-NAME>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE UUID="e7159f7a-a7c2-48ed-a549-7a81e7f7b413">
+              <SHORT-NAME>SWC_Actuator</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_FiM/SWC_Actuator</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f7f7debb-9cb1-4c38-96b2-9481d40d834b">
+              <SHORT-NAME>SWC_ComM</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_ComM/SWC_ComM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="9fe59faa-a6bb-4c4a-9e75-91db597d9bf4">
+              <SHORT-NAME>SWC_DiagnosticMonitor</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppSwComponent_Dem/SwComponentType/SWC_DiagnosticMonitor</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="c63e45e3-a33b-4952-bfaa-33ad60dd13df">
+              <SHORT-NAME>SWC_DiagnosticService</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppSwComponent_Dcm/SwComponentType/SWC_DiagnosticService</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="ecb5f39a-1f45-4a5a-8bc3-0de3468ae4d9">
+              <SHORT-NAME>SWC_WdgMTest</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_WdgM/SWC_WdgMTest</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="61646c0e-e6ad-4b1e-bfde-c4fbb43f9071">
+              <SHORT-NAME>SWC_ErrM</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ErrM/ApplicationSwComponentTypes/SWC_ErrM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="80d54717-7f6c-411f-b365-561b9325f053">
+              <SHORT-NAME>SWC_AppMode</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppMode/ApplicationSwComponentTypes/SWC_AppMode</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="b3c39245-fac2-4c69-bb99-dfc6a19cc534">
+              <SHORT-NAME>SWC_TestModeUser</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeUser</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="bb016ebb-5b4c-4c21-8555-9e85b2ccb371">
+              <SHORT-NAME>SWC_TestModeManager</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

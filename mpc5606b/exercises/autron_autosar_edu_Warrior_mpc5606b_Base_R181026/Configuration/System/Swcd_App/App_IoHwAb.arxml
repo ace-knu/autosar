@@ -7,6 +7,30 @@
         <APPLICATION-SW-COMPONENT-TYPE>
           <SHORT-NAME>SWC_IoHwAbTest</SHORT-NAME>
           <PORTS>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>R_IoHwAbDigitalDirectLogical_PE5</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
               <SHORT-NAME>P_IoHwAbGptLogical_Dummy_Cbk</SHORT-NAME>
               <PROVIDED-COM-SPECS>
@@ -113,6 +137,30 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="147d07ed-f3a5-41d4-8f67-8e80aa86a408">
+              <SHORT-NAME>R_IoHwAbPwmLogical_EMIOS23</SHORT-NAME>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE UUID="27a20a1f-da91-4712-bc78-aa37ea431995">
               <SHORT-NAME>P_IoHwAbGptLogical_EMIOS4_Cbk</SHORT-NAME>
               <PROVIDED-COM-SPECS>
@@ -154,6 +202,7 @@
               <EVENTS>
                 <TIMING-EVENT>
                   <SHORT-NAME>TE_IoHwAbTest</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/App_IoHwAb/SWC_IoHwAbTest/SwcIB_IoHwAbTest/RE_IoHwAbTest</START-ON-EVENT-REF>
                   <PERIOD>0.01</PERIOD>
                 </TIMING-EVENT>
                 <OPERATION-INVOKED-EVENT UUID="6c0abc76-ac24-4c72-82dc-f6dcede75fb2">
@@ -166,6 +215,324 @@
                 </OPERATION-INVOKED-EVENT>
               </EVENTS>
               <RUNNABLES>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>RE_IoHwAbTest</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="e7375c4f-d2ae-411f-9199-baf5336902a5">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="fd67950d-ffe2-4aed-a53b-09ade11c12b1">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="b0c876fb-06c1-4e8a-95d6-a78f0fa3c53e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="be5b5bd6-4eb9-40a8-ae58-11b0789f4444">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="18607e60-85c5-4c40-8a3f-ce09976c6789">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="da4fb613-a1c4-4330-b727-c9320d1127e4">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="c7df6de0-1dc2-4349-96b4-e8daf26a5e08">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6b57099a-b418-45e6-a7c7-34f00953064e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="daf71ab3-a212-46b0-99f9-60d73c3f9d03">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5babfedf-8b40-462b-9f47-5444911660d1">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="26f4abd1-36c8-4307-8eb7-5456f5b077b1">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="8af57f9b-b268-4f57-a1fa-33f73fbba5ec">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE5</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0897edb3-5bcf-4d33-a2ee-92dbc0e44b80">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="908238fb-0b61-4bf5-bf97-2c9c644bd77e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/IsOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="dbc02d15-fdf8-47f2-87eb-3aa119380ca8">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/ReadDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="41f43d36-9dde-4203-9590-48fc0a2ff938">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToInput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="09fe03de-f53c-4439-942e-f3a3a742549e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/SetToOutput</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4978bedb-df67-4376-86bf-1b55a5ba0483">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbDigitalDirectLogical_PE6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_DigDir/WriteDirect</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7ba29715-5dab-46f4-9ea9-ffd807365b26">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7199c471-c965-4cbe-aa07-619eb3fdf670">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="c8467b5c-7ee2-4b46-8edb-49eebf48d747">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="326a1d8e-2cd4-4d77-b94e-a1a6fd75b9da">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="674278e4-7e88-4620-8978-17a047d0e369">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="94138566-c593-4b10-ae1d-47d17ee2063e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="04fdb8d7-607e-4f0a-a450-fdbd082b1414">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_Dummy</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0e31bcfc-43ba-4f53-a0ea-85aa03d8af34">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/DisableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9d0c61d0-9c19-4fd6-b00d-5235ad1865d4">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/EnableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="a1ba1d3b-bad6-4941-845f-031fea9fc666">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeElapsed</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7ffbe9c9-58eb-414d-a480-1ca145cc0cb0">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/GetTimeRemaining</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3eae6f45-f59e-4d57-ba78-bed21f1c30d4">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/Notification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                      <TIMEOUT>0.0</TIMEOUT>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="20b8c51e-641d-4787-91fe-857760bb97f4">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StartTimer</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="d7a1d7b1-ebba-4ddd-96f1-15270edff2a3">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbGptLogical_EMIOS4</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Gpt/StopTimer</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="dbfe7a43-728e-407b-b54d-9556d3f11a0a">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="15be8883-0853-4d85-a8a3-5a9c78b08bc0">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="a2b9b3f3-897f-4ba7-9c54-b083a35d3c90">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="dad6a0f3-5e75-48f7-8f72-a8c82c4e0df1">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="a3a65131-60f9-4d21-89b2-9342a1f6c385">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="268632db-396b-4994-9e89-ede8c0988e82">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS23</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="f4c46762-7ef5-4e16-b1af-df3fca22aead">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/DisableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="06020904-63dd-49f1-a972-868f52f886f3">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/EnableNotification</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6fb5ae8c-b424-44fd-a57b-33fd3f41fa79">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/GetOutputState</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="84015fd4-bc55-4eff-b22f-90eefac7fb8e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetDutyCycle</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="cf5c1a40-8afc-4aaf-8c98-748ff308911f">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetOutputToIdle</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="a9506bc0-edfa-4f73-9a24-c136778b055e">
+                      <SHORT-NAME>SSCP_RE_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/App_IoHwAb/SWC_IoHwAbTest/R_IoHwAbPwmLogical_EMIOS2</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Svc_IoHwAb/ClientServerInterfaces/IoHwAb_If_Pwm/SetPeriodAndDuty</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_IoHwAbTest</SYMBOL>
+                </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="293cb4ef-1fa2-4aab-872a-0e9b837d7921">
                   <SHORT-NAME>RE_IoHwAbTest_Dummy_GptCbk</SHORT-NAME>
                   <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>

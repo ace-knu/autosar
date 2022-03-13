@@ -444,68 +444,68 @@
         </AR-PACKAGE>
       </AR-PACKAGES>
     </AR-PACKAGE>
-    <AR-PACKAGE UUID="8e6d686f-d341-45a7-b12e-b646347fe318">
+    <AR-PACKAGE UUID="f9c11afb-7650-40c9-9add-56537aaa2416">
       <SHORT-NAME>MODE_Project</SHORT-NAME>
       <AR-PACKAGES>
-        <AR-PACKAGE UUID="a3250095-500d-49a6-875e-1a382d2b4320">
+        <AR-PACKAGE UUID="c54051ee-7022-497a-9f10-461ae4ed57c5">
           <SHORT-NAME>ModeSwitchInterfaces</SHORT-NAME>
           <ELEMENTS>
-            <MODE-SWITCH-INTERFACE UUID="9d73e299-5998-4a1e-9b7a-af692ca64a11">
+            <MODE-SWITCH-INTERFACE UUID="8d5a1200-3701-4a66-a5f3-641245102c74">
               <SHORT-NAME>CanSMBORStateInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
-              <MODE-GROUP UUID="2b923610-f6c5-4f4c-8f54-dc6819882ae9">
+              <MODE-GROUP UUID="7611ec6a-f104-4d5f-8e99-abcd6a8a6777">
                 <SHORT-NAME>CanSMBORState_Project</SHORT-NAME>
                 <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMBORState</TYPE-TREF>
               </MODE-GROUP>
             </MODE-SWITCH-INTERFACE>
-            <MODE-SWITCH-INTERFACE UUID="9d73e299-5998-4a1e-9b7a-af692ca64a11">
+            <MODE-SWITCH-INTERFACE UUID="8d5a1200-3701-4a66-a5f3-641245102c74">
               <SHORT-NAME>CanSMStateInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
-              <MODE-GROUP UUID="aea70a8e-9ae1-45e0-85b9-4b2ec56e0005">
+              <MODE-GROUP UUID="e18da7fd-55bd-4cef-b927-b3c24701725c">
                 <SHORT-NAME>CanSMState_Project</SHORT-NAME>
                 <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_CanSMState</TYPE-TREF>
               </MODE-GROUP>
             </MODE-SWITCH-INTERFACE>
-            <MODE-SWITCH-INTERFACE UUID="9d73e299-5998-4a1e-9b7a-af692ca64a11">
+            <MODE-SWITCH-INTERFACE UUID="8d5a1200-3701-4a66-a5f3-641245102c74">
               <SHORT-NAME>ComMModeInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
-              <MODE-GROUP UUID="6cac1b7b-dabb-45e3-95a4-83da65621015">
+              <MODE-GROUP UUID="ddac3cd4-d24c-4ca8-ad77-646cf5db108d">
                 <SHORT-NAME>ComMMode_Project</SHORT-NAME>
                 <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_ComMMode</TYPE-TREF>
               </MODE-GROUP>
             </MODE-SWITCH-INTERFACE>
-            <MODE-SWITCH-INTERFACE UUID="9d73e299-5998-4a1e-9b7a-af692ca64a11">
+            <MODE-SWITCH-INTERFACE UUID="8d5a1200-3701-4a66-a5f3-641245102c74">
               <SHORT-NAME>PduGroupTxInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
-              <MODE-GROUP UUID="b5726d8d-4b95-49c7-a08d-fd91a50aa1ff">
+              <MODE-GROUP UUID="6bbb97fb-5be4-43e2-9143-7d6f6a98d211">
                 <SHORT-NAME>PduGroupTx_Project</SHORT-NAME>
                 <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
               </MODE-GROUP>
             </MODE-SWITCH-INTERFACE>
-            <MODE-SWITCH-INTERFACE UUID="9d73e299-5998-4a1e-9b7a-af692ca64a11">
+            <MODE-SWITCH-INTERFACE UUID="8d5a1200-3701-4a66-a5f3-641245102c74">
               <SHORT-NAME>PduGroupRxInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
-              <MODE-GROUP UUID="eb1f66ac-dd70-4a6b-89b2-ce12154f501f">
+              <MODE-GROUP UUID="ef8020e7-f64c-4c5b-83f6-d8373f010432">
                 <SHORT-NAME>PduGroupRx_Project</SHORT-NAME>
                 <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MODE/ModeDeclarationGroups/MDG_PduGroup</TYPE-TREF>
               </MODE-GROUP>
             </MODE-SWITCH-INTERFACE>
           </ELEMENTS>
         </AR-PACKAGE>
-        <AR-PACKAGE UUID="24fd53d3-9c08-47a7-934c-73a536ae506f">
+        <AR-PACKAGE UUID="3a82cc34-c18e-43f8-a95a-65414b83383b">
           <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
           <ELEMENTS>
-            <SENDER-RECEIVER-INTERFACE UUID="f9617b98-28ce-4e49-b662-c0bc242aa410">
+            <SENDER-RECEIVER-INTERFACE UUID="9c5c63a8-37af-4054-bee4-337faacb55ee">
               <SHORT-NAME>ComMModeRequestInterface_Project</SHORT-NAME>
               <IS-SERVICE>true</IS-SERVICE>
               <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
               <DATA-ELEMENTS>
-                <VARIABLE-DATA-PROTOTYPE UUID="0f23e1fd-5a8a-45da-aced-55dacf5db9bc">
+                <VARIABLE-DATA-PROTOTYPE UUID="91242081-a05b-429f-8cbc-5f5345cfd57f">
                   <SHORT-NAME>ComMMode_Project</SHORT-NAME>
                   <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/MODE/ApplicationPrimitiveDataTypes/ENUM_ComMMode</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>

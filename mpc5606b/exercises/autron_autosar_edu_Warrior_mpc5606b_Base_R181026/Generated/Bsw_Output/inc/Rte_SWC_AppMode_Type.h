@@ -20,67 +20,68 @@
 *******************************************************************************/
 /*
  * INPUT FILE:
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_EcuC.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Rte.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Composition\EcuExtract.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DBImport\Project.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Mode.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_EcuC.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Rte.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Composition\EcuExtract.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DBImport\Project.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Mode.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
 
  * GENERATED ON:  This timestamp is removed.
 */
@@ -393,6 +394,18 @@ typedef uint8 Rte_ModeType_MDG_WakeupEvent;
 #define COMM_MODE_FULL_COM 2U
 #endif /* COMM_MODE_FULL_COM */
 
+#ifndef MODE_READY
+#define MODE_READY 0U
+#endif /* MODE_READY */
+
+#ifndef MODE_A
+#define MODE_A 1U
+#endif /* MODE_A */
+
+#ifndef MODE_B
+#define MODE_B 2U
+#endif /* MODE_B */
+
 #ifndef APP_MODE_ACTIVE
 #define APP_MODE_ACTIVE 0U
 #endif /* APP_MODE_ACTIVE */
@@ -408,18 +421,6 @@ typedef uint8 Rte_ModeType_MDG_WakeupEvent;
 #ifndef APP_MODE_INACTIVE_SLEEP
 #define APP_MODE_INACTIVE_SLEEP 3U
 #endif /* APP_MODE_INACTIVE_SLEEP */
-
-#ifndef MODE_READY
-#define MODE_READY 0U
-#endif /* MODE_READY */
-
-#ifndef MODE_A
-#define MODE_A 1U
-#endif /* MODE_A */
-
-#ifndef MODE_B
-#define MODE_B 2U
-#endif /* MODE_B */
 
 /* polyspace:end<MISRA-C:1.1:Not a defect:Justify with annotations> Number of type definitions for enumeration constants is depends on user configuration */
 

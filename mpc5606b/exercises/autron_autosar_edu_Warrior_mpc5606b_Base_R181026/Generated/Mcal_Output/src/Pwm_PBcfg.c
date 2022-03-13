@@ -171,7 +171,7 @@ CONST(Mcal_DemErrorType, PWM_CONST) Pwm_E_UnexpectedIrqCfg=
 */
 
 
-#define PWM_CONF_CHANNELS_PB_0  ((Pwm_ChannelType)1)
+#define PWM_CONF_CHANNELS_PB_0  ((Pwm_ChannelType)2)
 
 
 
@@ -209,6 +209,39 @@ PWM_VARIABLE_PERIOD,/* channel type: Variable/Fixed period */
 
    (uint32)0xc3fa0000UL, /*EMiOS 0 Module Addr*/
            (uint32)0xc3fa0060UL, /*EMiOS 0 channel Addr*/
+    (Pwm_EmiosCtrlParamType)(PWM_BUS_INTERNAL_COUNTER | PWM_MODE_OPWFMB  | PWM_PRES_1
+ ),
+(Pwm_PeriodType)0,/* leading edge of the PWM output pulse in OPWMB, OPWMT modes */
+
+#ifdef PWM_FEATURE_OPWMT
+    #if (PWM_FEATURE_OPWMT == STD_ON)
+(Pwm_PeriodType)0,/* delay for generating the trigger event in OPWMT mode */
+    #endif
+#endif
+    (boolean)FALSE,/* Pwm_Offset and Pwm_TriggerDelay adjusted during runtime */
+    #ifdef PWM_FEATURE_OPWMCB
+        #if (PWM_FEATURE_OPWMCB == STD_ON)
+    (uint16)0/*deadtime parameter */
+        #endif
+    #endif
+    }}
+},/* end channel */
+{
+PWM_VARIABLE_PERIOD,/* channel type: Variable/Fixed period */
+    PWM_HIGH,/* signal polarity */
+
+(Pwm_PeriodType)0x2710, /* 10000 ticks - default period value */
+(uint16)0x0000,/* default duty cycle value */
+    PWM_LOW,/* signal idle state */
+        NULL_PTR,
+    PWM_EMIOS_CHANNEL, /* channel ip type */
+    /* PWM eMIOS channel specific configuration structure */
+    {{
+             (Pwm_ChannelType)PwmChannel_EMIOS23_EMIOS_0_CH_23,/* assigned eMIOS HW channel id */
+    /*EMiOS  channel Addr*/
+
+   (uint32)0xc3fa0000UL, /*EMiOS 0 Module Addr*/
+           (uint32)0xc3fa0300UL, /*EMiOS 0 channel Addr*/
     (Pwm_EmiosCtrlParamType)(PWM_BUS_INTERNAL_COUNTER | PWM_MODE_OPWFMB  | PWM_PRES_1
  ),
 (Pwm_PeriodType)0,/* leading edge of the PWM output pulse in OPWMB, OPWMT modes */

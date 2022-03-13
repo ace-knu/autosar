@@ -54,10 +54,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_GW1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -68,6 +64,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_GW1_ECU1_Msg_GW1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_GW1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -140,10 +140,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_IF1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -154,6 +150,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_IF1_ECU1_Msg_IF1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_IF1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -226,10 +226,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_OE1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -240,6 +236,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_OE1_ECU1_Msg_OE1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_OE1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -312,10 +312,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_OE2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -338,6 +334,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_OE2_ECU1_Msg_OE2_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_OE2</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -410,10 +410,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -424,6 +420,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_P1_ECU1_Msg_P1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -496,10 +496,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -510,6 +506,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_P2_ECU1_Msg_P2_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P2</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -582,10 +582,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -596,6 +592,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_P3_ECU1_Msg_P3_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P3</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -668,10 +668,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P4</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -682,6 +678,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_P4_ECU1_Msg_P4_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_P4</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -754,10 +754,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_PIF1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -768,6 +764,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_PIF1_ECU1_Msg_PIF1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_PIF1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -848,10 +848,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -862,6 +858,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_POE1_ECU1_Msg_POE1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -942,10 +942,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -956,6 +952,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_POE2_ECU1_Msg_POE2_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE2</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -1036,10 +1036,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -1050,6 +1046,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU1_Msg_POE3_ECU1_Msg_POE3_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_POE3</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -1130,12 +1130,12 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_TP1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_TP1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
@@ -1212,12 +1212,12 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_TP2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupTx_ECU1_Project</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU1_Msg_TP2</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
@@ -1294,10 +1294,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_OE1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -1308,6 +1304,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU2_Msg_OE1_ECU2_Msg_OE1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_OE1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -1335,10 +1335,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_P1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -1349,6 +1345,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU2_Msg_P1_ECU2_Msg_P1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_P1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -1376,10 +1376,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_PIF1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -1390,6 +1386,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU2_Msg_PIF1_ECU2_Msg_PIF1_Sig1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_PIF1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -1417,10 +1417,6 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_POE1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
@@ -1431,6 +1427,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComISignal_ECU2_Msg_POE1_ECU2_Msg_POE1_Sig2</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_ECU2_Msg_POE1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -1458,12 +1458,12 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_GST_Msg_TP1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_GST_Msg_TP1</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
@@ -1495,12 +1495,12 @@
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_GST_Msg_TP2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduGroupRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/Com/ComConfig/ComIPduGroupRx_ECU1_Project</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComPduIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/AUTOSAR/EcuC/EcucPduCollection/Pdu_ISignalIPdu_GST_Msg_TP2</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTRON/Com/ComConfig/ComIPdu/ComIPduSignalRef</DEFINITION-REF>
@@ -1571,10 +1571,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1624,10 +1620,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1677,10 +1669,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1730,10 +1718,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1783,10 +1767,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1836,10 +1816,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1889,10 +1865,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1942,10 +1914,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -1995,10 +1963,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2048,10 +2012,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2101,10 +2061,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2154,10 +2110,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2207,10 +2159,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2260,10 +2208,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2313,10 +2257,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2366,10 +2306,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2419,10 +2355,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2472,10 +2404,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2525,10 +2453,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2578,10 +2502,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2631,10 +2551,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2684,10 +2600,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2737,10 +2649,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2790,10 +2698,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2843,10 +2747,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2896,10 +2796,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -2949,10 +2845,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3002,10 +2894,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3055,10 +2943,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_WITHOUT_REPETITION</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3108,10 +2992,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3161,10 +3041,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>PENDING</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3214,10 +3090,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3267,10 +3139,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3320,10 +3188,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3373,10 +3237,6 @@
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComTransferProperty</DEFINITION-REF>
                       <VALUE>TRIGGERED_ON_CHANGE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3441,10 +3301,6 @@
                       <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSignalInitValue</DEFINITION-REF>
                       <VALUE>0 0 0 0 0 0 0 0</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3490,10 +3346,6 @@
                       <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSignalInitValue</DEFINITION-REF>
                       <VALUE>0 0 0 0 0 0 0 0</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3543,10 +3395,6 @@
                       <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSignalInitValue</DEFINITION-REF>
                       <VALUE>0 0 0 0 0 0 0 0</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
@@ -3596,10 +3444,6 @@
                       <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSignalInitValue</DEFINITION-REF>
                       <VALUE>0 0 0 0 0 0 0 0</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTRON/Com/ComConfig/ComSignal/ComSigReportIdsMEnable</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>

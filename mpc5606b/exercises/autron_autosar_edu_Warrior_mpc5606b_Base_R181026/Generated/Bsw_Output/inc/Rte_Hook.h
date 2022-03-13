@@ -20,67 +20,68 @@
 *******************************************************************************/
 /*
  * INPUT FILE:
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_EcuC.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Rte.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Composition\EcuExtract.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DBImport\Project.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Mode.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_EcuC.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Rte.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Composition\EcuExtract.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DBImport\Project.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Mode.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
 
  * GENERATED ON:  This timestamp is removed.
 */
@@ -468,28 +469,6 @@ extern void Rte_CallHook_Dcm_DataServices_ActuatorControl_ResetToDefault_Return(
 #define Rte_CallHook_Dcm_DataServices_ActuatorControl_ResetToDefault_Return(ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start)
-#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start
-extern void Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start(OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
-#else
-#define Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start(ErrorCode) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return)
-#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return
-extern void Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return(OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
-#else
-#define Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return(ErrorCode) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_Stop_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_Stop_Start
 #endif
@@ -518,30 +497,26 @@ extern void Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_Stop_
 #define Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_Stop_Return(DataIn_DcmDspRoutineStopInSignal0,	OpStatus,	DataOut_DcmDspRoutineStopOutSignal0,	ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start
+#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start
 #endif
 
-#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start)
-#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start
-extern void Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start(IN Dcm_OpStatusType OpStatus,
-	OUT P2VAR(RequestDataOutType_RID_0200h_CalibrationActuator_routineStatus_ResOutSignal, AUTOMATIC, RTE_APPL_DATA) DataOut_routineStatus_ResOutSignal,
-	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
+#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start)
+#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start
+extern void Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start(OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
-#define Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start(OpStatus,	DataOut_routineStatus_ResOutSignal,	ErrorCode) ((void)(0))
+#define Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Start(ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return
+#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return
 #endif
 
-#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return)
-#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return
-extern void Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return(IN Dcm_OpStatusType OpStatus,
-	OUT P2VAR(RequestDataOutType_RID_0200h_CalibrationActuator_routineStatus_ResOutSignal, AUTOMATIC, RTE_APPL_DATA) DataOut_routineStatus_ResOutSignal,
-	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
+#if defined(Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return)
+#undef Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return
+extern void Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return(OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
-#define Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return(OpStatus,	DataOut_routineStatus_ResOutSignal,	ErrorCode) ((void)(0))
+#define Rte_CallHook_Dcm_DataServices_RPM_ReturnControlToECU_Return(ErrorCode) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dcm_DataServices_ActuatorControl_ShortTermAdjustment_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -566,6 +541,32 @@ extern void Rte_CallHook_Dcm_DataServices_ActuatorControl_ShortTermAdjustment_Re
 	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
 #define Rte_CallHook_Dcm_DataServices_ActuatorControl_ShortTermAdjustment_Return(ControlStateInfo,	ErrorCode) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start
+#endif
+
+#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start)
+#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start
+extern void Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start(IN Dcm_OpStatusType OpStatus,
+	OUT P2VAR(RequestDataOutType_RID_0200h_CalibrationActuator_routineStatus_ResOutSignal, AUTOMATIC, RTE_APPL_DATA) DataOut_routineStatus_ResOutSignal,
+	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
+#else
+#define Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Start(OpStatus,	DataOut_routineStatus_ResOutSignal,	ErrorCode) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return
+#endif
+
+#if defined(Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return)
+#undef Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return
+extern void Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return(IN Dcm_OpStatusType OpStatus,
+	OUT P2VAR(RequestDataOutType_RID_0200h_CalibrationActuator_routineStatus_ResOutSignal, AUTOMATIC, RTE_APPL_DATA) DataOut_routineStatus_ResOutSignal,
+	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
+#else
+#define Rte_CallHook_Dcm_RoutineServices_RID_0200h_CalibrationActuator_RequestResults_Return(OpStatus,	DataOut_routineStatus_ResOutSignal,	ErrorCode) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dcm_DataServices_SystemSupplierECUHardwareVersionNumber_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -612,28 +613,6 @@ extern void Rte_CallHook_Dcm_DataServices_SystemSupplierECUSoftwareNumber_Condit
 #define Rte_CallHook_Dcm_DataServices_SystemSupplierECUSoftwareNumber_ConditionCheckRead_Return(ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start)
-#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start
-extern void Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
-#else
-#define Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start(Data) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return)
-#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return
-extern void Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
-#else
-#define Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return(Data) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_Dcm_DataServices_ActuatorControl_FreezeCurrentState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_Dcm_DataServices_ActuatorControl_FreezeCurrentState_Start
 #endif
@@ -654,6 +633,28 @@ extern void Rte_CallHook_Dcm_DataServices_ActuatorControl_FreezeCurrentState_Sta
 extern void Rte_CallHook_Dcm_DataServices_ActuatorControl_FreezeCurrentState_Return(OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
 #define Rte_CallHook_Dcm_DataServices_ActuatorControl_FreezeCurrentState_Return(ErrorCode) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start
+#endif
+
+#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start)
+#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start
+extern void Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#else
+#define Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Start(Data) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return
+#endif
+
+#if defined(Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return)
+#undef Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return
+extern void Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#else
+#define Rte_CallHook_Dcm_DataServices_BatVolt_ReadData_Return(Data) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_WriteData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -888,6 +889,28 @@ extern void Rte_CallHook_Dcm_DataServices_RPM_ReadData_Return(OUT P2VAR(uint8, A
 #define Rte_CallHook_Dcm_DataServices_RPM_ReadData_Return(Data) ((void)(0))
 #endif
 
+#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start
+#endif
+
+#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start)
+#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start
+extern void Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start(IN Dcm_ProtocolType ProtocolID);
+#else
+#define Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start(ProtocolID) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return
+#endif
+
+#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return)
+#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return
+extern void Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return(IN Dcm_ProtocolType ProtocolID);
+#else
+#define Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return(ProtocolID) ((void)(0))
+#endif
+
 #if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_ReadData_Start
 #endif
@@ -934,28 +957,6 @@ extern void Rte_CallHook_Dcm_SecurityAccess_L1_GetSeed_Return(IN Dcm_OpStatusTyp
 	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
 #define Rte_CallHook_Dcm_SecurityAccess_L1_GetSeed_Return(OpStatus,	Seed,	ErrorCode) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start
-#endif
-
-#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start)
-#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start
-extern void Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start(IN Dcm_ProtocolType ProtocolID);
-#else
-#define Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Start(ProtocolID) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return
-#endif
-
-#if defined(Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return)
-#undef Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return
-extern void Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return(IN Dcm_ProtocolType ProtocolID);
-#else
-#define Rte_CallHook_Dcm_CallbackDCMRequestServices_ECU1_StartProtocol_Return(ProtocolID) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dcm_DataServices_RPM_WriteData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -1224,30 +1225,6 @@ extern void Rte_CallHook_Dcm_DataServices_RPM_FreezeCurrentState_Return(OUT P2VA
 #define Rte_CallHook_Dcm_DataServices_RPM_FreezeCurrentState_Return(ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start)
-#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start
-extern void Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) ScalingInfo,
-	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
-#else
-#define Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start(ScalingInfo,	ErrorCode) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return
-#endif
-
-#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return)
-#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return
-extern void Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) ScalingInfo,
-	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
-#else
-#define Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return(ScalingInfo,	ErrorCode) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_Dcm_DataServices_DIDRange_DIDs_0100h_0110h_ReadDidData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_Dcm_DataServices_DIDRange_DIDs_0100h_0110h_ReadDidData_Start
 #endif
@@ -1278,26 +1255,28 @@ extern void Rte_CallHook_Dcm_DataServices_DIDRange_DIDs_0100h_0110h_ReadDidData_
 #define Rte_CallHook_Dcm_DataServices_DIDRange_DIDs_0100h_0110h_ReadDidData_Return(DID,	Data,	OpStatus,	DataLength,	ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start
+#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start
 #endif
 
-#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start)
-#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start
-extern void Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start)
+#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start
+extern void Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) ScalingInfo,
+	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
-#define Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start(Data) ((void)(0))
+#define Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Start(ScalingInfo,	ErrorCode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return
+#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return
 #endif
 
-#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return)
-#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return
-extern void Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#if defined(Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return)
+#undef Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return
+extern void Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) ScalingInfo,
+	OUT P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_APPL_DATA) ErrorCode);
 #else
-#define Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return(Data) ((void)(0))
+#define Rte_CallHook_Dcm_DataServices_VINDataIdentifier_GetScalingInformation_Return(ScalingInfo,	ErrorCode) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dem_CBStatusEvt_DEM_E_TEST_EVENT1_DemCallbackEventStatusChanged0_EventStatusChanged_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -1322,6 +1301,28 @@ extern void Rte_CallHook_Dem_CBStatusEvt_DEM_E_TEST_EVENT1_DemCallbackEventStatu
 	IN Dem_EventStatusExtendedType EventStatusNew);
 #else
 #define Rte_CallHook_Dem_CBStatusEvt_DEM_E_TEST_EVENT1_DemCallbackEventStatusChanged0_EventStatusChanged_Return(EventStatusOld,	EventStatusNew) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start
+#endif
+
+#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start)
+#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start
+extern void Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#else
+#define Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Start(Data) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return
+#endif
+
+#if defined(Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return)
+#undef Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return
+extern void Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return(OUT P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) Data);
+#else
+#define Rte_CallHook_Dem_CBReadData_DE_0001_ReadData_Return(Data) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_Dem_CBInitEvt_DEM_E_TEST_EVENT1_InitMonitorForEvent_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -2126,28 +2127,6 @@ extern void Rte_CallHook_SWC_ComM_UR000_R_RequestComMode_Return(IN ComM_ModeType
 #define Rte_CallHook_SWC_ComM_UR000_R_RequestComMode_Return(ComMode) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start)
-#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start
-extern void Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start(IN ComM_ModeType ComMode);
-#else
-#define Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start(ComMode) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return)
-#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return
-extern void Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return(IN ComM_ModeType ComMode);
-#else
-#define Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return(ComMode) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_SWC_ComM_CL001_R_LimitChannelToNoComMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_SWC_ComM_CL001_R_LimitChannelToNoComMode_Start
 #endif
@@ -2168,6 +2147,28 @@ extern void Rte_CallHook_SWC_ComM_CL001_R_LimitChannelToNoComMode_Start(IN boole
 extern void Rte_CallHook_SWC_ComM_CL001_R_LimitChannelToNoComMode_Return(IN boolean Status);
 #else
 #define Rte_CallHook_SWC_ComM_CL001_R_LimitChannelToNoComMode_Return(Status) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start)
+#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start
+extern void Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start(IN ComM_ModeType ComMode);
+#else
+#define Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Start(ComMode) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return)
+#undef Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return
+extern void Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return(IN ComM_ModeType ComMode);
+#else
+#define Rte_CallHook_SWC_ComM_UR001_R_RequestComMode_Return(ComMode) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_SWC_ComM_ML_R_ReadInhibitCounter_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -2280,28 +2281,6 @@ extern void Rte_ModeHook_SWC_ComM_UM000_R_currentMode_Return();
 #define Rte_ModeHook_SWC_ComM_UM000_R_currentMode_Return() ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Start
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Start)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Start
-extern void Rte_CallHook_SWC_ComM_CL000_R_GetState_Start(OUT P2VAR(ComM_StateType, AUTOMATIC, RTE_APPL_DATA) State);
-#else
-#define Rte_CallHook_SWC_ComM_CL000_R_GetState_Start(State) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Return
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Return)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Return
-extern void Rte_CallHook_SWC_ComM_CL000_R_GetState_Return(OUT P2VAR(ComM_StateType, AUTOMATIC, RTE_APPL_DATA) State);
-#else
-#define Rte_CallHook_SWC_ComM_CL000_R_GetState_Return(State) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_SWC_ComM_CL001_R_PreventWakeUp_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_SWC_ComM_CL001_R_PreventWakeUp_Start
 #endif
@@ -2322,6 +2301,28 @@ extern void Rte_CallHook_SWC_ComM_CL001_R_PreventWakeUp_Start(IN boolean Status)
 extern void Rte_CallHook_SWC_ComM_CL001_R_PreventWakeUp_Return(IN boolean Status);
 #else
 #define Rte_CallHook_SWC_ComM_CL001_R_PreventWakeUp_Return(Status) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Start)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Start
+extern void Rte_CallHook_SWC_ComM_CL000_R_GetState_Start(OUT P2VAR(ComM_StateType, AUTOMATIC, RTE_APPL_DATA) State);
+#else
+#define Rte_CallHook_SWC_ComM_CL000_R_GetState_Start(State) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetState_Return)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetState_Return
+extern void Rte_CallHook_SWC_ComM_CL000_R_GetState_Return(OUT P2VAR(ComM_StateType, AUTOMATIC, RTE_APPL_DATA) State);
+#else
+#define Rte_CallHook_SWC_ComM_CL000_R_GetState_Return(State) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_SWC_ComM_ML_R_GetStatus_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -2346,28 +2347,6 @@ extern void Rte_CallHook_SWC_ComM_ML_R_GetStatus_Return(OUT P2VAR(ComM_InitStatu
 #define Rte_CallHook_SWC_ComM_ML_R_GetStatus_Return(Status) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start
-extern void Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start(OUT P2VAR(ComM_InhibitionStatusType, AUTOMATIC, RTE_APPL_DATA) Status);
-#else
-#define Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start(Status) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return)
-#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return
-extern void Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return(OUT P2VAR(ComM_InhibitionStatusType, AUTOMATIC, RTE_APPL_DATA) Status);
-#else
-#define Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return(Status) ((void)(0))
-#endif
-
 #if defined(Rte_ReadHook_SWC_ComM_CR000_R_fullComRequestors_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_ReadHook_SWC_ComM_CR000_R_fullComRequestors_Start
 #endif
@@ -2388,6 +2367,28 @@ extern void Rte_ReadHook_SWC_ComM_CR000_R_fullComRequestors_Start(OUT P2VAR(ComM
 extern void Rte_ReadHook_SWC_ComM_CR000_R_fullComRequestors_Return(OUT P2VAR(ComM_UserHandleArrayType, AUTOMATIC, RTE_APPL_DATA) Data);
 #else
 #define Rte_ReadHook_SWC_ComM_CR000_R_fullComRequestors_Return(Data) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start
+extern void Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start(OUT P2VAR(ComM_InhibitionStatusType, AUTOMATIC, RTE_APPL_DATA) Status);
+#else
+#define Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Start(Status) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return)
+#undef Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return
+extern void Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return(OUT P2VAR(ComM_InhibitionStatusType, AUTOMATIC, RTE_APPL_DATA) Status);
+#else
+#define Rte_CallHook_SWC_ComM_CL000_R_GetInhibitionStatus_Return(Status) ((void)(0))
 #endif
 
 #if defined(Rte_ModeHook_SWC_ComM_UM001_R_currentMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -2434,28 +2435,6 @@ extern void Rte_CallHook_SWC_ComM_CL000_R_LimitChannelToNoComMode_Return(IN bool
 #define Rte_CallHook_SWC_ComM_CL000_R_LimitChannelToNoComMode_Return(Status) ((void)(0))
 #endif
 
-#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start)
-#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start
-extern void Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start(OUT P2VAR(ComM_ModeType, AUTOMATIC, RTE_APPL_DATA) ComMode);
-#else
-#define Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start(ComMode) ((void)(0))
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return) && (RTE_VFB_TRACE == RTE_FALSE)
-#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return
-#endif
-
-#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return)
-#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return
-extern void Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return(OUT P2VAR(ComM_ModeType, AUTOMATIC, RTE_APPL_DATA) ComMode);
-#else
-#define Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return(ComMode) ((void)(0))
-#endif
-
 #if defined(Rte_CallHook_SWC_ComM_CL001_R_GetState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
 #undef Rte_CallHook_SWC_ComM_CL001_R_GetState_Start
 #endif
@@ -2476,6 +2455,28 @@ extern void Rte_CallHook_SWC_ComM_CL001_R_GetState_Start(OUT P2VAR(ComM_StateTyp
 extern void Rte_CallHook_SWC_ComM_CL001_R_GetState_Return(OUT P2VAR(ComM_StateType, AUTOMATIC, RTE_APPL_DATA) State);
 #else
 #define Rte_CallHook_SWC_ComM_CL001_R_GetState_Return(State) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start)
+#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start
+extern void Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start(OUT P2VAR(ComM_ModeType, AUTOMATIC, RTE_APPL_DATA) ComMode);
+#else
+#define Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Start(ComMode) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return)
+#undef Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return
+extern void Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return(OUT P2VAR(ComM_ModeType, AUTOMATIC, RTE_APPL_DATA) ComMode);
+#else
+#define Rte_CallHook_SWC_ComM_UR000_R_GetCurrentComMode_Return(ComMode) ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_SWC_Actuator_R_Func_FiMFID_1_GetFunctionPermission_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -2520,6 +2521,978 @@ extern void Rte_CallHook_SWC_Actuator_R_Func_FiMFID_0_GetFunctionPermission_Star
 extern void Rte_CallHook_SWC_Actuator_R_Func_FiMFID_0_GetFunctionPermission_Return(OUT P2VAR(Boolean, AUTOMATIC, RTE_APPL_DATA) Permission);
 #else
 #define Rte_CallHook_SWC_Actuator_R_Func_FiMFID_0_GetFunctionPermission_Return(Permission) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start(IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Start(Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return(IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle_Return(Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start(IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Start(Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return(IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle_Return(Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start(IN IoHwAb_PwmEdgeType NotificationEdge);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Start(NotificationEdge) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return(IN IoHwAb_PwmEdgeType NotificationEdge);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification_Return(NotificationEdge) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start(IN IoHwAb_PwmEdgeType NotificationEdge);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Start(NotificationEdge) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return(IN IoHwAb_PwmEdgeType NotificationEdge);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification_Return(NotificationEdge) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return(IN IoHwAb_LevelType Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start(IN IoHwAb_GptValueType Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return(IN IoHwAb_GptValueType Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Start(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return(OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect_Return(Level) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start(IN IoHwAb_PwmPeriodType Period,
+	IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Start(Period,	Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return(IN IoHwAb_PwmPeriodType Period,
+	IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty_Return(Period,	Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start(IN IoHwAb_PwmPeriodType Period,
+	IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Start(Period,	Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return(IN IoHwAb_PwmPeriodType Period,
+	IN uint16 Duty);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty_Return(Period,	Duty) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return(OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput_Return() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start(IN IoHwAb_GptValueType Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Start(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return(IN IoHwAb_GptValueType Value);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer_Return(Value) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Start(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return(OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput_Return(blResult) ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Start() ((void)(0))
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return
+#endif
+
+#if defined(Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return)
+#undef Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return
+extern void Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return(void);
+#else
+#define Rte_CallHook_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput_Return() ((void)(0))
 #endif
 
 #if defined(Rte_CallHook_SWC_WdgMTest_WdgM_API_R_GetGlobalStatus_Start) && (RTE_VFB_TRACE == RTE_FALSE)
@@ -9218,6 +10191,72 @@ extern void Rte_Runnable_SWC_ErrM_ErrM_DemEventNotification_Start(void);
 extern void Rte_Runnable_SWC_ErrM_ErrM_DemEventNotification_Return(void);
 #else
 #define Rte_Runnable_SWC_ErrM_ErrM_DemEventNotification_Return() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Start() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Return() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Start() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_Dummy_GptCbk_Return() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Start() ((void)(0))
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return) && (RTE_VFB_TRACE == RTE_FALSE)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return
+#endif
+
+#if defined(Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return)
+#undef Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return
+extern void Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return(void);
+#else
+#define Rte_Runnable_SWC_IoHwAbTest_RE_IoHwAbTest_EMIOS4_GptCbk_Return() ((void)(0))
 #endif
 
 #if defined(Rte_Runnable_SWC_TestModeManager_TestModeManager_Start) && (RTE_VFB_TRACE == RTE_FALSE)

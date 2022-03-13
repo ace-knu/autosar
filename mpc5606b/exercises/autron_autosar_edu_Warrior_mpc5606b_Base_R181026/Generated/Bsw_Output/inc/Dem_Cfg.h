@@ -19,9 +19,9 @@
 *******************************************************************************/
 
 /*
- * INPUT FILE:    Configuration\ECU\Ecud_NvM.arxml
+ * INPUT FILE:    Configuration\ECU\Ecud_Dcm.arxml
  *                Configuration\ECU\Ecud_Dem.arxml
- *                Configuration\ECU\Ecud_Dcm.arxml
+ *                Configuration\ECU\Ecud_NvM.arxml
  * GENERATED ON:  This timestamp is removed.
  */
 

@@ -43,6 +43,10 @@
               <SHORT-NAME>SWC_TestModeManager</SHORT-NAME>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/AppMode/ApplicationSwComponentTypes/SWC_TestModeManager</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="49063f9c-1adf-4ca3-ae44-9d30063f19bc">
+              <SHORT-NAME>SWC_IoHwAbTest</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/App_IoHwAb/SWC_IoHwAbTest</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
         </COMPOSITION-SW-COMPONENT-TYPE>
       </ELEMENTS>

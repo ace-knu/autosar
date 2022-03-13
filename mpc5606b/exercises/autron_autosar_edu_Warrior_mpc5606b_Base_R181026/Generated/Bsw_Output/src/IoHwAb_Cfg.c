@@ -31,16 +31,16 @@
 **                      File Generation Information                           **
 *******************************************************************************/
 /*
- * INPUT FILE:    E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_IoHwAb.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Pwm.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Spi.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Dio.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Icu.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Port.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Adc.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Mcu.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Mcal\Ecud_Gpt.arxml
- *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml
+ * INPUT FILE:    E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Mcu.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Gpt.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Adc.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Pwm.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Port.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Icu.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_IoHwAb.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Spi.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Mcal\Ecud_Dio.arxml
+ *                E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Os.arxml
  * GENERATED ON:  This timestamp is removed.
  */
 
@@ -70,6 +70,8 @@ VAR(Port_PinDirectionType, IOHWAB_VAR)IoHwAb_GaaDigDirPinDir[IOHWAB_DIGDIR_NUM_L
 #include "MemMap.h"
 CONST(IoHwAb_IndexType, IOHWAB_CONST)IoHwAb_GaaDigDirChIdx[IOHWAB_DIGDIR_NUM_LGC] = {
   4U,  /* IoHwAbDigitalDirectLogical_LED01 => IoHwAbPortPinCh_PortE_Pin4 */
+  5U,  /* IoHwAbDigitalDirectLogical_LED02 => IoHwAbPortPinCh_PortE_Pin5 */
+  6U,  /* IoHwAbDigitalDirectLogical_LED03 => IoHwAbPortPinCh_PortE_Pin6 */
   0U,  /* IoHwAbDigitalDirectLogical_S01 => IoHwAbPortPinCh_PortE_Pin0 */
   1U,  /* IoHwAbDigitalDirectLogical_S02 => IoHwAbPortPinCh_PortE_Pin1 */
   2U,  /* IoHwAbDigitalDirectLogical_S03 => IoHwAbPortPinCh_PortE_Pin2 */
@@ -321,6 +323,9 @@ Pwm_EnableNotificationFuncPtr IoHwAb_GpPwmEnableNotification
 #define IOHWAB_START_SEC_CONST_UNSPECIFIED
 #include "MemMap.h"
 CONST(Pwm_ChannelType, IOHWAB_CONST)IoHwAb_GaaPwmChIdx[IOHWAB_PWM_NUM_LGC] = {
+  /* IoHwAbPwmLogical_EMIOS23 => PwmChannel_EMIOS23 */
+  PwmConf_PwmChannel_PwmChannel_EMIOS23,
+
   /* IoHwAbPwm_0 => PwmChannel_0 */
   PwmConf_PwmChannel_PwmChannel_0,
 

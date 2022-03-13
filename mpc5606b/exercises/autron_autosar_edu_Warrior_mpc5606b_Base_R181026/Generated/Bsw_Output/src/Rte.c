@@ -20,67 +20,68 @@
 *******************************************************************************/
 /*
  * INPUT FILE:
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_EcuC.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\ECU\Ecud_Rte.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Composition\EcuExtract.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DBImport\Project.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_Mode.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
- *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Base_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\ECUCD_EcucValueCollection.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_EcuC.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\ECU\Ecud_Rte.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Adc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Can.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanSM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_CanTp.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Com.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Crc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Dio.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fee.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Fls.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Gpt.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Icu_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Mcu.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_MemIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Os.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_PduR.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Port.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Pwm_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Spi.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\BswMd\Bswmd_Wdg_43.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Composition\EcuExtract.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DBImport\Project.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\DataTypes\AUTOSAR_DataTypes_Etc.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_Mode.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_App\App_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\MODE_PortInterfaces.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Bsw_BswM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_ComM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_Det.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Configuration\System\Swcd_Bsw\Swcd_FiM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgIf.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\bswmd\Bswmd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dcm.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_Dem.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_EcuM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_Bsw_NvM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_IoHwAb.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Generated\Bsw_Output\swcd\Swcd_WdgM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_swc_ErrorManagement\App_ErrM.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_EcuM_R40\generator\EcuM_PortInterface.arxml
+ *      E:\00_AUTOSAR\Project\autron_autosar_edu_Warrior_mpc5606b_Io_R181026\Static_Code\Modules\b_autosar_sys_WdgM_R40\generator\Swcd_WdgM_Fixed.arxml
 
  * GENERATED ON:  This timestamp is removed.
 */
@@ -134,6 +135,7 @@
 #include "Rte_SWC_DiagnosticMonitor.h"
 #include "Rte_SWC_DiagnosticService.h"
 #include "Rte_SWC_ErrM.h"
+#include "Rte_SWC_IoHwAbTest.h"
 #include "Rte_SWC_TestModeManager.h"
 #include "Rte_SWC_TestModeUser.h"
 #include "Rte_SWC_WdgMTest.h"
@@ -271,6 +273,7 @@ enum {
   MSE_SwcModeSwitchEvent_globalMode_OK_SWC_WdgMTest,
   MSE_SwcModeSwitchEvent_globalMode_STOPPED_SWC_WdgMTest,
   TE_TE_AppMode_Test_SWC_AppMode,
+  TE_TE_IoHwAbTest_SWC_IoHwAbTest,
   TE_TE_Run_Actuator_SWC_Actuator,
   TE_TE_TestModeUser_B_SWC_TestModeUser,
   TE_TE_WdgMTest_SWC_WdgMTest,
@@ -379,7 +382,7 @@ static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_AppModeRequestInterface_6
 static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_ComMModeRequestInterface_Project_76_ComMMode_Project_2 = RTE_E_OK;
 static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_ComM_CurrentChannelRequest_79_fullComRequestors_713 = RTE_E_UNCONNECTED;
 static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_ComM_CurrentChannelRequest_79_fullComRequestors_714 = RTE_E_UNCONNECTED;
-static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_TestModeRequestInterface_41_TestMode_728 = RTE_E_UNCONNECTED;
+static VAR(Std_ReturnType, RTE_VAR_INIT) Rte_GucStatus_TestModeRequestInterface_41_TestMode_786 = RTE_E_UNCONNECTED;
 static VAR(uint8, RTE_VAR_INIT) SchM_GucBET_Dem_ReleasedTrigger_ToNvM_Count = RTE_ZERO;
 static VAR(uint8, RTE_VAR_INIT) SchM_GucBET_Dem_ReleasedTrigger_ToNvM_Queue = RTE_ZERO;
 static VAR(uint8, RTE_VAR_INIT) SchM_GucBIT_NvM_BITP_CallCyclicMemFunction_Count = RTE_ZERO;
@@ -401,7 +404,7 @@ static VAR(ComM_UserHandleArrayType, RTE_VAR_CLEARED) Rte_GstComM_CurrentChannel
 static VAR(ComM_UserHandleArrayType, RTE_VAR_CLEARED) Rte_GstComM_CurrentChannelRequest_79_fullComRequestors_714;
 static VAR(uint8, RTE_VAR_CLEARED) Rte_GucAppModeRequestInterface_69_AppMode_1;
 static VAR(uint8, RTE_VAR_CLEARED) Rte_GucComMModeRequestInterface_Project_76_ComMMode_Project_2;
-static VAR(uint8, RTE_VAR_CLEARED) Rte_GucTestModeRequestInterface_41_TestMode_728;
+static VAR(uint8, RTE_VAR_CLEARED) Rte_GucTestModeRequestInterface_41_TestMode_786;
 
 #define RTE_STOP_SEC_VAR_CLEARED_8
 #include "MemMap.h"
@@ -466,6 +469,8 @@ const struct Rte_CDS_SWC_DiagnosticMonitor Rte_Inst_SWC_DiagnosticMonitor = {0};
 const struct Rte_CDS_SWC_DiagnosticService Rte_Inst_SWC_DiagnosticService = {0};
 
 const struct Rte_CDS_SWC_ErrM Rte_Inst_SWC_ErrM = {0};
+
+const struct Rte_CDS_SWC_IoHwAbTest Rte_Inst_SWC_IoHwAbTest = {0};
 
 const struct Rte_CDS_SWC_TestModeManager Rte_Inst_SWC_TestModeManager = {0};
 
@@ -911,13 +916,13 @@ Rte_Read_SWC_TestModeManager_TestModeRequestInterface_TestMode(OUT P2VAR(uint8, 
 
   if (Data != NULL_PTR)
   {
-    *Data = Rte_GucTestModeRequestInterface_41_TestMode_728;
+    *Data = Rte_GucTestModeRequestInterface_41_TestMode_786;
   }
 
   /* polyspace<MISRA-C:14.2:Not a defect:Justify with annotations> AUTOSAR Standard rte_sws_1236 */
   Rte_ReadHook_SWC_TestModeManager_TestModeRequestInterface_TestMode_Return(Data);
 
-  return Rte_GucStatus_TestModeRequestInterface_41_TestMode_728;
+  return Rte_GucStatus_TestModeRequestInterface_41_TestMode_786;
 }
 
 /*******************************************************************************
@@ -2417,7 +2422,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_IoHwAb_R_IoHwAbGptLogical0_Cbk_Notificat
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_IoHwAb_R_IoHwAbGptLogical_EMIOS4_Cbk_Notification(void)
 {
   VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
-  LddRetVal = RTE_E_UNCONNECTED;
+  RE_IoHwAbTest_EMIOS4_GptCbk();
   return LddRetVal;
 }
 
@@ -2776,6 +2781,394 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_DiagnosticService_DCM_Services_Reset
 {
   VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
   LddRetVal = Dcm_ResetToDefaultSession();
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsInput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(blResult);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_IsOutput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(blResult);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_ReadDirect(
+  OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(Level);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToInput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_SetToOutput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE4_WriteDirect(
+  IN IoHwAb_LevelType Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED(Level);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsInput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirIsInput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1,
+    blResult);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_IsOutput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirIsOutput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1,
+    blResult);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_ReadDirect(
+  OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirReadDirect(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1,
+    Level);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToInput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirSetToInput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_SetToOutput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirSetToOutput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE5_WriteDirect(
+  IN IoHwAb_LevelType Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirWriteDirect(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED02_1,
+    Level);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsInput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirIsInput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1,
+    blResult);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_IsOutput(
+  OUT P2VAR(IoHwAb_BoolType, AUTOMATIC, RTE_APPL_DATA) blResult)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirIsOutput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1,
+    blResult);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_ReadDirect(
+  OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirReadDirect(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1,
+    Level);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToInput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirSetToInput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_SetToOutput(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirSetToOutput(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbDigitalDirectLogical_PE6_WriteDirect(
+  IN IoHwAb_LevelType Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  IoHwAb_DigDirWriteDirect(
+    Rte_PDAV_IoHwAbP_IoHwAbDigitalDirectLogical_LED03_1,
+    Level);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_DisableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_EnableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeElapsed(
+  OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(Value);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_GetTimeRemaining(
+  OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(Value);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_Notification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StartTimer(
+  IN IoHwAb_GptValueType Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED(Value);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_Dummy_StopTimer(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_DisableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptDisableNotification(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_EnableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptEnableNotification(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeElapsed(
+  OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptGetTimeElapsed(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1,
+    Value);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_GetTimeRemaining(
+  OUT P2VAR(IoHwAb_GptValueType, AUTOMATIC, RTE_APPL_DATA) Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptGetTimeRemaining(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1,
+    Value);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_Notification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StartTimer(
+  IN IoHwAb_GptValueType Value)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptStartTimer(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1,
+    Value);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbGptLogical_EMIOS4_StopTimer(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_GptStopTimer(
+    Rte_PDAV_IoHwAbP_IoHwAbGptLogical_EMIOS4_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_DisableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmDisableNotification(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_EnableNotification(
+  IN IoHwAb_PwmEdgeType NotificationEdge)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmEnableNotification(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1,
+    NotificationEdge);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_GetOutputState(
+  OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmGetOutputState(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1,
+    Level);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetDutyCycle(
+  IN uint16 Duty)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmSetDutyCycle(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1,
+    Duty);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetOutputToIdle(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmSetOutputToIdle(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS23_SetPeriodAndDuty(
+  IN IoHwAb_PwmPeriodType Period,
+  IN uint16 Duty)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = IoHwAb_PwmSetPeriodAndDuty(
+    Rte_PDAV_IoHwAbP_IoHwAbPwmLogical_EMIOS23_1,
+    Period,
+    Duty);
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_DisableNotification(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_EnableNotification(
+  IN IoHwAb_PwmEdgeType NotificationEdge)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED(NotificationEdge);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_GetOutputState(
+  OUT P2VAR(IoHwAb_LevelType, AUTOMATIC, RTE_APPL_DATA) Level)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED_PTR(Level);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetDutyCycle(
+  IN uint16 Duty)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED(Duty);
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetOutputToIdle(void)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  LddRetVal = RTE_E_UNCONNECTED;
+  return LddRetVal;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_SWC_IoHwAbTest_R_IoHwAbPwmLogical_EMIOS2_SetPeriodAndDuty(
+  IN IoHwAb_PwmPeriodType Period,
+  IN uint16 Duty)
+{
+  VAR(Std_ReturnType, RTE_DATA) LddRetVal = RTE_E_OK;
+  RTE_UNUSED(Period);
+  RTE_UNUSED(Duty);
+  LddRetVal = RTE_E_UNCONNECTED;
   return LddRetVal;
 }
 
@@ -5948,6 +6341,7 @@ TASK(OsTask_ASW_FG1_10ms)
   {
     DiagnosticMonitor();
     RE_WdgMTest();
+    RE_IoHwAbTest();
     Run_Actuator();
     TestModeUser_B();
   }

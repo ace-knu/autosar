@@ -114,7 +114,7 @@
                     <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MODE/DataTypeMappingSets/MAP_ComMMode</DATA-TYPE-MAPPING-REF>
                   </DATA-TYPE-MAPPING-REFS>
                   <EVENTS>
-                    <DATA-RECEIVED-EVENT UUID="49fe97e4-e7d3-4ea3-9df5-759bed8b9af8">
+                    <DATA-RECEIVED-EVENT UUID="b3dce359-95f2-441c-9aae-781be6b1c9d6">
                       <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_AppMode_modeRequestPort_AppMode_AppMode</SHORT-NAME>
                       <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM/SwcIB_BswM/BswM_Immediate_SwcModeRequest_AppMode</START-ON-EVENT-REF>
                       <DATA-IREF>
@@ -122,7 +122,7 @@
                         <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MODE/SenderReceiverInterfaces/AppModeRequestInterface/AppMode</TARGET-DATA-ELEMENT-REF>
                       </DATA-IREF>
                     </DATA-RECEIVED-EVENT>
-                    <DATA-RECEIVED-EVENT UUID="81ed1188-f93d-4103-bd82-3ad2c49981b9">
+                    <DATA-RECEIVED-EVENT UUID="267ab88d-fe97-41c8-b66e-a24287c6055e">
                       <SHORT-NAME>DRE_BswM_Immediate_SwcModeRequest_ComMMode_Project_modeRequestPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
                       <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/BswM/ServiceSwComponentTypes/BswM/SwcIB_BswM/BswM_Immediate_SwcModeRequest_ComMMode_Project</START-ON-EVENT-REF>
                       <DATA-IREF>
@@ -138,7 +138,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="f6571889-cc4f-4e8e-9132-f6cc3eae98b8">
+                        <MODE-SWITCH-POINT UUID="b6e34361-256f-4e63-92c5-468a6b2b058a">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_ComMMode_Project_modeSwitchPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -154,7 +154,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="4a1819c5-877e-4ef3-863c-bbde46583e9a">
+                        <MODE-SWITCH-POINT UUID="a576e40c-f45f-4f8b-927e-4be0de090111">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_DcmDiagnosticSessionControl_modeSwitchPort_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -170,7 +170,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="34d8521d-ffc1-46b3-9973-9be7b61f3dae">
+                        <MODE-SWITCH-POINT UUID="086ca81d-1033-4e5f-b1f8-0430a8b4557c">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_EcuMode_modeSwitchPort_EcuMode_EcuMode</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -186,7 +186,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="334210fc-5f7c-4c78-a1e3-2b205aec29e6">
+                        <MODE-SWITCH-POINT UUID="f2f2408d-b886-4fda-a62d-4641c14c56e1">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_InitState_modeSwitchPort_InitState_InitState</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -202,7 +202,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="5ef67e1a-80ea-4a47-b5d4-7d8844d55142">
+                        <MODE-SWITCH-POINT UUID="b0363550-3d64-4899-8dfc-7b7439544ea2">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupRx_Project_modeSwitchPort_PduGroupRx_Project_PduGroupRx_Project</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -218,7 +218,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="78eeea4f-cf62-4402-926f-8485e5219cff">
+                        <MODE-SWITCH-POINT UUID="78aaa451-defe-452f-ba89-71d63dc1d3d0">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_PduGroupTx_Project_modeSwitchPort_PduGroupTx_Project_PduGroupTx_Project</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -234,7 +234,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                       <MODE-SWITCH-POINTS>
-                        <MODE-SWITCH-POINT UUID="2de39eec-374d-4c26-bfa6-54df1881998f">
+                        <MODE-SWITCH-POINT UUID="8a96cafb-ddca-431f-bee2-e1303c2aa5e6">
                           <SHORT-NAME>MSP_BswM_ActionList_RteSwitch_WakeupEvent_modeSwitchPort_WakeupEvent_WakeupEvent</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <MODE-GROUP-IREF>
@@ -250,7 +250,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
                       <DATA-RECEIVE-POINT-BY-ARGUMENTS>
-                        <VARIABLE-ACCESS UUID="62dae511-83ab-4818-a755-cffd27316248">
+                        <VARIABLE-ACCESS UUID="dd210dab-b0b6-4d84-8146-304f13b5c39d">
                           <SHORT-NAME>DRPBA_BswM_Immediate_SwcModeRequest_AppMode_modeRequestPort_AppMode_AppMode</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <ACCESSED-VARIABLE>
@@ -269,7 +269,7 @@
                       <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
                       <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
                       <DATA-RECEIVE-POINT-BY-ARGUMENTS>
-                        <VARIABLE-ACCESS UUID="7010ad2d-f2aa-4561-8311-db57d0047b73">
+                        <VARIABLE-ACCESS UUID="ea59eac5-e0f3-4c39-9832-c94c057f7ae2">
                           <SHORT-NAME>DRPBA_BswM_Immediate_SwcModeRequest_ComMMode_Project_modeRequestPort_ComMMode_Project_ComMMode_Project</SHORT-NAME>
                           <CATEGORY>TOOL_CONFIGURED</CATEGORY>
                           <ACCESSED-VARIABLE>
