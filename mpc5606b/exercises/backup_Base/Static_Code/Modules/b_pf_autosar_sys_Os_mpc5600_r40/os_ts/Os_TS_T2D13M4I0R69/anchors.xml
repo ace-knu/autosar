@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?NLS TYPE="org.eclipse.help.toc"?>
-
-<toc label="OS PA/XPC560XB"> 
-  <topic label="Users Manual &quot;AUTOSAR OS/XPC560XB&quot; (.pdf)" href="doc/AUTOSAR_OSMPC5600_um.pdf"/>
-  <topic label="Technical Reference  &quot;AUTOSAR OS/XPC560XB&quot; (.pdf)" href="doc/AUTOSAR_OSMPC5600_tr.pdf"/>
-</toc>
