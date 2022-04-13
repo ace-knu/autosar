@@ -1,5 +1,7 @@
 AUTOSAR RTE 실습
 
+실습 동영상 (실습3) https://youtu.be/uc1QseOsTSE
+
 # 실습 1
 
 ![실습1](./exercise1.png)
@@ -10,7 +12,6 @@ AUTOSAR RTE 실습
 
 
 # 실습 3
-https://youtu.be/uc1QseOsTSE
 
 ![실습3](./exercise3.png)
 
