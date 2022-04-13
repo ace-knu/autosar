@@ -10,6 +10,7 @@ AUTOSAR RTE 실습
 
 
 # 실습 3
+https://youtu.be/uc1QseOsTSE
 
 ![실습3](./exercise3.png)
 
