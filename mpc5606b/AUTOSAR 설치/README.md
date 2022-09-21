@@ -30,11 +30,11 @@
 
 Code Warrior설치중 아래와 같이 선택하고 계속 진행
 
-![1](img\1.PNG)
+![1](img/1.PNG)
 
 설치가 완료되면 장치 관리자에서 아래와 같이 연결한 보드(TRK-MPC5606B Board)가 포트에서 보이는지 확인하다.
 
-![2](img\2.PNG)
+![2](img/2.PNG)
 
 ## 2. Debug Patch
 
@@ -50,33 +50,33 @@ CodeWarrior 설치 직후 그대로 사용하면 Debug 연결이 안 된다. 추
 
 CodeWarrior를 실행하면 아래와 같이 workspace 설정하는 창이 뜬다. 자신이 원하는 위치에 workspace를 설정해준다. **(단, 위치에 한글경로 이름이 있으면 안되니 주의한다.)** 
 
-![3](img\3.PNG)
+![3](img/3.PNG)
 
 Project가 없는 상태로 CodeWarrior가 실행된다. 예제 elf파일을 실행하려고만 하므로 왼쪽아래 항목에서 Import MCU executable file을 실행한다.
 
-![4](img\4.png)
+![4](img/4.png)
 
 Project이름을 설정해주고 import file은 `Debug\e_autosar_edu_mpc5606b_Base.elf` 파일로 설정한다. 
 
-![5](img\5.png)
+![5](img/5.png)
 
 Target MCU를 선택해준다. `Qorivva \ MPC560xB/C/D Family \ MPC5606B`에 있다.
 
-![6](img\6.png)
+![6](img/6.png)
 
-![7](img\7.PNG)
+![7](img/7.PNG)
 
 왼쪽 창에 Project가 생긴 것을 볼 수 있다. 디버깅을 위해 벌레모양 옆 화살표를 클릭하여 Debug configuration을 선택한다.
 
-![8](img\8.png)
+![8](img/8.png)
 
 아래 그림과 같이 되어있는지 확인하고
 
-![9](img\9.png)
+![9](img/9.png)
 
 <Target settings에서 Edit을 누르고 아래와 같이 나오는지확인> 그리고 Debug클릭
 
-![10](img\10.png)
+![10](img/10.png)
 
 
 
@@ -109,7 +109,7 @@ Target MCU를 선택해준다. `Qorivva \ MPC560xB/C/D Family \ MPC5606B`에 있
 
 이후 Odin이 켜지면 License설정창이 뜬다. 자기가 가지고있는 네트워크 모듈 넘버와 같은 파일을 `license\fw`에서 찾아서 등록하면 된다.
 
-![11](img\11.PNG)
+![11](img/11.PNG)
 
 ### 2. 프로젝트 생성
 
