@@ -6,4 +6,4 @@ S32K312 Project
 - LED Red : PTA29
 - LED Green : PTA30
 - LED Blue : PTA31, EMIOS_1_CH14
-- Potentiometer : PTA11
+- Potentiometer : PTA11, ADC1_S10
