@@ -5,5 +5,5 @@ S32K312 Project
 - SW6 : PTB19
 - LED Red : PTA29
 - LED Green : PTA30
-- LED Blue : PTA31
+- LED Blue : PTA31, EMIOS_1_CH14
 - Potentiometer : PTA11
