@@ -20,6 +20,7 @@ AUTOSAR RTE 실습
 ![실습4](./exercise4.png)
 
 # 실습 5
+![실습5](./exercise5.png)
 
 # 실습 6
-![실습4](./exercise6.png)
+![실습6](./exercise6.png)
