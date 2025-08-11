@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ab6412ec-2dbe-4932-be70-6f771fbdd8dc">
+      <SHORT-NAME>mga</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="0247a8fa-af74-4dae-9b22-5750639b7064">
+          <SHORT-NAME>autoever</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="d9e431bb-01df-493b-8c55-59854db67d01">
+              <SHORT-NAME>sample</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="ea78fd96-f235-44a7-8d1d-70d48e611233">
+                  <SHORT-NAME>smd</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE>
+                      <SHORT-NAME>Executable_SMD</SHORT-NAME>
+                      <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+                      <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+                      <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                      <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                      <ROOT-SW-COMPONENT-PROTOTYPE>
+                        <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/mga/autoever/sample/smd/SWC_SMD</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                    <PROCESS-TO-MACHINE-MAPPING-SET UUID="7999a7ec-a0d9-4269-858f-4236105407bf">
+                      <SHORT-NAME>ProcessToMachineMappingSet_2</SHORT-NAME>
+                      <PROCESS-TO-MACHINE-MAPPINGS>
+                        <PROCESS-TO-MACHINE-MAPPING UUID="ccff25e1-e732-4669-a6de-43a6a7b4823d">
+                          <SHORT-NAME>ProcessToMachineMap_1</SHORT-NAME>
+                          <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                          <PROCESS-REF DEST="PROCESS">/mga/autoever/sample/smd/SMD</PROCESS-REF>
+                          <SHALL-RUN-ON-REFS>
+                            <SHALL-RUN-ON-REF DEST="PROCESSOR-CORE">/Machine/Machine_ECU/MachineProcessor/MachineProcessor_Core_0</SHALL-RUN-ON-REF>
+                          </SHALL-RUN-ON-REFS>
+                        </PROCESS-TO-MACHINE-MAPPING>
+                      </PROCESS-TO-MACHINE-MAPPINGS>
+                    </PROCESS-TO-MACHINE-MAPPING-SET>
+                    <PROCESS>
+                      <SHORT-NAME>SMD</SHORT-NAME>
+                      <DESIGN-REF DEST="PROCESS-DESIGN">/mga/autoever/sample/smd/SMDDesign</DESIGN-REF>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/mga/autoever/sample/smd/Executable_SMD</EXECUTABLE-REF>
+                      <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                      <LOG-TRACE-LOG-MODES>
+                        <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+                      </LOG-TRACE-LOG-MODES>
+                      <LOG-TRACE-PROCESS-DESC>SMD DLT</LOG-TRACE-PROCESS-DESC>
+                      <LOG-TRACE-PROCESS-ID>SMD</LOG-TRACE-PROCESS-ID>
+                      <PROCESS-STATE-MACHINE UUID="1fa9b596-1887-429f-aa97-06047870c738">
+                        <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                        <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mga/autoever/sample/smd/SMD_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+                      </PROCESS-STATE-MACHINE>
+                      <STATE-DEPENDENT-STARTUP-CONFIGS>
+                        <STATE-DEPENDENT-STARTUP-CONFIG>
+                          <FUNCTION-GROUP-STATE-IREFS>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Driving</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Restart</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Shutdown</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                          </FUNCTION-GROUP-STATE-IREFS>
+                          <RESOURCE-GROUP-REF DEST="RESOURCE-GROUP">/Machine/Machine_ECU/OsModuleInst/ResourceGroup_1</RESOURCE-GROUP-REF>
+                          <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mga/autoever/sample/smd/StartupConfigSet_SMD/StartupConfig_1</STARTUP-CONFIG-REF>
+                        </STATE-DEPENDENT-STARTUP-CONFIG>
+                      </STATE-DEPENDENT-STARTUP-CONFIGS>
+                    </PROCESS>
+                    <PROCESS-DESIGN UUID="de683b26-fbaf-43d8-9d8b-02a56e3ee0c2">
+                      <SHORT-NAME>SMDDesign</SHORT-NAME>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/mga/autoever/sample/smd/Executable_SMD</EXECUTABLE-REF>
+                    </PROCESS-DESIGN>
+                    <MODE-DECLARATION-GROUP UUID="992d5157-02e3-4ad7-8758-1076ba6744d0">
+                      <SHORT-NAME>SMD_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+                      <MODE-DECLARATIONS>
+                        <MODE-DECLARATION UUID="f708097d-3706-4c9c-9ca9-0d3bdad5b3c0">
+                          <SHORT-NAME>Running</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="7fdd824d-9268-423c-8db6-c97467f14a8d">
+                          <SHORT-NAME>Terminated</SHORT-NAME>
+                        </MODE-DECLARATION>
+                      </MODE-DECLARATIONS>
+                    </MODE-DECLARATION-GROUP>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                      <SHORT-NAME>SWC_SMD</SHORT-NAME>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                    <STARTUP-CONFIG-SET>
+                      <SHORT-NAME>StartupConfigSet_SMD</SHORT-NAME>
+                      <STARTUP-CONFIGS>
+                        <STARTUP-CONFIG>
+                          <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                          <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                          <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                          <TIMEOUT>
+                            <ENTER-TIMEOUT-VALUE>2.0</ENTER-TIMEOUT-VALUE>
+                            <EXIT-TIMEOUT-VALUE>2.0</EXIT-TIMEOUT-VALUE>
+                          </TIMEOUT>
+                        </STARTUP-CONFIG>
+                      </STARTUP-CONFIGS>
+                    </STARTUP-CONFIG-SET>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

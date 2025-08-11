@@ -1,0 +1,91 @@
+#  --------------------------------------------------------------------------
+#  |              _    _ _______     .----.      _____         _____        |
+#  |         /\  | |  | |__   __|  .  ____ .    / ____|  /\   |  __ \       |
+#  |        /  \ | |  | |  | |    .  / __ \ .  | (___   /  \  | |__) |      |
+#  |       / /\ \| |  | |  | |   .  / / / / v   \___ \ / /\ \ |  _  /       |
+#  |      / /__\ \ |__| |  | |   . / /_/ /  .   ____) / /__\ \| | \ \       |
+#  |     /________\____/   |_|   ^ \____/  .   |_____/________\_|  \_\      |
+#  |                              . _ _  .                                  |
+#  --------------------------------------------------------------------------
+#
+#  All Rights Reserved.
+#  Any use of this source code is subject to a license agreement with the
+#  AUTOSAR development cooperation.
+#  More information is available at www.autosar.org.
+#
+#  Disclaimer
+#
+#  This work (specification and/or software implementation) and the material
+#  contained in it, as released by AUTOSAR, is for the purpose of information
+#  only. AUTOSAR and the companies that have contributed to it shall not be
+#  liable for any use of the work.
+#
+#  The material contained in this work is protected by copyright and other
+#  types of intellectual property rights. The commercial exploitation of the
+#  material contained in this work requires a license to such intellectual
+#  property rights.
+#
+#  This work may be utilized or reproduced without any modification, in any
+#  form or by any means, for informational purposes only. For any other
+#  purpose, no part of the work may be utilized or reproduced, in any form
+#  or by any means, without permission in writing from the publisher.
+#
+#  The work has been developed for automotive applications only. It has
+#  neither been developed, nor tested for non-automotive applications.
+#
+#  The word AUTOSAR and the AUTOSAR logo are registered trademarks.
+#  --------------------------------------------------------------------------
+
+set(MACHINE_NAME Machine_ECU)
+string(TOLOWER ${MACHINE_NAME} MACHINE_NAME_LOWER)
+set(MACHINE /Machine/${MACHINE_NAME}) 
+set(LOG_LEVEL "debug")
+
+set(IPC_CONFIG_MAKE_TARGET ${APP_NAME}JSONGenerated)
+set(EM_CONFIG_MAKE_TARGET ${APP_NAME}_EM_configs)
+
+set(LOCALIPC_CONFIG_FILENAME ${GEN_DEST}/processes/manifest_localipc.json)
+set(CM_MANIFEST_FILENAME ${GEN_DEST}/processes/${PROCESS_NAME_LOWER}_cm_manifest.json)
+set(EM_CONFIG_FILENAME ${GEN_DEST}/manifest/${MACHINE_NAME_LOWER}_machine/${PROCESS_NAME_LOWER}_execution.json)
+set(MACHINE_CONFIG_FILENAME ${GEN_DEST}/manifest/${MACHINE_NAME_LOWER}_machine/${MACHINE_NAME_LOWER}_manifest.json)
+
+add_em_gen(
+    DESTINATION ${GEN_DEST}
+    TARGET ${EM_CONFIG_MAKE_TARGET}
+    MACHINE ${MACHINE}
+    PROCESS_FQN ${PROCESS_FQN}
+    ARXMLS ${ARXMLS}
+)
+
+include_directories(
+    ${ARA_INCLUDE_DIRS}
+    ../inc
+)
+
+# Build adaptive application (incl. Core glue code)
+add_executable(${APP_EXECUTABLE} ${ADAPTIVEAUTOSARAPPLICATION_src})
+target_link_libraries(${APP_EXECUTABLE} ${CMAKE_THREAD_LIBS_INIT} ${ARA_LIBRARIES})
+
+add_dependencies(${APP_EXECUTABLE} ${BINARY_MAKE_TARGET} ${EM_CONFIG_MAKE_TARGET})
+
+install(TARGETS ${APP_EXECUTABLE} RUNTIME DESTINATION ${MGA_INSTALL_SAMPLE_APP_DIR}/${PROJECT_NAME}/${APP_NAME}_ipc/bin)
+
+##########################
+## Add configuration files
+##########################
+
+# Add local ipc configuration file
+if(EXISTS "${LOCALIPC_CONFIG_FILENAME}")
+    install(FILES ${LOCALIPC_CONFIG_FILENAME} PERMISSIONS OWNER_READ GROUP_READ WORLD_READ DESTINATION ${MGA_INSTALL_SAMPLE_APP_DIR}/${PROJECT_NAME}/${APP_NAME}_ipc/etc)
+#else()
+#message("No manifest_localipc.json")
+endif()
+
+# EM manifest
+install(FILES ${EM_CONFIG_FILENAME} PERMISSIONS OWNER_READ GROUP_READ WORLD_READ DESTINATION ${MGA_INSTALL_SAMPLE_APP_DIR}/${PROJECT_NAME}/${APP_NAME}_ipc/etc/ RENAME em_manifest.json)
+
+# Machine Manifest
+install(FILES ${MACHINE_CONFIG_FILENAME} PERMISSIONS OWNER_READ GROUP_READ WORLD_READ DESTINATION ${MGA_INSTALL_SAMPLE_APP_DIR}/${PROJECT_NAME}/${APP_NAME}_ipc/etc/ RENAME machine_manifest.json)
+
+# Add cm configuration file
+install(FILES ${CM_MANIFEST_FILENAME} PERMISSIONS OWNER_READ GROUP_READ WORLD_READ DESTINATION ${MGA_INSTALL_SAMPLE_APP_DIR}/${PROJECT_NAME}/${APP_NAME}_ipc/etc RENAME cm_manifest.json)

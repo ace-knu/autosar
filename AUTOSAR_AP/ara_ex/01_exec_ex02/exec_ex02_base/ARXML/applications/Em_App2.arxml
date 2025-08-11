@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c95d15d8-68a5-40bf-840c-d842e528994c">
+      <SHORT-NAME>mga</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b8a593c4-5232-48cd-8ae3-76c2943ab225">
+          <SHORT-NAME>autoever</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="1838d6a0-ca22-4c0c-9359-7e2e3a6f3896">
+              <SHORT-NAME>sample</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="7754229c-0e06-4bdf-b792-d10fea4b2c99">
+                  <SHORT-NAME>em_app2</SHORT-NAME>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

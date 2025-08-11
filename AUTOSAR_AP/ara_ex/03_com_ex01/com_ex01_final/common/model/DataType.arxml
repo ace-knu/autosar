@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="8bcee8c2-3f58-4089-859c-f59560d9e8cc">
+      <SHORT-NAME>DataTypes</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="30c338a4-2932-475c-b1bf-b4468157e5f1">
+          <SHORT-NAME>ApAppError</SHORT-NAME>
+          <ELEMENTS>
+            <AP-APPLICATION-ERROR UUID="b9b9338d-bd9e-4f24-b4c6-515cfb5d0d02">
+              <SHORT-NAME>GenericFailure</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Generic failure</L-2>
+              </DESC>
+              <ERROR-CODE>12</ERROR-CODE>
+              <ERROR-DOMAIN-REF DEST="AP-APPLICATION-ERROR-DOMAIN">/DataTypes/ApAppErrorDomain/GenericErrors</ERROR-DOMAIN-REF>
+            </AP-APPLICATION-ERROR>
+            <AP-APPLICATION-ERROR UUID="c7f5d70e-998f-4c4d-9fb7-f5e5bf4334ea">
+              <SHORT-NAME>InvalidConfigString</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration string is invalid</L-2>
+              </DESC>
+              <ERROR-CODE>5</ERROR-CODE>
+              <ERROR-DOMAIN-REF DEST="AP-APPLICATION-ERROR-DOMAIN">/DataTypes/ApAppErrorDomain/SpecificErrors</ERROR-DOMAIN-REF>
+            </AP-APPLICATION-ERROR>
+            <AP-APPLICATION-ERROR UUID="ce2d28b0-a132-4701-a20a-d6bda49a46d1">
+              <SHORT-NAME>InvalidParameter</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Parameter is invalid</L-2>
+              </DESC>
+              <ERROR-CODE>6</ERROR-CODE>
+              <ERROR-DOMAIN-REF DEST="AP-APPLICATION-ERROR-DOMAIN">/DataTypes/ApAppErrorDomain/SpecificErrors</ERROR-DOMAIN-REF>
+            </AP-APPLICATION-ERROR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="be6a41ba-4d61-4ea4-a880-eba13f21e656">
+          <SHORT-NAME>ApAppErrorDomain</SHORT-NAME>
+          <ELEMENTS>
+            <AP-APPLICATION-ERROR-DOMAIN UUID="3965d949-b17d-46eb-8aca-4accec9b5889">
+              <SHORT-NAME>GenericErrors</SHORT-NAME>
+              <NAMESPACES>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>ara</SHORT-NAME>
+                  <SYMBOL>ara</SYMBOL>
+                </SYMBOL-PROPS>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>com</SHORT-NAME>
+                  <SYMBOL>com</SYMBOL>
+                </SYMBOL-PROPS>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>sample</SHORT-NAME>
+                  <SYMBOL>sample</SYMBOL>
+                </SYMBOL-PROPS>
+              </NAMESPACES>
+              <VALUE>45</VALUE>
+            </AP-APPLICATION-ERROR-DOMAIN>
+            <AP-APPLICATION-ERROR-DOMAIN UUID="6eefc41e-7fa2-4274-a662-01a2754d34e9">
+              <SHORT-NAME>SpecificErrors</SHORT-NAME>
+              <NAMESPACES>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>ara</SHORT-NAME>
+                  <SYMBOL>ara</SYMBOL>
+                </SYMBOL-PROPS>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>com</SHORT-NAME>
+                  <SYMBOL>com</SYMBOL>
+                </SYMBOL-PROPS>
+                <SYMBOL-PROPS>
+                  <SHORT-NAME>sample</SHORT-NAME>
+                  <SYMBOL>sample</SYMBOL>
+                </SYMBOL-PROPS>
+              </NAMESPACES>
+              <VALUE>44</VALUE>
+            </AP-APPLICATION-ERROR-DOMAIN>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f6daf61a-4410-4d0d-958c-7780f2cd6b8f">
+          <SHORT-NAME>CompuMethod</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD UUID="b53c0049-d8ce-4900-a1bb-c331181761d5">
+              <SHORT-NAME>CM_FusionVariant</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <SYMBOL>FV_CHINA</SYMBOL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0x01</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0x01</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SYMBOL>FV_USA</SYMBOL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0x05</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0x05</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SYMBOL>FV_EUROPE</SYMBOL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0x06</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0x06</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <SYMBOL>FV_RUSSIA</SYMBOL>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0x04</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0x04</UPPER-LIMIT>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="b9f2c581-1c17-4e34-b377-3a8472145789">
+          <SHORT-NAME>DataType</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="cbe6b688-8093-4bfb-8059-dedfdaf83680">
+              <SHORT-NAME>IDT</SHORT-NAME>
+              <ELEMENTS>
+                <STD-CPP-IMPLEMENTATION-DATA-TYPE UUID="ae82626c-be61-4d67-aa28-23a7e4f6d729">
+                  <SHORT-NAME>ByteArray</SHORT-NAME>
+                  <CATEGORY>VECTOR</CATEGORY>
+                  <TEMPLATE-ARGUMENTS>
+                    <CPP-TEMPLATE-ARGUMENT>
+                      <TEMPLATE-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/uint8_t</TEMPLATE-TYPE-REF>
+                    </CPP-TEMPLATE-ARGUMENT>
+                  </TEMPLATE-ARGUMENTS>
+                  <TYPE-EMITTER>TYPE_EMITTER_ARA</TYPE-EMITTER>
+                </STD-CPP-IMPLEMENTATION-DATA-TYPE>
+                <STD-CPP-IMPLEMENTATION-DATA-TYPE UUID="1761d7b0-283d-46c6-9253-9cd77d04a495">
+                  <SHORT-NAME>FusionVariant</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataTypes/CompuMethod/CM_FusionVariant</COMPU-METHOD-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <NAMESPACES>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>ara</SHORT-NAME>
+                      <SYMBOL>ara</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>com</SHORT-NAME>
+                      <SYMBOL>com</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>sample</SHORT-NAME>
+                      <SYMBOL>sample</SYMBOL>
+                    </SYMBOL-PROPS>
+                  </NAMESPACES>
+                  <TYPE-EMITTER>TYPE_EMITTER_ARA</TYPE-EMITTER>
+                  <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/DataTypes/DataType/IDT/UnsignedInt</TYPE-REFERENCE-REF>
+                </STD-CPP-IMPLEMENTATION-DATA-TYPE>
+                <STD-CPP-IMPLEMENTATION-DATA-TYPE UUID="d311c219-a624-474a-9a4c-89378b7fdceb">
+                  <SHORT-NAME>Position</SHORT-NAME>
+                  <CATEGORY>STRUCTURE</CATEGORY>
+                  <NAMESPACES>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>ara</SHORT-NAME>
+                      <SYMBOL>ara</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>com</SHORT-NAME>
+                      <SYMBOL>com</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>sample</SHORT-NAME>
+                      <SYMBOL>sample</SYMBOL>
+                    </SYMBOL-PROPS>
+                  </NAMESPACES>
+                  <SUB-ELEMENTS>
+                    <CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="d58f48f8-15c2-4e27-a316-a370454fd6d2">
+                      <SHORT-NAME>x</SHORT-NAME>
+                      <TYPE-REFERENCE>
+                        <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int32_t</TYPE-REFERENCE-REF>
+                      </TYPE-REFERENCE>
+                    </CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="e5a7d5b4-c5cf-490a-9465-e51c70789085">
+                      <SHORT-NAME>y</SHORT-NAME>
+                      <TYPE-REFERENCE>
+                        <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int32_t</TYPE-REFERENCE-REF>
+                      </TYPE-REFERENCE>
+                    </CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="04b64d93-1ef6-4a92-ab53-559c1610b67d">
+                      <SHORT-NAME>z</SHORT-NAME>
+                      <TYPE-REFERENCE>
+                        <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int32_t</TYPE-REFERENCE-REF>
+                      </TYPE-REFERENCE>
+                    </CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                  <TYPE-EMITTER>TYPE_EMITTER_ARA</TYPE-EMITTER>
+                </STD-CPP-IMPLEMENTATION-DATA-TYPE>
+                <STD-CPP-IMPLEMENTATION-DATA-TYPE UUID="36758a97-555b-4bd1-a8fd-1169673e83fd">
+                  <SHORT-NAME>RadarObjects</SHORT-NAME>
+                  <CATEGORY>STRUCTURE</CATEGORY>
+                  <NAMESPACES>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>ara</SHORT-NAME>
+                      <SYMBOL>ara</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>com</SHORT-NAME>
+                      <SYMBOL>com</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>sample</SHORT-NAME>
+                      <SYMBOL>sample</SYMBOL>
+                    </SYMBOL-PROPS>
+                  </NAMESPACES>
+                  <SUB-ELEMENTS>
+                    <CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="f888c59b-43ac-410d-b154-b19da7622eba">
+                      <SHORT-NAME>active</SHORT-NAME>
+                      <TYPE-REFERENCE>
+                        <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/bool</TYPE-REFERENCE-REF>
+                      </TYPE-REFERENCE>
+                    </CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="3f2c9b6e-de38-483c-a8fc-18624c3a4b47">
+                      <SHORT-NAME>objectVector</SHORT-NAME>
+                      <TYPE-REFERENCE>
+                        <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/DataTypes/DataType/IDT/ByteArray</TYPE-REFERENCE-REF>
+                      </TYPE-REFERENCE>
+                    </CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                  <TYPE-EMITTER>TYPE_EMITTER_ARA</TYPE-EMITTER>
+                </STD-CPP-IMPLEMENTATION-DATA-TYPE>
+                <STD-CPP-IMPLEMENTATION-DATA-TYPE UUID="9c2c18ea-127f-4cda-93ad-70d1ec5c1769">
+                  <SHORT-NAME>UnsignedInt</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <NAMESPACES>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>ara</SHORT-NAME>
+                      <SYMBOL>ara</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>com</SHORT-NAME>
+                      <SYMBOL>com</SYMBOL>
+                    </SYMBOL-PROPS>
+                    <SYMBOL-PROPS>
+                      <SHORT-NAME>sample</SHORT-NAME>
+                      <SYMBOL>sample</SYMBOL>
+                    </SYMBOL-PROPS>
+                  </NAMESPACES>
+                  <TYPE-EMITTER>TYPE_EMITTER_ARA</TYPE-EMITTER>
+                  <TYPE-REFERENCE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/uint16_t</TYPE-REFERENCE-REF>
+                </STD-CPP-IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

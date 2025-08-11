@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6d449bd7-77f4-4dd2-96d4-e6f06cdf7063">
+      <SHORT-NAME>radar</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="144b83a3-ea75-4ff9-a5e6-5a60ac833c63">
+          <SHORT-NAME>Application</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="a05d7bc1-4260-4aa5-8762-d92d3ac0559d">
+              <SHORT-NAME>Executable</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE>
+                  <SHORT-NAME>radarServiceExe</SHORT-NAME>
+                  <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+                  <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE>
+                    <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/radar/Application/SwComponent/radarService</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="457a51aa-f0d4-43c0-b6d4-cf92aa7a01cb">
+              <SHORT-NAME>Process</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS>
+                  <SHORT-NAME>radarService_Process</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/radar/Application/ProcessDesign/radarService_ProcessDesign</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/radar/Application/Executable/radarServiceExe</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-FILE-PATH>/adar/install/var</LOG-TRACE-FILE-PATH>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+                    <LOG-TRACE-LOG-MODE>FILE</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                  <LOG-TRACE-PROCESS-DESC>Com Sample Provider App IPC</LOG-TRACE-PROCESS-DESC>
+                  <LOG-TRACE-PROCESS-ID>ACRA</LOG-TRACE-PROCESS-ID>
+                  <PROCESS-STATE-MACHINE UUID="378f9fca-e6b4-4d24-8a39-eb7767825f17">
+                    <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/radar/Application/Process/radarService_Process_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+                  </PROCESS-STATE-MACHINE>
+                  <STATE-DEPENDENT-STARTUP-CONFIGS>
+                    <STATE-DEPENDENT-STARTUP-CONFIG>
+                      <EXECUTION-DEPENDENCYS>
+                        <EXECUTION-DEPENDENCY>
+                          <PROCESS-STATE-IREF>
+                            <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/mga_localipcd/Process/mga_localipcd/ProcessStateMachine</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                            <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/mga_localipcd/Process/Process_1_ProcessStateMachine_ModeDeclarationGroup/Running</TARGET-MODE-DECLARATION-REF>
+                          </PROCESS-STATE-IREF>
+                        </EXECUTION-DEPENDENCY>
+                      </EXECUTION-DEPENDENCYS>
+                      <FUNCTION-GROUP-STATE-IREFS>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Restart</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Shutdown</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                      </FUNCTION-GROUP-STATE-IREFS>
+                      <RESOURCE-GROUP-REF DEST="RESOURCE-GROUP">/Machine/Machine_ECU/OsModuleInst/ResourceGroup_1</RESOURCE-GROUP-REF>
+                      <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/radar/Application/Process/radarconfig/StartupConfig_1</STARTUP-CONFIG-REF>
+                    </STATE-DEPENDENT-STARTUP-CONFIG>
+                  </STATE-DEPENDENT-STARTUP-CONFIGS>
+                </PROCESS>
+                <MODE-DECLARATION-GROUP UUID="9b05573d-1484-4309-976d-db7bc0880218">
+                  <SHORT-NAME>radarService_Process_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+                  <MODE-DECLARATIONS>
+                    <MODE-DECLARATION UUID="f189e480-92fe-4f40-b98b-511e18fe4254">
+                      <SHORT-NAME>Running</SHORT-NAME>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION UUID="7bc533b6-a961-4de2-879c-c892c22d879f">
+                      <SHORT-NAME>Terminated</SHORT-NAME>
+                    </MODE-DECLARATION>
+                  </MODE-DECLARATIONS>
+                </MODE-DECLARATION-GROUP>
+                <STARTUP-CONFIG-SET>
+                  <SHORT-NAME>radarconfig</SHORT-NAME>
+                  <STARTUP-CONFIGS>
+                    <STARTUP-CONFIG>
+                      <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                      <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                      <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                    </STARTUP-CONFIG>
+                  </STARTUP-CONFIGS>
+                </STARTUP-CONFIG-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="37e3e174-238e-4ab5-8651-e10af6be0bac">
+              <SHORT-NAME>ProcessDesign</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="1efb70eb-06c1-4157-9e8d-27af58607e02">
+                  <SHORT-NAME>radarService_ProcessDesign</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/radar/Application/Executable/radarServiceExe</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="fd27a821-27ab-46da-8aa4-eae19c27cfb3">
+              <SHORT-NAME>SwComponent</SHORT-NAME>
+              <ELEMENTS>
+                <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  <SHORT-NAME>radarService</SHORT-NAME>
+                </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="a95932ce-02d7-4521-b8d2-4e9750806ec2">
+          <SHORT-NAME>Service</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="530f3caf-25ab-44fc-93dc-fba894b96f3f">
+              <SHORT-NAME>InstancePortMap</SHORT-NAME>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="b997e0a2-f577-4ab1-9fb2-6dbb5a6db661">
+              <SHORT-NAME>Someip</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="f66c62bb-f73d-4f99-9352-ee54446f034f">
+                  <SHORT-NAME>Deployment</SHORT-NAME>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="a330cfbd-f171-4261-8944-ea649e1d7096">
+                  <SHORT-NAME>Instance</SHORT-NAME>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

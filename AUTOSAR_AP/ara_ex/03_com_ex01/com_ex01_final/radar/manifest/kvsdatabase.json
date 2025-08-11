@@ -1,0 +1,9 @@
+[
+    {
+        "key": "SOMEIP_APPLICATION_NAME",
+        "value": {
+            "string": "radarService_Process"
+        },
+        "checksum": 0
+    }
+]

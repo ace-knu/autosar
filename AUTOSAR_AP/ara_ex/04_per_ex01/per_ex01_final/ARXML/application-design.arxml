@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>mobilgene</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>perdemo</SHORT-NAME>
+          <ELEMENTS>
+            <PERSISTENCY-FILE-ARRAY UUID="f0e416f3-c3fe-4294-984d-6ecf2d817c33">
+              <SHORT-NAME>FileArray_1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DATA-ENCRYPTION">
+                    <SD GID="USE-DATA-ENCRYPTION">No</SD>
+                    <SD GID="CRYPTO-ALGORITHM"/>
+                  </SDG>
+                  <SDG GID="PERSISTENCY-DEPLOYMENT-EXTENSION">
+                    <SDX-REF DEST="PR-PORT-PROTOTYPE">/mobilgene/perdemo/SwComponent_PerExampleFs/MobilgeneMofNFP</SDX-REF>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <MAXIMUM-ALLOWED-SIZE>12000</MAXIMUM-ALLOWED-SIZE>
+              <MINIMUM-SUSTAINED-SIZE>400</MINIMUM-SUSTAINED-SIZE>
+              <REDUNDANCY-HANDLINGS>
+                <PERSISTENCY-REDUNDANCY-M-OUT-OF-N>
+                  <SCOPE>PERSISTENCY-REDUNDANCY-HANDLING-SCOPE-FILE</SCOPE>
+                  <M>3</M>
+                  <N>5</N>
+                </PERSISTENCY-REDUNDANCY-M-OUT-OF-N>
+              </REDUNDANCY-HANDLINGS>
+              <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+              <FILES>
+                <PERSISTENCY-FILE UUID="8357ab4c-2d1a-491d-8c7d-b344509acfdc">
+                  <SHORT-NAME>FileProxy_1</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/ReadOnlyFile1.txt</CONTENT-URI>
+                  <FILE-NAME>ReadOnlyFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE>
+                <PERSISTENCY-FILE UUID="ddf8cce8-8047-47a4-81cf-d2f04ecac6c1">
+                  <SHORT-NAME>FileProxy_2</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/WriteOnlyFile1.txt</CONTENT-URI>
+                  <FILE-NAME>WriteOnlyFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE>
+                <PERSISTENCY-FILE UUID="b0406208-08e9-491b-b9a6-f18807c5d617">
+                  <SHORT-NAME>FileProxy_3</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/ReadWriteFile1.txt</CONTENT-URI>
+                  <FILE-NAME>ReadWriteFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE>
+              </FILES>
+              <URI>var/MobilgeneMofNFP</URI>
+            </PERSISTENCY-FILE-ARRAY>
+            <PERSISTENCY-FILE-PROXY-INTERFACE UUID="b5cbea4b-f406-43eb-ba22-f23e7ad6dd67">
+              <SHORT-NAME>FileProxyInterface_1</SHORT-NAME>
+              <CATEGORY>TEXT_FILE</CATEGORY>
+              <MINIMUM-SUSTAINED-SIZE>400</MINIMUM-SUSTAINED-SIZE>
+              <REDUNDANCY>REDUNDANT</REDUNDANCY>
+              <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+              <ENCODING>UTF-8</ENCODING>
+              <FILE-PROXYS>
+                <PERSISTENCY-FILE-PROXY UUID="2165e1ce-aba7-4da4-9c08-2e84b2f115d8">
+                  <SHORT-NAME>FileProxy_1</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/ReadOnlyFile1.txt</CONTENT-URI>
+                  <FILE-NAME>ReadOnlyFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE-PROXY>
+                <PERSISTENCY-FILE-PROXY UUID="1bdae95c-cbfb-4f0d-a4a2-8baae37e53cb">
+                  <SHORT-NAME>FileProxy_2</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/WriteOnlyFile1.txt</CONTENT-URI>
+                  <FILE-NAME>WriteOnlyFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE-PROXY>
+                <PERSISTENCY-FILE-PROXY UUID="4b41e00c-e116-4e7b-a48a-86e2a06e73a5">
+                  <SHORT-NAME>FileProxy_3</SHORT-NAME>
+                  <CONTENT-URI>files/MobilgeneMofNFP/ReadWriteFile1.txt</CONTENT-URI>
+                  <FILE-NAME>ReadWriteFile1.txt</FILE-NAME>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-FILE-PROXY>
+              </FILE-PROXYS>
+              <MAX-NUMBER-OF-FILES>3</MAX-NUMBER-OF-FILES>
+            </PERSISTENCY-FILE-PROXY-INTERFACE>
+            <PROCESS>
+              <SHORT-NAME>PerExampleFs</SHORT-NAME>
+              <DESIGN-REF DEST="PROCESS-DESIGN">/mobilgene/perdemo/PerExampleFsDesign</DESIGN-REF>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleFsEx</EXECUTABLE-REF>
+              <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+              <LOG-TRACE-LOG-MODES>
+                <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+              </LOG-TRACE-LOG-MODES>
+              <LOG-TRACE-PROCESS-DESC>Internal persistency debug context</LOG-TRACE-PROCESS-DESC>
+              <LOG-TRACE-PROCESS-ID>APEF</LOG-TRACE-PROCESS-ID>
+              <PROCESS-STATE-MACHINE UUID="e72d1397-ea80-4378-a5a3-134fe97c2af1">
+                <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mobilgene/perdemo/PerExampleFs_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+              </PROCESS-STATE-MACHINE>
+              <STATE-DEPENDENT-STARTUP-CONFIGS>
+                <STATE-DEPENDENT-STARTUP-CONFIG>
+                  <FUNCTION-GROUP-STATE-IREFS>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Driving</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                  </FUNCTION-GROUP-STATE-IREFS>
+                  <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mobilgene/perdemo/StartupConfigSet1/StartupConfig_1</STARTUP-CONFIG-REF>
+                </STATE-DEPENDENT-STARTUP-CONFIG>
+              </STATE-DEPENDENT-STARTUP-CONFIGS>
+            </PROCESS>
+            <PROCESS-DESIGN UUID="a3dd0518-d509-4a19-957a-165c5824a216">
+              <SHORT-NAME>PerExampleFsDesign</SHORT-NAME>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleFsEx</EXECUTABLE-REF>
+            </PROCESS-DESIGN>
+            <EXECUTABLE>
+              <SHORT-NAME>PerExampleFsEx</SHORT-NAME>
+              <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+              <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+              <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+              <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+              <ROOT-SW-COMPONENT-PROTOTYPE>
+                <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/mobilgene/perdemo/SwComponent_PerExampleFs</APPLICATION-TYPE-TREF>
+              </ROOT-SW-COMPONENT-PROTOTYPE>
+            </EXECUTABLE>
+            <MODE-DECLARATION-GROUP UUID="ec84eb9d-284b-42eb-aa10-a1d4d875b007">
+              <SHORT-NAME>PerExampleFs_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="4564736f-c1a1-4fbe-83a6-a204f0cbacce">
+                  <SHORT-NAME>Running</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="89aff282-80db-48b2-a264-ce31ef9dab60">
+                  <SHORT-NAME>Terminated</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <PERSISTENCY-PORT-PROTOTYPE-TO-FILE-ARRAY-MAPPING UUID="bfe5f400-6790-4a87-90d4-bfd83c562131">
+              <SHORT-NAME>PortToFileMap_1</SHORT-NAME>
+              <PERSISTENCY-FILE-ARRAY-REF DEST="PERSISTENCY-FILE-ARRAY">/mobilgene/perdemo/FileArray_1</PERSISTENCY-FILE-ARRAY-REF>
+              <PORT-PROTOTYPE-IREF>
+                <TARGET-PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/mobilgene/perdemo/SwComponent_PerExampleFs/MobilgeneMofNFP</TARGET-PORT-PROTOTYPE-REF>
+              </PORT-PROTOTYPE-IREF>
+              <PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleFs</PROCESS-REF>
+            </PERSISTENCY-PORT-PROTOTYPE-TO-FILE-ARRAY-MAPPING>
+            <PROCESS-TO-MACHINE-MAPPING-SET UUID="66b88efe-059d-4fc7-9a09-756a8eb145d0">
+              <SHORT-NAME>ProcessToMachineMapppingSet_1</SHORT-NAME>
+              <PROCESS-TO-MACHINE-MAPPINGS>
+                <PROCESS-TO-MACHINE-MAPPING UUID="6e22d860-84ec-44f8-9cb6-0d3a09837ef1">
+                  <SHORT-NAME>ProcessToMachineMap_1</SHORT-NAME>
+                  <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                  <PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleFs</PROCESS-REF>
+                </PROCESS-TO-MACHINE-MAPPING>
+              </PROCESS-TO-MACHINE-MAPPINGS>
+            </PROCESS-TO-MACHINE-MAPPING-SET>
+            <STARTUP-CONFIG-SET>
+              <SHORT-NAME>StartupConfigSet1</SHORT-NAME>
+              <STARTUP-CONFIGS>
+                <STARTUP-CONFIG>
+                  <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                  <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                  <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                </STARTUP-CONFIG>
+              </STARTUP-CONFIGS>
+            </STARTUP-CONFIG-SET>
+            <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+              <SHORT-NAME>SwComponent_PerExampleFs</SHORT-NAME>
+              <PORTS>
+                <PR-PORT-PROTOTYPE UUID="5c68f607-1384-4d67-851f-702637b0c8c8">
+                  <SHORT-NAME>MobilgeneMofNFP</SHORT-NAME>
+                  <PROVIDED-REQUIRED-INTERFACE-TREF DEST="PERSISTENCY-FILE-PROXY-INTERFACE">/mobilgene/perdemo/FileProxyInterface_1</PROVIDED-REQUIRED-INTERFACE-TREF>
+                </PR-PORT-PROTOTYPE>
+              </PORTS>
+            </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e34cf561-64ac-4146-8953-8590e7ad2e77">
+              <SHORT-NAME>ecu1</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

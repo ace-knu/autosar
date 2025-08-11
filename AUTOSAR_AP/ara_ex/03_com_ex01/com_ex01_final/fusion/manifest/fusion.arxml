@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="080a1564-00b8-4955-ace5-931d1c12c7d3">
+      <SHORT-NAME>fusion</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="ceb7d887-7b04-4b76-9fab-c4a869b59bab">
+          <SHORT-NAME>Application</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="831748f5-d36c-4623-bd9e-2297f6945163">
+              <SHORT-NAME>Executable</SHORT-NAME>
+              <ELEMENTS>
+                <EXECUTABLE>
+                  <SHORT-NAME>fusionExe</SHORT-NAME>
+                  <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+                  <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+                  <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                  <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                  <ROOT-SW-COMPONENT-PROTOTYPE>
+                    <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                    <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/fusion/Application/SwComponent/fusion</APPLICATION-TYPE-TREF>
+                  </ROOT-SW-COMPONENT-PROTOTYPE>
+                </EXECUTABLE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="64f38f90-6000-48f5-ae97-de54164005ef">
+              <SHORT-NAME>Process</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS>
+                  <SHORT-NAME>fusion_Process</SHORT-NAME>
+                  <DESIGN-REF DEST="PROCESS-DESIGN">/fusion/Application/ProcessDesign/fusion_ProcessDesign</DESIGN-REF>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/fusion/Application/Executable/fusionExe</EXECUTABLE-REF>
+                  <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                  <LOG-TRACE-FILE-PATH>/adar/install/var</LOG-TRACE-FILE-PATH>
+                  <LOG-TRACE-LOG-MODES>
+                    <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+                    <LOG-TRACE-LOG-MODE>FILE</LOG-TRACE-LOG-MODE>
+                  </LOG-TRACE-LOG-MODES>
+                  <LOG-TRACE-PROCESS-DESC>Com Sample Consumer App IPC</LOG-TRACE-PROCESS-DESC>
+                  <LOG-TRACE-PROCESS-ID>ACFA</LOG-TRACE-PROCESS-ID>
+                  <PROCESS-STATE-MACHINE UUID="1de4c940-6926-40e5-9385-6fee275b6c6d">
+                    <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/fusion/Application/Process/fusion_Process_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+                  </PROCESS-STATE-MACHINE>
+                  <STATE-DEPENDENT-STARTUP-CONFIGS>
+                    <STATE-DEPENDENT-STARTUP-CONFIG>
+                      <EXECUTION-DEPENDENCYS>
+                        <EXECUTION-DEPENDENCY>
+                          <PROCESS-STATE-IREF>
+                            <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/mga_localipcd/Process/mga_localipcd/ProcessStateMachine</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                            <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/mga_localipcd/Process/Process_1_ProcessStateMachine_ModeDeclarationGroup/Running</TARGET-MODE-DECLARATION-REF>
+                          </PROCESS-STATE-IREF>
+                        </EXECUTION-DEPENDENCY>
+                      </EXECUTION-DEPENDENCYS>
+                      <FUNCTION-GROUP-STATE-IREFS>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Restart</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Shutdown</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                        <FUNCTION-GROUP-STATE-IREF>
+                          <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                          <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                        </FUNCTION-GROUP-STATE-IREF>
+                      </FUNCTION-GROUP-STATE-IREFS>
+                      <RESOURCE-GROUP-REF DEST="RESOURCE-GROUP">/Machine/Machine_ECU/OsModuleInst/ResourceGroup_1</RESOURCE-GROUP-REF>
+                      <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/fusion/Application/Process/fusionconfig/StartupConfig_1</STARTUP-CONFIG-REF>
+                    </STATE-DEPENDENT-STARTUP-CONFIG>
+                  </STATE-DEPENDENT-STARTUP-CONFIGS>
+                </PROCESS>
+                <MODE-DECLARATION-GROUP UUID="3313d523-57bb-4461-beef-a7bb6a97ecc8">
+                  <SHORT-NAME>fusion_Process_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+                  <MODE-DECLARATIONS>
+                    <MODE-DECLARATION UUID="875e0e09-58fe-44e7-90ad-24c0b52a46ef">
+                      <SHORT-NAME>Running</SHORT-NAME>
+                    </MODE-DECLARATION>
+                    <MODE-DECLARATION UUID="93055272-43f8-4393-ab64-e688cfa87c5d">
+                      <SHORT-NAME>Terminated</SHORT-NAME>
+                    </MODE-DECLARATION>
+                  </MODE-DECLARATIONS>
+                </MODE-DECLARATION-GROUP>
+                <STARTUP-CONFIG-SET>
+                  <SHORT-NAME>fusionconfig</SHORT-NAME>
+                  <STARTUP-CONFIGS>
+                    <STARTUP-CONFIG>
+                      <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                      <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                      <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                    </STARTUP-CONFIG>
+                  </STARTUP-CONFIGS>
+                </STARTUP-CONFIG-SET>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="0b05c765-17b0-4455-961c-7272ab1d1441">
+              <SHORT-NAME>ProcessDesign</SHORT-NAME>
+              <ELEMENTS>
+                <PROCESS-DESIGN UUID="41b7b819-b16e-42a6-ac89-f5f955710857">
+                  <SHORT-NAME>fusion_ProcessDesign</SHORT-NAME>
+                  <EXECUTABLE-REF DEST="EXECUTABLE">/fusion/Application/Executable/fusionExe</EXECUTABLE-REF>
+                </PROCESS-DESIGN>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="13759091-6be8-4806-80d9-dffb60a66aeb">
+              <SHORT-NAME>SwComponent</SHORT-NAME>
+              <ELEMENTS>
+                <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  <SHORT-NAME>fusion</SHORT-NAME>
+                  <PORTS>
+                    <R-PORT-PROTOTYPE UUID="86daea81-2e95-4e23-88ed-b6dca4970fa2">
+                      <SHORT-NAME>radar_RPort</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/ServiceInterface/Interface/radar</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f0828d00-d051-42cf-88a4-a216505d0ff3">
+          <SHORT-NAME>Service</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="a4e26355-d968-478d-845e-75e7b6a8ceea">
+              <SHORT-NAME>Instance</SHORT-NAME>
+              <ELEMENTS>
+                <SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG UUID="eed07cde-984d-42e0-8ae8-afdd53cdc647">
+                  <SHORT-NAME>client_timingConf_1</SHORT-NAME>
+                  <REQUEST-RESPONSE-DELAY>
+                    <MAX-VALUE>10.0</MAX-VALUE>
+                    <MIN-VALUE>10.0</MIN-VALUE>
+                  </REQUEST-RESPONSE-DELAY>
+                  <SUBSCRIBE-EVENTGROUP-RETRY-DELAY>10.0</SUBSCRIBE-EVENTGROUP-RETRY-DELAY>
+                  <SUBSCRIBE-EVENTGROUP-RETRY-MAX>10</SUBSCRIBE-EVENTGROUP-RETRY-MAX>
+                  <TIME-TO-LIVE>0</TIME-TO-LIVE>
+                </SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG>
+                <SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG UUID="9cef16db-ec3d-4479-a890-b144ce578232">
+                  <SHORT-NAME>client_timingConf_2</SHORT-NAME>
+                  <REQUEST-RESPONSE-DELAY>
+                    <MAX-VALUE>10.0</MAX-VALUE>
+                    <MIN-VALUE>10.0</MIN-VALUE>
+                  </REQUEST-RESPONSE-DELAY>
+                  <SUBSCRIBE-EVENTGROUP-RETRY-DELAY>10.0</SUBSCRIBE-EVENTGROUP-RETRY-DELAY>
+                  <SUBSCRIBE-EVENTGROUP-RETRY-MAX>10</SUBSCRIBE-EVENTGROUP-RETRY-MAX>
+                  <TIME-TO-LIVE>0</TIME-TO-LIVE>
+                </SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG>
+                <REQUIRED-SOMEIP-SERVICE-INSTANCE UUID="adcde171-e9d3-425a-8561-f5e837aaec78">
+                  <SHORT-NAME>radar_RequiredSomeipServiceInstance</SHORT-NAME>
+                  <SERVICE-INTERFACE-DEPLOYMENT-REF DEST="SOMEIP-SERVICE-INTERFACE-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1</SERVICE-INTERFACE-DEPLOYMENT-REF>
+                  <METHOD-REQUEST-PROPSS>
+                    <SOMEIP-METHOD-PROPS>
+                      <METHOD-REF DEST="SOMEIP-METHOD-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_ObjectDetectionLimitDep_1/Someip_ObjectDetectionLimitDep_Setter</METHOD-REF>
+                    </SOMEIP-METHOD-PROPS>
+                    <SOMEIP-METHOD-PROPS>
+                      <METHOD-REF DEST="SOMEIP-METHOD-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_RearObjectDistanceDep_1/Someip_RearObjectDistanceDep_Getter</METHOD-REF>
+                    </SOMEIP-METHOD-PROPS>
+                    <SOMEIP-METHOD-PROPS>
+                      <METHOD-REF DEST="SOMEIP-METHOD-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_UpdateRateDep_1/Someip_UpdateRateDep_Setter</METHOD-REF>
+                    </SOMEIP-METHOD-PROPS>
+                    <SOMEIP-METHOD-PROPS>
+                      <METHOD-REF DEST="SOMEIP-METHOD-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_UpdateRateDep_1/Someip_UpdateRateDep_Getter</METHOD-REF>
+                    </SOMEIP-METHOD-PROPS>
+                  </METHOD-REQUEST-PROPSS>
+                  <REQUIRED-EVENT-GROUPS>
+                    <SOMEIP-REQUIRED-EVENT-GROUP>
+                      <SHORT-NAME>SomeipREventGroup_1</SHORT-NAME>
+                      <EVENT-GROUP-REF DEST="SOMEIP-EVENT-GROUP">/Deployment/Someip/Someip_radarDep_1/EventGroup_1</EVENT-GROUP-REF>
+                      <SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF DEST="SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG">/fusion/Service/Instance/client_timingConf_1</SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF>
+                    </SOMEIP-REQUIRED-EVENT-GROUP>
+                    <SOMEIP-REQUIRED-EVENT-GROUP>
+                      <SHORT-NAME>SomeipREventGroup_2</SHORT-NAME>
+                      <EVENT-GROUP-REF DEST="SOMEIP-EVENT-GROUP">/Deployment/Someip/Someip_radarDep_1/EventGroup_2</EVENT-GROUP-REF>
+                      <SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF DEST="SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG">/fusion/Service/Instance/client_timingConf_2</SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF>
+                    </SOMEIP-REQUIRED-EVENT-GROUP>
+                  </REQUIRED-EVENT-GROUPS>
+                  <REQUIRED-MINOR-VERSION>0</REQUIRED-MINOR-VERSION>
+                  <REQUIRED-SERVICE-INSTANCE-ID>ANY</REQUIRED-SERVICE-INSTANCE-ID>
+                  <SD-CLIENT-CONFIG-REF DEST="SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG">/fusion/Service/Instance/radar_SomeipClientServiceInstanceConfig</SD-CLIENT-CONFIG-REF>
+                  <VERSION-DRIVEN-FIND-BEHAVIOR>MINIMUM-MINOR-VERSION</VERSION-DRIVEN-FIND-BEHAVIOR>
+                </REQUIRED-SOMEIP-SERVICE-INSTANCE>
+                <SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG UUID="7b876ec3-f5f5-4bc4-a4dd-3be7b5ac60f5">
+                  <SHORT-NAME>radar_SomeipClientServiceInstanceConfig</SHORT-NAME>
+                  <INITIAL-FIND-BEHAVIOR>
+                    <INITIAL-DELAY-MAX-VALUE>0.1</INITIAL-DELAY-MAX-VALUE>
+                    <INITIAL-DELAY-MIN-VALUE>0.01</INITIAL-DELAY-MIN-VALUE>
+                    <INITIAL-REPETITIONS-BASE-DELAY>0.2</INITIAL-REPETITIONS-BASE-DELAY>
+                    <INITIAL-REPETITIONS-MAX>3</INITIAL-REPETITIONS-MAX>
+                  </INITIAL-FIND-BEHAVIOR>
+                  <SERVICE-FIND-TIME-TO-LIVE>10</SERVICE-FIND-TIME-TO-LIVE>
+                </SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="5b02f3c9-49e2-4c9f-bc9c-560d748a6bc6">
+              <SHORT-NAME>InstancePortMap</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="6c1589e2-c962-4086-8e23-21e639c77491">
+                  <SHORT-NAME>radar_RequiredServiceInstance_toPort</SHORT-NAME>
+                  <PORT-PROTOTYPE-IREF>
+                    <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/fusion/Application/SwComponent/fusion/radar_RPort</TARGET-PORT-PROTOTYPE-REF>
+                  </PORT-PROTOTYPE-IREF>
+                  <PROCESS-REF DEST="PROCESS-DESIGN">/fusion/Application/ProcessDesign/fusion_ProcessDesign</PROCESS-REF>
+                  <SERVICE-INSTANCE-REF DEST="REQUIRED-SOMEIP-SERVICE-INSTANCE">/fusion/Service/Instance/radar_RequiredSomeipServiceInstance</SERVICE-INSTANCE-REF>
+                </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="09b76568-6959-4d2c-977e-682bdaa53173">
+              <SHORT-NAME>Interface</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

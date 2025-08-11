@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="97d31d53-7855-4cf0-9e86-f1b910d09794">
+      <SHORT-NAME>radar</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="66cc84c5-5d1f-4721-8e4d-1e4f6c1f4fd3">
+          <SHORT-NAME>InstanceToMachineMapping</SHORT-NAME>
+          <ELEMENTS>
+            <SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="7a7d582c-2129-4d41-a32f-1c5dc3606a4b">
+              <SHORT-NAME>radar_ProvidedServiceInstance_toMachine</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="REMOTE-CONFIG"/>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Machine/MachineDesign_ECU/Connector_ECU</COMMUNICATION-CONNECTOR-REF>
+              <SERVICE-INSTANCE-REFS>
+                <SERVICE-INSTANCE-REF DEST="PROVIDED-SOMEIP-SERVICE-INSTANCE">/radar/Service/Someip/Instance/radar_ProvidedSomeipServiceInstance</SERVICE-INSTANCE-REF>
+              </SERVICE-INSTANCE-REFS>
+              <UDP-PORT>5000</UDP-PORT>
+            </SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="244ffdcd-c2bf-4184-b6f3-63a19c3cb1a5">
+          <SHORT-NAME>ProcessToMachineMappingSet</SHORT-NAME>
+          <ELEMENTS>
+            <PROCESS-TO-MACHINE-MAPPING-SET UUID="0233222a-be48-4a3e-8c95-ac70d11c1f8c">
+              <SHORT-NAME>Machine_ECUMapping</SHORT-NAME>
+              <PROCESS-TO-MACHINE-MAPPINGS>
+                <PROCESS-TO-MACHINE-MAPPING UUID="87f9d67c-efba-4891-9f03-11616d00d6f7">
+                  <SHORT-NAME>radarMapping</SHORT-NAME>
+                  <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                  <PROCESS-REF DEST="PROCESS">/radar/Application/Process/radarService_Process</PROCESS-REF>
+                </PROCESS-TO-MACHINE-MAPPING>
+              </PROCESS-TO-MACHINE-MAPPINGS>
+            </PROCESS-TO-MACHINE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

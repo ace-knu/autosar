@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c056a160-87e6-4838-9790-1d24f9c2b044">
+      <SHORT-NAME>mga</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="27a91786-fe1c-4386-82ce-7f8fe9ce0463">
+          <SHORT-NAME>autoever</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="5d8df0b6-8817-413d-a168-6d6f4becf4ca">
+              <SHORT-NAME>sample</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="fb791e9a-ca61-4f4c-b124-5ac98a256f5e">
+                  <SHORT-NAME>em_app1</SHORT-NAME>
+                  <ELEMENTS>
+                    <PROCESS>
+                      <SHORT-NAME>App1</SHORT-NAME>
+                      <DESIGN-REF DEST="PROCESS-DESIGN">/mga/autoever/sample/em_app1/App1Design</DESIGN-REF>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/mga/autoever/sample/em_app1/Executable_App1</EXECUTABLE-REF>
+                      <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+                      <LOG-TRACE-LOG-MODES>
+                        <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+                      </LOG-TRACE-LOG-MODES>
+                      <LOG-TRACE-PROCESS-DESC>APP1 DLT</LOG-TRACE-PROCESS-DESC>
+                      <LOG-TRACE-PROCESS-ID>APP1</LOG-TRACE-PROCESS-ID>
+                      <PROCESS-STATE-MACHINE UUID="73a2e480-088b-46e3-bf23-e88aceac31d3">
+                        <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                        <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mga/autoever/sample/em_app1/App1_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+                      </PROCESS-STATE-MACHINE>
+                      <STATE-DEPENDENT-STARTUP-CONFIGS>
+                        <STATE-DEPENDENT-STARTUP-CONFIG>
+                          <FUNCTION-GROUP-STATE-IREFS>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                          </FUNCTION-GROUP-STATE-IREFS>
+                          <RESOURCE-GROUP-REF DEST="RESOURCE-GROUP">/Machine/Machine_ECU/OsModuleInst/ResourceGroup_1</RESOURCE-GROUP-REF>
+                          <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mga/autoever/sample/em_app1/StartupConfigSet_App1/StartupConfig_1</STARTUP-CONFIG-REF>
+                        </STATE-DEPENDENT-STARTUP-CONFIG>
+                      </STATE-DEPENDENT-STARTUP-CONFIGS>
+                    </PROCESS>
+                    <PROCESS-DESIGN UUID="bc4e98c7-2ffd-48f4-ad1f-78ac783ade6f">
+                      <SHORT-NAME>App1Design</SHORT-NAME>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/mga/autoever/sample/em_app1/Executable_App1</EXECUTABLE-REF>
+                    </PROCESS-DESIGN>
+                    <MODE-DECLARATION-GROUP UUID="c9a41778-315c-4216-8294-a71b00bd5ed6">
+                      <SHORT-NAME>App1_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+                      <MODE-DECLARATIONS>
+                        <MODE-DECLARATION UUID="3d3f1fe5-7811-45cb-8436-54ecf99c7225">
+                          <SHORT-NAME>Running</SHORT-NAME>
+                        </MODE-DECLARATION>
+                        <MODE-DECLARATION UUID="a064bb7d-2195-4530-83ea-3268eef66fa9">
+                          <SHORT-NAME>Terminated</SHORT-NAME>
+                        </MODE-DECLARATION>
+                      </MODE-DECLARATIONS>
+                    </MODE-DECLARATION-GROUP>
+                    <EXECUTABLE>
+                      <SHORT-NAME>Executable_App1</SHORT-NAME>
+                      <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+                      <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+                      <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+                      <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+                      <ROOT-SW-COMPONENT-PROTOTYPE>
+                        <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/mga/autoever/sample/em_app1/SWC_App1</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                    <PROCESS-TO-MACHINE-MAPPING-SET UUID="b5dd44c9-883e-4bf6-9ee6-b89a549265a2">
+                      <SHORT-NAME>ProcessToMachineMappingSet_1</SHORT-NAME>
+                      <PROCESS-TO-MACHINE-MAPPINGS>
+                        <PROCESS-TO-MACHINE-MAPPING UUID="8f2af44e-6123-4498-bdf8-883acd87fc05">
+                          <SHORT-NAME>ProcessToMachineMap_1</SHORT-NAME>
+                          <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                          <PROCESS-REF DEST="PROCESS">/mga/autoever/sample/em_app1/App1</PROCESS-REF>
+                          <SHALL-RUN-ON-REFS>
+                            <SHALL-RUN-ON-REF DEST="PROCESSOR-CORE">/Machine/Machine_ECU/MachineProcessor/MachineProcessor_Core_0</SHALL-RUN-ON-REF>
+                          </SHALL-RUN-ON-REFS>
+                        </PROCESS-TO-MACHINE-MAPPING>
+                      </PROCESS-TO-MACHINE-MAPPINGS>
+                    </PROCESS-TO-MACHINE-MAPPING-SET>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                      <SHORT-NAME>SWC_App1</SHORT-NAME>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                    <STARTUP-CONFIG-SET>
+                      <SHORT-NAME>StartupConfigSet_App1</SHORT-NAME>
+                      <STARTUP-CONFIGS>
+                        <STARTUP-CONFIG>
+                          <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                          <SCHEDULING-POLICY>SCHEDULING-POLICY-ROUND-ROBIN</SCHEDULING-POLICY>
+                          <SCHEDULING-PRIORITY>20</SCHEDULING-PRIORITY>
+                          <TIMEOUT>
+                            <ENTER-TIMEOUT-VALUE>2.0</ENTER-TIMEOUT-VALUE>
+                            <EXIT-TIMEOUT-VALUE>2.0</EXIT-TIMEOUT-VALUE>
+                          </TIMEOUT>
+                        </STARTUP-CONFIG>
+                      </STARTUP-CONFIGS>
+                    </STARTUP-CONFIG-SET>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

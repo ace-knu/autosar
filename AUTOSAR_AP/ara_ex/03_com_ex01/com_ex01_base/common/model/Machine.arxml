@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="e5801c51-1e41-4d57-ae5c-07f67bf77d5c">
+      <SHORT-NAME>Machine</SHORT-NAME>
+      <ELEMENTS>
+        <ETHERNET-CLUSTER UUID="7d889a4d-05fa-490f-a05e-ca684bbbd245">
+          <SHORT-NAME>EthernetCluster_ECU</SHORT-NAME>
+          <ETHERNET-CLUSTER-VARIANTS>
+            <ETHERNET-CLUSTER-CONDITIONAL>
+              <PHYSICAL-CHANNELS>
+                <ETHERNET-PHYSICAL-CHANNEL UUID="78572c00-c883-48dc-976f-02d6dd85b2d3">
+                  <SHORT-NAME>EthernetPhysicalChannel_1</SHORT-NAME>
+                  <COMM-CONNECTORS>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Machine/MachineDesign_ECU/Connector_ECU</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                  </COMM-CONNECTORS>
+                  <NETWORK-ENDPOINTS>
+                    <NETWORK-ENDPOINT UUID="0eba5691-3ce5-4da0-a974-da9cd0d42f4b">
+                      <SHORT-NAME>NwEndpoint_ECU</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <DEFAULT-GATEWAY>172.17.0.1</DEFAULT-GATEWAY>
+                          <IP-ADDRESS-KEEP-BEHAVIOR>FORGET</IP-ADDRESS-KEEP-BEHAVIOR>
+                          <IPV-4-ADDRESS>172.17.0.2</IPV-4-ADDRESS>
+                          <IPV-4-ADDRESS-SOURCE>DHCPV-4</IPV-4-ADDRESS-SOURCE>
+                          <NETWORK-MASK>255.255.255.0</NETWORK-MASK>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                    <NETWORK-ENDPOINT UUID="d71a0d23-db62-4183-9d81-cfff9db9e4bb">
+                      <SHORT-NAME>NwEndpoint_SD_ECU</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <IP-ADDRESS-KEEP-BEHAVIOR>FORGET</IP-ADDRESS-KEEP-BEHAVIOR>
+                          <IPV-4-ADDRESS>224.244.224.245</IPV-4-ADDRESS>
+                          <IPV-4-ADDRESS-SOURCE>DHCPV-4</IPV-4-ADDRESS-SOURCE>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                  </NETWORK-ENDPOINTS>
+                </ETHERNET-PHYSICAL-CHANNEL>
+              </PHYSICAL-CHANNELS>
+              <PROTOCOL-NAME>EthernetCluster_ECU_Protocol_1</PROTOCOL-NAME>
+            </ETHERNET-CLUSTER-CONDITIONAL>
+          </ETHERNET-CLUSTER-VARIANTS>
+        </ETHERNET-CLUSTER>
+        <MACHINE-DESIGN UUID="ac0c06d1-a037-475f-ab0f-200a5942e398">
+          <SHORT-NAME>MachineDesign_ECU</SHORT-NAME>
+          <ACCESS-CONTROL>MODELED</ACCESS-CONTROL>
+          <COMMUNICATION-CONNECTORS>
+            <ETHERNET-COMMUNICATION-CONNECTOR UUID="a95ea6d3-cfe8-40dd-a7f5-c0eb3ca777c0">
+              <SHORT-NAME>Connector_ECU</SHORT-NAME>
+              <PATH-MTU-ENABLED>true</PATH-MTU-ENABLED>
+              <UNICAST-NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Machine/EthernetCluster_ECU/EthernetPhysicalChannel_1/NwEndpoint_ECU</UNICAST-NETWORK-ENDPOINT-REF>
+            </ETHERNET-COMMUNICATION-CONNECTOR>
+          </COMMUNICATION-CONNECTORS>
+          <PN-RESET-TIMER>0.0</PN-RESET-TIMER>
+          <SERVICE-DISCOVER-CONFIGS>
+            <SOMEIP-SERVICE-DISCOVERY>
+              <MULTICAST-SD-IP-ADDRESS-REF DEST="NETWORK-ENDPOINT">/Machine/EthernetCluster_ECU/EthernetPhysicalChannel_1/NwEndpoint_SD_ECU</MULTICAST-SD-IP-ADDRESS-REF>
+              <SOMEIP-SERVICE-DISCOVERY-PORT>30490</SOMEIP-SERVICE-DISCOVERY-PORT>
+            </SOMEIP-SERVICE-DISCOVERY>
+          </SERVICE-DISCOVER-CONFIGS>
+        </MACHINE-DESIGN>
+        <MACHINE UUID="82f99b65-68d5-4184-89f0-bcea91c08de2">
+          <SHORT-NAME>Machine_ECU</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="VSOMEIP-CONFIG"/>
+            </SDGS>
+          </ADMIN-DATA>
+          <DEFAULT-APPLICATION-TIMEOUT>
+            <EXIT-TIMEOUT-VALUE>1.0</EXIT-TIMEOUT-VALUE>
+          </DEFAULT-APPLICATION-TIMEOUT>
+          <FUNCTION-GROUPS>
+            <MODE-DECLARATION-GROUP-PROTOTYPE UUID="82de624c-7290-454f-8a54-5b9bf2ba997f">
+              <SHORT-NAME>MachineState</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+          </FUNCTION-GROUPS>
+          <MACHINE-DESIGN-REF DEST="MACHINE-DESIGN">/Machine/MachineDesign_ECU</MACHINE-DESIGN-REF>
+          <MODULE-INSTANTIATIONS>
+            <OS-MODULE-INSTANTIATION UUID="08e92271-ede8-4615-a8f9-6d0e08b84440">
+              <SHORT-NAME>OsModuleInst</SHORT-NAME>
+              <RESOURCE-GROUPS>
+                <RESOURCE-GROUP UUID="26ffd520-30e6-432b-abe8-ca359e48cc29">
+                  <SHORT-NAME>ResourceGroup_1</SHORT-NAME>
+                  <CPU-USAGE>95</CPU-USAGE>
+                  <MEM-USAGE>2000000000</MEM-USAGE>
+                </RESOURCE-GROUP>
+              </RESOURCE-GROUPS>
+            </OS-MODULE-INSTANTIATION>
+          </MODULE-INSTANTIATIONS>
+          <PROCESSORS>
+            <PROCESSOR UUID="7a294136-b5be-4d5a-8795-62c67a24510f">
+              <SHORT-NAME>Processor_1</SHORT-NAME>
+              <CORES>
+                <PROCESSOR-CORE UUID="0fe57cdc-5450-43f0-bf77-2c2d28b1471b">
+                  <SHORT-NAME>Processor_1_Core_0</SHORT-NAME>
+                  <CORE-ID>0</CORE-ID>
+                </PROCESSOR-CORE>
+                <PROCESSOR-CORE UUID="913bc369-ee24-467a-9716-24db5c9d16fa">
+                  <SHORT-NAME>Processor_1_Core_1</SHORT-NAME>
+                  <CORE-ID>1</CORE-ID>
+                </PROCESSOR-CORE>
+                <PROCESSOR-CORE UUID="03836f5c-aea4-4e16-9bfd-390d23610b52">
+                  <SHORT-NAME>Processor_1_Core_2</SHORT-NAME>
+                  <CORE-ID>2</CORE-ID>
+                </PROCESSOR-CORE>
+                <PROCESSOR-CORE UUID="1405b91c-e10a-4a37-ac78-98b2bd31c343">
+                  <SHORT-NAME>Processor_1_Core_3</SHORT-NAME>
+                  <CORE-ID>3</CORE-ID>
+                </PROCESSOR-CORE>
+              </CORES>
+            </PROCESSOR>
+          </PROCESSORS>
+          <TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR>MONITOR-MODE</TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR>
+        </MACHINE>
+        <MODE-DECLARATION-GROUP UUID="654f3686-229b-4919-9ec6-ff27b38e84c2">
+          <SHORT-NAME>Machine_ECU_MachineState_ModeDeclarationGroup</SHORT-NAME>
+          <MODE-DECLARATIONS>
+            <MODE-DECLARATION UUID="b7905192-52c9-44f6-9509-3bd8624e8091">
+              <SHORT-NAME>Driving</SHORT-NAME>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION UUID="10974348-3d4f-4ef2-b6a4-916164ecf097">
+              <SHORT-NAME>Off</SHORT-NAME>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION UUID="e93b172b-de20-42a7-8e31-5f16f3e95314">
+              <SHORT-NAME>Parking</SHORT-NAME>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION UUID="c38eb01a-45c7-4e6a-9d29-6fb3ced785cc">
+              <SHORT-NAME>Restart</SHORT-NAME>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION UUID="da242396-2aa7-41f6-bb17-b2e1493b3169">
+              <SHORT-NAME>Shutdown</SHORT-NAME>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION UUID="fd8d20ce-ba9c-48a4-b2a8-22f5e54374d0">
+              <SHORT-NAME>Startup</SHORT-NAME>
+            </MODE-DECLARATION>
+          </MODE-DECLARATIONS>
+        </MODE-DECLARATION-GROUP>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="282f258b-e506-4ae3-aa78-52a2ddc3cb8d">
+      <SHORT-NAME>mga_localipcd</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="d69b7e18-47f9-48a1-96a1-6c7a3923327c">
+          <SHORT-NAME>Executable</SHORT-NAME>
+          <ELEMENTS>
+            <EXECUTABLE>
+              <SHORT-NAME>mga_localipcdExe</SHORT-NAME>
+              <CATEGORY>PLATFORM_LEVEL</CATEGORY>
+              <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+              <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+              <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+            </EXECUTABLE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="d776cbf1-3fa9-43bd-8d8c-bd4d1a5a8a51">
+          <SHORT-NAME>Process</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="b8d98693-301a-4633-9719-4f4183855cce">
+              <SHORT-NAME>Process_1_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="73d30561-4c5a-46a9-b013-70f104285882">
+                  <SHORT-NAME>Running</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="794a8552-87b0-465b-a080-695d7228cf3e">
+                  <SHORT-NAME>Terminated</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <STARTUP-CONFIG-SET>
+              <SHORT-NAME>localipc_daemon_startupConfigSet</SHORT-NAME>
+              <STARTUP-CONFIGS>
+                <STARTUP-CONFIG>
+                  <SHORT-NAME>localipc_daemon_startup</SHORT-NAME>
+                  <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                  <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                  <TIMEOUT>
+                    <ENTER-TIMEOUT-VALUE>5.0</ENTER-TIMEOUT-VALUE>
+                    <EXIT-TIMEOUT-VALUE>5.0</EXIT-TIMEOUT-VALUE>
+                  </TIMEOUT>
+                </STARTUP-CONFIG>
+              </STARTUP-CONFIGS>
+            </STARTUP-CONFIG-SET>
+            <PROCESS>
+              <SHORT-NAME>mga_localipcd</SHORT-NAME>
+              <DESIGN-REF DEST="PROCESS-DESIGN">/mga_localipcd/Process/mga_localipcdDesign</DESIGN-REF>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mga_localipcd/Executable/mga_localipcdExe</EXECUTABLE-REF>
+              <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+			  <LOG-TRACE-FILE-PATH>/tmp/mobilgene/mga_localipcd/log</LOG-TRACE-FILE-PATH>
+              <LOG-TRACE-LOG-MODES>
+                <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+                <LOG-TRACE-LOG-MODE>FILE</LOG-TRACE-LOG-MODE>
+              </LOG-TRACE-LOG-MODES>
+              <LOG-TRACE-PROCESS-DESC>Local IPC Daemon</LOG-TRACE-PROCESS-DESC>
+              <LOG-TRACE-PROCESS-ID>ACLD</LOG-TRACE-PROCESS-ID>
+              <PROCESS-STATE-MACHINE UUID="19bc1d2f-8322-4282-90c5-31f512a364fb">
+                <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mga_localipcd/Process/Process_1_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+              </PROCESS-STATE-MACHINE>
+              <STATE-DEPENDENT-STARTUP-CONFIGS>
+                <STATE-DEPENDENT-STARTUP-CONFIG>
+                  <EXECUTION-DEPENDENCYS>
+                    <EXECUTION-DEPENDENCY>
+                      <PROCESS-STATE-IREF>
+                        <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/mga_iamd/Process/mga_iamd/ProcessStateMachine</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                        <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/mga_iamd/Process/Process_1_ProcessStateMachine_ModeDeclarationGroup/Running</TARGET-MODE-DECLARATION-REF>
+                      </PROCESS-STATE-IREF>
+                    </EXECUTION-DEPENDENCY>
+                  </EXECUTION-DEPENDENCYS>
+                  <FUNCTION-GROUP-STATE-IREFS>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Driving</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                  </FUNCTION-GROUP-STATE-IREFS>
+                  <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mga_localipcd/Process/localipc_daemon_startupConfigSet/localipc_daemon_startup</STARTUP-CONFIG-REF>
+                </STATE-DEPENDENT-STARTUP-CONFIG>
+              </STATE-DEPENDENT-STARTUP-CONFIGS>
+            </PROCESS>
+            <PROCESS-DESIGN UUID="64369985-1742-4e10-a7eb-ca6e70fbd06a">
+              <SHORT-NAME>mga_localipcdDesign</SHORT-NAME>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mga_localipcd/Executable/mga_localipcdExe</EXECUTABLE-REF>
+            </PROCESS-DESIGN>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

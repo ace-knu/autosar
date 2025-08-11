@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>mobilgene</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>perdemo</SHORT-NAME>
+          <ELEMENTS>
+            <PERSISTENCY-KEY-VALUE-DATABASE UUID="9593442a-dc41-435f-b49a-f33eedbb3a6a">
+              <SHORT-NAME>KeyValueDeployment_1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DATA-ENCRYPTION">
+                    <SD GID="USE-DATA-ENCRYPTION">No</SD>
+                    <SD GID="CRYPTO-ALGORITHM"/>
+                  </SDG>
+                  <SDG GID="PERSISTENCY-DEPLOYMENT-EXTENSION">
+                    <SDX-REF DEST="PR-PORT-PROTOTYPE">/mobilgene/perdemo/SwComponent_PerExampleKvs/MobilgeneMofNKVS</SDX-REF>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <MAXIMUM-ALLOWED-SIZE>12000</MAXIMUM-ALLOWED-SIZE>
+              <MINIMUM-SUSTAINED-SIZE>800</MINIMUM-SUSTAINED-SIZE>
+              <REDUNDANCY-HANDLINGS>
+                <PERSISTENCY-REDUNDANCY-M-OUT-OF-N>
+                  <SCOPE>PERSISTENCY-REDUNDANCY-HANDLING-SCOPE-DATABASE</SCOPE>
+                  <M>3</M>
+                  <N>5</N>
+                </PERSISTENCY-REDUNDANCY-M-OUT-OF-N>
+              </REDUNDANCY-HANDLINGS>
+              <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+              <KEY-VALUE-PAIRS>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="9eaa8b5a-b1cc-4c45-a0de-0c389eda118f">
+                  <SHORT-NAME>KeyOfBool</SHORT-NAME>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>true</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/bool</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="4ce588a1-c7a3-4de5-80f8-e00d7d7f4774">
+                  <SHORT-NAME>KeyOfDouble</SHORT-NAME>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>1.234567</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/double</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="190856aa-ebe0-4b92-b90d-9cea5e6544b8">
+                  <SHORT-NAME>KeyOfDoubleVector</SHORT-NAME>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0.1234</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>1234.56789</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0.1</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/ImplementationDataTypes/DoubleVector</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="d7d422ed-7129-4e04-a24e-af8069bf9467">
+                  <SHORT-NAME>KeyOfFloat</SHORT-NAME>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>1.234567</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/float</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="e6fe3a3e-72a0-4c35-8eb8-4fde50b8b929">
+                  <SHORT-NAME>KeyOfInt64</SHORT-NAME>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>-240000000000</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int64_t</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="8adb6db1-d77a-4e3a-99b1-99942aec2be4">
+                  <SHORT-NAME>KeyOfStringElement1</SHORT-NAME>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>H</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>e</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>o</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE> </VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>W</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>o</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>r</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>d</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="86b14a14-9465-4db9-918e-2c62a95a8835">
+                  <SHORT-NAME>KeyOfStringElement2</SHORT-NAME>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>H</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>e</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>o</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE> </VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>A</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>u</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>t</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>r</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>o</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>n</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="d8036007-d2f8-4ef5-b55f-b727544e02de">
+                  <SHORT-NAME>KeyOfStringElement3</SHORT-NAME>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>H</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>e</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>l</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>o</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE> </VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>S</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>W</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>P</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>!</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+                <PERSISTENCY-KEY-VALUE-PAIR UUID="cf3a8f72-8235-44ac-9e06-342644cbce36">
+                  <SHORT-NAME>KeyOfUint64</SHORT-NAME>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>240000000000</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                  <VALUE-DATA-TYPE-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/uint64_t</VALUE-DATA-TYPE-REF>
+                </PERSISTENCY-KEY-VALUE-PAIR>
+              </KEY-VALUE-PAIRS>
+              <URI>var/MobilgeneMofNKVS.json</URI>
+            </PERSISTENCY-KEY-VALUE-DATABASE>
+            <PERSISTENCY-KEY-VALUE-DATABASE-INTERFACE UUID="518aae31-4d1b-4ac1-8021-3a648788598d">
+              <SHORT-NAME>KeyValueInterface_1</SHORT-NAME>
+              <MINIMUM-SUSTAINED-SIZE>800</MINIMUM-SUSTAINED-SIZE>
+              <REDUNDANCY>REDUNDANT</REDUNDANCY>
+              <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+              <DATA-ELEMENTS>
+                <PERSISTENCY-DATA-ELEMENT UUID="f59544fa-f4ff-4e73-846c-31b0f72305de">
+                  <SHORT-NAME>KeyOfBool</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/bool</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="a3080985-e6b2-441e-96b5-cb7aa63c1eb2">
+                  <SHORT-NAME>KeyOfDouble</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/double</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="0d824a4b-361e-49e1-a500-d23442bc960a">
+                  <SHORT-NAME>KeyOfDoubleVector</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/ImplementationDataTypes/DoubleVector</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="85cc1da1-bfe5-4a3b-9358-0b4240c66a69">
+                  <SHORT-NAME>KeyOfFloat</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/float</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="1b9ce638-f12d-4d33-b828-84793fff86ec">
+                  <SHORT-NAME>KeyOfInt64</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int64_t</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="ca7bcd39-0a1b-4623-806b-067a748af9d9">
+                  <SHORT-NAME>KeyOfStringElement1</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="8bbd09b3-c389-4356-a0db-d4fa1218cd64">
+                  <SHORT-NAME>KeyOfStringElement2</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="54325bb6-450f-41af-9bcd-611cfa353b9e">
+                  <SHORT-NAME>KeyOfStringElement3</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+                <PERSISTENCY-DATA-ELEMENT UUID="971942cb-a29c-4a4b-bf5a-2f621c088758">
+                  <SHORT-NAME>KeyOfUint64</SHORT-NAME>
+                  <TYPE-TREF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/uint64_t</TYPE-TREF>
+                  <UPDATE-STRATEGY>DELETE</UPDATE-STRATEGY>
+                </PERSISTENCY-DATA-ELEMENT>
+              </DATA-ELEMENTS>
+              <DATA-TYPE-FOR-SERIALIZATION-REFS>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/ImplementationDataTypes/DoubleVector</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/mobilgene/perdemo/String</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/bool</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/double</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/float</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/int64_t</DATA-TYPE-FOR-SERIALIZATION-REF>
+                <DATA-TYPE-FOR-SERIALIZATION-REF DEST="STD-CPP-IMPLEMENTATION-DATA-TYPE">/AUTOSAR/StdTypes/uint64_t</DATA-TYPE-FOR-SERIALIZATION-REF>
+              </DATA-TYPE-FOR-SERIALIZATION-REFS>
+            </PERSISTENCY-KEY-VALUE-DATABASE-INTERFACE>
+            <PROCESS>
+              <SHORT-NAME>PerExampleKvs</SHORT-NAME>
+              <DESIGN-REF DEST="PROCESS-DESIGN">/mobilgene/perdemo/PerExampleKvsDesign</DESIGN-REF>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleKvsEx</EXECUTABLE-REF>
+              <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+              <LOG-TRACE-LOG-MODES>
+                <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+              </LOG-TRACE-LOG-MODES>
+              <LOG-TRACE-PROCESS-DESC>Internal persistency debug context</LOG-TRACE-PROCESS-DESC>
+              <LOG-TRACE-PROCESS-ID>APEK</LOG-TRACE-PROCESS-ID>
+              <PROCESS-STATE-MACHINE UUID="7c3a69a2-0aac-4517-be84-3847ce48bab9">
+                <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mobilgene/perdemo/PerExampleKvs_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+              </PROCESS-STATE-MACHINE>
+              <STATE-DEPENDENT-STARTUP-CONFIGS>
+                <STATE-DEPENDENT-STARTUP-CONFIG>
+                  <FUNCTION-GROUP-STATE-IREFS>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Driving</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                  </FUNCTION-GROUP-STATE-IREFS>
+                  <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mobilgene/perdemo/StartupConfigSet1/StartupConfig_1</STARTUP-CONFIG-REF>
+                </STATE-DEPENDENT-STARTUP-CONFIG>
+              </STATE-DEPENDENT-STARTUP-CONFIGS>
+            </PROCESS>
+            <PROCESS-DESIGN UUID="5ef6ef50-9e70-4a40-8694-801c67762ef1">
+              <SHORT-NAME>PerExampleKvsDesign</SHORT-NAME>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleKvsEx</EXECUTABLE-REF>
+            </PROCESS-DESIGN>
+            <EXECUTABLE>
+              <SHORT-NAME>PerExampleKvsEx</SHORT-NAME>
+              <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+              <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+              <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+              <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+              <ROOT-SW-COMPONENT-PROTOTYPE>
+                <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/mobilgene/perdemo/SwComponent_PerExampleKvs</APPLICATION-TYPE-TREF>
+              </ROOT-SW-COMPONENT-PROTOTYPE>
+            </EXECUTABLE>
+            <MODE-DECLARATION-GROUP UUID="06ceebf8-4f2f-495f-b5ce-d8ee5f5ed576">
+              <SHORT-NAME>PerExampleKvs_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="7cc297aa-d7c3-4241-bfeb-c331596e6f82">
+                  <SHORT-NAME>Running</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="eba54d81-6836-44d9-8c88-e5b6f5935173">
+                  <SHORT-NAME>Terminated</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <PERSISTENCY-PORT-PROTOTYPE-TO-KEY-VALUE-DATABASE-MAPPING UUID="3a55bf46-cba0-435a-a005-9c9978eff093">
+              <SHORT-NAME>PortToKeyValueMap_1</SHORT-NAME>
+              <KEY-VALUE-STORAGE-REF DEST="PERSISTENCY-KEY-VALUE-DATABASE">/mobilgene/perdemo/KeyValueDeployment_1</KEY-VALUE-STORAGE-REF>
+              <PORT-PROTOTYPE-IREF>
+                <TARGET-PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/mobilgene/perdemo/SwComponent_PerExampleKvs/MobilgeneMofNKVS</TARGET-PORT-PROTOTYPE-REF>
+              </PORT-PROTOTYPE-IREF>
+              <PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleKvs</PROCESS-REF>
+            </PERSISTENCY-PORT-PROTOTYPE-TO-KEY-VALUE-DATABASE-MAPPING>
+            <PROCESS-TO-MACHINE-MAPPING-SET UUID="6eb7e06a-52cc-4472-935a-07b7f181b383">
+              <SHORT-NAME>ProcessToMachineMapppingSet_1</SHORT-NAME>
+              <PROCESS-TO-MACHINE-MAPPINGS>
+                <PROCESS-TO-MACHINE-MAPPING UUID="8f3b059a-7013-4e2b-a86e-b4f6908c969b">
+                  <SHORT-NAME>ProcessToMachineMap_1</SHORT-NAME>
+                  <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                  <PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleKvs</PROCESS-REF>
+                </PROCESS-TO-MACHINE-MAPPING>
+              </PROCESS-TO-MACHINE-MAPPINGS>
+            </PROCESS-TO-MACHINE-MAPPING-SET>
+            <STARTUP-CONFIG-SET>
+              <SHORT-NAME>StartupConfigSet1</SHORT-NAME>
+              <STARTUP-CONFIGS>
+                <STARTUP-CONFIG>
+                  <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                  <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                  <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                </STARTUP-CONFIG>
+              </STARTUP-CONFIGS>
+            </STARTUP-CONFIG-SET>
+            <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+              <SHORT-NAME>SwComponent_PerExampleKvs</SHORT-NAME>
+              <PORTS>
+                <PR-PORT-PROTOTYPE UUID="35b3d779-145d-4529-901d-bc351c593dcd">
+                  <SHORT-NAME>MobilgeneMofNKVS</SHORT-NAME>
+                  <PROVIDED-REQUIRED-INTERFACE-TREF DEST="PERSISTENCY-KEY-VALUE-DATABASE-INTERFACE">/mobilgene/perdemo/KeyValueInterface_1</PROVIDED-REQUIRED-INTERFACE-TREF>
+                </PR-PORT-PROTOTYPE>
+              </PORTS>
+            </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e34cf561-64ac-4146-8953-8590e7ad2e77">
+              <SHORT-NAME>ecu1</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

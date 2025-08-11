@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>mobilgene</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>perdemo</SHORT-NAME>
+          <ELEMENTS>
+            <PROCESS>
+              <SHORT-NAME>PerExampleKvs</SHORT-NAME>
+              <DESIGN-REF DEST="PROCESS-DESIGN">/mobilgene/perdemo/PerExampleKvsDesign</DESIGN-REF>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleKvsEx</EXECUTABLE-REF>
+              <LOG-TRACE-DEFAULT-LOG-LEVEL>INFO</LOG-TRACE-DEFAULT-LOG-LEVEL>
+              <LOG-TRACE-LOG-MODES>
+                <LOG-TRACE-LOG-MODE>CONSOLE</LOG-TRACE-LOG-MODE>
+              </LOG-TRACE-LOG-MODES>
+              <LOG-TRACE-PROCESS-DESC>Internal persistency debug context</LOG-TRACE-PROCESS-DESC>
+              <LOG-TRACE-PROCESS-ID>APEK</LOG-TRACE-PROCESS-ID>
+              <PROCESS-STATE-MACHINE UUID="7c3a69a2-0aac-4517-be84-3847ce48bab9">
+                <SHORT-NAME>ProcessStateMachine</SHORT-NAME>
+                <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/mobilgene/perdemo/PerExampleKvs_ProcessStateMachine_ModeDeclarationGroup</TYPE-TREF>
+              </PROCESS-STATE-MACHINE>
+              <STATE-DEPENDENT-STARTUP-CONFIGS>
+                <STATE-DEPENDENT-STARTUP-CONFIG>
+                  <FUNCTION-GROUP-STATE-IREFS>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Driving</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Parking</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                    <FUNCTION-GROUP-STATE-IREF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/Machine/Machine_ECU/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</TARGET-MODE-DECLARATION-REF>
+                    </FUNCTION-GROUP-STATE-IREF>
+                  </FUNCTION-GROUP-STATE-IREFS>
+                  <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/mobilgene/perdemo/StartupConfigSet1/StartupConfig_1</STARTUP-CONFIG-REF>
+                </STATE-DEPENDENT-STARTUP-CONFIG>
+              </STATE-DEPENDENT-STARTUP-CONFIGS>
+            </PROCESS>
+            <PROCESS-DESIGN UUID="5ef6ef50-9e70-4a40-8694-801c67762ef1">
+              <SHORT-NAME>PerExampleKvsDesign</SHORT-NAME>
+              <EXECUTABLE-REF DEST="EXECUTABLE">/mobilgene/perdemo/PerExampleKvsEx</EXECUTABLE-REF>
+            </PROCESS-DESIGN>
+            <EXECUTABLE>
+              <SHORT-NAME>PerExampleKvsEx</SHORT-NAME>
+              <CATEGORY>APPLICATION_LEVEL</CATEGORY>
+              <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+              <LOGGING-BEHAVIOR>USES-LOGGING</LOGGING-BEHAVIOR>
+              <REPORTING-BEHAVIOR>REPORTS-EXECUTION-STATE</REPORTING-BEHAVIOR>
+              <ROOT-SW-COMPONENT-PROTOTYPE>
+                <SHORT-NAME>RootSwComponent</SHORT-NAME>
+                <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/mobilgene/perdemo/SwComponent_PerExampleKvs</APPLICATION-TYPE-TREF>
+              </ROOT-SW-COMPONENT-PROTOTYPE>
+            </EXECUTABLE>
+            <MODE-DECLARATION-GROUP UUID="06ceebf8-4f2f-495f-b5ce-d8ee5f5ed576">
+              <SHORT-NAME>PerExampleKvs_ProcessStateMachine_ModeDeclarationGroup</SHORT-NAME>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="7cc297aa-d7c3-4241-bfeb-c331596e6f82">
+                  <SHORT-NAME>Running</SHORT-NAME>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="eba54d81-6836-44d9-8c88-e5b6f5935173">
+                  <SHORT-NAME>Terminated</SHORT-NAME>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <PROCESS-TO-MACHINE-MAPPING-SET UUID="6eb7e06a-52cc-4472-935a-07b7f181b383">
+              <SHORT-NAME>ProcessToMachineMapppingSet_1</SHORT-NAME>
+              <PROCESS-TO-MACHINE-MAPPINGS>
+                <PROCESS-TO-MACHINE-MAPPING UUID="8f3b059a-7013-4e2b-a86e-b4f6908c969b">
+                  <SHORT-NAME>ProcessToMachineMap_1</SHORT-NAME>
+                  <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                  <PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleKvs</PROCESS-REF>
+                </PROCESS-TO-MACHINE-MAPPING>
+              </PROCESS-TO-MACHINE-MAPPINGS>
+            </PROCESS-TO-MACHINE-MAPPING-SET>
+            <STARTUP-CONFIG-SET>
+              <SHORT-NAME>StartupConfigSet1</SHORT-NAME>
+              <STARTUP-CONFIGS>
+                <STARTUP-CONFIG>
+                  <SHORT-NAME>StartupConfig_1</SHORT-NAME>
+                  <SCHEDULING-POLICY>SCHEDULING-POLICY-FIFO</SCHEDULING-POLICY>
+                  <SCHEDULING-PRIORITY>15</SCHEDULING-PRIORITY>
+                </STARTUP-CONFIG>
+              </STARTUP-CONFIGS>
+            </STARTUP-CONFIG-SET>
+            <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+              <SHORT-NAME>SwComponent_PerExampleKvs</SHORT-NAME>
+            </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e34cf561-64ac-4146-8953-8590e7ad2e77">
+              <SHORT-NAME>ecu1</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

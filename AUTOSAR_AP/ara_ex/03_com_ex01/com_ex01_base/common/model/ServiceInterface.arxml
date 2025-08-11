@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="0b7db361-152d-497c-80b1-f9301c9d13f7">
+      <SHORT-NAME>ServiceInterface</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="ba8cbd4e-132d-40de-b5aa-8b508211638a">
+          <SHORT-NAME>Interface</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

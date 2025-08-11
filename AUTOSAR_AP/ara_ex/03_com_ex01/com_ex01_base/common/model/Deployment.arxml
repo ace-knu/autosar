@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c2ef1d80-0183-4147-8040-62f17770e197">
+      <SHORT-NAME>Deployment</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="66b9a570-2adc-4e29-b272-bee6a4936091">
+          <SHORT-NAME>E2EProfile</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="82ef4253-9580-472f-90c5-52bd51be3549">
+          <SHORT-NAME>Someip</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

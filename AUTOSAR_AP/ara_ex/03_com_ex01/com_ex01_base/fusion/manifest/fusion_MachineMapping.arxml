@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="1ad28223-ebea-4c2e-b8ac-0275ccf6a9d6">
+      <SHORT-NAME>fusion</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="b6cd9fdf-3a88-4e11-b40a-7bf1f1a06bc1">
+          <SHORT-NAME>InstanceToMachineMapping</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="edfbca53-f5ca-4bea-bc01-e9db61626fed">
+          <SHORT-NAME>ProcessToMachineMappingSet</SHORT-NAME>
+          <ELEMENTS>
+            <PROCESS-TO-MACHINE-MAPPING-SET UUID="2ee98c3a-a3b4-4ada-9d39-ef0b8729083c">
+              <SHORT-NAME>Machine_ECUMapping</SHORT-NAME>
+              <PROCESS-TO-MACHINE-MAPPINGS>
+                <PROCESS-TO-MACHINE-MAPPING UUID="8ba8b2de-a4bb-49e1-aef5-225c075362e8">
+                  <SHORT-NAME>fusionMapping</SHORT-NAME>
+                  <MACHINE-REF DEST="MACHINE">/Machine/Machine_ECU</MACHINE-REF>
+                  <PROCESS-REF DEST="PROCESS">/fusion/Application/Process/fusion_Process</PROCESS-REF>
+                </PROCESS-TO-MACHINE-MAPPING>
+              </PROCESS-TO-MACHINE-MAPPINGS>
+            </PROCESS-TO-MACHINE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c2ef1d80-0183-4147-8040-62f17770e197">
+      <SHORT-NAME>Deployment</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="66b9a570-2adc-4e29-b272-bee6a4936091">
+          <SHORT-NAME>E2EProfile</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="82ef4253-9580-472f-90c5-52bd51be3549">
+          <SHORT-NAME>Someip</SHORT-NAME>
+          <ELEMENTS>
+            <SOMEIP-SERVICE-INTERFACE-DEPLOYMENT UUID="13ea21d0-1973-414a-b141-a796ec699fcf">
+              <SHORT-NAME>Someip_radarDep_1</SHORT-NAME>
+              <EVENT-DEPLOYMENTS>
+                <SOMEIP-EVENT-DEPLOYMENT UUID="ddd4eab3-8692-478b-bcd3-cd50d89a061b">
+                  <SHORT-NAME>Someip_brakeEventDep</SHORT-NAME>
+                  <EVENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceInterface/Interface/radar/brakeEvent</EVENT-REF>
+                  <EVENT-ID>1</EVENT-ID>
+                  <MAXIMUM-SEGMENT-LENGTH>0</MAXIMUM-SEGMENT-LENGTH>
+                  <SEPARATION-TIME>0.0</SEPARATION-TIME>
+                  <SERIALIZER>SOMEIP</SERIALIZER>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-EVENT-DEPLOYMENT>
+                <SOMEIP-EVENT-DEPLOYMENT UUID="14f6ce14-44cb-4dd3-a28b-c692ff10a7bc">
+                  <SHORT-NAME>Someip_parkingBrakeEventDep</SHORT-NAME>
+                  <EVENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/ServiceInterface/Interface/radar/parkingBrakeEvent</EVENT-REF>
+                  <EVENT-ID>2</EVENT-ID>
+                  <MAXIMUM-SEGMENT-LENGTH>0</MAXIMUM-SEGMENT-LENGTH>
+                  <SEPARATION-TIME>0.0</SEPARATION-TIME>
+                  <SERIALIZER>SOMEIP</SERIALIZER>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-EVENT-DEPLOYMENT>
+              </EVENT-DEPLOYMENTS>
+              <FIELD-DEPLOYMENTS>
+                <SOMEIP-FIELD-DEPLOYMENT UUID="c3e1b8e3-21ed-45f9-9f54-0f6033406cba">
+                  <SHORT-NAME>Someip_FrontObjectDistanceDep_1</SHORT-NAME>
+                  <FIELD-REF DEST="FIELD">/ServiceInterface/Interface/radar/FrontObjectDistance</FIELD-REF>
+                  <NOTIFIER UUID="7435b4ac-1bbc-4787-984d-dd3917276bdd">
+                    <SHORT-NAME>Someip_FrontObjectDistanceDep_Notifier</SHORT-NAME>
+                    <EVENT-ID>3004</EVENT-ID>
+                    <MAXIMUM-SEGMENT-LENGTH>0</MAXIMUM-SEGMENT-LENGTH>
+                    <SEPARATION-TIME>0.0</SEPARATION-TIME>
+                    <SERIALIZER>SOMEIP</SERIALIZER>
+                    <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                  </NOTIFIER>
+                </SOMEIP-FIELD-DEPLOYMENT>
+                <SOMEIP-FIELD-DEPLOYMENT UUID="28fad98b-1bac-4d2c-bebb-72ca3f66ef23">
+                  <SHORT-NAME>Someip_ObjectDetectionLimitDep_1</SHORT-NAME>
+                  <FIELD-REF DEST="FIELD">/ServiceInterface/Interface/radar/ObjectDetectionLimit</FIELD-REF>
+                  <SET UUID="f105ab39-1627-4ae7-a384-419bf5e2a603">
+                    <SHORT-NAME>Someip_ObjectDetectionLimitDep_Setter</SHORT-NAME>
+                    <METHOD-ID>3011</METHOD-ID>
+                    <TRANSPORT-PROTOCOL>TCP</TRANSPORT-PROTOCOL>
+                  </SET>
+                </SOMEIP-FIELD-DEPLOYMENT>
+                <SOMEIP-FIELD-DEPLOYMENT UUID="5a0389a3-b8d0-4c1c-8044-8058d785d862">
+                  <SHORT-NAME>Someip_RearObjectDistanceDep_1</SHORT-NAME>
+                  <FIELD-REF DEST="FIELD">/ServiceInterface/Interface/radar/RearObjectDistance</FIELD-REF>
+                  <GET UUID="654f8bd2-3237-4375-9071-167fcbd3595c">
+                    <SHORT-NAME>Someip_RearObjectDistanceDep_Getter</SHORT-NAME>
+                    <METHOD-ID>3006</METHOD-ID>
+                    <TRANSPORT-PROTOCOL>TCP</TRANSPORT-PROTOCOL>
+                  </GET>
+                </SOMEIP-FIELD-DEPLOYMENT>
+                <SOMEIP-FIELD-DEPLOYMENT UUID="1724e076-bd26-4a6e-8ead-cce692057b83">
+                  <SHORT-NAME>Someip_UpdateRateDep_1</SHORT-NAME>
+                  <FIELD-REF DEST="FIELD">/ServiceInterface/Interface/radar/UpdateRate</FIELD-REF>
+                  <GET UUID="07f485b2-ab2d-4f0d-ae43-addfc54aa11b">
+                    <SHORT-NAME>Someip_UpdateRateDep_Getter</SHORT-NAME>
+                    <METHOD-ID>3001</METHOD-ID>
+                    <TRANSPORT-PROTOCOL>TCP</TRANSPORT-PROTOCOL>
+                  </GET>
+                  <NOTIFIER UUID="591c9207-c9af-4f8e-96c2-389edc179191">
+                    <SHORT-NAME>Someip_UpdateRateDep_Notifier</SHORT-NAME>
+                    <EVENT-ID>3000</EVENT-ID>
+                    <MAXIMUM-SEGMENT-LENGTH>0</MAXIMUM-SEGMENT-LENGTH>
+                    <SEPARATION-TIME>0.0</SEPARATION-TIME>
+                    <SERIALIZER>SOMEIP</SERIALIZER>
+                    <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                  </NOTIFIER>
+                  <SET UUID="d4f8a1f5-ecd3-476f-a389-51c0e63607ed">
+                    <SHORT-NAME>Someip_UpdateRateDep_Setter</SHORT-NAME>
+                    <METHOD-ID>3002</METHOD-ID>
+                    <TRANSPORT-PROTOCOL>TCP</TRANSPORT-PROTOCOL>
+                  </SET>
+                </SOMEIP-FIELD-DEPLOYMENT>
+              </FIELD-DEPLOYMENTS>
+              <METHOD-DEPLOYMENTS>
+                <SOMEIP-METHOD-DEPLOYMENT UUID="15a21ae3-1731-47c2-b740-8f2c6581c8f2">
+                  <SHORT-NAME>Someip_AdjustDep</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ServiceInterface/Interface/radar/Adjust</METHOD-REF>
+                  <MAXIMUM-SEGMENT-LENGTH-REQUEST>0</MAXIMUM-SEGMENT-LENGTH-REQUEST>
+                  <MAXIMUM-SEGMENT-LENGTH-RESPONSE>0</MAXIMUM-SEGMENT-LENGTH-RESPONSE>
+                  <METHOD-ID>32000</METHOD-ID>
+                  <SEPARATION-TIME-REQUEST>0.0</SEPARATION-TIME-REQUEST>
+                  <SEPARATION-TIME-RESPONSE>0.0</SEPARATION-TIME-RESPONSE>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-METHOD-DEPLOYMENT>
+                <SOMEIP-METHOD-DEPLOYMENT UUID="e1323f12-611d-4fd9-9b75-dd5677868391">
+                  <SHORT-NAME>Someip_CalibrateDep</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ServiceInterface/Interface/radar/Calibrate</METHOD-REF>
+                  <MAXIMUM-SEGMENT-LENGTH-REQUEST>0</MAXIMUM-SEGMENT-LENGTH-REQUEST>
+                  <MAXIMUM-SEGMENT-LENGTH-RESPONSE>0</MAXIMUM-SEGMENT-LENGTH-RESPONSE>
+                  <METHOD-ID>32010</METHOD-ID>
+                  <SEPARATION-TIME-REQUEST>0.0</SEPARATION-TIME-REQUEST>
+                  <SEPARATION-TIME-RESPONSE>0.0</SEPARATION-TIME-RESPONSE>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-METHOD-DEPLOYMENT>
+                <SOMEIP-METHOD-DEPLOYMENT UUID="e02cd5ff-823d-4102-8144-fa3735f2b8dc">
+                  <SHORT-NAME>Someip_EchoDep</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ServiceInterface/Interface/radar/Echo</METHOD-REF>
+                  <MAXIMUM-SEGMENT-LENGTH-REQUEST>0</MAXIMUM-SEGMENT-LENGTH-REQUEST>
+                  <MAXIMUM-SEGMENT-LENGTH-RESPONSE>0</MAXIMUM-SEGMENT-LENGTH-RESPONSE>
+                  <METHOD-ID>32020</METHOD-ID>
+                  <SEPARATION-TIME-REQUEST>0.0</SEPARATION-TIME-REQUEST>
+                  <SEPARATION-TIME-RESPONSE>0.0</SEPARATION-TIME-RESPONSE>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-METHOD-DEPLOYMENT>
+                <SOMEIP-METHOD-DEPLOYMENT UUID="7dfaba47-98ee-4d58-812c-38a8061b6d19">
+                  <SHORT-NAME>Someip_testDoubleDep</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ServiceInterface/Interface/radar/testDouble</METHOD-REF>
+                  <MAXIMUM-SEGMENT-LENGTH-REQUEST>0</MAXIMUM-SEGMENT-LENGTH-REQUEST>
+                  <MAXIMUM-SEGMENT-LENGTH-RESPONSE>0</MAXIMUM-SEGMENT-LENGTH-RESPONSE>
+                  <METHOD-ID>32022</METHOD-ID>
+                  <SEPARATION-TIME-REQUEST>0.0</SEPARATION-TIME-REQUEST>
+                  <SEPARATION-TIME-RESPONSE>0.0</SEPARATION-TIME-RESPONSE>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-METHOD-DEPLOYMENT>
+                <SOMEIP-METHOD-DEPLOYMENT UUID="8ac2ebf3-2464-4acb-942e-94fd11626249">
+                  <SHORT-NAME>Someip_testFloatDep</SHORT-NAME>
+                  <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ServiceInterface/Interface/radar/testFloat</METHOD-REF>
+                  <MAXIMUM-SEGMENT-LENGTH-REQUEST>0</MAXIMUM-SEGMENT-LENGTH-REQUEST>
+                  <MAXIMUM-SEGMENT-LENGTH-RESPONSE>0</MAXIMUM-SEGMENT-LENGTH-RESPONSE>
+                  <METHOD-ID>32021</METHOD-ID>
+                  <SEPARATION-TIME-REQUEST>0.0</SEPARATION-TIME-REQUEST>
+                  <SEPARATION-TIME-RESPONSE>0.0</SEPARATION-TIME-RESPONSE>
+                  <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                </SOMEIP-METHOD-DEPLOYMENT>
+              </METHOD-DEPLOYMENTS>
+              <SERVICE-INTERFACE-REF DEST="SERVICE-INTERFACE">/ServiceInterface/Interface/radar</SERVICE-INTERFACE-REF>
+              <EVENT-GROUPS>
+                <SOMEIP-EVENT-GROUP UUID="91b790e5-fe7d-4dd7-ada7-6469966893f2">
+                  <SHORT-NAME>EventGroup_1</SHORT-NAME>
+                  <EVENT-GROUP-ID>1</EVENT-GROUP-ID>
+                  <EVENT-REFS>
+                    <EVENT-REF DEST="SOMEIP-EVENT-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_brakeEventDep</EVENT-REF>
+                  </EVENT-REFS>
+                </SOMEIP-EVENT-GROUP>
+                <SOMEIP-EVENT-GROUP UUID="adfd40db-090c-4ae3-999a-6f526736f2fb">
+                  <SHORT-NAME>EventGroup_2</SHORT-NAME>
+                  <EVENT-GROUP-ID>2</EVENT-GROUP-ID>
+                  <EVENT-REFS>
+                    <EVENT-REF DEST="SOMEIP-EVENT-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_parkingBrakeEventDep</EVENT-REF>
+                  </EVENT-REFS>
+                </SOMEIP-EVENT-GROUP>
+                <SOMEIP-EVENT-GROUP UUID="916534c4-64e6-4023-9868-d8d0787f0a3c">
+                  <SHORT-NAME>EventGroup_3</SHORT-NAME>
+                  <EVENT-GROUP-ID>3</EVENT-GROUP-ID>
+                  <EVENT-REFS>
+                    <EVENT-REF DEST="SOMEIP-EVENT-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_FrontObjectDistanceDep_1/Someip_FrontObjectDistanceDep_Notifier</EVENT-REF>
+                  </EVENT-REFS>
+                </SOMEIP-EVENT-GROUP>
+                <SOMEIP-EVENT-GROUP UUID="237318ce-5cff-40c4-a6e4-e12c5e0fcf29">
+                  <SHORT-NAME>EventGroup_4</SHORT-NAME>
+                  <EVENT-GROUP-ID>4</EVENT-GROUP-ID>
+                  <EVENT-REFS>
+                    <EVENT-REF DEST="SOMEIP-EVENT-DEPLOYMENT">/Deployment/Someip/Someip_radarDep_1/Someip_UpdateRateDep_1/Someip_UpdateRateDep_Notifier</EVENT-REF>
+                  </EVENT-REFS>
+                </SOMEIP-EVENT-GROUP>
+              </EVENT-GROUPS>
+              <SERVICE-INTERFACE-ID>99</SERVICE-INTERFACE-ID>
+              <SERVICE-INTERFACE-VERSION>
+                <MAJOR-VERSION>1</MAJOR-VERSION>
+                <MINOR-VERSION>0</MINOR-VERSION>
+              </SERVICE-INTERFACE-VERSION>
+            </SOMEIP-SERVICE-INTERFACE-DEPLOYMENT>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

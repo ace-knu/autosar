@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>mobilgene</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>softwarecluster</SHORT-NAME>
+          <ELEMENTS>
+            <SOFTWARE-CLUSTER UUID="037c1695-27a1-41af-b9fe-6d41c7c30295">
+              <SHORT-NAME>Per_Kvs_SW</SHORT-NAME>
+              <CONTAINED-PROCESS-REFS>
+                <CONTAINED-PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/PerExampleKvs</CONTAINED-PROCESS-REF>
+              </CONTAINED-PROCESS-REFS>
+              <VENDOR-ID>0</VENDOR-ID>
+              <VERSION>1.2.3.4</VERSION>
+            </SOFTWARE-CLUSTER>
+            <SOFTWARE-CLUSTER>
+              <SHORT-NAME>Per_Test_SW_cluster</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:SoftwareClusterIndex">
+                    <SD GID="DV:Value">0</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <CONTAINED-PROCESS-REFS>
+                <CONTAINED-PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/ecu1/StateManagerProc</CONTAINED-PROCESS-REF>
+                <CONTAINED-PROCESS-REF DEST="PROCESS">/mobilgene/bsw/ecu1/someipd</CONTAINED-PROCESS-REF>
+                <CONTAINED-PROCESS-REF DEST="PROCESS">/mobilgene/perdemo/ecu1/TrainingPer</CONTAINED-PROCESS-REF>
+              </CONTAINED-PROCESS-REFS>
+              <DESIGN-REFS>
+                <DESIGN-REF DEST="SOFTWARE-CLUSTER-DESIGN">/mobilgene/softwarecluster/softwareclusterdesign</DESIGN-REF>
+              </DESIGN-REFS>
+              <VERSION>1.00.00.0000</VERSION>
+            </SOFTWARE-CLUSTER>
+            <SOFTWARE-CLUSTER-DESIGN>
+              <SHORT-NAME>softwareclusterdesign</SHORT-NAME>
+              <CONTAINED-PROCESS-REFS>
+                <CONTAINED-PROCESS-REF DEST="PROCESS-DESIGN">/mobilgene/perdemo/ecu1/PerProcDesign</CONTAINED-PROCESS-REF>
+              </CONTAINED-PROCESS-REFS>
+            </SOFTWARE-CLUSTER-DESIGN>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE UUID="ba4ce9fa-ae87-4adb-bd6c-b88d9aa26b34">
+      <SHORT-NAME>Machine</SHORT-NAME>
+      <ELEMENTS>
+        <ETHERNET-CLUSTER>
+          <SHORT-NAME>Eth</SHORT-NAME>
+          <ETHERNET-CLUSTER-VARIANTS>
+            <ETHERNET-CLUSTER-CONDITIONAL>
+              <PHYSICAL-CHANNELS>
+                <ETHERNET-PHYSICAL-CHANNEL>
+                  <SHORT-NAME>EthCh1</SHORT-NAME>
+                  <COMM-CONNECTORS>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/Machine/MachineDesign_ECU/EthernetConnector</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                  </COMM-CONNECTORS>
+                  <NETWORK-ENDPOINTS>
+                    <NETWORK-ENDPOINT>
+                      <SHORT-NAME>NetworkEndpointEcu1</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <DEFAULT-GATEWAY>192.168.100.1</DEFAULT-GATEWAY>
+                          <IP-ADDRESS-KEEP-BEHAVIOR>FORGET</IP-ADDRESS-KEEP-BEHAVIOR>
+                          <IPV-4-ADDRESS>192.168.100.5</IPV-4-ADDRESS>
+                          <IPV-4-ADDRESS-SOURCE>FIXED</IPV-4-ADDRESS-SOURCE>
+                          <NETWORK-MASK>255.255.255.0</NETWORK-MASK>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                    <NETWORK-ENDPOINT>
+                      <SHORT-NAME>SdMulticastEndpoint</SHORT-NAME>
+                      <NETWORK-ENDPOINT-ADDRESSES>
+                        <IPV-4-CONFIGURATION>
+                          <IPV-4-ADDRESS>239.192.255.251</IPV-4-ADDRESS>
+                        </IPV-4-CONFIGURATION>
+                      </NETWORK-ENDPOINT-ADDRESSES>
+                    </NETWORK-ENDPOINT>
+                  </NETWORK-ENDPOINTS>
+                </ETHERNET-PHYSICAL-CHANNEL>
+              </PHYSICAL-CHANNELS>
+              <PROTOCOL-NAME>Eth_ECC</PROTOCOL-NAME>
+            </ETHERNET-CLUSTER-CONDITIONAL>
+          </ETHERNET-CLUSTER-VARIANTS>
+        </ETHERNET-CLUSTER>
+        <MACHINE-DESIGN>
+          <SHORT-NAME>MachineDesign_ECU</SHORT-NAME>
+          <ACCESS-CONTROL>MODELED</ACCESS-CONTROL>
+          <COMMUNICATION-CONNECTORS>
+            <ETHERNET-COMMUNICATION-CONNECTOR>
+              <SHORT-NAME>EthernetConnector</SHORT-NAME>
+              <PATH-MTU-ENABLED>true</PATH-MTU-ENABLED>
+              <UNICAST-NETWORK-ENDPOINT-REF DEST="NETWORK-ENDPOINT">/Machine/Eth/EthCh1/NetworkEndpointEcu1</UNICAST-NETWORK-ENDPOINT-REF>
+            </ETHERNET-COMMUNICATION-CONNECTOR>
+          </COMMUNICATION-CONNECTORS>
+          <SERVICE-DISCOVER-CONFIGS>
+            <SOMEIP-SERVICE-DISCOVERY>
+              <MULTICAST-SD-IP-ADDRESS-REF DEST="NETWORK-ENDPOINT">/Machine/Eth/EthCh1/SdMulticastEndpoint</MULTICAST-SD-IP-ADDRESS-REF>
+              <SOMEIP-SERVICE-DISCOVERY-PORT>30490</SOMEIP-SERVICE-DISCOVERY-PORT>
+            </SOMEIP-SERVICE-DISCOVERY>
+          </SERVICE-DISCOVER-CONFIGS>
+        </MACHINE-DESIGN>
+        <MACHINE>
+          <SHORT-NAME>Machine_ECU</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="PER-STORAGE-PATH">
+                <SD GID="PATH">etc/mobilgene/redundant/red1</SD>
+              </SDG>
+              <SDG GID="VSOMEIP-CONFIG"/>
+            </SDGS>
+          </ADMIN-DATA>
+          <DEFAULT-APPLICATION-TIMEOUT>
+            <ENTER-TIMEOUT-VALUE>1.0</ENTER-TIMEOUT-VALUE>
+            <EXIT-TIMEOUT-VALUE>1.0</EXIT-TIMEOUT-VALUE>
+          </DEFAULT-APPLICATION-TIMEOUT>
+          <FUNCTION-GROUPS>
+            <MODE-DECLARATION-GROUP-PROTOTYPE>
+              <SHORT-NAME>MachineState</SHORT-NAME>
+              <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup</TYPE-TREF>
+            </MODE-DECLARATION-GROUP-PROTOTYPE>
+          </FUNCTION-GROUPS>
+          <MACHINE-DESIGN-REF DEST="MACHINE-DESIGN">/Machine/MachineDesign_ECU</MACHINE-DESIGN-REF>
+          <TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR>STRICT-MODE</TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR>
+        </MACHINE>
+        <MODE-DECLARATION-GROUP>
+          <SHORT-NAME>Machine_ECU_MachineState_ModeDeclarationGroup</SHORT-NAME>
+          <INITIAL-MODE-REF DEST="MODE-DECLARATION">/Machine/Machine_ECU_MachineState_ModeDeclarationGroup/Startup</INITIAL-MODE-REF>
+          <MODE-DECLARATIONS>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Driving</SHORT-NAME>
+              <VALUE>4</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Off</SHORT-NAME>
+              <VALUE>0</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Parking</SHORT-NAME>
+              <VALUE>5</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Restart</SHORT-NAME>
+              <VALUE>3</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Shutdown</SHORT-NAME>
+              <VALUE>2</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>Startup</SHORT-NAME>
+              <VALUE>1</VALUE>
+            </MODE-DECLARATION>
+          </MODE-DECLARATIONS>
+        </MODE-DECLARATION-GROUP>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
